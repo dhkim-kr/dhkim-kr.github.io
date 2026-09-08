@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NeuroTruth | Dae Hyeon Kim</title>
+<meta name="description" content="Connected wearable craving estimates and rule-based risk decisions to app notifications and conversational support.">
+<link rel="canonical" href="https://dhkim-kr.github.io/en/projects/neurotruth/">
+<link rel="alternate" hreflang="ko" href="https://dhkim-kr.github.io/projects/neurotruth/">
+<link rel="alternate" hreflang="en" href="https://dhkim-kr.github.io/en/projects/neurotruth/">
+<link rel="alternate" hreflang="x-default" href="https://dhkim-kr.github.io/projects/neurotruth/">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:title" content="NeuroTruth">
+<meta property="og:description" content="Connected wearable craving estimates and rule-based risk decisions to app notifications and conversational support.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dhkim-kr.github.io/en/projects/neurotruth/">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/site.css">
+<script src="/assets/site.js" defer>
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="wrap header-inner">
+<a class="brand" href="/en/">Dae Hyeon Kim <span>RESEARCH</span>
+</a>
+<button class="menu-button" type="button" aria-expanded="false" aria-controls="main-nav">Menu</button>
+<nav class="main-nav" id="main-nav" aria-label="Main navigation">
+<a href="/en/#about">About</a>
+<a href="/en/projects/">Projects</a>
+<a href="/en/publications/">Publications</a>
+<a href="/en/#experience">Experience</a>
+<a href="/en/#contact">Contact</a>
+</nav>
+<a class="language" href="/projects/neurotruth/" lang="ko" hreflang="ko" aria-label="한국어로 보기">한국어</a>
+</div>
+</header>
+<main id="main">
+<div class="wrap">
+<div class="page-intro">
+<div class="breadcrumb">
+<a href="/en/">Home</a>
+<span>/</span>
+<span>Projects</span>
+</div>
+<h1>NeuroTruth</h1>
+<p class="lead">Connected wearable craving estimates and rule-based risk decisions to app notifications and conversational support.</p>
+</div>
+<div class="link-list">
+<a href="https://github.com/dhkim-kr/neurotruth" target="_blank" rel="noopener noreferrer">GitHub: neurotruth</a>
+</div>
+<dl class="detail-meta">
+<div>
+<dt>Role</dt>
+<dd>Technical lead and project manager</dd>
+</div>
+<div>
+<dt>Contribution</dt>
+<dd>Designed the system and implemented risk logic, backend services, notifications, speech recognition and speech synthesis.</dd>
+</div>
+<div>
+<dt>Period & affiliation</dt>
+<dd>2026.03 ~ Present NeuroTruth</dd>
+</div>
+</dl>
+<div class="detail-layout">
+<aside class="detail-toc">
+<p>On this page</p>
+<a href="#stage-1">01 NeuroTruth</a>
+<a href="#stage-2">02 NeuroTruth</a>
+<a href="#related">Related work</a>
+</aside>
+<div class="detail-body">
+<section class="detail-stage" id="stage-1">
+<h2>
+<span class="section-number">01 / RESEARCH DETAIL</span>NeuroTruth: sensing, state checks and dialogue</h2>
+<dl class="arguments">
+<dt>Problem / context</dt>
+<dd>Wearable predictions must trigger state checks and notifications while keeping dialogue separate from risk decisions.</dd>
+<dt>Approach</dt>
+<dd>Backend rules determine risk levels and notification timing. The app supports state confirmation, questionnaires and speech interaction.</dd>
+<dt>Contribution / next steps</dt>
+<dd>Served as technical lead and PM; implemented risk logic, backend, notifications, Korean STT and TTS integration.</dd>
+</dl>
+<div class="evidence-gallery">
+<figure>
+<a class="figure-link" href="/assets/figures/slide-38-1.png" target="_blank" rel="noopener" aria-label="Enlarge figure: NeuroTruth: sensing, state checks and dialogue: source figure 1">
+<img src="/assets/figures/slide-38-1.png" alt="NeuroTruth: sensing, state checks and dialogue: source figure 1" loading="lazy">
+</a>
+<figcaption>NeuroTruth: sensing, state checks and dialogue: source figure 1<br>
+<a href="/assets/figures/slide-38-1.png">View full-size figure</a>
+</figcaption>
+</figure>
+<figure>
+<a class="figure-link" href="/assets/figures/slide-38-2.png" target="_blank" rel="noopener" aria-label="Enlarge figure: NeuroTruth: sensing, state checks and dialogue: source figure 2">
+<img src="/assets/figures/slide-38-2.png" alt="NeuroTruth: sensing, state checks and dialogue: source figure 2" loading="lazy">
+</a>
+<figcaption>NeuroTruth: sensing, state checks and dialogue: source figure 2<br>
+<a href="/assets/figures/slide-38-2.png">View full-size figure</a>
+</figcaption>
+</figure>
+<figure>
+<a class="figure-link" href="/assets/figures/slide-38-3.png" target="_blank" rel="noopener" aria-label="Enlarge figure: NeuroTruth: sensing, state checks and dialogue: source figure 3">
+<img src="/assets/figures/slide-38-3.png" alt="NeuroTruth: sensing, state checks and dialogue: source figure 3" loading="lazy">
+</a>
+<figcaption>NeuroTruth: sensing, state checks and dialogue: source figure 3<br>
+<a href="/assets/figures/slide-38-3.png">View full-size figure</a>
+</figcaption>
+</figure>
+</div>
+<div class="table-wrap" role="region" tabindex="0" aria-label="Model specification and evaluation 1">
+<table>
+<caption>Model specification and evaluation 1</caption>
+<thead>
+<tr>
+<th scope="col">Current function</th>
+<th scope="col">Implementation scope</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Physiological input</td>
+<td>4-level craving estimation from PPG and EDA</td>
+</tr>
+<tr>
+<td>Dialogue support</td>
+<td>AWS Bedrock LLM, STT, Android TTS</td>
+</tr>
+<tr>
+<td>Records</td>
+<td>AUQ, state and notification history</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="evidence-note">
+<strong>Evaluation conditions and scope</strong>The prototype currently supports four-level craving estimation. Bio-linguistic incongruence analysis (MBID) and clinical intervention evaluation remain future work.</div>
+</section>
+<section class="detail-stage" id="stage-2">
+<h2>
+<span class="section-number">02 / RESEARCH DETAIL</span>NeuroTruth: integration and notification latency</h2>
+<dl class="arguments">
+<dt>Problem / context</dt>
+<dd>Confirmed the connection between classification, risk decisions, notifications and dialogue in 21 of 21 repeated integration tests.</dd>
+<dt>Approach</dt>
+<dd>A separate camera test processed 10 of 10 static videos. Mean processing time for a 20-second video was 14.8 seconds.</dd>
+<dt>Contribution / next steps</dt>
+<dd>Next steps are MBID scoring and intervention evaluation, with clinical assessment of approximately 80 participants at two hospitals planned.</dd>
+</dl>
+<div class="evidence-gallery one">
+<figure>
+<a class="figure-link" href="/assets/figures/slide-39-1.png" target="_blank" rel="noopener" aria-label="Enlarge figure: NeuroTruth: integration and notification latency: source figure 1">
+<img src="/assets/figures/slide-39-1.png" alt="NeuroTruth: integration and notification latency: source figure 1" loading="lazy">
+</a>
+<figcaption>NeuroTruth: integration and notification latency: source figure 1<br>
+<a href="/assets/figures/slide-39-1.png">View full-size figure</a>
+</figcaption>
+</figure>
+</div>
+<div class="chart-set">
+<figure class="chart-figure">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 410" role="img" aria-labelledby="chart-39-0" aria-describedby="chart-desc-39-0">
+<title id="chart-39-0">Craving classification, LOSO (%)</title>
+<desc id="chart-desc-39-0">Classification performance: Balanced acc. 71.0, Macro F1 70.0</desc>
+<rect width="680" height="410" fill="white"/>
+<line x1="65" y1="290.0" x2="665" y2="290.0" stroke="#dce5f1"/>
+<text x="55" y="295.0" text-anchor="end" fill="#596b82" font-size="14">0</text>
+<line x1="65" y1="226.25" x2="665" y2="226.25" stroke="#dce5f1"/>
+<text x="55" y="231.25" text-anchor="end" fill="#596b82" font-size="14">22</text>
+<line x1="65" y1="162.5" x2="665" y2="162.5" stroke="#dce5f1"/>
+<text x="55" y="167.5" text-anchor="end" fill="#596b82" font-size="14">43</text>
+<line x1="65" y1="98.75" x2="665" y2="98.75" stroke="#dce5f1"/>
+<text x="55" y="103.75" text-anchor="end" fill="#596b82" font-size="14">65</text>
+<line x1="65" y1="35.0" x2="665" y2="35.0" stroke="#dce5f1"/>
+<text x="55" y="40.0" text-anchor="end" fill="#596b82" font-size="14">87</text>
+<rect x="181.0" y="80.98360655737707" width="65" height="209.01639344262293" rx="2" fill="#a7bddd"/>
+<text x="213.5" y="72.98360655737707" text-anchor="middle" fill="#172a43" font-size="15" font-weight="600">71</text>
+<text x="215.0" y="315" text-anchor="middle" fill="#172a43" font-size="14">Balanced acc.</text>
+<rect x="481.0" y="83.92749942276612" width="65" height="206.07250057723388" rx="2" fill="#a7bddd"/>
+<text x="513.5" y="75.92749942276612" text-anchor="middle" fill="#172a43" font-size="15" font-weight="600">70</text>
+<text x="515.0" y="315" text-anchor="middle" fill="#172a43" font-size="14">Macro F1</text>
+<rect x="65" y="379" width="10" height="10" rx="2" fill="#a7bddd"/>
+<text x="82" y="389" fill="#596b82" font-size="13">Classification performance</text>
+</svg>
+<figcaption>Craving classification, LOSO (%)</figcaption>
+</figure>
+<figure class="chart-figure">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 410" role="img" aria-labelledby="chart-39-1" aria-describedby="chart-desc-39-1">
+<title id="chart-39-1">Notification delivery latency (ms)</title>
+<desc id="chart-desc-39-1">Mean: Wi-Fi 78.0, LTE 121.1; P95: Wi-Fi 89.0, LTE 133.0</desc>
+<rect width="680" height="410" fill="white"/>
+<line x1="65" y1="290.0" x2="665" y2="290.0" stroke="#dce5f1"/>
+<text x="55" y="295.0" text-anchor="end" fill="#596b82" font-size="14">0</text>
+<line x1="65" y1="226.25" x2="665" y2="226.25" stroke="#dce5f1"/>
+<text x="55" y="231.25" text-anchor="end" fill="#596b82" font-size="14">41</text>
+<line x1="65" y1="162.5" x2="665" y2="162.5" stroke="#dce5f1"/>
+<text x="55" y="167.5" text-anchor="end" fill="#596b82" font-size="14">81</text>
+<line x1="65" y1="98.75" x2="665" y2="98.75" stroke="#dce5f1"/>
+<text x="55" y="103.75" text-anchor="end" fill="#596b82" font-size="14">122</text>
+<line x1="65" y1="35.0" x2="665" y2="35.0" stroke="#dce5f1"/>
+<text x="55" y="40.0" text-anchor="end" fill="#596b82" font-size="14">162</text>
+<rect x="147.0" y="167.4189572291384" width="65" height="122.58104277086159" rx="2" fill="#a7bddd"/>
+<text x="179.5" y="159.4189572291384" text-anchor="middle" fill="#172a43" font-size="15" font-weight="600">78</text>
+<rect x="215.0" y="150.13188709478615" width="65" height="139.86811290521385" rx="2" fill="#1f5fbf"/>
+<text x="247.5" y="142.13188709478615" text-anchor="middle" fill="#172a43" font-size="15" font-weight="600">89</text>
+<text x="215.0" y="315" text-anchor="middle" fill="#172a43" font-size="14">Wi-Fi</text>
+<rect x="447.0" y="99.68507333908542" width="65" height="190.31492666091458" rx="2" fill="#a7bddd"/>
+<text x="479.5" y="91.68507333908542" text-anchor="middle" fill="#172a43" font-size="15" font-weight="600">121.1</text>
+<rect x="515.0" y="80.98360655737704" width="65" height="209.01639344262296" rx="2" fill="#1f5fbf"/>
+<text x="547.5" y="72.98360655737704" text-anchor="middle" fill="#172a43" font-size="15" font-weight="600">133</text>
+<text x="515.0" y="315" text-anchor="middle" fill="#172a43" font-size="14">LTE</text>
+<rect x="65" y="379" width="10" height="10" rx="2" fill="#a7bddd"/>
+<text x="82" y="389" fill="#596b82" font-size="13">Mean</text>
+<rect x="275" y="379" width="10" height="10" rx="2" fill="#1f5fbf"/>
+<text x="292" y="389" fill="#596b82" font-size="13">P95</text>
+</svg>
+<figcaption>Notification delivery latency (ms)</figcaption>
+</figure>
+</div>
+<div class="table-wrap" role="region" tabindex="0" aria-label="Model specification and evaluation 1">
+<table>
+<caption>Model specification and evaluation 1</caption>
+<thead>
+<tr>
+<th scope="col">Measurement scope</th>
+<th scope="col">Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Integration tests</td>
+<td>Repeated functional tests excluding MBID</td>
+</tr>
+<tr>
+<td>Latency</td>
+<td>Notification delivery; excludes LLM response</td>
+</tr>
+<tr>
+<td>Pending evidence</td>
+<td>MBID and clinical evaluation results</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="evidence-note">
+<strong>Evaluation conditions and scope</strong>LOSO balanced accuracy: 71%; macro F1: 70%. Mean notification delay: 78.0 ms over Wi-Fi and 121.1 ms over LTE, excluding LLM response time. Camera throughput does not establish heart-rate accuracy or clinical benefit.</div>
+</section>
+<section class="related" id="related">
+<h2>Related publications and research</h2>
+<ul>
+<li>
+<a href="https://github.com/dhkim-kr/neurotruth" target="_blank" rel="noopener noreferrer">Research repository</a>
+</li>
+</ul>
+</section>
+<nav class="next-project" aria-label="More projects">
+<a href="/en/projects/">All projects</a>
+<a href="/en/projects/multiscale-entropy/">Next: Multiscale entropy for short EEG</a>
+</nav>
+</div>
+</div>
+</div>
+</main>
+<footer class="footer" id="contact">
+<div class="wrap">
+<div class="footer-top">
+<div>
+<p class="eyebrow">CONTACT</p>
+<h2>Research & collaboration</h2>
+<a href="mailto:dhkim1016@kw.ac.kr" class="mail">dhkim1016@kw.ac.kr</a>
+<p class="affiliation">NeuroAI Lab, Kwangwoon University<br>Seoul, Republic of Korea</p>
+</div>
+<div class="link-list">
+<a href="https://scholar.google.com/citations?user=CcqJMb0AAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+<a href="https://github.com/dhkim-kr" target="_blank" rel="noopener noreferrer">GitHub</a>
+<a href="https://orcid.org/0009-0005-7105-0894" target="_blank" rel="noopener noreferrer">ORCID</a>
+<a href="https://www.linkedin.com/in/dhkim-kr" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 Dae Hyeon Kim</span>
+<span>Research information as of September 2026</span>
+</div>
+</div>
+</footer>
+</body>
+</html>

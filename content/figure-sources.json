@@ -1,0 +1,40 @@
+{
+  "portfolio": "김대현 연구 포트폴리오, 2026.09.08",
+  "additional": [
+    {
+      "src": "/assets/figures/sgcl-architecture.png",
+      "source": "https://github.com/dhkim-kr/sgcl",
+      "sourcePath": "figures/architecture.png"
+    },
+    {
+      "src": "/assets/figures/sgcl-embeddings.png",
+      "source": "https://github.com/dhkim-kr/sgcl",
+      "sourcePath": "figures/embeddings.png"
+    },
+    {
+      "src": "/assets/figures/sparse-dgcnn-l21-architecture.png",
+      "source": "https://github.com/dhkim-kr/sparse-dgcnn-l21",
+      "sourcePath": "figures/architecture.png"
+    },
+    {
+      "src": "/assets/figures/sparse-dgcnn-l21-edge-density.png",
+      "source": "https://github.com/dhkim-kr/sparse-dgcnn-l21",
+      "sourcePath": "figures/edge-density.png"
+    },
+    {
+      "src": "/assets/figures/idcl-architecture.png",
+      "source": "https://github.com/dhkim-kr/IDCL",
+      "sourcePath": "figures/architecture.png"
+    },
+    {
+      "src": "/assets/figures/idcl-inter-dialog.png",
+      "source": "https://github.com/dhkim-kr/IDCL",
+      "sourcePath": "figures/inter-dialog.png"
+    },
+    {
+      "src": "/assets/figures/axis-ecg-model_architecture.png",
+      "source": "https://github.com/dhkim-kr/axis-ecg",
+      "sourcePath": "model_architecture.png"
+    }
+  ]
+}

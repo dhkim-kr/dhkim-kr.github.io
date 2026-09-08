@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NeuroSync | Dae Hyeon Kim</title>
+<meta name="description" content="Combined Korean LLMs with evidence verification to turn intake conversations into structured clinician handoff records.">
+<link rel="canonical" href="https://dhkim-kr.github.io/en/projects/neurosync/">
+<link rel="alternate" hreflang="ko" href="https://dhkim-kr.github.io/projects/neurosync/">
+<link rel="alternate" hreflang="en" href="https://dhkim-kr.github.io/en/projects/neurosync/">
+<link rel="alternate" hreflang="x-default" href="https://dhkim-kr.github.io/projects/neurosync/">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:title" content="NeuroSync">
+<meta property="og:description" content="Combined Korean LLMs with evidence verification to turn intake conversations into structured clinician handoff records.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dhkim-kr.github.io/en/projects/neurosync/">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/site.css">
+<script src="/assets/site.js" defer>
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="wrap header-inner">
+<a class="brand" href="/en/">Dae Hyeon Kim <span>RESEARCH</span>
+</a>
+<button class="menu-button" type="button" aria-expanded="false" aria-controls="main-nav">Menu</button>
+<nav class="main-nav" id="main-nav" aria-label="Main navigation">
+<a href="/en/#about">About</a>
+<a href="/en/projects/">Projects</a>
+<a href="/en/publications/">Publications</a>
+<a href="/en/#experience">Experience</a>
+<a href="/en/#contact">Contact</a>
+</nav>
+<a class="language" href="/projects/neurosync/" lang="ko" hreflang="ko" aria-label="한국어로 보기">한국어</a>
+</div>
+</header>
+<main id="main">
+<div class="wrap">
+<div class="page-intro">
+<div class="breadcrumb">
+<a href="/en/">Home</a>
+<span>/</span>
+<span>Projects</span>
+</div>
+<h1>NeuroSync</h1>
+<p class="lead">Combined Korean LLMs with evidence verification to turn intake conversations into structured clinician handoff records.</p>
+</div>
+<div class="link-list">
+<a href="https://github.com/dhkim-kr/neurosync" target="_blank" rel="noopener noreferrer">GitHub: neurosync</a>
+</div>
+<dl class="detail-meta">
+<div>
+<dt>Role</dt>
+<dd>Method design and core implementation</dd>
+</div>
+<div>
+<dt>Contribution</dt>
+<dd>Implemented multi-agent orchestration, retrieval and evidence verification. Integrated the patient app, clinician web interface and backend.</dd>
+</div>
+<div>
+<dt>Period & affiliation</dt>
+<dd>2026.03 ~ Present NeuroSync</dd>
+</div>
+</dl>
+<div class="detail-layout">
+<aside class="detail-toc">
+<p>On this page</p>
+<a href="#stage-1">01 NeuroSync</a>
+<a href="#stage-2">02 NeuroSync</a>
+<a href="#related">Related work</a>
+</aside>
+<div class="detail-body">
+<section class="detail-stage" id="stage-1">
+<h2>
+<span class="section-number">01 / RESEARCH DETAIL</span>NeuroSync: intake, retrieval and clinician handoff</h2>
+<dl class="arguments">
+<dt>Problem / context</dt>
+<dd>Free dialogue must populate clinical slots without allowing unsupported values into the handoff record.</dd>
+<dt>Approach</dt>
+<dd>A rule-based state machine runs 10 specialist agents. Scales use deterministic scoring, and final records undergo source and evidence checks.</dd>
+<dt>Contribution / next steps</dt>
+<dd>Implemented orchestration, RAG and verification logic and integrated the patient app, clinician interface and backend.</dd>
+</dl>
+<div class="evidence-gallery">
+<figure>
+<a class="figure-link" href="/assets/figures/slide-35-1.png" target="_blank" rel="noopener" aria-label="Enlarge figure: NeuroSync: intake, retrieval and clinician handoff: source figure 1">
+<img src="/assets/figures/slide-35-1.png" alt="NeuroSync: intake, retrieval and clinician handoff: source figure 1" loading="lazy">
+</a>
+<figcaption>NeuroSync: intake, retrieval and clinician handoff: source figure 1<br>
+<a href="/assets/figures/slide-35-1.png">View full-size figure</a>
+</figcaption>
+</figure>
+<figure>
+<a class="figure-link" href="/assets/figures/slide-35-2.png" target="_blank" rel="noopener" aria-label="Enlarge figure: NeuroSync: intake, retrieval and clinician handoff: source figure 2">
+<img src="/assets/figures/slide-35-2.png" alt="NeuroSync: intake, retrieval and clinician handoff: source figure 2" loading="lazy">
+</a>
+<figcaption>NeuroSync: intake, retrieval and clinician handoff: source figure 2<br>
+<a href="/assets/figures/slide-35-2.png">View full-size figure</a>
+</figcaption>
+</figure>
+</div>
+<div class="table-wrap" role="region" tabindex="0" aria-label="Model specification and evaluation 1">
+<table>
+<caption>Model specification and evaluation 1</caption>
+<thead>
+<tr>
+<th scope="col">Component</th>
+<th scope="col">Implementation scope</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Korean models</td>
+<td>Solar Pro 3, K-EXAONE, A.X K1</td>
+</tr>
+<tr>
+<td>Retrieval corpus</td>
+<td>1,248 clinical cases, 1,789 QA entries</td>
+</tr>
+<tr>
+<td>Services</td>
+<td>FastAPI, PostgreSQL, Expo, Next.js</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="evidence-note">
+<strong>Evaluation conditions and scope</strong>The architecture and screens document an AI Champion prototype for clinician handoff support. It does not establish diagnoses.</div>
+</section>
+<section class="detail-stage" id="stage-2">
+<h2>
+<span class="section-number">02 / RESEARCH DETAIL</span>NeuroSync: output reliability and inference cost</h2>
+<dl class="arguments">
+<dt>Problem / context</dt>
+<dd>Verification blocked 337 unsupported candidates before final output and improved slot coverage and scale assignment.</dd>
+<dt>Approach</dt>
+<dd>The pre-filter unsupported-candidate ratio rose from 46.4% to 55.2%, exposing limitations at the generation stage despite final-output verification.</dd>
+<dt>Contribution / next steps</dt>
+<dd>Further work concerns reducing calls and tokens and obtaining specialist assessment and clinical proof-of-concept evidence.</dd>
+</dl>
+<div class="chart-set">
+<figure class="chart-figure">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 410" role="img" aria-labelledby="chart-36-0" aria-describedby="chart-desc-36-0">
+<title id="chart-36-0">Structured intake performance (%)</title>
+<desc id="chart-desc-36-0">Single backbone: Scale assignment 23.8, Slot coverage 55.6; NeuroSync: Scale assignment 73.0, Slot coverage 98.4</desc>
+<rect width="680" height="410" fill="white"/>
+<line x1="65" y1="290.0" x2="665" y2="290.0" stroke="#dce5f1"/>
+<text x="55" y="295.0" text-anchor="end" fill="#596b82" font-size="14">0</text>
+<line x1="65" y1="226.25" x2="665" y2="226.25" stroke="#dce5f1"/>
+<text x="55" y="231.25" text-anchor="end" fill="#596b82" font-size="14">25</text>
+<line x1="65" y1="162.5" x2="665" y2="162.5" stroke="#dce5f1"/>
+<text x="55" y="167.5" text-anchor="end" fill="#596b82" font-size="14">50</text>
+<line x1="65" y1="98.75" x2="665" y2="98.75" stroke="#dce5f1"/>
+<text x="55" y="103.75" text-anchor="end" fill="#596b82" font-size="14">75</text>
+<line x1="65" y1="35.0" x2="665" y2="35.0" stroke="#dce5f1"/>
+<text x="55" y="40.0" text-anchor="end" fill="#596b82" font-size="14">100</text>
+<rect x="147.0" y="229.31" width="65" height="60.690000000000005" rx="2" fill="#a7bddd"/>
+<text x="179.5" y="221.31" text-anchor="middle" fill="#172a43" font-size="15" font-weight="600">23.8</text>
+<rect x="215.0" y="103.85" width="65" height="186.15" rx="2" fill="#1f5fbf"/>
+<text x="247.5" y="95.85" text-anchor="middle" fill="#172a43" font-size="15" font-weight="600">73</text>
+<text x="215.0" y="315" text-anchor="middle" fill="#172a43" font-size="14">Scale assignment</text>
+<rect x="447.0" y="148.22" width="65" height="141.78" rx="2" fill="#a7bddd"/>
+<text x="479.5" y="140.22" text-anchor="middle" fill="#172a43" font-size="15" font-weight="600">55.6</text>
+<rect x="515.0" y="39.079999999999984" width="65" height="250.92000000000002" rx="2" fill="#1f5fbf"/>
+<text x="547.5" y="31.079999999999984" text-anchor="middle" fill="#172a43" font-size="15" font-weight="600">98.4</text>
+<text x="515.0" y="315" text-anchor="middle" fill="#172a43" font-size="14">Slot coverage</text>
+<rect x="65" y="379" width="10" height="10" rx="2" fill="#a7bddd"/>
+<text x="82" y="389" fill="#596b82" font-size="13">Single backbone</text>
+<rect x="275" y="379" width="10" height="10" rx="2" fill="#1f5fbf"/>
+<text x="292" y="389" fill="#596b82" font-size="13">NeuroSync</text>
+</svg>
+<figcaption>Structured intake performance (%)</figcaption>
+</figure>
+<figure class="chart-figure">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 410" role="img" aria-labelledby="chart-36-1" aria-describedby="chart-desc-36-1">
+<title id="chart-36-1">Unsupported final values (count)</title>
+<desc id="chart-desc-36-1">Final output: Single backbone 39.0, NeuroSync 0.0</desc>
+<rect width="680" height="410" fill="white"/>
+<line x1="65" y1="290.0" x2="665" y2="290.0" stroke="#dce5f1"/>
+<text x="55" y="295.0" text-anchor="end" fill="#596b82" font-size="14">0</text>
+<line x1="65" y1="226.25" x2="665" y2="226.25" stroke="#dce5f1"/>
+<text x="55" y="231.25" text-anchor="end" fill="#596b82" font-size="14">12</text>
+<line x1="65" y1="162.5" x2="665" y2="162.5" stroke="#dce5f1"/>
+<text x="55" y="167.5" text-anchor="end" fill="#596b82" font-size="14">24</text>
+<line x1="65" y1="98.75" x2="665" y2="98.75" stroke="#dce5f1"/>
+<text x="55" y="103.75" text-anchor="end" fill="#596b82" font-size="14">36</text>
+<line x1="65" y1="35.0" x2="665" y2="35.0" stroke="#dce5f1"/>
+<text x="55" y="40.0" text-anchor="end" fill="#596b82" font-size="14">48</text>
+<rect x="181.0" y="80.98360655737704" width="65" height="209.01639344262296" rx="2" fill="#a7bddd"/>
+<text x="213.5" y="72.98360655737704" text-anchor="middle" fill="#172a43" font-size="15" font-weight="600">39</text>
+<text x="215.0" y="315" text-anchor="middle" fill="#172a43" font-size="14">Single backbone</text>
+<rect x="481.0" y="290.0" width="65" height="0.0" rx="2" fill="#a7bddd"/>
+<text x="513.5" y="282.0" text-anchor="middle" fill="#172a43" font-size="15" font-weight="600">0</text>
+<text x="515.0" y="315" text-anchor="middle" fill="#172a43" font-size="14">NeuroSync</text>
+<rect x="65" y="379" width="10" height="10" rx="2" fill="#a7bddd"/>
+<text x="82" y="389" fill="#596b82" font-size="13">Final output</text>
+</svg>
+<figcaption>Unsupported final values (count)</figcaption>
+</figure>
+<figure class="chart-figure">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 410" role="img" aria-labelledby="chart-36-2" aria-describedby="chart-desc-36-2">
+<title id="chart-36-2">Cumulative waiting time per turn (s)</title>
+<desc id="chart-desc-36-2">Cumulative waiting time: Single backbone 4.16, NeuroSync 9.04</desc>
+<rect width="680" height="410" fill="white"/>
+<line x1="65" y1="290.0" x2="665" y2="290.0" stroke="#dce5f1"/>
+<text x="55" y="295.0" text-anchor="end" fill="#596b82" font-size="14">0</text>
+<line x1="65" y1="226.25" x2="665" y2="226.25" stroke="#dce5f1"/>
+<text x="55" y="231.25" text-anchor="end" fill="#596b82" font-size="14">3</text>
+<line x1="65" y1="162.5" x2="665" y2="162.5" stroke="#dce5f1"/>
+<text x="55" y="167.5" text-anchor="end" fill="#596b82" font-size="14">6</text>
+<line x1="65" y1="98.75" x2="665" y2="98.75" stroke="#dce5f1"/>
+<text x="55" y="103.75" text-anchor="end" fill="#596b82" font-size="14">8</text>
+<line x1="65" y1="35.0" x2="665" y2="35.0" stroke="#dce5f1"/>
+<text x="55" y="40.0" text-anchor="end" fill="#596b82" font-size="14">11</text>
+<rect x="181.0" y="193.81546496445668" width="65" height="96.18453503554332" rx="2" fill="#a7bddd"/>
+<text x="213.5" y="185.81546496445668" text-anchor="middle" fill="#172a43" font-size="15" font-weight="600">4.16</text>
+<text x="215.0" y="315" text-anchor="middle" fill="#172a43" font-size="14">Single backbone</text>
+<rect x="481.0" y="80.98360655737704" width="65" height="209.01639344262296" rx="2" fill="#a7bddd"/>
+<text x="513.5" y="72.98360655737704" text-anchor="middle" fill="#172a43" font-size="15" font-weight="600">9.04</text>
+<text x="515.0" y="315" text-anchor="middle" fill="#172a43" font-size="14">NeuroSync</text>
+<rect x="65" y="379" width="10" height="10" rx="2" fill="#a7bddd"/>
+<text x="82" y="389" fill="#596b82" font-size="13">Cumulative waiting time</text>
+</svg>
+<figcaption>Cumulative waiting time per turn (s)</figcaption>
+</figure>
+</div>
+<div class="table-wrap" role="region" tabindex="0" aria-label="Model specification and evaluation 1">
+<table>
+<caption>Model specification and evaluation 1</caption>
+<thead>
+<tr>
+<th scope="col">Metric</th>
+<th scope="col">Single backbone</th>
+<th scope="col">NeuroSync</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tokens per session</td>
+<td>30,514</td>
+<td>125,933</td>
+</tr>
+<tr>
+<td>Sessions with unsupported outputs</td>
+<td>54.2%</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>Full evaluation</td>
+<td>8 personas</td>
+<td>384 sessions</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="evidence-note">
+<strong>Evaluation conditions and scope</strong>384 synthetic sessions in total, with 144 in the direct comparison. Slot coverage improved from 55.6% to 98.4%; cumulative turn waiting time increased from 4.16 to 9.04 seconds. These are synthetic evaluations, not clinical outcomes.</div>
+</section>
+<section class="related" id="related">
+<h2>Related publications and research</h2>
+<ul>
+<li>
+<a href="https://github.com/dhkim-kr/neurosync" target="_blank" rel="noopener noreferrer">Research repository</a>
+</li>
+</ul>
+</section>
+<nav class="next-project" aria-label="More projects">
+<a href="/en/projects/">All projects</a>
+<a href="/en/projects/neurotruth/">Next: NeuroTruth</a>
+</nav>
+</div>
+</div>
+</div>
+</main>
+<footer class="footer" id="contact">
+<div class="wrap">
+<div class="footer-top">
+<div>
+<p class="eyebrow">CONTACT</p>
+<h2>Research & collaboration</h2>
+<a href="mailto:dhkim1016@kw.ac.kr" class="mail">dhkim1016@kw.ac.kr</a>
+<p class="affiliation">NeuroAI Lab, Kwangwoon University<br>Seoul, Republic of Korea</p>
+</div>
+<div class="link-list">
+<a href="https://scholar.google.com/citations?user=CcqJMb0AAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+<a href="https://github.com/dhkim-kr" target="_blank" rel="noopener noreferrer">GitHub</a>
+<a href="https://orcid.org/0009-0005-7105-0894" target="_blank" rel="noopener noreferrer">ORCID</a>
+<a href="https://www.linkedin.com/in/dhkim-kr" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 Dae Hyeon Kim</span>
+<span>Research information as of September 2026</span>
+</div>
+</div>
+</footer>
+</body>
+</html>

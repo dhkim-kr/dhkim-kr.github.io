@@ -1,0 +1,2851 @@
+[
+  {
+    "slug": "alcohol-craving",
+    "short": {
+      "ko": "갈망 생리지표",
+      "en": "Alcohol craving physiomarkers"
+    },
+    "title": {
+      "ko": "물질중독환자의 행동패턴 분석을 통한 실시간 개인맞춤형 갈망 중재 기술 개발",
+      "en": "Alcohol craving physiomarkers"
+    },
+    "category": "Clinical biosignals",
+    "coverSlide": 10,
+    "summary": {
+      "ko": "개인별 생체 반응 차이를 분석해 알코올 갈망의 후보 지표를 선별했다."
+    },
+    "role": {
+      "ko": "기술 세부과제 리드"
+    },
+    "work": {
+      "ko": "2개 병원 IRB 및 수집 프로토콜 설계 생체신호 품질 검사, 통계 분석, 공인시험 대응"
+    },
+    "scope": {
+      "ko": "ECG, PPG, EDA 임상 수집 환자와 대조군 100명 이상"
+    },
+    "status": {
+      "ko": "50명 확장 분석, JBHI 투고"
+    },
+    "date": "2024.04 ~ 현재 광운대학교 NeuroAI Lab",
+    "links": [
+      [
+        "연구 자료",
+        "https://github.com/dhkim-kr/alcohol-craving-study"
+      ]
+    ],
+    "stages": [
+      {
+        "slide": 11,
+        "title": "개인별 갈망 반응 탐색 / 초기 연구와 확장 연구를 구분",
+        "arguments": [
+          {
+            "label": "난제",
+            "text": "갈망 반응의 크기와 방향이 개인마다 달라 단일 지표로 전체 환자를 설명하기 어려움"
+          },
+          {
+            "label": "아이디어",
+            "text": "영상 자극, 설문, 생체신호를 동기화하고 개인별 상관과 갈망 단계별 변화 비교"
+          },
+          {
+            "label": "기여",
+            "text": "2개 병원 수집 프로토콜과 품질 검사 설계 확장 코호트에서 LMM 및 SHAP 분석 수행"
+          }
+        ],
+        "note": "그림은 2025년 초기 연구 2편. 50명 확장 연구는 별도 분석이며 JBHI 투고 자료 기준",
+        "figures": [
+          {
+            "src": "/assets/figures/slide-11-1.png",
+            "alt": "",
+            "x": 59.09,
+            "y": 236.06,
+            "cx": 489.82,
+            "cy": 307.88,
+            "caption": "11명 탐색: 개인별 상관 상위 25개 특징"
+          },
+          {
+            "src": "/assets/figures/slide-11-2.png",
+            "alt": "",
+            "x": 590.0,
+            "y": 255.44,
+            "cx": 460.0,
+            "cy": 269.12,
+            "caption": "6명 7세션 연구: ECG 및 PPG 심박수"
+          },
+          {
+            "src": "/assets/figures/slide-11-3.png",
+            "alt": "",
+            "x": 1086.0,
+            "y": 255.44,
+            "cx": 460.0,
+            "cy": 269.12,
+            "caption": "같은 연구의 다른 참여자 예시"
+          }
+        ],
+        "tables": [
+          {
+            "rows": [
+              [
+                {
+                  "text": "연구 범위",
+                  "links": []
+                },
+                {
+                  "text": "규모 / 분석",
+                  "links": []
+                }
+              ],
+              [
+                {
+                  "text": "전체 수집",
+                  "links": []
+                },
+                {
+                  "text": "환자 및 대조군 100명 이상",
+                  "links": []
+                }
+              ],
+              [
+                {
+                  "text": "확장 연구",
+                  "links": []
+                },
+                {
+                  "text": "AUD 환자 50명, 1,697 trial",
+                  "links": []
+                }
+              ],
+              [
+                {
+                  "text": "특징 분석",
+                  "links": []
+                },
+                {
+                  "text": "10초 구간, 생리 특징 152개",
+                  "links": []
+                }
+              ]
+            ],
+            "x": 940.0,
+            "y": 614.0,
+            "cx": 606.0,
+            "cy": 179.0
+          }
+        ],
+        "charts": [],
+        "heads": [
+          "생체 특징과 갈망 수준의 관계",
+          "참여자 #3 심박 반응",
+          "참여자 #5 심박 반응"
+        ],
+        "overview": []
+      }
+    ],
+    "metrics": [
+      "100명+",
+      "50명 / 1,697 trial"
+    ],
+    "thumbnail": "/assets/figures/slide-11-1.png"
+  },
+  {
+    "slug": "eeg-graph-learning",
+    "short": {
+      "ko": "EEG 그래프 학습과 경량 디코딩",
+      "en": "EEG graph learning and compact decoding"
+    },
+    "title": {
+      "ko": "인간의 신경계를 모사한 뉴로칩 설계 기술 및 뉴로컴퓨팅 플랫폼 연구개발",
+      "en": "EEG graph learning and compact decoding"
+    },
+    "category": "Graph learning",
+    "coverSlide": 12,
+    "summary": {
+      "ko": "소량 레이블의 그래프 학습과 경량 시간 모델로 EEG 상태를 분류했다."
+    },
+    "role": {
+      "ko": "EEG 연구 리드"
+    },
+    "work": {
+      "ko": "SGCL, ASGCRL, SimNeXt-EEG 방법 설계 모델 구현, 비교 실험, 제1저자 논문 작성"
+    },
+    "scope": {
+      "ko": "EEG 감정 인식과 운동상상 분류 희소 그래프, 대조학습, 시간 어텐션"
+    },
+    "status": {
+      "ko": "EAAI 2025, KBS 2026, IEEE SPL 2026"
+    },
+    "date": "2022.07 ~ 현재 ITRC",
+    "links": [
+      [
+        "ASGCRL 코드",
+        "https://github.com/dhkim-kr/ASGCRL"
+      ],
+      [
+        "KBS 논문 DOI",
+        "https://doi.org/10.1016/j.knosys.2026.115638"
+      ],
+      [
+        "SGCL 논문 DOI",
+        "https://doi.org/10.1016/j.engappai.2025.111969"
+      ]
+    ],
+    "stages": [
+      {
+        "slide": 13,
+        "title": "ASGCRL / 고정 그래프의 잡음 연결을 줄이는 적응형 대조학습",
+        "arguments": [
+          {
+            "label": "난제",
+            "text": "고정 유사도 그래프의 잘못된 연결이 소량 레이블 학습에서 오차를 전파"
+          },
+          {
+            "label": "해결",
+            "text": "표현에 따라 연결을 갱신하고, 적응형 증강으로 같은 클래스 관계를 유지하며 대조학습"
+          },
+          {
+            "label": "기여",
+            "text": "방법 설계, 모델 구현, 절제 실험 및 논문 작성 KBS 2026 제1저자, SGCL 후속 연구"
+          }
+        ],
+        "note": "레이블 2.4% 조건, 피험자별 transductive 평가. 임베딩 그림의 개인별 정확도와 전체 평균을 구분",
+        "figures": [
+          {
+            "src": "/assets/figures/slide-13-1.png",
+            "alt": "",
+            "x": 123.49,
+            "y": 236.0,
+            "cx": 689.02,
+            "cy": 308.0,
+            "caption": "원본 모델: 적응형 그래프, 레이블 기반 증강, 대조 손실"
+          },
+          {
+            "src": "/assets/figures/slide-13-2.png",
+            "alt": "",
+            "x": 924.0,
+            "y": 246.02,
+            "cx": 296.0,
+            "cy": 277.97,
+            "caption": "참여자 #15 예시: (a) Static GCN / (d) ASGCRL"
+          },
+          {
+            "src": "/assets/figures/slide-13-3.png",
+            "alt": "",
+            "x": 1260.23,
+            "y": 231.0,
+            "cx": 275.54,
+            "cy": 308.0,
+            "caption": "참여자 #15 예시: (a) Static GCN / (d) ASGCRL"
+          }
+        ],
+        "tables": [
+          {
+            "rows": [
+              [
+                {
+                  "text": "SEED-IV Case 1",
+                  "links": []
+                },
+                {
+                  "text": "정확도",
+                  "links": []
+                }
+              ],
+              [
+                {
+                  "text": "Static GCN",
+                  "links": []
+                },
+                {
+                  "text": "75.75 ± 8.95%",
+                  "links": []
+                }
+              ],
+              [
+                {
+                  "text": "ASGCRL",
+                  "links": []
+                },
+                {
+                  "text": "87.31 ± 3.84%",
+                  "links": []
+                }
+              ],
+              [
+                {
+                  "text": "동일 조건 차이",
+                  "links": []
+                },
+                {
+                  "text": "+11.56%p",
+                  "links": []
+                }
+              ]
+            ],
+            "x": 940.0,
+            "y": 620.0,
+            "cx": 606.0,
+            "cy": 177.0
+          }
+        ],
+        "charts": [],
+        "heads": [
+          "표현과 그래프를 함께 갱신",
+          "클래스 관계 변화와 절제 실험"
+        ],
+        "overview": []
+      },
+      {
+        "slide": 14,
+        "title": "SimNeXt-EEG / 다중 시간척도와 파라미터 없는 시간 어텐션",
+        "arguments": [
+          {
+            "label": "난제",
+            "text": "운동상상 EEG의 시간척도 차이와 잡음을 작은 모델에서 함께 처리해야 함"
+          },
+          {
+            "label": "해결",
+            "text": "다중 커널로 시간 특징을 추출하고, 평균과 분산에 기반한 SimAM으로 시간별 중요도 재조정"
+          },
+          {
+            "label": "기여",
+            "text": "모델 설계, 정확도 및 CPU 지연 측정, 절제 실험 IEEE SPL 2026 제1저자"
+          }
+        ],
+        "note": "SimNeXt 70.81 ± 0.49%, 20.69 MFLOPs. 데스크톱 CPU, batch size 1. 두 SimAM 제거 시 68.26%",
+        "figures": [],
+        "tables": [
+          {
+            "rows": [
+              [
+                {
+                  "text": "단계",
+                  "links": []
+                },
+                {
+                  "text": "연산 / 출력",
+                  "links": []
+                }
+              ],
+              [
+                {
+                  "text": "MSTF",
+                  "links": []
+                },
+                {
+                  "text": "시간 커널 32, 80 / 8채널",
+                  "links": []
+                }
+              ],
+              [
+                {
+                  "text": "STE",
+                  "links": []
+                },
+                {
+                  "text": "공간 분리합성곱 + SimAM",
+                  "links": []
+                }
+              ],
+              [
+                {
+                  "text": "STR",
+                  "links": []
+                },
+                {
+                  "text": "시간 분리합성곱 + SimAM",
+                  "links": []
+                }
+              ],
+              [
+                {
+                  "text": "분류",
+                  "links": []
+                },
+                {
+                  "text": "Flatten, Linear / 4클래스",
+                  "links": []
+                }
+              ]
+            ],
+            "x": 54.0,
+            "y": 236.0,
+            "cx": 471.0,
+            "cy": 301.0
+          },
+          {
+            "rows": [
+              [
+                {
+                  "text": "모델",
+                  "links": []
+                },
+                {
+                  "text": "파라미터",
+                  "links": []
+                },
+                {
+                  "text": "CPU 지연",
+                  "links": []
+                }
+              ],
+              [
+                {
+                  "text": "EEGNet",
+                  "links": []
+                },
+                {
+                  "text": "3.44K",
+                  "links": []
+                },
+                {
+                  "text": "0.79 ms",
+                  "links": []
+                }
+              ],
+              [
+                {
+                  "text": "MSVTNet",
+                  "links": []
+                },
+                {
+                  "text": "75.49K",
+                  "links": []
+                },
+                {
+                  "text": "3.78 ms",
+                  "links": []
+                }
+              ],
+              [
+                {
+                  "text": "SimNeXt",
+                  "links": []
+                },
+                {
+                  "text": "1.84K",
+                  "links": []
+                },
+                {
+                  "text": "1.46 ms",
+                  "links": []
+                }
+              ]
+            ],
+            "x": 940.0,
+            "y": 614.0,
+            "cx": 606.0,
+            "cy": 179.0
+          }
+        ],
+        "charts": [
+          {
+            "series": [
+              {
+                "name": "정확도",
+                "categories": [
+                  "EEGNet",
+                  "MSVTNet",
+                  "SimNeXt"
+                ],
+                "values": [
+                  58.6,
+                  65.93,
+                  70.81
+                ]
+              }
+            ],
+            "x": 555.0,
+            "y": 229.0,
+            "cx": 481.0,
+            "cy": 324.0,
+            "title": "분류 정확도 (%)"
+          },
+          {
+            "series": [
+              {
+                "name": "정확도",
+                "categories": [
+                  "두 모듈 제거",
+                  "전체"
+                ],
+                "values": [
+                  68.26,
+                  70.81
+                ]
+              }
+            ],
+            "x": 1071.0,
+            "y": 229.0,
+            "cx": 475.0,
+            "cy": 324.0,
+            "title": "시간 어텐션 절제 (%)"
+          }
+        ],
+        "heads": [
+          "모델의 연산 흐름",
+          "분류 정확도 (%)",
+          "시간 어텐션 절제 (%)"
+        ],
+        "overview": []
+      }
+    ],
+    "metrics": [
+      "1.84K",
+      "70.81%"
+    ],
+    "thumbnail": "/assets/figures/slide-13-1.png"
+  },
+  {
+    "slug": "multimodal-emotion",
+    "short": {
+      "ko": "다중모달 감정 인식",
+      "en": "Multimodal emotion recognition"
+    },
+    "title": {
+      "ko": "비대면 환경 사용자의 정량적 감정-감성 평가모델 개발 및 양방향 디지털콘텐츠 적용 상용화",
+      "en": "Multimodal emotion recognition"
+    },
+    "category": "Multimodal learning",
+    "coverSlide": 15,
+    "summary": {
+      "ko": "노년층 발화 데이터를 구축하고 음성 및 텍스트의 그래프 융합을 평가했다."
+    },
+    "role": {
+      "ko": "기술 세부과제 리드"
+    },
+    "work": {
+      "ko": "IRB 및 감정 유발 프로토콜 설계 다중모달 모델 개발, 성능 평가, 기업 기술이전"
+    },
+    "scope": {
+      "ko": "전체 80명 이상 다중모달 수집 노년층 발화 실험 24명"
+    },
+    "status": {
+      "ko": "기술이전 2,000만원, 우수포스터상"
+    },
+    "date": "2023.04 ~ 2025.12 IITP",
+    "links": [
+      [
+        "후속 감정 인식 코드",
+        "https://github.com/dhkim-kr/emotionheart"
+      ]
+    ],
+    "stages": [
+      {
+        "slide": 16,
+        "title": "노년층 감정 발화 / 수집부터 전사 오류의 영향 분석까지",
+        "arguments": [
+          {
+            "label": "난제",
+            "text": "노년층 발화 특성과 전사 오류가 텍스트 중심 감정 분류에 미치는 영향 확인 필요"
+          },
+          {
+            "label": "해결",
+            "text": "고정 문장 발화를 수집하고 음성, 원문, 전사문을 동일한 피험자 독립 분할에서 비교"
+          },
+          {
+            "label": "기여",
+            "text": "IRB 및 감정 유발 프로토콜 설계, 모델 공동 개발 전체 과제 데이터 구축과 기업 기술이전 대응"
+          }
+        ],
+        "note": "고정 문장 발화 실험의 결과. 전체 과제는 80명 이상 수집, 기술이전 2,000만원",
+        "figures": [
+          {
+            "src": "/assets/figures/slide-16-1.png",
+            "alt": "",
+            "x": 174.87,
+            "y": 236.0,
+            "cx": 228.26,
+            "cy": 308.0,
+            "caption": "KOSOMBE 2024 원본 모델 구조"
+          }
+        ],
+        "tables": [
+          {
+            "rows": [
+              [
+                {
+                  "text": "수집 / 평가",
+                  "links": []
+                },
+                {
+                  "text": "실험 조건",
+                  "links": []
+                }
+              ],
+              [
+                {
+                  "text": "노년층 실험",
+                  "links": []
+                },
+                {
+                  "text": "24명, 66 ~ 81세",
+                  "links": []
+                }
+              ],
+              [
+                {
+                  "text": "발화 구성",
+                  "links": []
+                },
+                {
+                  "text": "7개 감정, 1,512개 발화",
+                  "links": []
+                }
+              ],
+              [
+                {
+                  "text": "평가 / 산출물",
+                  "links": []
+                },
+                {
+                  "text": "피험자 독립 4-fold / 우수포스터상",
+                  "links": []
+                }
+              ]
+            ],
+            "x": 940.0,
+            "y": 614.0,
+            "cx": 606.0,
+            "cy": 179.0
+          }
+        ],
+        "charts": [
+          {
+            "series": [
+              {
+                "name": "원본 텍스트",
+                "categories": [
+                  "텍스트 단독",
+                  "음성 + 텍스트"
+                ],
+                "values": [
+                  92.33,
+                  92.33
+                ]
+              },
+              {
+                "name": "전사 텍스트",
+                "categories": [
+                  "텍스트 단독",
+                  "음성 + 텍스트"
+                ],
+                "values": [
+                  81.64,
+                  81.38
+                ]
+              }
+            ],
+            "x": 565.0,
+            "y": 229.0,
+            "cx": 981.0,
+            "cy": 320.0,
+            "title": "텍스트 변환 전후 Weighted F1 (%)"
+          }
+        ],
+        "heads": [
+          "음성 및 텍스트의 그래프 융합",
+          "텍스트 변환 전후 Weighted F1 (%)"
+        ],
+        "overview": []
+      },
+      {
+        "slide": 17,
+        "title": "EmotionHeart / 대화 관계 학습과 모달 결손 대응",
+        "arguments": [
+          {
+            "label": "난제",
+            "text": "화자 관계와 모달 간 차이를 함께 반영하고 특정 입력이 빠진 상황에서도 문맥 유지 필요"
+          },
+          {
+            "label": "해결",
+            "text": "화자 내부, 화자 간, 모달 간 관계를 구분해 인코딩 증강 없는 대조 정렬로 입력 간 의미 차이 축소"
+          },
+          {
+            "label": "기여",
+            "text": "이종 그래프와 정렬 손실 설계, 모달 결손 평가 ICASSP 2026 제1저자"
+          }
+        ],
+        "note": "Weighted F1 (%). 전체 입력 기준 모델은 Transformer, 음성만 조건은 GRACE. 10회 랜덤 분할 평균",
+        "figures": [
+          {
+            "src": "/assets/figures/slide-17-1.png",
+            "alt": "",
+            "x": 54.0,
+            "y": 272.64,
+            "cx": 885.0,
+            "cy": 234.71,
+            "caption": "원본 구조: Heterogeneous Graph Transformer와 모달 정렬"
+          },
+          {
+            "src": "/assets/figures/slide-17-2.png",
+            "alt": "",
+            "x": 983.0,
+            "y": 283.1,
+            "cx": 563.0,
+            "cy": 213.8,
+            "caption": "초기 / GCL 제거 / EmotionHeart 임베딩 비교"
+          }
+        ],
+        "tables": [
+          {
+            "rows": [
+              [
+                {
+                  "text": "평가 조건",
+                  "links": []
+                },
+                {
+                  "text": "기준 모델",
+                  "links": []
+                },
+                {
+                  "text": "제안 모델",
+                  "links": []
+                }
+              ],
+              [
+                {
+                  "text": "IEMOCAP 전체",
+                  "links": []
+                },
+                {
+                  "text": "68.99",
+                  "links": []
+                },
+                {
+                  "text": "73.13",
+                  "links": []
+                }
+              ],
+              [
+                {
+                  "text": "MELD 전체",
+                  "links": []
+                },
+                {
+                  "text": "66.75",
+                  "links": []
+                },
+                {
+                  "text": "68.99",
+                  "links": []
+                }
+              ],
+              [
+                {
+                  "text": "IEMOCAP 음성만",
+                  "links": []
+                },
+                {
+                  "text": "54.09",
+                  "links": []
+                },
+                {
+                  "text": "60.26",
+                  "links": []
+                }
+              ]
+            ],
+            "x": 940.0,
+            "y": 614.0,
+            "cx": 606.0,
+            "cy": 179.0
+          }
+        ],
+        "charts": [],
+        "heads": [
+          "화자 관계와 모달 간 대조 정렬",
+          "표현 공간의 변화"
+        ],
+        "overview": []
+      }
+    ],
+    "metrics": [
+      "24명",
+      "73.13 w.F1"
+    ],
+    "thumbnail": "/assets/figures/slide-16-1.png"
+  },
+  {
+    "slug": "time-series-fusion",
+    "short": {
+      "ko": "시계열 데이터 융합",
+      "en": "Multimodal time-series fusion"
+    },
+    "title": {
+      "ko": "파편화된 데이터의 적극 활용을 위한 시계열 기반 통합 플랫폼 기술 개발",
+      "en": "Multimodal time-series fusion"
+    },
+    "category": "Graph learning",
+    "coverSlide": 18,
+    "summary": {
+      "ko": "신호별 유사도 네트워크를 융합해 적은 레이블로 다중모달 특징을 학습했다."
+    },
+    "role": {
+      "ko": "기술 세부과제 리드"
+    },
+    "work": {
+      "ko": "이종 그래프 융합, 시차 의존성 및 이상탐지 연구 성능 평가, 공인시험, 지식재산 산출물 대응"
+    },
+    "scope": {
+      "ko": "EEG, EDA, PPG 특징 융합 준지도 그래프 신경망"
+    },
+    "status": {
+      "ko": "공인시험 2건, 특허 출원 1건, SW 등록 3건"
+    },
+    "date": "2022.03 ~ 2023.12 IITP",
+    "links": [
+      [
+        "GitHub 프로필",
+        "https://github.com/dhkim-kr"
+      ]
+    ],
+    "stages": [
+      {
+        "slide": 19,
+        "title": "MSGCN / 신호 내부와 신호 간 유사도를 단계적으로 융합",
+        "arguments": [
+          {
+            "label": "난제",
+            "text": "모달별 특징 공간과 레이블 확보량이 달라 단순 연결만으로 관계를 반영하기 어려움"
+          },
+          {
+            "label": "해결",
+            "text": "신호 내부의 DE 및 PSD 유사도를 먼저 통합하고 신호 간 유사도를 확산한 뒤 GCN으로 분류"
+          },
+          {
+            "label": "기여",
+            "text": "이종 그래프 융합 및 준지도 모델 개발 공인시험과 지식재산 산출물 대응"
+          }
+        ],
+        "note": "감정가 97.37 ± 1.75%, 자극 97.38 ± 1.68%. 피험자별 transductive 평가, 특허는 출원 상태",
+        "figures": [
+          {
+            "src": "/assets/figures/slide-19-1.png",
+            "alt": "",
+            "x": 225.29,
+            "y": 236.02,
+            "cx": 547.42,
+            "cy": 307.96,
+            "caption": "원본 구조: EEG, EDA, PPG의 DE 및 PSD 특징 융합"
+          }
+        ],
+        "tables": [
+          {
+            "rows": [
+              [
+                {
+                  "text": "평가 / 산출물",
+                  "links": []
+                },
+                {
+                  "text": "내용",
+                  "links": []
+                }
+              ],
+              [
+                {
+                  "text": "DEAP",
+                  "links": []
+                },
+                {
+                  "text": "32명, 피험자 의존 평가",
+                  "links": []
+                }
+              ],
+              [
+                {
+                  "text": "공인시험",
+                  "links": []
+                },
+                {
+                  "text": "2건",
+                  "links": []
+                }
+              ],
+              [
+                {
+                  "text": "지식재산",
+                  "links": []
+                },
+                {
+                  "text": "특허 출원 1건, SW 등록 3건",
+                  "links": []
+                }
+              ]
+            ],
+            "x": 940.0,
+            "y": 614.0,
+            "cx": 606.0,
+            "cy": 179.0
+          }
+        ],
+        "charts": [
+          {
+            "series": [
+              {
+                "name": "정확도",
+                "categories": [
+                  "감정가",
+                  "자극"
+                ],
+                "values": [
+                  97.37,
+                  97.38
+                ]
+              }
+            ],
+            "x": 988.0,
+            "y": 230.0,
+            "cx": 558.0,
+            "cy": 318.0,
+            "title": "DEAP 감정 분류 정확도 (%)"
+          }
+        ],
+        "heads": [
+          "생리 특징에서 유사도 그래프 구성",
+          "DEAP 감정 분류 정확도 (%)"
+        ],
+        "overview": []
+      }
+    ],
+    "metrics": [
+      "97.37%",
+      "공인시험 2건"
+    ],
+    "thumbnail": "/assets/figures/slide-19-1.png"
+  },
+  {
+    "slug": "neurobio-hybrid",
+    "short": {
+      "ko": "정신-대사 상태의 종단 분석",
+      "en": "Longitudinal mental and metabolic state modeling"
+    },
+    "title": {
+      "ko": "정신-대사 복합질병의 인과추론 및 초조기 예측을 위한 뉴로-바이오 하이브리드 AI 기술 개발",
+      "en": "Longitudinal mental and metabolic state modeling"
+    },
+    "category": "Ongoing research",
+    "coverSlide": 20,
+    "summary": {
+      "ko": "웨어러블 종단 관측으로 정신 및 대사 상태 변화의 시차 관계를 연구한다."
+    },
+    "role": {
+      "ko": "연구 참여"
+    },
+    "work": {
+      "ko": "활동, 수면, HRV, 피부온도 특징 구성 이종 그래프 및 시차 정보흐름 모델링"
+    },
+    "scope": {
+      "ko": "복합질병 초조기 예측 치료 반응 모니터링"
+    },
+    "status": {
+      "ko": "모델 및 평가 프로토콜 설계 단계"
+    },
+    "date": "2026.04 ~ 현재 IITP",
+    "links": [],
+    "stages": [
+      {
+        "slide": 21,
+        "title": "웨어러블 종단 관측 / 모델과 평가 프로토콜 설계 단계",
+        "arguments": [
+          {
+            "label": "난제",
+            "text": "관측 주기와 결측이 다른 웨어러블 지표에서 질병 상태 변화의 선행 신호를 찾아야 함"
+          },
+          {
+            "label": "역할",
+            "text": "모달별 특징 구성과 이종 그래프 연구 참여 시차 정보흐름 및 종단 상태 변화 모델링"
+          },
+          {
+            "label": "다음 단계",
+            "text": "평가 대상과 예측 시점을 확정한 후 구조도와 결과 그림을 추가"
+          }
+        ],
+        "note": "진행 중 과제. 현재 확보 자료에 없는 최종 구조와 성능은 공란 항목으로 남김",
+        "figures": [],
+        "tables": [
+          {
+            "rows": [
+              [
+                {
+                  "text": "추가 자료",
+                  "links": []
+                },
+                {
+                  "text": "기입할 내용",
+                  "links": []
+                }
+              ],
+              [
+                {
+                  "text": "데이터",
+                  "links": []
+                },
+                {
+                  "text": "코호트, 수집 기간, 관측 간격",
+                  "links": []
+                }
+              ],
+              [
+                {
+                  "text": "모델",
+                  "links": []
+                },
+                {
+                  "text": "확정 구조도, 학습 목표",
+                  "links": []
+                }
+              ],
+              [
+                {
+                  "text": "평가",
+                  "links": []
+                },
+                {
+                  "text": "기준 모델, 예측 시점, 정량 결과",
+                  "links": []
+                }
+              ]
+            ],
+            "x": 940.0,
+            "y": 614.0,
+            "cx": 606.0,
+            "cy": 179.0
+          }
+        ],
+        "charts": [],
+        "heads": [
+          "관측 단위",
+          "연구 방향",
+          "평가 목표"
+        ],
+        "overview": [
+          {
+            "label": "입력과 관측 주기",
+            "text": "활동, 수면, HRV, 피부온도 관측 간격과 결측 패턴 확인 개인별 종단 관측 단위 정의"
+          },
+          {
+            "label": "이종 그래프와 시차 분석",
+            "text": "모달별 특징의 관계 학습 비선형 시차 정보흐름 분석 상태 변화와 치료 반응 추적"
+          },
+          {
+            "label": "초조기 예측과 반응 평가",
+            "text": "예측 대상과 시점을 고정 피험자 및 시간 분할 구분 기준 모델과 전향 평가 설계"
+          }
+        ]
+      }
+    ],
+    "metrics": [
+      "종단 관측",
+      "연구 진행 중"
+    ],
+    "thumbnail": null
+  },
+  {
+    "slug": "dual-stream-foundation",
+    "short": {
+      "ko": "이중 스트림 상호작용 모델",
+      "en": "Dual-stream interaction modeling"
+    },
+    "title": {
+      "ko": "인간-기기 인과적 공명 학습을 위한 이중 스트림 경량 상호작용 파운데이션 모델 개발",
+      "en": "Dual-stream interaction modeling"
+    },
+    "category": "Ongoing research",
+    "coverSlide": 22,
+    "summary": {
+      "ko": "연속 생체신호 인코더와 대화 모델을 연결하는 이중 스트림 구조를 연구한다."
+    },
+    "role": {
+      "ko": "연구 참여 및 공동 개발"
+    },
+    "work": {
+      "ko": "생체 상태 표현과 LLM 인터페이스 연구 FR-PTT 비접촉 혈압 추정 모델 공동 개발"
+    },
+    "scope": {
+      "ko": "생체 입력과 언어 입력의 정렬 경량 상호작용 모델"
+    },
+    "status": {
+      "ko": "연계 논문 IJCNN 2026 구두 발표, 공저자"
+    },
+    "date": "2026.03 ~ 현재 NRF",
+    "links": [
+      [
+        "관련 FR-PTT 연구",
+        "https://github.com/dhkim-kr/fr-ptt-bp"
+      ]
+    ],
+    "stages": [
+      {
+        "slide": 23,
+        "title": "연계 연구 FR-PTT / 생체 인코더의 근거와 이중 스트림 확장 범위",
+        "arguments": [
+          {
+            "label": "아이디어",
+            "text": "얼굴 8개 부위의 28개 PTT와 파형 형태를 파형 인코더에 결합해 혈압 관련 정보 보완"
+          },
+          {
+            "label": "기여",
+            "text": "FR-PTT 모델 공동 개발 및 IJCNN 2026 구두 발표 생체 상태 표현과 LLM 인터페이스 연구 참여"
+          },
+          {
+            "label": "확장 범위",
+            "text": "연계 인코더를 바탕으로 상호작용 모델 연구 이중 스트림 최종 구조와 지연 평가 자료 필요"
+          }
+        ],
+        "note": "단위 mmHg. FR-PTT 논문의 결과이며 진행 중 파운데이션 모델의 최종 성능과 구분",
+        "figures": [
+          {
+            "src": "/assets/figures/slide-23-1.png",
+            "alt": "",
+            "x": 122.25,
+            "y": 236.0,
+            "cx": 483.5,
+            "cy": 308.0,
+            "caption": "파형, 형태, 부위 간 PTT를 각각 인코딩"
+          },
+          {
+            "src": "/assets/figures/slide-23-2.png",
+            "alt": "",
+            "x": 710.19,
+            "y": 283.59,
+            "cx": 431.62,
+            "cy": 212.81,
+            "caption": "원본 FR-PTT 산출 및 잘못된 피크 제외"
+          }
+        ],
+        "tables": [
+          {
+            "rows": [
+              [
+                {
+                  "text": "평가 데이터",
+                  "links": []
+                },
+                {
+                  "text": "SBP MAE",
+                  "links": []
+                },
+                {
+                  "text": "DBP MAE",
+                  "links": []
+                }
+              ],
+              [
+                {
+                  "text": "VitalVideos",
+                  "links": []
+                },
+                {
+                  "text": "13.13",
+                  "links": []
+                },
+                {
+                  "text": "7.56",
+                  "links": []
+                }
+              ],
+              [
+                {
+                  "text": "V4V",
+                  "links": []
+                },
+                {
+                  "text": "12.16",
+                  "links": []
+                },
+                {
+                  "text": "8.96",
+                  "links": []
+                }
+              ],
+              [
+                {
+                  "text": "파운데이션 모델",
+                  "links": []
+                },
+                {
+                  "text": "구조 미확정",
+                  "links": []
+                },
+                {
+                  "text": "평가 자료 필요",
+                  "links": []
+                }
+              ]
+            ],
+            "x": 940.0,
+            "y": 614.0,
+            "cx": 606.0,
+            "cy": 179.0
+          }
+        ],
+        "charts": [
+          {
+            "series": [
+              {
+                "name": "파형만",
+                "categories": [
+                  "SBP",
+                  "DBP"
+                ],
+                "values": [
+                  15.89,
+                  11.14
+                ]
+              },
+              {
+                "name": "전체",
+                "categories": [
+                  "SBP",
+                  "DBP"
+                ],
+                "values": [
+                  13.13,
+                  7.56
+                ]
+              }
+            ],
+            "x": 1168.0,
+            "y": 231.0,
+            "cx": 378.0,
+            "cy": 315.0,
+            "title": "결합 효과 (mmHg)"
+          }
+        ],
+        "heads": [
+          "생체 정보의 3개 분기 결합",
+          "얼굴 부위 간 시간차",
+          "결합 효과 (mmHg)"
+        ],
+        "overview": []
+      }
+    ],
+    "metrics": [
+      "FR-PTT",
+      "IJCNN 2026"
+    ],
+    "thumbnail": "/assets/figures/slide-23-1.png"
+  },
+  {
+    "slug": "multimodal-domain-adaptation",
+    "short": {
+      "ko": "다중모달 데이터와 도메인 적응",
+      "en": "Multimodal data and domain adaptation"
+    },
+    "title": {
+      "ko": "감정 감성 AI 모델 생성 학습데이터셋 구축 기술 개발",
+      "en": "Multimodal data and domain adaptation"
+    },
+    "category": "Domain adaptation",
+    "coverSlide": 24,
+    "summary": {
+      "ko": "모달 융합과 도메인 적대학습으로 피험자 및 세션 변화에 따른 성능을 평가했다."
+    },
+    "role": {
+      "ko": "연구 참여, MDA-GCL 공동 제1저자"
+    },
+    "work": {
+      "ko": "다중모달 수집 프로토콜 설계 도메인 적응 모델 공동 개발, 절제 실험"
+    },
+    "scope": {
+      "ko": "음성, 영상, 텍스트, 생체신호 수집 목표 3,300시간 이상"
+    },
+    "status": {
+      "ko": "KBS 2026 게재 승인, 실제 확보량 확인 필요"
+    },
+    "date": "2026.04 ~ 현재 IITP",
+    "links": [
+      [
+        "MDA-GCL 코드 및 논문 정보",
+        "https://github.com/dhkim-kr/MDA-GCL"
+      ]
+    ],
+    "stages": [
+      {
+        "slide": 25,
+        "title": "MDA-GCL / 모달 융합과 도메인 적대학습의 효과",
+        "arguments": [
+          {
+            "label": "난제",
+            "text": "EEG와 안구 특징의 분포가 피험자와 세션에 따라 달라져 같은 분류기를 적용하기 어려움"
+          },
+          {
+            "label": "해결",
+            "text": "모달 유사도를 융합한 그래프에 대조 손실과 도메인 적대 손실을 적용해 분포 차이 완화"
+          },
+          {
+            "label": "기여",
+            "text": "MDA-GCL 공동 개발 및 절제 실험, 공동 제1저자 다중모달 수집 프로토콜 설계 참여"
+          }
+        ],
+        "note": "비레이블 타깃 특징을 학습에 사용하는 transductive 도메인 적응. 타깃 감정 레이블은 학습 및 모델 선택에서 제외",
+        "figures": [
+          {
+            "src": "/assets/figures/slide-25-1.png",
+            "alt": "",
+            "x": 145.25,
+            "y": 236.0,
+            "cx": 500.5,
+            "cy": 308.0,
+            "caption": "모달별 유사도 그래프, 대조학습, 도메인 적대학습"
+          },
+          {
+            "src": "/assets/figures/slide-25-2.png",
+            "alt": "",
+            "x": 822.26,
+            "y": 236.0,
+            "cx": 243.48,
+            "cy": 308.0,
+            "caption": "SEED-IV, 피험자 간 평가"
+          }
+        ],
+        "tables": [
+          {
+            "rows": [
+              [
+                {
+                  "text": "정확도 (%)",
+                  "links": []
+                },
+                {
+                  "text": "피험자 간",
+                  "links": []
+                },
+                {
+                  "text": "세션 간",
+                  "links": []
+                }
+              ],
+              [
+                {
+                  "text": "SEED-IV",
+                  "links": []
+                },
+                {
+                  "text": "76.1 ± 7.4",
+                  "links": []
+                },
+                {
+                  "text": "83.8 ± 8.3",
+                  "links": []
+                }
+              ],
+              [
+                {
+                  "text": "SEED-V",
+                  "links": []
+                },
+                {
+                  "text": "75.6 ± 6.3",
+                  "links": []
+                },
+                {
+                  "text": "82.5 ± 9.1",
+                  "links": []
+                }
+              ],
+              [
+                {
+                  "text": "과제 수집 목표",
+                  "links": []
+                },
+                {
+                  "text": "3,300시간 이상",
+                  "links": []
+                },
+                {
+                  "text": "실제 확보량 필요",
+                  "links": []
+                }
+              ]
+            ],
+            "x": 940.0,
+            "y": 614.0,
+            "cx": 606.0,
+            "cy": 179.0
+          }
+        ],
+        "charts": [
+          {
+            "series": [
+              {
+                "name": "정확도",
+                "categories": [
+                  "DANN 제거",
+                  "전체"
+                ],
+                "values": [
+                  62.5,
+                  76.1
+                ]
+              }
+            ],
+            "x": 1141.0,
+            "y": 231.0,
+            "cx": 405.0,
+            "cy": 315.0,
+            "title": "DANN 절제 (%)"
+          }
+        ],
+        "heads": [
+          "유사도 융합과 도메인 정렬",
+          "피험자 간 혼동행렬",
+          "DANN 절제 (%)"
+        ],
+        "overview": []
+      }
+    ],
+    "metrics": [
+      "76.1%",
+      "83.8%"
+    ],
+    "thumbnail": "/assets/figures/slide-25-1.png"
+  },
+  {
+    "slug": "rppg-deployment",
+    "short": {
+      "ko": "비접촉 바이탈 추정과 현장 적용",
+      "en": "Contactless vital estimation and deployment"
+    },
+    "title": {
+      "ko": "AI 기반 얼굴영상 비접촉식 바이탈 신호 측정 기술 개발 및 제품 상용화",
+      "en": "Contactless vital estimation and deployment"
+    },
+    "category": "Applied research",
+    "coverSlide": 26,
+    "summary": {
+      "ko": "얼굴 영상 기반 맥파 추정 모델을 Jetson 환경에 적용해 키오스크 상용화를 지원했다."
+    },
+    "role": {
+      "ko": "알고리즘 공동 개발 및 추론 최적화"
+    },
+    "work": {
+      "ko": "rPPG 모델 개발 TensorRT FP16 변환, 임베디드 추론 최적화"
+    },
+    "scope": {
+      "ko": "HEALLO 키오스크 서울 NH농협은행 약 100개 지점"
+    },
+    "status": {
+      "ko": "기업 공동 개발 및 현장 적용 경험"
+    },
+    "date": "2025.05 ~ 2025.12 TIPA, 쿠도커뮤니케이션",
+    "links": [
+      [
+        "관련 GLCL rPPG 연구",
+        "https://github.com/dhkim-kr/glcl_rPPG"
+      ]
+    ],
+    "stages": [
+      {
+        "slide": 27,
+        "title": "rPPG 연구와 제품 적용 / 맥파 표현학습부터 Jetson 배포까지",
+        "arguments": [
+          {
+            "label": "아이디어",
+            "text": "같은 영상에서 추출한 맥파 스펙트럼을 정렬해 맥파 레이블 없이 생리적 공통 성분 학습"
+          },
+          {
+            "label": "제품 적용",
+            "text": "모델 공동 개발, TensorRT FP16 변환 Jetson Nano 추론 및 키오스크 연동"
+          },
+          {
+            "label": "성과",
+            "text": "HEALLO 키오스크 현장 적용 지원 서울 NH농협은행 약 100개 지점 공급 경험"
+          }
+        ],
+        "note": "GLCL은 관련 연구의 원고 결과. 추가 자료: 실제 배포 모델 명세, 제품 사진, 장치 지연 및 현장 오차",
+        "figures": [
+          {
+            "src": "/assets/figures/slide-27-1.png",
+            "alt": "",
+            "x": 165.29,
+            "y": 236.0,
+            "cx": 494.42,
+            "cy": 308.0,
+            "caption": "공간별 맥파의 전역 및 국소 스펙트럼 대조학습"
+          },
+          {
+            "src": "/assets/figures/slide-27-2.png",
+            "alt": "",
+            "x": 882.79,
+            "y": 236.0,
+            "cx": 590.43,
+            "cy": 308.0,
+            "caption": "원고 Fig. 3(a): UBFC-rPPG 산점도와 Bland-Altman"
+          }
+        ],
+        "tables": [
+          {
+            "rows": [
+              [
+                {
+                  "text": "GLCL 원고 평가",
+                  "links": []
+                },
+                {
+                  "text": "MAE (bpm)",
+                  "links": []
+                },
+                {
+                  "text": "RMSE (bpm)",
+                  "links": []
+                }
+              ],
+              [
+                {
+                  "text": "UBFC-rPPG",
+                  "links": []
+                },
+                {
+                  "text": "1.09",
+                  "links": []
+                },
+                {
+                  "text": "1.72",
+                  "links": []
+                }
+              ],
+              [
+                {
+                  "text": "PURE",
+                  "links": []
+                },
+                {
+                  "text": "0.26",
+                  "links": []
+                },
+                {
+                  "text": "0.42",
+                  "links": []
+                }
+              ],
+              [
+                {
+                  "text": "COHFACE",
+                  "links": []
+                },
+                {
+                  "text": "2.19",
+                  "links": []
+                },
+                {
+                  "text": "5.83",
+                  "links": []
+                }
+              ]
+            ],
+            "x": 940.0,
+            "y": 614.0,
+            "cx": 606.0,
+            "cy": 179.0
+          }
+        ],
+        "charts": [],
+        "heads": [
+          "관련 연구 GLCL의 학습 구조",
+          "맥파 추정 결과와 오차 분포"
+        ],
+        "overview": []
+      }
+    ],
+    "metrics": [
+      "TensorRT",
+      "약 100개 지점"
+    ],
+    "thumbnail": "/assets/figures/slide-27-1.png"
+  },
+  {
+    "slug": "kist-ultrasound",
+    "short": {
+      "ko": "집속초음파 위치 정합과 제어",
+      "en": "Focused-ultrasound registration and control"
+    },
+    "title": {
+      "ko": "뇌종양 치료를 위한 위치추적장치 기반 집속초음파 음장 캘리브레이션 S/W 개발",
+      "en": "Focused-ultrasound registration and control"
+    },
+    "category": "KIST internship",
+    "coverSlide": 28,
+    "summary": {
+      "ko": "영상과 추적 좌표를 정합하고 집속초음파 음장 측정의 위치 제어를 구현했다."
+    },
+    "role": {
+      "ko": "3D Slicer 모듈 및 장치 제어 개발"
+    },
+    "work": {
+      "ko": "좌표 정합, 실시간 영상 단면 갱신 VXM 이동 제어, 파형 취득, 모듈 패키징"
+    },
+    "scope": {
+      "ko": "CT/MRI와 위치추적장치 연결 집속초음파 스캔 및 음장 시각화"
+    },
+    "status": {
+      "ko": "연구용 시제품 개발, 전임상 연구자 협업"
+    },
+    "date": "2021.01 ~ 2021.02 KIST 바이오닉스연구센터",
+    "links": [
+      [
+        "KIST 프로젝트 GitHub",
+        "https://github.com/dhkim-kr/ultrasound_brain_tumor_project"
+      ]
+    ],
+    "stages": [
+      {
+        "slide": 29,
+        "title": "영상 좌표와 추적 좌표의 정합 / 3D Slicer 모듈 구현",
+        "arguments": [
+          {
+            "label": "난제",
+            "text": "CT/MRI, 추적장치, 탐침의 좌표가 달라 추적 위치를 영상과 측정 위치에 연결해야 함"
+          },
+          {
+            "label": "해결",
+            "text": "랜드마크 및 표면 정합으로 Reference와 RAS 연결 탐침의 위치 변환을 영상 단면에 실시간 반영"
+          },
+          {
+            "label": "기여",
+            "text": "3D Slicer Python 모듈 개발과 장치 연동 연구용 모듈 패키징, 전임상 연구자와 검증"
+          }
+        ],
+        "note": "알키미스트 0119 및 0225 원본 PPTX. 영상 안내와 제어 구현 결과이며 치료 효과 평가와 구분",
+        "figures": [
+          {
+            "src": "/assets/figures/slide-29-1.png",
+            "alt": "",
+            "x": 77.83,
+            "y": 236.04,
+            "cx": 630.35,
+            "cy": 307.93,
+            "caption": "KIST 원본 PPT: 영상 RAS와 추적 좌표의 연결"
+          },
+          {
+            "src": "/assets/figures/slide-29-2.png",
+            "alt": "",
+            "x": 770.06,
+            "y": 269.78,
+            "cx": 462.89,
+            "cy": 240.44,
+            "caption": "UpdateSlicePlane으로 MRI 단면 갱신"
+          },
+          {
+            "src": "/assets/figures/slide-29-3.png",
+            "alt": "",
+            "x": 1271.0,
+            "y": 252.5,
+            "cx": 275.0,
+            "cy": 275.0,
+            "caption": "위치추적 및 음장 측정 장치"
+          }
+        ],
+        "tables": [
+          {
+            "rows": [
+              [
+                {
+                  "text": "구현 항목",
+                  "links": []
+                },
+                {
+                  "text": "동작",
+                  "links": []
+                }
+              ],
+              [
+                {
+                  "text": "좌표 변환",
+                  "links": []
+                },
+                {
+                  "text": "ReferenceToRAS × TipToReference",
+                  "links": []
+                }
+              ],
+              [
+                {
+                  "text": "단면 갱신",
+                  "links": []
+                },
+                {
+                  "text": "Red / Green / Yellow 위치 반영",
+                  "links": []
+                }
+              ],
+              [
+                {
+                  "text": "모듈 구성",
+                  "links": []
+                },
+                {
+                  "text": "정합, 추적, 이동 제어, 파형 취득",
+                  "links": []
+                }
+              ]
+            ],
+            "x": 940.0,
+            "y": 614.0,
+            "cx": 606.0,
+            "cy": 179.0
+          }
+        ],
+        "charts": [],
+        "heads": [
+          "좌표계 연결",
+          "추적 위치에 따른 영상 단면",
+          "실제 장치"
+        ],
+        "overview": []
+      },
+      {
+        "slide": 30,
+        "title": "이동과 취득의 순차 제어 / 대기시간 조정과 음장 시각화",
+        "arguments": [
+          {
+            "label": "난제",
+            "text": "좌표 이동마다 누적되는 대기시간과 측정 위치 및 파형의 대응 관계 관리"
+          },
+          {
+            "label": "해결",
+            "text": "이동 간격과 대기시간을 조정한 VXM 제어 구현 격자별 파형 취득 후 평면별 음장 분포 생성"
+          },
+          {
+            "label": "기여",
+            "text": "로봇 이동, 파형 취득, 음장 시각화 연결 3D Slicer 안에서 측정 절차와 결과 확인"
+          }
+        ],
+        "note": "KIST PPT의 시간 계산 비교. 추가 자료: 표적 오차의 단위, 기준 위치와 반복 검증표",
+        "figures": [
+          {
+            "src": "/assets/figures/slide-30-1.png",
+            "alt": "",
+            "x": 72.25,
+            "y": 236.0,
+            "cx": 391.5,
+            "cy": 308.0,
+            "caption": "Step size와 Sleep time을 조정한 원본 비교"
+          },
+          {
+            "src": "/assets/figures/slide-30-2.png",
+            "alt": "",
+            "x": 519.0,
+            "y": 258.72,
+            "cx": 440.0,
+            "cy": 262.55,
+            "caption": "동일 위치의 취득 파형을 측정 좌표와 저장"
+          },
+          {
+            "src": "/assets/figures/slide-30-3.png",
+            "alt": "",
+            "x": 1012.25,
+            "y": 232.0,
+            "cx": 207.5,
+            "cy": 139.0,
+            "caption": "7 × 7 × 7 격자 / 위치별 취득값의 2D 지도"
+          },
+          {
+            "src": "/assets/figures/slide-30-4.png",
+            "alt": "",
+            "x": 1077.05,
+            "y": 374.0,
+            "cx": 387.91,
+            "cy": 165.0,
+            "caption": "7 × 7 × 7 격자 / 위치별 취득값의 2D 지도"
+          }
+        ],
+        "tables": [
+          {
+            "rows": [
+              [
+                {
+                  "text": "원본 시간 비교",
+                  "links": []
+                },
+                {
+                  "text": "계산 결과",
+                  "links": []
+                }
+              ],
+              [
+                {
+                  "text": "기존",
+                  "links": []
+                },
+                {
+                  "text": "0.7 × 21 = 14.7초",
+                  "links": []
+                }
+              ],
+              [
+                {
+                  "text": "조정 후",
+                  "links": []
+                },
+                {
+                  "text": "0.7 + 0.3 × 8 + 1.3 = 4.4초",
+                  "links": []
+                }
+              ],
+              [
+                {
+                  "text": "개선 비율",
+                  "links": []
+                },
+                {
+                  "text": "약 3.3배",
+                  "links": []
+                }
+              ]
+            ],
+            "x": 940.0,
+            "y": 614.0,
+            "cx": 606.0,
+            "cy": 179.0
+          }
+        ],
+        "charts": [],
+        "heads": [
+          "이동 및 대기시간 비교",
+          "위치별 파형 취득",
+          "스캔 격자와 음장 분포"
+        ],
+        "overview": []
+      }
+    ],
+    "metrics": [
+      "3D Slicer",
+      "약 3.3배"
+    ],
+    "thumbnail": "/assets/figures/slide-29-1.png"
+  },
+  {
+    "slug": "bcg-blood-pressure",
+    "short": {
+      "ko": "2채널 BCG 혈압 추정",
+      "en": "Blood pressure estimation from two-channel BCG"
+    },
+    "title": {
+      "ko": "일상 생활 중 건강 모니터링을 위한 생체 신호 딥러닝 분석 연구",
+      "en": "Blood pressure estimation from two-channel BCG"
+    },
+    "category": "Undergraduate internship",
+    "coverSlide": 31,
+    "summary": {
+      "ko": "의자의 2채널 BCG를 CNN, BiGRU, 어텐션으로 분석해 혈압을 추정했다."
+    },
+    "role": {
+      "ko": "혈압 추정 모델 및 실시간 처리 공동 개발"
+    },
+    "work": {
+      "ko": "혈압 상승 실험과 동기화 신호 수집 최종 모델 개발, 실시간 분석, 코드 리팩토링"
+    },
+    "scope": {
+      "ko": "등과 좌석 BCG 2채널 모델 서버와 모니터링 앱 연동"
+    },
+    "status": {
+      "ko": "KOSOMBE 2021 제1저자 구두 발표"
+    },
+    "date": "2020.09 ~ 2021.06 BCML, EMMA Healthcare, 팀 TOG",
+    "links": [
+      [
+        "최종 코드 리팩토링 GitHub",
+        "https://github.com/dhkim-kr/e2e_multimodal_bp_estimation"
+      ]
+    ],
+    "stages": [
+      {
+        "slide": 32,
+        "title": "2채널 BCG 혈압 추정 / 최종 모델과 실시간 서비스 구성",
+        "arguments": [
+          {
+            "label": "난제",
+            "text": "등과 좌석의 BCG에서 시간에 따른 변화를 추출하고 실시간 혈압 표시까지 연결해야 함"
+          },
+          {
+            "label": "해결",
+            "text": "10초 구간의 국소 특징을 CNN으로 추출 BiGRU와 시간 어텐션으로 혈압 회귀"
+          },
+          {
+            "label": "기여",
+            "text": "신호 수집과 모델 및 실시간 처리 공동 개발 최종 프로젝트 코드를 모듈화해 공개 저장소 구성"
+          }
+        ],
+        "note": "발표 그림의 CNN 채널 표기는 최종 코드와 차이가 있어 표에 실제 구현을 기재. 팀 TOG 공동 프로젝트",
+        "figures": [
+          {
+            "src": "/assets/figures/slide-32-1.png",
+            "alt": "",
+            "x": 54.0,
+            "y": 265.77,
+            "cx": 477.0,
+            "cy": 248.45,
+            "caption": "등과 좌석 BCG의 실시간 수집 및 분석 구성"
+          },
+          {
+            "src": "/assets/figures/slide-32-2.png",
+            "alt": "",
+            "x": 567.0,
+            "y": 263.39,
+            "cx": 676.0,
+            "cy": 253.22,
+            "caption": "최종 발표의 CNN, BiGRU, Attention 모델"
+          },
+          {
+            "src": "/assets/figures/slide-32-3.png",
+            "alt": "",
+            "x": 1330.68,
+            "y": 236.11,
+            "cx": 163.65,
+            "cy": 307.78,
+            "caption": "원본 모니터링 앱 화면"
+          }
+        ],
+        "tables": [
+          {
+            "rows": [
+              [
+                {
+                  "text": "최종 코드 명세",
+                  "links": []
+                },
+                {
+                  "text": "구현",
+                  "links": []
+                }
+              ],
+              [
+                {
+                  "text": "입력",
+                  "links": []
+                },
+                {
+                  "text": "250 Hz, 2채널, 10초",
+                  "links": []
+                }
+              ],
+              [
+                {
+                  "text": "CNN",
+                  "links": []
+                },
+                {
+                  "text": "10층, 64 / 128 / 256 / 512채널",
+                  "links": []
+                }
+              ],
+              [
+                {
+                  "text": "회귀",
+                  "links": []
+                },
+                {
+                  "text": "BiGRU 64 + 시간 어텐션",
+                  "links": []
+                }
+              ]
+            ],
+            "x": 940.0,
+            "y": 614.0,
+            "cx": 606.0,
+            "cy": 179.0
+          }
+        ],
+        "charts": [],
+        "heads": [
+          "의자, 모델 서버, 앱 연결",
+          "시간 특징 기반 회귀 모델",
+          "결과 표시"
+        ],
+        "overview": []
+      },
+      {
+        "slide": 33,
+        "title": "혈압 추적 결과 / 6명 개인 내 평가와 재현 조건",
+        "arguments": [
+          {
+            "label": "실험",
+            "text": "1인 약 3시간, 안정 및 운동 후 상태 측정 커프 혈압을 2분 간격으로 확보"
+          },
+          {
+            "label": "평가",
+            "text": "개인 내 시간 분할 29 / 14 / 57% 적용 6명의 SBP 및 DBP 추적 오차 보고"
+          },
+          {
+            "label": "재현 조건",
+            "text": "원 실험은 중첩 구간과 분할 전 정규화 사용 리팩토링 코드의 실데이터 재평가 필요"
+          }
+        ],
+        "note": "수치는 2021년 원논문 결과. 현재 리팩토링 코드로 재평가한 결과와 구분",
+        "figures": [
+          {
+            "src": "/assets/figures/slide-33-1.png",
+            "alt": "",
+            "x": 54.0,
+            "y": 287.99,
+            "cx": 471.0,
+            "cy": 204.02,
+            "caption": "원논문 SBP 실측 및 예측 파형 예시"
+          },
+          {
+            "src": "/assets/figures/slide-33-2.png",
+            "alt": "",
+            "x": 565.0,
+            "y": 288.48,
+            "cx": 471.0,
+            "cy": 203.04,
+            "caption": "원논문 DBP 실측 및 예측 파형 예시"
+          }
+        ],
+        "tables": [
+          {
+            "rows": [
+              [
+                {
+                  "text": "6명 평균 (mmHg)",
+                  "links": []
+                },
+                {
+                  "text": "SBP",
+                  "links": []
+                },
+                {
+                  "text": "DBP",
+                  "links": []
+                }
+              ],
+              [
+                {
+                  "text": "MAE",
+                  "links": []
+                },
+                {
+                  "text": "4.70",
+                  "links": []
+                },
+                {
+                  "text": "3.83",
+                  "links": []
+                }
+              ],
+              [
+                {
+                  "text": "RMSE",
+                  "links": []
+                },
+                {
+                  "text": "6.02",
+                  "links": []
+                },
+                {
+                  "text": "4.90",
+                  "links": []
+                }
+              ]
+            ],
+            "x": 940.0,
+            "y": 614.0,
+            "cx": 606.0,
+            "cy": 179.0
+          }
+        ],
+        "charts": [
+          {
+            "series": [
+              {
+                "name": "SBP",
+                "categories": [
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6"
+                ],
+                "values": [
+                  5.5,
+                  3.2,
+                  5.25,
+                  3.35,
+                  4.68,
+                  6.2
+                ]
+              },
+              {
+                "name": "DBP",
+                "categories": [
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6"
+                ],
+                "values": [
+                  4.65,
+                  3.12,
+                  3.88,
+                  4.03,
+                  3.8,
+                  3.5
+                ]
+              }
+            ],
+            "x": 1062.0,
+            "y": 229.0,
+            "cx": 484.0,
+            "cy": 322.0,
+            "title": "참여자별 MAE (mmHg)"
+          }
+        ],
+        "heads": [
+          "수축기 혈압 추적",
+          "이완기 혈압 추적",
+          "참여자별 MAE (mmHg)"
+        ],
+        "overview": []
+      }
+    ],
+    "metrics": [
+      "SBP MAE 4.70",
+      "DBP MAE 3.83"
+    ],
+    "thumbnail": "/assets/figures/slide-32-1.png"
+  },
+  {
+    "slug": "neurosync",
+    "short": {
+      "ko": "NeuroSync",
+      "en": "NeuroSync"
+    },
+    "title": {
+      "ko": "NeuroSync: 국산 LLM 다중 에이전트 기반 정신건강 사전문진, 종단 분석, 의료진 인계 시스템",
+      "en": "NeuroSync"
+    },
+    "category": "AI Champion 2026",
+    "coverSlide": 34,
+    "summary": {
+      "ko": "국산 LLM과 근거 검증을 결합해 사전문진 내용을 의료진 인계 기록으로 구성했다."
+    },
+    "role": {
+      "ko": "방법론 설계 및 핵심 구현"
+    },
+    "work": {
+      "ko": "다중 에이전트 오케스트레이션 RAG와 근거 검증 구현, 앱 및 의료진 웹 통합"
+    },
+    "scope": {
+      "ko": "규칙 기반 상태기계, 전문 에이전트 10종 음성, 문서, 대화 입력"
+    },
+    "status": {
+      "ko": "합성 페르소나 8종, 전체 384세션 평가"
+    },
+    "date": "2026.03 ~ 현재 NeuroSync",
+    "links": [
+      [
+        "NeuroSync GitHub",
+        "https://github.com/dhkim-kr/neurosync"
+      ]
+    ],
+    "stages": [
+      {
+        "slide": 35,
+        "title": "국산 LLM 사전문진 / 구조화 기록과 근거 검증을 통한 의료진 인계",
+        "arguments": [
+          {
+            "label": "난제",
+            "text": "자유 대화에서 임상 슬롯을 빠짐없이 확보하고 근거 없는 값이 인계 기록에 들어가지 않도록 제어"
+          },
+          {
+            "label": "해결",
+            "text": "규칙 기반 상태기계가 전문 에이전트 10종을 실행 척도는 규칙 채점, 최종 기록은 출처와 근거 검증"
+          },
+          {
+            "label": "기여",
+            "text": "오케스트레이션, RAG 및 검증 로직 핵심 구현 환자 앱, 의료진 웹, 백엔드 통합"
+          }
+        ],
+        "note": "AI Champion 중간결과보고서의 시제품 구조와 화면. 진단을 확정하지 않는 의료진 인계 지원 시스템",
+        "figures": [
+          {
+            "src": "/assets/figures/slide-35-1.png",
+            "alt": "",
+            "x": 146.75,
+            "y": 236.0,
+            "cx": 688.5,
+            "cy": 308.0,
+            "caption": "원본 보고서: 문진, RAG, 척도, 종단 분석, 근거 검증"
+          },
+          {
+            "src": "/assets/figures/slide-35-2.png",
+            "alt": "",
+            "x": 968.0,
+            "y": 282.74,
+            "cx": 578.0,
+            "cy": 214.52,
+            "caption": "시제품 보고서 발췌: 현재 상태, PHQ-9, 위험 단계"
+          }
+        ],
+        "tables": [
+          {
+            "rows": [
+              [
+                {
+                  "text": "구성",
+                  "links": []
+                },
+                {
+                  "text": "구현 범위",
+                  "links": []
+                }
+              ],
+              [
+                {
+                  "text": "국산 모델",
+                  "links": []
+                },
+                {
+                  "text": "Solar Pro 3, K-EXAONE, A.X K1",
+                  "links": []
+                }
+              ],
+              [
+                {
+                  "text": "검색 근거",
+                  "links": []
+                },
+                {
+                  "text": "임상 사례 1,248개, QA 1,789개",
+                  "links": []
+                }
+              ],
+              [
+                {
+                  "text": "서비스",
+                  "links": []
+                },
+                {
+                  "text": "FastAPI, PostgreSQL, Expo, Next.js",
+                  "links": []
+                }
+              ]
+            ],
+            "x": 940.0,
+            "y": 614.0,
+            "cx": 606.0,
+            "cy": 179.0
+          }
+        ],
+        "charts": [],
+        "heads": [
+          "입력부터 인계까지의 처리 구조",
+          "인계 보고서의 상태 및 척도 요약"
+        ],
+        "overview": []
+      },
+      {
+        "slide": 36,
+        "title": "합성 시나리오 평가 / 출력 신뢰도와 호출 비용의 동시 확인",
+        "arguments": [
+          {
+            "label": "확인 결과",
+            "text": "비근거 후보 337건을 최종 출력 전에 차단 슬롯 커버리지와 척도 배정 정확도 향상"
+          },
+          {
+            "label": "남은 난제",
+            "text": "필터 전 비근거 후보 비율은 46.4%에서 55.2% 출력 검증의 효과와 생성 단계의 한계를 함께 확인"
+          },
+          {
+            "label": "후속 검증",
+            "text": "호출 수와 토큰을 줄이는 실행 경로 최적화 전문의 평가와 임상 PoC 자료 추가 필요"
+          }
+        ],
+        "note": "384세션 중 직접 비교는 144세션. 나머지는 모델 비교 및 대조 평가. 합성 실험 결과이며 임상 효과와 구분",
+        "figures": [],
+        "tables": [
+          {
+            "rows": [
+              [
+                {
+                  "text": "비교 지표",
+                  "links": []
+                },
+                {
+                  "text": "단일 백본",
+                  "links": []
+                },
+                {
+                  "text": "NeuroSync",
+                  "links": []
+                }
+              ],
+              [
+                {
+                  "text": "세션 토큰",
+                  "links": []
+                },
+                {
+                  "text": "30,514",
+                  "links": []
+                },
+                {
+                  "text": "125,933",
+                  "links": []
+                }
+              ],
+              [
+                {
+                  "text": "비근거 세션 비율",
+                  "links": []
+                },
+                {
+                  "text": "54.2%",
+                  "links": []
+                },
+                {
+                  "text": "0%",
+                  "links": []
+                }
+              ],
+              [
+                {
+                  "text": "전체 평가",
+                  "links": []
+                },
+                {
+                  "text": "8개 페르소나",
+                  "links": []
+                },
+                {
+                  "text": "384세션",
+                  "links": []
+                }
+              ]
+            ],
+            "x": 940.0,
+            "y": 614.0,
+            "cx": 606.0,
+            "cy": 179.0
+          }
+        ],
+        "charts": [
+          {
+            "series": [
+              {
+                "name": "단일 백본",
+                "categories": [
+                  "척도 배정",
+                  "슬롯 커버리지"
+                ],
+                "values": [
+                  23.8,
+                  55.6
+                ]
+              },
+              {
+                "name": "NeuroSync",
+                "categories": [
+                  "척도 배정",
+                  "슬롯 커버리지"
+                ],
+                "values": [
+                  73.0,
+                  98.4
+                ]
+              }
+            ],
+            "x": 49.0,
+            "y": 229.0,
+            "cx": 582.0,
+            "cy": 320.0,
+            "title": "구조화 문진 성능 (%)"
+          },
+          {
+            "series": [
+              {
+                "name": "최종 출력",
+                "categories": [
+                  "단일 백본",
+                  "NeuroSync"
+                ],
+                "values": [
+                  39.0,
+                  0.0
+                ]
+              }
+            ],
+            "x": 663.0,
+            "y": 229.0,
+            "cx": 397.0,
+            "cy": 320.0,
+            "title": "최종 비근거 값 (건)"
+          },
+          {
+            "series": [
+              {
+                "name": "누적 대기",
+                "categories": [
+                  "단일 백본",
+                  "NeuroSync"
+                ],
+                "values": [
+                  4.16,
+                  9.04
+                ]
+              }
+            ],
+            "x": 1090.0,
+            "y": 229.0,
+            "cx": 456.0,
+            "cy": 320.0,
+            "title": "턴 누적 대기 (초)"
+          }
+        ],
+        "heads": [
+          "구조화 문진 성능 (%)",
+          "최종 비근거 값 (건)",
+          "턴 누적 대기 (초)"
+        ],
+        "overview": []
+      }
+    ],
+    "metrics": [
+      "10종 에이전트",
+      "384세션"
+    ],
+    "thumbnail": "/assets/figures/slide-35-1.png"
+  },
+  {
+    "slug": "neurotruth",
+    "short": {
+      "ko": "NeuroTruth",
+      "en": "NeuroTruth"
+    },
+    "title": {
+      "ko": "NeuroTruth: 멀티모달 생체-언어 불일치 기반 알코올 사용장애 갈망 실시간 탐지 및 능동 개입",
+      "en": "NeuroTruth"
+    },
+    "category": "AI Champion 2026",
+    "coverSlide": 37,
+    "summary": {
+      "ko": "웨어러블 갈망 추정과 규칙 기반 위험 판정을 앱 알림 및 대화 지원에 연결했다."
+    },
+    "role": {
+      "ko": "기술 리드 및 PM"
+    },
+    "work": {
+      "ko": "시스템 설계와 위험 판정 로직 구현 백엔드, 앱 알림, STT 및 TTS 연동"
+    },
+    "scope": {
+      "ko": "4단계 갈망 추정, 상태 확인, 대화 지원 MBID 불일치 분석은 후속 개발"
+    },
+    "status": {
+      "ko": "시제품 통합 기능 및 알림 전달 중간평가"
+    },
+    "date": "2026.03 ~ 현재 NeuroTruth",
+    "links": [
+      [
+        "NeuroTruth GitHub",
+        "https://github.com/dhkim-kr/neurotruth"
+      ]
+    ],
+    "stages": [
+      {
+        "slide": 38,
+        "title": "갈망 추정에서 알림과 대화까지 / 시제품의 현재 구현 범위",
+        "arguments": [
+          {
+            "label": "난제",
+            "text": "웨어러블 분류 결과를 상태 확인과 알림으로 연결하고 LLM 대화의 역할을 구분해야 함"
+          },
+          {
+            "label": "해결",
+            "text": "백엔드 규칙이 위험 단계와 알림 시점을 결정 앱에서 상태 확인, 설문과 음성 대화 지원"
+          },
+          {
+            "label": "기여",
+            "text": "기술 리드 및 PM, 위험 판정과 백엔드 구현 앱 알림, 한국어 STT와 TTS 통합"
+          }
+        ],
+        "note": "중간결과보고서의 시제품 화면. 생체-언어 불일치 분석 MBID와 임상 개입 효과 검증은 후속 개발",
+        "figures": [
+          {
+            "src": "/assets/figures/slide-38-1.png",
+            "alt": "",
+            "x": 125.82,
+            "y": 236.1,
+            "cx": 219.35,
+            "cy": 307.79,
+            "caption": "신호 화면 발췌: PPG 및 EDA 수신"
+          },
+          {
+            "src": "/assets/figures/slide-38-2.png",
+            "alt": "",
+            "x": 575.38,
+            "y": 236.0,
+            "cx": 448.24,
+            "cy": 308.0,
+            "caption": "갈망 단계와 이전 알림을 반영한 상태 확인 판정"
+          },
+          {
+            "src": "/assets/figures/slide-38-3.png",
+            "alt": "",
+            "x": 1220.0,
+            "y": 236.0,
+            "cx": 288.0,
+            "cy": 308.0,
+            "caption": "대화 화면 발췌: 사용자 발화와 응답"
+          }
+        ],
+        "tables": [
+          {
+            "rows": [
+              [
+                {
+                  "text": "현재 기능",
+                  "links": []
+                },
+                {
+                  "text": "구현 범위",
+                  "links": []
+                }
+              ],
+              [
+                {
+                  "text": "생체 입력",
+                  "links": []
+                },
+                {
+                  "text": "PPG, EDA 기반 4단계 갈망 추정",
+                  "links": []
+                }
+              ],
+              [
+                {
+                  "text": "대화 지원",
+                  "links": []
+                },
+                {
+                  "text": "AWS Bedrock LLM, STT, Android TTS",
+                  "links": []
+                }
+              ],
+              [
+                {
+                  "text": "기록",
+                  "links": []
+                },
+                {
+                  "text": "AUQ 설문, 상태 및 알림 이력",
+                  "links": []
+                }
+              ]
+            ],
+            "x": 940.0,
+            "y": 614.0,
+            "cx": 606.0,
+            "cy": 179.0
+          }
+        ],
+        "charts": [],
+        "heads": [
+          "생체신호 모니터링",
+          "규칙 기반 상태 확인",
+          "음성 대화 지원"
+        ],
+        "overview": []
+      },
+      {
+        "slide": 39,
+        "title": "갈망 분류와 시스템 통합 평가 / 알림 전달 지연 측정",
+        "arguments": [
+          {
+            "label": "통합 결과",
+            "text": "분류, 위험 판정, 알림, 대화 연결을 확인 동일 시나리오 반복 시험 21 / 21회 성공"
+          },
+          {
+            "label": "추가 확인",
+            "text": "카메라 정적 영상 10개에서 유효 처리 10 / 10 20초 영상의 평균 처리시간 14.8초"
+          },
+          {
+            "label": "다음 단계",
+            "text": "MBID 불일치 점수와 개입 전후 효과 검증 2개 병원 약 80명 임상평가 진행 예정"
+          }
+        ],
+        "note": "카메라 시험은 유효 처리율과 처리시간을 평가. 심박 정확도 또는 임상 개입 효과의 근거로 사용하지 않음",
+        "figures": [
+          {
+            "src": "/assets/figures/slide-39-1.png",
+            "alt": "",
+            "x": 1199.5,
+            "y": 236.0,
+            "cx": 269.0,
+            "cy": 308.0,
+            "caption": "화면 발췌: 최근 1시간 상태 변화"
+          }
+        ],
+        "tables": [
+          {
+            "rows": [
+              [
+                {
+                  "text": "측정 범위",
+                  "links": []
+                },
+                {
+                  "text": "해석",
+                  "links": []
+                }
+              ],
+              [
+                {
+                  "text": "통합 시험",
+                  "links": []
+                },
+                {
+                  "text": "MBID를 제외한 반복 기능 시험",
+                  "links": []
+                }
+              ],
+              [
+                {
+                  "text": "지연",
+                  "links": []
+                },
+                {
+                  "text": "알림 전달시간, LLM 응답시간 제외",
+                  "links": []
+                }
+              ],
+              [
+                {
+                  "text": "추가 자료",
+                  "links": []
+                },
+                {
+                  "text": "MBID 성능 및 임상평가 결과",
+                  "links": []
+                }
+              ]
+            ],
+            "x": 940.0,
+            "y": 614.0,
+            "cx": 606.0,
+            "cy": 179.0
+          }
+        ],
+        "charts": [
+          {
+            "series": [
+              {
+                "name": "분류 성능",
+                "categories": [
+                  "Balanced acc.",
+                  "Macro F1"
+                ],
+                "values": [
+                  71.0,
+                  70.0
+                ]
+              }
+            ],
+            "x": 48.0,
+            "y": 229.0,
+            "cx": 439.0,
+            "cy": 320.0,
+            "title": "갈망 분류 LOSO (%)"
+          },
+          {
+            "series": [
+              {
+                "name": "평균",
+                "categories": [
+                  "Wi-Fi",
+                  "LTE"
+                ],
+                "values": [
+                  78.0,
+                  121.1
+                ]
+              },
+              {
+                "name": "P95",
+                "categories": [
+                  "Wi-Fi",
+                  "LTE"
+                ],
+                "values": [
+                  89.0,
+                  133.0
+                ]
+              }
+            ],
+            "x": 520.0,
+            "y": 229.0,
+            "cx": 562.0,
+            "cy": 320.0,
+            "title": "알림 전달 지연 (ms)"
+          }
+        ],
+        "heads": [
+          "갈망 분류 LOSO (%)",
+          "알림 전달 지연 (ms)",
+          "기록 확인 화면"
+        ],
+        "overview": []
+      }
+    ],
+    "metrics": [
+      "LOSO 71%",
+      "통합 시험 21/21"
+    ],
+    "thumbnail": "/assets/figures/slide-38-1.png"
+  },
+  {
+    "slug": "multiscale-entropy",
+    "short": {
+      "ko": "짧은 EEG의 다중척도 엔트로피",
+      "en": "Multiscale entropy for short EEG"
+    },
+    "title": {
+      "ko": "Multiscale Distribution Entropy Analysis of Short Epileptic EEG Signals",
+      "en": "Multiscale entropy for short EEG"
+    },
+    "category": "Research internship",
+    "coverSlide": 40,
+    "summary": {
+      "ko": "이동평균으로 짧은 EEG의 표본 수를 유지해 다중척도 엔트로피를 분석했다."
+    },
+    "role": {
+      "ko": "분석 방법 비교 및 공동 제1저자"
+    },
+    "work": {
+      "ko": "짧은 EEG 구간 분석, 엔트로피 방법 비교 통계 검정, 결과 해석, 논문 작성"
+    },
+    "scope": {
+      "ko": "Bonn 및 Bern-Barcelona 공개 EEG 척도별 ROC AUC 비교"
+    },
+    "status": {
+      "ko": "Mathematical Biosciences and Engineering 2024"
+    },
+    "date": "2022.01 ~ 2022.02 NeuroAI 연구 인턴, MBE 2024 공동 제1저자",
+    "links": [
+      [
+        "논문 DOI",
+        "https://doi.org/10.3934/mbe.2024245"
+      ],
+      [
+        "연구 자료",
+        "https://github.com/dhkim-kr/multiscale-distribution-entropy"
+      ]
+    ],
+    "stages": [
+      {
+        "slide": 41,
+        "title": "MDE-MA / 짧은 EEG의 표본 수를 유지하는 다중척도 분석",
+        "arguments": [
+          {
+            "label": "난제",
+            "text": "짧은 EEG에 coarse-graining을 적용하면 큰 척도에서 표본이 줄어 엔트로피 추정이 제한됨"
+          },
+          {
+            "label": "해결",
+            "text": "이동평균으로 표본 수를 유지하며 척도를 구성 MSE 및 MDE-CG와 척도별 ROC AUC 비교"
+          },
+          {
+            "label": "기여",
+            "text": "짧은 구간 분석, 방법 비교와 통계 검정 MBE 2024 공동 제1저자"
+          }
+        ],
+        "note": "Bonn A 구간은 제1사분위 중심의 5초. 척도별 ROC AUC는 공개 EEG의 상태 분리 성능",
+        "figures": [
+          {
+            "src": "/assets/figures/slide-41-1.png",
+            "alt": "",
+            "x": 95.06,
+            "y": 236.04,
+            "cx": 453.87,
+            "cy": 307.91,
+            "caption": "원본 방법 그림: 중첩 이동평균으로 표본 유지"
+          },
+          {
+            "src": "/assets/figures/slide-41-2.png",
+            "alt": "",
+            "x": 695.19,
+            "y": 236.0,
+            "cx": 277.61,
+            "cy": 308.0,
+            "caption": "Normal / Ictal, A 구간의 5초"
+          },
+          {
+            "src": "/assets/figures/slide-41-3.png",
+            "alt": "",
+            "x": 1119.86,
+            "y": 236.0,
+            "cx": 384.29,
+            "cy": 308.0,
+            "caption": "Focal / Non-focal, 척도별 분리도"
+          }
+        ],
+        "tables": [
+          {
+            "rows": [
+              [
+                {
+                  "text": "척도 s의 표본 수",
+                  "links": []
+                },
+                {
+                  "text": "길이 N 기준",
+                  "links": []
+                }
+              ],
+              [
+                {
+                  "text": "Coarse-graining",
+                  "links": []
+                },
+                {
+                  "text": "floor(N / s)",
+                  "links": []
+                }
+              ],
+              [
+                {
+                  "text": "Moving average",
+                  "links": []
+                },
+                {
+                  "text": "N - s + 1",
+                  "links": []
+                }
+              ],
+              [
+                {
+                  "text": "평가",
+                  "links": []
+                },
+                {
+                  "text": "공개 EEG의 상태 분리",
+                  "links": []
+                }
+              ]
+            ],
+            "x": 940.0,
+            "y": 614.0,
+            "cx": 606.0,
+            "cy": 179.0
+          }
+        ],
+        "charts": [],
+        "heads": [
+          "이동평균으로 척도 구성",
+          "Bonn ROC AUC",
+          "Bern-Barcelona ROC AUC"
+        ],
+        "overview": []
+      }
+    ],
+    "metrics": [
+      "MBE 2024",
+      "공동 제1저자"
+    ],
+    "thumbnail": "/assets/figures/slide-41-1.png"
+  }
+]

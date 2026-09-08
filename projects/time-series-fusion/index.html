@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>파편화된 데이터의 적극 활용을 위한 시계열 기반 통합 플랫폼 기술 개발 | Dae Hyeon Kim</title>
+<meta name="description" content="신호별 유사도 네트워크를 융합해 적은 레이블로 다중모달 특징을 학습했다.">
+<link rel="canonical" href="https://dhkim-kr.github.io/projects/time-series-fusion/">
+<link rel="alternate" hreflang="ko" href="https://dhkim-kr.github.io/projects/time-series-fusion/">
+<link rel="alternate" hreflang="en" href="https://dhkim-kr.github.io/en/projects/time-series-fusion/">
+<link rel="alternate" hreflang="x-default" href="https://dhkim-kr.github.io/projects/time-series-fusion/">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:title" content="파편화된 데이터의 적극 활용을 위한 시계열 기반 통합 플랫폼 기술 개발">
+<meta property="og:description" content="신호별 유사도 네트워크를 융합해 적은 레이블로 다중모달 특징을 학습했다.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dhkim-kr.github.io/projects/time-series-fusion/">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/site.css">
+<script src="/assets/site.js" defer>
+</script>
+</head>
+<body>
+<a class="skip" href="#main">본문 바로가기</a>
+<header class="site-header">
+<div class="wrap header-inner">
+<a class="brand" href="/">Dae Hyeon Kim <span>RESEARCH</span>
+</a>
+<button class="menu-button" type="button" aria-expanded="false" aria-controls="main-nav">메뉴</button>
+<nav class="main-nav" id="main-nav" aria-label="주 메뉴">
+<a href="/#about">소개</a>
+<a href="/projects/">프로젝트</a>
+<a href="/publications/">논문</a>
+<a href="/#experience">경력</a>
+<a href="/#contact">연락처</a>
+</nav>
+<a class="language" href="/en/projects/time-series-fusion/" lang="en" hreflang="en" aria-label="Switch to English">EN</a>
+</div>
+</header>
+<main id="main">
+<div class="wrap">
+<div class="page-intro">
+<div class="breadcrumb">
+<a href="/">홈</a>
+<span>/</span>
+<span>프로젝트</span>
+</div>
+<h1>파편화된 데이터의 적극 활용을 위한 시계열 기반 통합 플랫폼 기술 개발</h1>
+<p class="lead">신호별 유사도 네트워크를 융합해 적은 레이블로 다중모달 특징을 학습했다.</p>
+</div>
+<div class="link-list">
+<a href="https://github.com/dhkim-kr" target="_blank" rel="noopener noreferrer">GitHub 프로필</a>
+</div>
+<dl class="detail-meta">
+<div>
+<dt>역할</dt>
+<dd>기술 세부과제 리드</dd>
+</div>
+<div>
+<dt>담당 업무</dt>
+<dd>이종 그래프 융합, 시차 의존성 및 이상탐지 연구 성능 평가, 공인시험, 지식재산 산출물 대응</dd>
+</div>
+<div>
+<dt>기간 및 소속</dt>
+<dd>2022.03 ~ 2023.12 IITP</dd>
+</div>
+</dl>
+<div class="detail-layout">
+<aside class="detail-toc">
+<p>이 프로젝트에서</p>
+<a href="#stage-1">01 MSGCN</a>
+<a href="#related">관련 논문</a>
+</aside>
+<div class="detail-body">
+<section class="detail-stage" id="stage-1">
+<h2>
+<span class="section-number">01 / RESEARCH DETAIL</span>MSGCN / 신호 내부와 신호 간 유사도를 단계적으로 융합</h2>
+<dl class="arguments">
+<dt>난제</dt>
+<dd>모달별 특징 공간과 레이블 확보량이 달라 단순 연결만으로 관계를 반영하기 어려움</dd>
+<dt>해결</dt>
+<dd>신호 내부의 DE 및 PSD 유사도를 먼저 통합하고 신호 간 유사도를 확산한 뒤 GCN으로 분류</dd>
+<dt>기여</dt>
+<dd>이종 그래프 융합 및 준지도 모델 개발 공인시험과 지식재산 산출물 대응</dd>
+</dl>
+<div class="evidence-gallery one">
+<figure>
+<a class="figure-link" href="/assets/figures/slide-19-1.png" target="_blank" rel="noopener" aria-label="그림 확대: 원본 구조: EEG, EDA, PPG의 DE 및 PSD 특징 융합">
+<img src="/assets/figures/slide-19-1.png" alt="원본 구조: EEG, EDA, PPG의 DE 및 PSD 특징 융합" loading="lazy">
+</a>
+<figcaption>원본 구조: EEG, EDA, PPG의 DE 및 PSD 특징 융합<br>
+<a href="/assets/figures/slide-19-1.png">원본 그림 확대</a>
+</figcaption>
+</figure>
+</div>
+<div class="chart-set one">
+<figure class="chart-figure">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 410" role="img" aria-labelledby="chart-19-0" aria-describedby="chart-desc-19-0">
+<title id="chart-19-0">DEAP 감정 분류 정확도 (%)</title>
+<desc id="chart-desc-19-0">정확도: 감정가 97.37, 자극 97.38</desc>
+<rect width="680" height="410" fill="white"/>
+<line x1="65" y1="290.0" x2="665" y2="290.0" stroke="#dce5f1"/>
+<text x="55" y="295.0" text-anchor="end" fill="#596b82" font-size="14">0</text>
+<line x1="65" y1="226.25" x2="665" y2="226.25" stroke="#dce5f1"/>
+<text x="55" y="231.25" text-anchor="end" fill="#596b82" font-size="14">25</text>
+<line x1="65" y1="162.5" x2="665" y2="162.5" stroke="#dce5f1"/>
+<text x="55" y="167.5" text-anchor="end" fill="#596b82" font-size="14">50</text>
+<line x1="65" y1="98.75" x2="665" y2="98.75" stroke="#dce5f1"/>
+<text x="55" y="103.75" text-anchor="end" fill="#596b82" font-size="14">75</text>
+<line x1="65" y1="35.0" x2="665" y2="35.0" stroke="#dce5f1"/>
+<text x="55" y="40.0" text-anchor="end" fill="#596b82" font-size="14">100</text>
+<rect x="181.0" y="41.706500000000005" width="65" height="248.2935" rx="2" fill="#a7bddd"/>
+<text x="213.5" y="33.706500000000005" text-anchor="middle" fill="#172a43" font-size="15" font-weight="600">97.37</text>
+<text x="215.0" y="315" text-anchor="middle" fill="#172a43" font-size="14">감정가</text>
+<rect x="481.0" y="41.68100000000001" width="65" height="248.319" rx="2" fill="#a7bddd"/>
+<text x="513.5" y="33.68100000000001" text-anchor="middle" fill="#172a43" font-size="15" font-weight="600">97.38</text>
+<text x="515.0" y="315" text-anchor="middle" fill="#172a43" font-size="14">자극</text>
+<rect x="65" y="379" width="10" height="10" rx="2" fill="#a7bddd"/>
+<text x="82" y="389" fill="#596b82" font-size="13">정확도</text>
+</svg>
+<figcaption>DEAP 감정 분류 정확도 (%)</figcaption>
+</figure>
+</div>
+<div class="table-wrap" role="region" tabindex="0" aria-label="모델 구성 및 평가 수치 1">
+<table>
+<caption>모델 구성 및 평가 수치 1</caption>
+<thead>
+<tr>
+<th scope="col">평가 / 산출물</th>
+<th scope="col">내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DEAP</td>
+<td>32명, 피험자 의존 평가</td>
+</tr>
+<tr>
+<td>공인시험</td>
+<td>2건</td>
+</tr>
+<tr>
+<td>지식재산</td>
+<td>특허 출원 1건, SW 등록 3건</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="evidence-note">
+<strong>평가 조건 및 연구 범위</strong>감정가 97.37 ± 1.75%, 자극 97.38 ± 1.68%. 피험자별 transductive 평가, 특허는 출원 상태</div>
+</section>
+<section class="related" id="related">
+<h2>관련 논문과 연구 자료</h2>
+<ul>
+<li>
+<a href="https://github.com/dhkim-kr" target="_blank" rel="noopener noreferrer">GitHub 프로필</a>
+</li>
+</ul>
+</section>
+<nav class="next-project" aria-label="다른 프로젝트">
+<a href="/projects/">전체 프로젝트</a>
+<a href="/projects/neurobio-hybrid/">다음: 정신-대사 상태의 종단 분석</a>
+</nav>
+</div>
+</div>
+</div>
+</main>
+<footer class="footer" id="contact">
+<div class="wrap">
+<div class="footer-top">
+<div>
+<p class="eyebrow">CONTACT</p>
+<h2>연구 및 협업 연락처</h2>
+<a href="mailto:dhkim1016@kw.ac.kr" class="mail">dhkim1016@kw.ac.kr</a>
+<p class="affiliation">광운대학교 전자통신공학과, NeuroAI Lab<br>서울, 대한민국</p>
+</div>
+<div class="link-list">
+<a href="https://scholar.google.com/citations?user=CcqJMb0AAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+<a href="https://github.com/dhkim-kr" target="_blank" rel="noopener noreferrer">GitHub</a>
+<a href="https://orcid.org/0009-0005-7105-0894" target="_blank" rel="noopener noreferrer">ORCID</a>
+<a href="https://www.linkedin.com/in/dhkim-kr" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 Dae Hyeon Kim</span>
+<span>연구 정보 기준: 2026년 9월</span>
+</div>
+</div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>인간-기기 인과적 공명 학습을 위한 이중 스트림 경량 상호작용 파운데이션 모델 개발 | Dae Hyeon Kim</title>
+<meta name="description" content="연속 생체신호 인코더와 대화 모델을 연결하는 이중 스트림 구조를 연구한다.">
+<link rel="canonical" href="https://dhkim-kr.github.io/projects/dual-stream-foundation/">
+<link rel="alternate" hreflang="ko" href="https://dhkim-kr.github.io/projects/dual-stream-foundation/">
+<link rel="alternate" hreflang="en" href="https://dhkim-kr.github.io/en/projects/dual-stream-foundation/">
+<link rel="alternate" hreflang="x-default" href="https://dhkim-kr.github.io/projects/dual-stream-foundation/">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:title" content="인간-기기 인과적 공명 학습을 위한 이중 스트림 경량 상호작용 파운데이션 모델 개발">
+<meta property="og:description" content="연속 생체신호 인코더와 대화 모델을 연결하는 이중 스트림 구조를 연구한다.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dhkim-kr.github.io/projects/dual-stream-foundation/">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/site.css">
+<script src="/assets/site.js" defer>
+</script>
+</head>
+<body>
+<a class="skip" href="#main">본문 바로가기</a>
+<header class="site-header">
+<div class="wrap header-inner">
+<a class="brand" href="/">Dae Hyeon Kim <span>RESEARCH</span>
+</a>
+<button class="menu-button" type="button" aria-expanded="false" aria-controls="main-nav">메뉴</button>
+<nav class="main-nav" id="main-nav" aria-label="주 메뉴">
+<a href="/#about">소개</a>
+<a href="/projects/">프로젝트</a>
+<a href="/publications/">논문</a>
+<a href="/#experience">경력</a>
+<a href="/#contact">연락처</a>
+</nav>
+<a class="language" href="/en/projects/dual-stream-foundation/" lang="en" hreflang="en" aria-label="Switch to English">EN</a>
+</div>
+</header>
+<main id="main">
+<div class="wrap">
+<div class="page-intro">
+<div class="breadcrumb">
+<a href="/">홈</a>
+<span>/</span>
+<span>프로젝트</span>
+</div>
+<h1>인간-기기 인과적 공명 학습을 위한 이중 스트림 경량 상호작용 파운데이션 모델 개발</h1>
+<p class="lead">연속 생체신호 인코더와 대화 모델을 연결하는 이중 스트림 구조를 연구한다.</p>
+</div>
+<div class="link-list">
+<a href="https://github.com/dhkim-kr/fr-ptt-bp" target="_blank" rel="noopener noreferrer">관련 FR-PTT 연구</a>
+</div>
+<dl class="detail-meta">
+<div>
+<dt>역할</dt>
+<dd>연구 참여 및 공동 개발</dd>
+</div>
+<div>
+<dt>담당 업무</dt>
+<dd>생체 상태 표현과 LLM 인터페이스 연구 FR-PTT 비접촉 혈압 추정 모델 공동 개발</dd>
+</div>
+<div>
+<dt>기간 및 소속</dt>
+<dd>2026.03 ~ 현재 NRF</dd>
+</div>
+</dl>
+<div class="detail-layout">
+<aside class="detail-toc">
+<p>이 프로젝트에서</p>
+<a href="#stage-1">01 연계 연구 FR-PTT</a>
+<a href="#related">관련 논문</a>
+</aside>
+<div class="detail-body">
+<section class="detail-stage" id="stage-1">
+<h2>
+<span class="section-number">01 / RESEARCH DETAIL</span>연계 연구 FR-PTT / 생체 인코더의 근거와 이중 스트림 확장 범위</h2>
+<dl class="arguments">
+<dt>아이디어</dt>
+<dd>얼굴 8개 부위의 28개 PTT와 파형 형태를 파형 인코더에 결합해 혈압 관련 정보 보완</dd>
+<dt>기여</dt>
+<dd>FR-PTT 모델 공동 개발 및 IJCNN 2026 구두 발표 생체 상태 표현과 LLM 인터페이스 연구 참여</dd>
+<dt>확장 범위</dt>
+<dd>연계 인코더를 바탕으로 상호작용 모델 연구 이중 스트림 최종 구조와 지연 평가 자료 필요</dd>
+</dl>
+<div class="evidence-gallery">
+<figure>
+<a class="figure-link" href="/assets/figures/slide-23-1.png" target="_blank" rel="noopener" aria-label="그림 확대: 파형, 형태, 부위 간 PTT를 각각 인코딩">
+<img src="/assets/figures/slide-23-1.png" alt="파형, 형태, 부위 간 PTT를 각각 인코딩" loading="lazy">
+</a>
+<figcaption>파형, 형태, 부위 간 PTT를 각각 인코딩<br>
+<a href="/assets/figures/slide-23-1.png">원본 그림 확대</a>
+</figcaption>
+</figure>
+<figure>
+<a class="figure-link" href="/assets/figures/slide-23-2.png" target="_blank" rel="noopener" aria-label="그림 확대: 원본 FR-PTT 산출 및 잘못된 피크 제외">
+<img src="/assets/figures/slide-23-2.png" alt="원본 FR-PTT 산출 및 잘못된 피크 제외" loading="lazy">
+</a>
+<figcaption>원본 FR-PTT 산출 및 잘못된 피크 제외<br>
+<a href="/assets/figures/slide-23-2.png">원본 그림 확대</a>
+</figcaption>
+</figure>
+</div>
+<div class="chart-set one">
+<figure class="chart-figure">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 410" role="img" aria-labelledby="chart-23-0" aria-describedby="chart-desc-23-0">
+<title id="chart-23-0">결합 효과 (mmHg)</title>
+<desc id="chart-desc-23-0">파형만: SBP 15.89, DBP 11.14; 전체: SBP 13.13, DBP 7.56</desc>
+<rect width="680" height="410" fill="white"/>
+<line x1="65" y1="290.0" x2="665" y2="290.0" stroke="#dce5f1"/>
+<text x="55" y="295.0" text-anchor="end" fill="#596b82" font-size="14">0</text>
+<line x1="65" y1="226.25" x2="665" y2="226.25" stroke="#dce5f1"/>
+<text x="55" y="231.25" text-anchor="end" fill="#596b82" font-size="14">5</text>
+<line x1="65" y1="162.5" x2="665" y2="162.5" stroke="#dce5f1"/>
+<text x="55" y="167.5" text-anchor="end" fill="#596b82" font-size="14">10</text>
+<line x1="65" y1="98.75" x2="665" y2="98.75" stroke="#dce5f1"/>
+<text x="55" y="103.75" text-anchor="end" fill="#596b82" font-size="14">15</text>
+<line x1="65" y1="35.0" x2="665" y2="35.0" stroke="#dce5f1"/>
+<text x="55" y="40.0" text-anchor="end" fill="#596b82" font-size="14">19</text>
+<rect x="147.0" y="80.98360655737704" width="65" height="209.01639344262296" rx="2" fill="#a7bddd"/>
+<text x="179.5" y="72.98360655737704" text-anchor="middle" fill="#172a43" font-size="15" font-weight="600">15.89</text>
+<rect x="215.0" y="117.28853078026182" width="65" height="172.71146921973818" rx="2" fill="#1f5fbf"/>
+<text x="247.5" y="109.28853078026182" text-anchor="middle" fill="#172a43" font-size="15" font-weight="600">13.13</text>
+<text x="215.0" y="315" text-anchor="middle" fill="#172a43" font-size="14">SBP</text>
+<rect x="447.0" y="143.46490730328384" width="65" height="146.53509269671616" rx="2" fill="#a7bddd"/>
+<text x="479.5" y="135.46490730328384" text-anchor="middle" fill="#172a43" font-size="15" font-weight="600">11.14</text>
+<rect x="515.0" y="190.5560771286199" width="65" height="99.44392287138008" rx="2" fill="#1f5fbf"/>
+<text x="547.5" y="182.5560771286199" text-anchor="middle" fill="#172a43" font-size="15" font-weight="600">7.56</text>
+<text x="515.0" y="315" text-anchor="middle" fill="#172a43" font-size="14">DBP</text>
+<rect x="65" y="379" width="10" height="10" rx="2" fill="#a7bddd"/>
+<text x="82" y="389" fill="#596b82" font-size="13">파형만</text>
+<rect x="275" y="379" width="10" height="10" rx="2" fill="#1f5fbf"/>
+<text x="292" y="389" fill="#596b82" font-size="13">전체</text>
+</svg>
+<figcaption>결합 효과 (mmHg)</figcaption>
+</figure>
+</div>
+<div class="table-wrap" role="region" tabindex="0" aria-label="모델 구성 및 평가 수치 1">
+<table>
+<caption>모델 구성 및 평가 수치 1</caption>
+<thead>
+<tr>
+<th scope="col">평가 데이터</th>
+<th scope="col">SBP MAE</th>
+<th scope="col">DBP MAE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VitalVideos</td>
+<td>13.13</td>
+<td>7.56</td>
+</tr>
+<tr>
+<td>V4V</td>
+<td>12.16</td>
+<td>8.96</td>
+</tr>
+<tr>
+<td>파운데이션 모델</td>
+<td>구조 미확정</td>
+<td>평가 자료 필요</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="evidence-note">
+<strong>평가 조건 및 연구 범위</strong>단위 mmHg. FR-PTT 논문의 결과이며 진행 중 파운데이션 모델의 최종 성능과 구분</div>
+</section>
+<section class="related" id="related">
+<h2>관련 논문과 연구 자료</h2>
+<ul>
+<li>
+<a href="/publications/fr-ptt/">Physiology-Aware Multi-Branch Network for Fully Contactless Blood Pressure Estimation via Facial Remote Pulse Transit Time</a>
+</li>
+</ul>
+</section>
+<nav class="next-project" aria-label="다른 프로젝트">
+<a href="/projects/">전체 프로젝트</a>
+<a href="/projects/multimodal-domain-adaptation/">다음: 다중모달 데이터와 도메인 적응</a>
+</nav>
+</div>
+</div>
+</div>
+</main>
+<footer class="footer" id="contact">
+<div class="wrap">
+<div class="footer-top">
+<div>
+<p class="eyebrow">CONTACT</p>
+<h2>연구 및 협업 연락처</h2>
+<a href="mailto:dhkim1016@kw.ac.kr" class="mail">dhkim1016@kw.ac.kr</a>
+<p class="affiliation">광운대학교 전자통신공학과, NeuroAI Lab<br>서울, 대한민국</p>
+</div>
+<div class="link-list">
+<a href="https://scholar.google.com/citations?user=CcqJMb0AAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+<a href="https://github.com/dhkim-kr" target="_blank" rel="noopener noreferrer">GitHub</a>
+<a href="https://orcid.org/0009-0005-7105-0894" target="_blank" rel="noopener noreferrer">ORCID</a>
+<a href="https://www.linkedin.com/in/dhkim-kr" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 Dae Hyeon Kim</span>
+<span>연구 정보 기준: 2026년 9월</span>
+</div>
+</div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Multiscale entropy for short EEG | Dae Hyeon Kim</title>
+<meta name="description" content="Used moving averages to retain samples when estimating multiscale entropy from short EEG segments.">
+<link rel="canonical" href="https://dhkim-kr.github.io/en/projects/multiscale-entropy/">
+<link rel="alternate" hreflang="ko" href="https://dhkim-kr.github.io/projects/multiscale-entropy/">
+<link rel="alternate" hreflang="en" href="https://dhkim-kr.github.io/en/projects/multiscale-entropy/">
+<link rel="alternate" hreflang="x-default" href="https://dhkim-kr.github.io/projects/multiscale-entropy/">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:title" content="Multiscale entropy for short EEG">
+<meta property="og:description" content="Used moving averages to retain samples when estimating multiscale entropy from short EEG segments.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dhkim-kr.github.io/en/projects/multiscale-entropy/">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/site.css">
+<script src="/assets/site.js" defer>
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="wrap header-inner">
+<a class="brand" href="/en/">Dae Hyeon Kim <span>RESEARCH</span>
+</a>
+<button class="menu-button" type="button" aria-expanded="false" aria-controls="main-nav">Menu</button>
+<nav class="main-nav" id="main-nav" aria-label="Main navigation">
+<a href="/en/#about">About</a>
+<a href="/en/projects/">Projects</a>
+<a href="/en/publications/">Publications</a>
+<a href="/en/#experience">Experience</a>
+<a href="/en/#contact">Contact</a>
+</nav>
+<a class="language" href="/projects/multiscale-entropy/" lang="ko" hreflang="ko" aria-label="한국어로 보기">한국어</a>
+</div>
+</header>
+<main id="main">
+<div class="wrap">
+<div class="page-intro">
+<div class="breadcrumb">
+<a href="/en/">Home</a>
+<span>/</span>
+<span>Projects</span>
+</div>
+<h1>Multiscale entropy for short EEG</h1>
+<p class="lead">Used moving averages to retain samples when estimating multiscale entropy from short EEG segments.</p>
+</div>
+<div class="link-list">
+<a href="https://doi.org/10.3934/mbe.2024245" target="_blank" rel="noopener noreferrer">Paper DOI</a>
+<a href="https://github.com/dhkim-kr/multiscale-distribution-entropy" target="_blank" rel="noopener noreferrer">GitHub: multiscale-distribution-entropy</a>
+</div>
+<dl class="detail-meta">
+<div>
+<dt>Role</dt>
+<dd>Method comparison and co-first authorship</dd>
+</div>
+<div>
+<dt>Contribution</dt>
+<dd>Analyzed short EEG segments, compared entropy methods, performed statistical tests and contributed to the manuscript.</dd>
+</div>
+<div>
+<dt>Period & affiliation</dt>
+<dd>2022.01 ~ 2022.02 NeuroAI Research internship, MBE 2024 Co-first author</dd>
+</div>
+</dl>
+<div class="detail-layout">
+<aside class="detail-toc">
+<p>On this page</p>
+<a href="#stage-1">01 MDE-MA</a>
+<a href="#related">Related work</a>
+</aside>
+<div class="detail-body">
+<section class="detail-stage" id="stage-1">
+<h2>
+<span class="section-number">01 / RESEARCH DETAIL</span>MDE-MA: multiscale analysis of short EEG</h2>
+<dl class="arguments">
+<dt>Problem / context</dt>
+<dd>Coarse-graining reduces sample counts at larger scales, limiting entropy estimation in short segments.</dd>
+<dt>Approach</dt>
+<dd>Used moving averages to retain N-s+1 samples and compared scale-wise ROC AUC with MSE and coarse-grained MDE.</dd>
+<dt>Contribution / next steps</dt>
+<dd>Analyzed short segments, compared methods and performed statistical tests. Co-first author, MBE 2024.</dd>
+</dl>
+<div class="evidence-gallery">
+<figure>
+<a class="figure-link" href="/assets/figures/slide-41-1.png" target="_blank" rel="noopener" aria-label="Enlarge figure: MDE-MA: multiscale analysis of short EEG: source figure 1">
+<img src="/assets/figures/slide-41-1.png" alt="MDE-MA: multiscale analysis of short EEG: source figure 1" loading="lazy">
+</a>
+<figcaption>MDE-MA: multiscale analysis of short EEG: source figure 1<br>
+<a href="/assets/figures/slide-41-1.png">View full-size figure</a>
+</figcaption>
+</figure>
+<figure>
+<a class="figure-link" href="/assets/figures/slide-41-2.png" target="_blank" rel="noopener" aria-label="Enlarge figure: MDE-MA: multiscale analysis of short EEG: source figure 2">
+<img src="/assets/figures/slide-41-2.png" alt="MDE-MA: multiscale analysis of short EEG: source figure 2" loading="lazy">
+</a>
+<figcaption>MDE-MA: multiscale analysis of short EEG: source figure 2<br>
+<a href="/assets/figures/slide-41-2.png">View full-size figure</a>
+</figcaption>
+</figure>
+<figure>
+<a class="figure-link" href="/assets/figures/slide-41-3.png" target="_blank" rel="noopener" aria-label="Enlarge figure: MDE-MA: multiscale analysis of short EEG: source figure 3">
+<img src="/assets/figures/slide-41-3.png" alt="MDE-MA: multiscale analysis of short EEG: source figure 3" loading="lazy">
+</a>
+<figcaption>MDE-MA: multiscale analysis of short EEG: source figure 3<br>
+<a href="/assets/figures/slide-41-3.png">View full-size figure</a>
+</figcaption>
+</figure>
+</div>
+<div class="table-wrap" role="region" tabindex="0" aria-label="Model specification and evaluation 1">
+<table>
+<caption>Model specification and evaluation 1</caption>
+<thead>
+<tr>
+<th scope="col">Samples at scale s</th>
+<th scope="col">For a sequence of length N</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Coarse-graining</td>
+<td>floor(N / s)</td>
+</tr>
+<tr>
+<td>Moving average</td>
+<td>N - s + 1</td>
+</tr>
+<tr>
+<td>Evaluation</td>
+<td>State separation in public EEG</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="evidence-note">
+<strong>Evaluation conditions and scope</strong>The Bonn A segment is a five-second interval centered on the first quartile. ROC AUC measures state separation in public EEG datasets. Bern-Barcelona evaluation distinguishes focal from non-focal EEG.</div>
+</section>
+<section class="related" id="related">
+<h2>Related publications and research</h2>
+<ul>
+<li>
+<a href="/en/publications/multiscale-entropy/">Multiscale Distribution Entropy Analysis of Short Epileptic EEG Signals</a>
+</li>
+</ul>
+</section>
+<nav class="next-project" aria-label="More projects">
+<a href="/en/projects/">All projects</a>
+</nav>
+</div>
+</div>
+</div>
+</main>
+<footer class="footer" id="contact">
+<div class="wrap">
+<div class="footer-top">
+<div>
+<p class="eyebrow">CONTACT</p>
+<h2>Research & collaboration</h2>
+<a href="mailto:dhkim1016@kw.ac.kr" class="mail">dhkim1016@kw.ac.kr</a>
+<p class="affiliation">NeuroAI Lab, Kwangwoon University<br>Seoul, Republic of Korea</p>
+</div>
+<div class="link-list">
+<a href="https://scholar.google.com/citations?user=CcqJMb0AAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+<a href="https://github.com/dhkim-kr" target="_blank" rel="noopener noreferrer">GitHub</a>
+<a href="https://orcid.org/0009-0005-7105-0894" target="_blank" rel="noopener noreferrer">ORCID</a>
+<a href="https://www.linkedin.com/in/dhkim-kr" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 Dae Hyeon Kim</span>
+<span>Research information as of September 2026</span>
+</div>
+</div>
+</footer>
+</body>
+</html>

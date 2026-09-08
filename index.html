@@ -1,843 +1,442 @@
-<!DOCTYPE html>
-<html lang="en" data-lang="en">
+<!doctype html>
+<html lang="ko">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dae Hyeon Kim · NeuroAI — Physiological Machine Learning</title>
-<meta name="description" content="Dae Hyeon Kim — Ph.D. candidate at the NeuroAI Lab, Kwangwoon University. Robust machine learning for physiological time series and evidence-grounded clinical AI.">
-<meta property="og:title" content="Dae Hyeon Kim — NeuroAI Lab, Kwangwoon University">
-<meta property="og:description" content="Robust machine learning for physiological time series — EEG, ECG, PPG — and clinical AI that grounds every claim in signal evidence.">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>김대현 연구 프로필 | Dae Hyeon Kim</title>
+<meta name="description" content="그래프 학습, 다중모달 표현학습, 생체신호 분석과 경량 AI를 연구하는 김대현의 연구 프로필.">
+<link rel="canonical" href="https://dhkim-kr.github.io/">
+<link rel="alternate" hreflang="ko" href="https://dhkim-kr.github.io/">
+<link rel="alternate" hreflang="en" href="https://dhkim-kr.github.io/en/">
+<link rel="alternate" hreflang="x-default" href="https://dhkim-kr.github.io/">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:title" content="김대현 연구 프로필">
+<meta property="og:description" content="그래프 학습, 다중모달 표현학습, 생체신호 분석과 경량 AI를 연구하는 김대현의 연구 프로필.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://dhkim-kr.github.io/">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23F5F7F6'/%3E%3Cpath d='M2 19h6l3-8 4 13 3-10 2 5h10' stroke='%2317507F' stroke-width='2.4' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=Noto+Serif+KR:wght@600;700&family=STIX+Two+Text:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-<style>
-:root{
-  --paper:#F5F7F6;
-  --card:#FFFFFF;
-  --ink:#141B22;
-  --body-text:#2A333B;
-  --muted:#5B6771;
-  --trace:#17507F;
-  --trace-soft:rgba(23,80,127,.5);
-  --trace-faint:rgba(23,80,127,.14);
-  --marker:#E4A93C;
-  --marker-ink:#8A651C;
-  --line:#DAE0DD;
-  --line-strong:#C4CDC9;
-  --font-d:"STIX Two Text","Noto Serif KR",Georgia,serif;
-  --font-b:"IBM Plex Sans","IBM Plex Sans KR",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-  --font-m:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
-  --wrap:1060px;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  margin:0;
-  background:var(--paper);
-  color:var(--body-text);
-  font-family:var(--font-b);
-  font-size:16.5px;
-  line-height:1.7;
-  -webkit-font-smoothing:antialiased;
-  text-rendering:optimizeLegibility;
-}
-[data-lang="en"] .ko{display:none !important}
-[data-lang="ko"] .en{display:none !important}
-.ko{word-break:keep-all}
-a{color:var(--trace);text-decoration:none}
-a:hover{text-decoration:underline;text-underline-offset:3px}
-.wrap{max-width:var(--wrap);margin:0 auto;padding:0 26px}
-.mono{font-family:var(--font-m)}
-.eyebrow{
-  font-family:var(--font-m);
-  font-size:.7rem;
-  letter-spacing:.2em;
-  text-transform:uppercase;
-  color:var(--muted);
-  margin:0;
-}
-::selection{background:rgba(23,80,127,.16)}
-:focus-visible{outline:2px solid var(--trace);outline-offset:3px;border-radius:2px}
-.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-
-/* ---------- Nav ---------- */
-.nav{
-  position:fixed;top:0;left:0;right:0;z-index:60;
-  background:rgba(245,247,246,.86);
-  -webkit-backdrop-filter:blur(10px);
-  backdrop-filter:blur(10px);
-  border-bottom:1px solid var(--line);
-}
-.nav-inner{
-  max-width:var(--wrap);margin:0 auto;padding:0 26px;
-  height:58px;display:flex;align-items:center;gap:28px;
-}
-.brand{
-  font-family:var(--font-d);font-weight:700;font-size:1.12rem;
-  color:var(--ink);letter-spacing:.01em;
-}
-.brand:hover{text-decoration:none}
-.brand em{color:var(--trace);font-style:normal}
-.nav-links{display:flex;gap:24px;margin-left:auto}
-.nav-links a{color:var(--muted);font-size:.86rem;font-weight:500}
-.nav-links a:hover{color:var(--ink);text-decoration:none}
-.lang-toggle{
-  display:flex;border:1px solid var(--line-strong);
-  border-radius:999px;overflow:hidden;background:var(--card);
-}
-.lang-toggle button{
-  font-family:var(--font-m);font-size:.7rem;letter-spacing:.1em;
-  padding:6px 13px;background:transparent;border:0;
-  color:var(--muted);cursor:pointer;
-}
-.lang-toggle button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
-
-/* ---------- Hero ---------- */
-.hero{
-  position:relative;
-  padding:158px 0 0;
-  border-bottom:1px solid var(--line);
-  background-image:
-    linear-gradient(180deg, rgba(245,247,246,0) 62%, var(--paper) 96%),
-    linear-gradient(rgba(23,80,127,.085) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(23,80,127,.085) 1px, transparent 1px),
-    linear-gradient(rgba(23,80,127,.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(23,80,127,.04) 1px, transparent 1px);
-  background-size:100% 100%, 120px 120px, 120px 120px, 24px 24px, 24px 24px;
-}
-.hero h1{
-  font-family:var(--font-d);font-weight:600;color:var(--ink);
-  font-size:clamp(2.7rem, 6.5vw, 4.6rem);
-  line-height:1.05;letter-spacing:-.015em;
-  margin:16px 0 24px;
-}
-.lede{max-width:660px;font-size:1.13rem;line-height:1.78;margin:0}
-.hero-links{display:flex;flex-wrap:wrap;gap:10px;margin:34px 0 70px}
-.chip{
-  display:inline-flex;align-items:center;gap:8px;
-  padding:8px 16px;border:1px solid var(--line-strong);border-radius:999px;
-  background:var(--card);font-size:.84rem;font-weight:500;color:var(--ink);
-  transition:border-color .2s, color .2s;
-}
-.chip:hover{border-color:var(--trace);color:var(--trace);text-decoration:none}
-.chip .arr{font-family:var(--font-m);font-size:.72rem;color:var(--muted)}
-.chip:hover .arr{color:var(--trace)}
-
-/* ---------- Signal strip ---------- */
-.strip{
-  position:relative;height:152px;
-  border-top:1px solid var(--line);
-}
-.strip canvas{display:block;width:100%;height:100%}
-.strip-labels{
-  position:absolute;left:0;top:0;bottom:0;z-index:2;
-  display:flex;flex-direction:column;justify-content:space-around;
-  padding:10px 0 10px 26px;width:96px;
-  background:linear-gradient(90deg, var(--paper) 48%, rgba(245,247,246,0));
-  pointer-events:none;
-}
-.strip-labels span{
-  font-family:var(--font-m);font-size:.6rem;letter-spacing:.24em;
-  color:var(--muted);
-}
-
-/* ---------- Sections ---------- */
-.section{padding:92px 0;border-bottom:1px solid var(--line)}
-.section:last-of-type{border-bottom:0}
-.sec-grid{display:grid;grid-template-columns:225px 1fr;gap:52px;align-items:start}
-.sec-head h2{
-  font-family:var(--font-d);font-weight:600;color:var(--ink);
-  font-size:1.78rem;line-height:1.22;margin:10px 0 0;letter-spacing:-.01em;
-}
-.sec-body{min-width:0}
-.sec-body > p{margin:0 0 18px;max-width:68ch}
-.sec-body > p:last-child{margin-bottom:0}
-
-/* ---------- Research pillars ---------- */
-.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:36px}
-.pillar{
-  background:var(--card);border:1px solid var(--line);
-  border-top:3px solid var(--trace);border-radius:3px;
-  padding:20px 18px 18px;
-}
-.pillar h3{font-size:.98rem;font-weight:600;color:var(--ink);margin:0 0 9px;line-height:1.45}
-.pillar p{font-size:.875rem;color:var(--muted);line-height:1.65;margin:0 0 12px}
-.pillar .kw{font-family:var(--font-m);font-size:.66rem;letter-spacing:.08em;color:var(--trace)}
-
-/* ---------- News ---------- */
-.news{list-style:none;margin:0;padding:0}
-.news li{
-  display:grid;grid-template-columns:110px 1fr;gap:22px;
-  padding:15px 0;border-bottom:1px dashed var(--line);
-  font-size:.95rem;
-}
-.news li:last-child{border-bottom:0}
-.news .date{
-  font-family:var(--font-m);font-size:.74rem;letter-spacing:.05em;
-  color:var(--muted);padding-top:4px;white-space:nowrap;
-}
-.news p{margin:0}
-.mini{
-  display:inline-block;font-family:var(--font-m);font-size:.6rem;
-  letter-spacing:.12em;text-transform:uppercase;
-  padding:2px 8px;border-radius:999px;margin-right:8px;vertical-align:2px;
-  border:1px solid rgba(228,169,60,.6);background:rgba(228,169,60,.14);color:var(--marker-ink);
-}
-
-/* ---------- Publications ---------- */
-.pubs{list-style:none;margin:0;padding:0}
-.pub{
-  position:relative;padding:24px 0 24px 24px;
-  border-bottom:1px solid var(--line);
-}
-.pub::before{
-  content:"";position:absolute;left:0;top:28px;bottom:28px;width:2px;
-  background:var(--line-strong);transition:background .25s;
-}
-.pub:hover::before{background:var(--trace)}
-.pub h3{
-  font-family:var(--font-d);font-weight:600;font-size:1.15rem;
-  line-height:1.45;margin:0 0 7px;color:var(--ink);letter-spacing:0;
-}
-.pub .authors{font-size:.9rem;color:var(--muted);margin:0 0 5px}
-.pub .authors b{color:var(--ink);font-weight:600}
-.pub .venue{
-  font-family:var(--font-m);font-size:.73rem;letter-spacing:.03em;
-  color:var(--trace);margin:0 0 12px;
-}
-.pub-meta{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
-.tag{
-  font-family:var(--font-m);font-size:.64rem;letter-spacing:.07em;
-  padding:3px 10px;border:1px solid var(--line-strong);border-radius:999px;
-  color:var(--muted);background:var(--card);white-space:nowrap;
-}
-.tag.hl{border-color:rgba(228,169,60,.6);background:rgba(228,169,60,.14);color:var(--marker-ink)}
-.plink{font-family:var(--font-m);font-size:.73rem;letter-spacing:.04em;margin-left:auto;white-space:nowrap}
-.pubs-more{margin-top:28px;font-size:.92rem}
-.pubs-more a{font-weight:500}
-
-/* ---------- Timeline ---------- */
-.tl{list-style:none;margin:0;padding:0;position:relative}
-.tl::before{
-  content:"";position:absolute;left:5px;top:8px;bottom:8px;width:1px;
-  background:var(--line-strong);
-}
-.tl li{position:relative;padding:0 0 36px 34px}
-.tl li:last-child{padding-bottom:0}
-.tl li::before{
-  content:"";position:absolute;left:0;top:6px;width:11px;height:11px;
-  border-radius:50%;background:var(--paper);border:2px solid var(--trace);
-}
-.tl .date{
-  display:block;font-family:var(--font-m);font-size:.71rem;
-  letter-spacing:.08em;color:var(--muted);margin-bottom:5px;
-}
-.tl h3{font-size:1.02rem;font-weight:600;color:var(--ink);margin:0 0 3px;line-height:1.5}
-.tl .org{font-size:.89rem;color:var(--trace);margin:0 0 7px;font-weight:500}
-.tl .detail{font-size:.89rem;color:var(--muted);margin:0;max-width:62ch;line-height:1.65}
-
-/* ---------- Awards & service ---------- */
-.duo{display:grid;grid-template-columns:1fr 1fr;gap:48px}
-.duo h3{
-  font-family:var(--font-m);font-size:.7rem;letter-spacing:.2em;
-  text-transform:uppercase;color:var(--muted);font-weight:500;
-  margin:0 0 6px;padding-bottom:10px;border-bottom:1px solid var(--line-strong);
-}
-.duo ul{list-style:none;margin:0;padding:0}
-.duo li{
-  padding:13px 0;border-bottom:1px dashed var(--line);
-  font-size:.92rem;display:grid;grid-template-columns:1fr auto;gap:16px;align-items:baseline;
-}
-.duo li:last-child{border-bottom:0}
-.duo .when{font-family:var(--font-m);font-size:.7rem;color:var(--muted);white-space:nowrap}
-.duo li p{margin:0}
-.duo li .sub{display:block;font-size:.82rem;color:var(--muted);margin-top:2px}
-
-/* ---------- Footer ---------- */
-.footer{padding:88px 0 64px}
-.footer h2{
-  font-family:var(--font-d);font-weight:600;color:var(--ink);
-  font-size:clamp(1.7rem, 3.4vw, 2.4rem);margin:10px 0 14px;letter-spacing:-.01em;
-}
-.footer .contact-note{max-width:56ch;margin:0 0 26px}
-.mail{
-  font-family:var(--font-m);font-size:clamp(.95rem, 2.4vw, 1.18rem);
-  letter-spacing:.01em;border-bottom:1px solid var(--trace-soft);padding-bottom:2px;
-}
-.mail:hover{text-decoration:none;border-bottom-color:var(--trace)}
-.foot-meta{
-  display:flex;flex-wrap:wrap;gap:10px 26px;align-items:center;
-  margin-top:56px;padding-top:26px;border-top:1px solid var(--line);
-}
-.foot-meta span, .foot-meta a{font-family:var(--font-m);font-size:.72rem;letter-spacing:.05em;color:var(--muted)}
-.foot-meta a:hover{color:var(--trace)}
-.foot-meta .spacer{margin-left:auto}
-
-/* ---------- Reveal ---------- */
-.rv{opacity:0;transform:translateY(14px);transition:opacity .65s ease,transform .65s ease}
-.rv.in{opacity:1;transform:none}
-
-/* ---------- Responsive ---------- */
-@media (max-width:860px){
-  .pillars{grid-template-columns:1fr}
-  .duo{grid-template-columns:1fr;gap:40px}
-}
-@media (max-width:760px){
-  .nav-links{display:none}
-  .sec-grid{grid-template-columns:1fr;gap:26px}
-  .section{padding:70px 0}
-  .hero{padding-top:128px}
-  .news li{grid-template-columns:88px 1fr;gap:14px}
-  .pub .plink{margin-left:0}
-  .strip{height:132px}
-}
-@media (prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  .rv{opacity:1;transform:none;transition:none}
-}
-@media print{
-  .nav,.strip,.lang-toggle{display:none !important}
-  body{background:#fff;font-size:11.5px}
-  .hero{padding-top:30px;background-image:none}
-  .section,.footer{padding:26px 0}
-  .rv{opacity:1;transform:none}
-  a{color:var(--ink)}
-}
-</style>
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/site.css">
+<script src="/assets/site.js" defer>
+</script>
 </head>
 <body>
-
-<header class="nav">
-  <div class="nav-inner">
-    <a class="brand" href="#top">DH<em>.</em>Kim</a>
-    <nav class="nav-links" aria-label="Sections">
-      <a href="#about"><span class="en">About</span><span class="ko">소개</span></a>
-      <a href="#news"><span class="en">News</span><span class="ko">소식</span></a>
-      <a href="#publications"><span class="en">Publications</span><span class="ko">논문</span></a>
-      <a href="#experience"><span class="en">Experience</span><span class="ko">이력</span></a>
-    </nav>
-    <div class="lang-toggle" role="group" aria-label="Language">
-      <button type="button" id="btn-en" aria-pressed="true">EN</button>
-      <button type="button" id="btn-ko" aria-pressed="false">KO</button>
-    </div>
-  </div>
+<a class="skip" href="#main">본문 바로가기</a>
+<header class="site-header">
+<div class="wrap header-inner">
+<a class="brand" href="/">Dae Hyeon Kim <span>RESEARCH</span>
+</a>
+<button class="menu-button" type="button" aria-expanded="false" aria-controls="main-nav">메뉴</button>
+<nav class="main-nav" id="main-nav" aria-label="주 메뉴">
+<a href="/#about">소개</a>
+<a href="/projects/">프로젝트</a>
+<a href="/publications/">논문</a>
+<a href="/#experience">경력</a>
+<a href="/#contact">연락처</a>
+</nav>
+<a class="language" href="/en/" lang="en" hreflang="en" aria-label="Switch to English">EN</a>
+</div>
 </header>
-
-<main id="top">
-
-<!-- ================= HERO ================= -->
-<section class="hero">
-  <div class="wrap">
-    <p class="eyebrow">
-      <span class="en">Ph.D. Candidate · NeuroAI Lab · Kwangwoon University</span><span class="ko">박사과정 · 광운대학교 NeuroAI 연구실</span>
-    </p>
-    <h1><span class="en">Dae Hyeon Kim</span><span class="ko">김대현</span></h1>
-    <p class="lede en">I build machine learning for physiological time series — EEG, ECG, PPG, and beyond — that stays robust across people, sessions, and devices, and clinical AI that grounds every claim in signal evidence.</p>
-    <p class="lede ko">EEG·ECG·PPG 등 생체신호 시계열을 위한 기계학습을 연구합니다. 사람·세션·기기가 바뀌어도 무너지지 않는 표현 학습, 그리고 모든 판단의 근거를 신호로 제시하는 임상 AI를 만듭니다.</p>
-    <div class="hero-links">
-      <a class="chip" href="mailto:dhkim1016@kw.ac.kr">Email <span class="arr">↗</span></a>
-      <a class="chip" href="https://scholar.google.com/citations?user=CcqJMb0AAAAJ" target="_blank" rel="noopener">Google Scholar <span class="arr">↗</span></a>
-      <a class="chip" href="https://github.com/dhkim-kr" target="_blank" rel="noopener">GitHub <span class="arr">↗</span></a>
-      <a class="chip" href="https://www.linkedin.com/in/dhkim-kr" target="_blank" rel="noopener">LinkedIn <span class="arr">↗</span></a>
-      <a class="chip" href="https://orcid.org/0009-0005-7105-0894" target="_blank" rel="noopener">ORCID <span class="arr">↗</span></a>
-    </div>
-  </div>
-  <div class="strip" aria-hidden="false">
-    <p class="sr-only">Decorative animation of four physiological signal traces: EEG, ECG, PPG and EDA.</p>
-    <div class="strip-labels" aria-hidden="true">
-      <span>EEG</span><span>ECG</span><span>PPG</span><span>EDA</span>
-    </div>
-    <canvas id="sig" aria-hidden="true"></canvas>
-  </div>
+<main id="main">
+<div class="wrap">
+<section class="hero" id="about">
+<div class="hero-copy">
+<p class="eyebrow">NEUROAI LAB / KWANGWOON UNIVERSITY</p>
+<div class="hero-name">
+<h1>김대현</h1>
+<p class="name-en">Dae Hyeon Kim</p>
+</div>
+<h2 class="hero-title">그래프와 다중모달 학습의<br>강건성과 효율성을 연구합니다.</h2>
+<p class="hero-intro">적은 레이블과 변화하는 측정 환경에서도 유효한 관계를 학습하는 모델을 연구합니다. 생체신호 수집과 분석, 그래프 모델 설계, 실제 시스템 구현까지 연구를 수행해 왔습니다.</p>
+<div class="link-list">
+<a href="mailto:dhkim1016@kw.ac.kr">Email</a>
+<a href="https://scholar.google.com/citations?user=CcqJMb0AAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+<a href="https://github.com/dhkim-kr" target="_blank" rel="noopener noreferrer">GitHub</a>
+<a href="https://orcid.org/0009-0005-7105-0894" target="_blank" rel="noopener noreferrer">ORCID</a>
+<a href="https://www.linkedin.com/in/dhkim-kr" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+</div>
+</div>
+<div class="portrait">
+<figure>
+<img src="/assets/portrait.png" alt="김대현 프로필 사진" width="270" height="350" fetchpriority="high">
+<figcaption>전자통신공학과 석박사통합과정<br>지도교수 최영석 / 2027.02 졸업 예정</figcaption>
+</figure>
+</div>
 </section>
-
-<!-- ================= ABOUT ================= -->
-<section class="section" id="about">
-  <div class="wrap sec-grid rv">
-    <div class="sec-head">
-      <p class="eyebrow">About</p>
-      <h2><span class="en">Signals, structure,<br>and evidence</span><span class="ko">신호, 구조,<br>그리고 근거</span></h2>
-    </div>
-    <div class="sec-body">
-      <p class="en">I am a Ph.D. candidate in Electronics and Communications Engineering at Kwangwoon University, working with Prof. Young-Seok Choi at the Neuroengineering and Artificial Intelligence (NeuroAI) Lab. My research centers on machine learning for human-derived time series — EEG, ECG, PPG and EDA, facial video, speech, and language.</p>
-      <p class="ko">광운대학교 전자통신공학과 박사과정으로, NeuroAI 연구실에서 최영석 교수님의 지도를 받고 있습니다. EEG·ECG·PPG·EDA 같은 생체신호와 얼굴 영상, 음성, 언어 등 사람에게서 나오는 시계열 데이터를 위한 기계학습이 연구의 중심입니다.</p>
-      <p class="en">These signals are non-stationary and deeply person-specific, and scale alone has not solved this — even biosignal foundation models still fail across subjects, sessions, and devices. I encode the missing structure explicitly: sparse and dynamic graphs over sensors and sources, self- and semi-supervised contrastive objectives, and cross-modal alignment, so that representations hold when the person, the day, or the device changes.</p>
-      <p class="ko">이런 신호는 비정상적(non-stationary)이고 개인차가 매우 커서, 모델과 데이터 규모를 키우는 것만으로는 해결되지 않습니다 — 생체신호 파운데이션 모델조차 피험자·세션·기기가 바뀌면 무너집니다. 저는 그 빠져 있는 '구조'를 학습에 명시적으로 새겨 넣습니다. 센서와 신호원 위의 희소·동적 그래프, 자기/준지도 대조학습, 교차 모달 정렬을 통해 사람이 바뀌고, 날이 바뀌고, 기기가 바뀌어도 유지되는 표현을 만듭니다.</p>
-      <p class="en">Robustness alone is not enough for the clinic — outputs must be traceable to evidence. My current work couples physiological encoders with LLM-based multi-agent reasoning, so that a clinical claim can be traced back to the ECG or PPG segment that supports it: toward personalized models that stay current as a person changes and support closed-loop intervention.</p>
-      <p class="ko">임상에서는 강건함만으로는 부족합니다 — 모델의 출력은 근거까지 추적 가능해야 합니다. 최근에는 생체신호 인코더와 LLM 기반 멀티 에이전트 추론을 결합해, 임상적 판단을 그것을 뒷받침하는 ECG·PPG 구간까지 되짚을 수 있게 만드는 연구를 하고 있습니다. 사람의 변화를 따라 갱신되고 폐루프 중재까지 지원하는 개인화 생리 모델이 장기 목표입니다.</p>
-
-      <div class="pillars">
-        <div class="pillar">
-          <h3><span class="en">Robust biosignal representation learning</span><span class="ko">강건한 생체신호 표현 학습</span></h3>
-          <p class="en">Graph-structured priors and semi-/self-supervised contrastive objectives for EEG and wearable signals under subject, session, and device shift.</p>
-          <p class="ko">피험자·세션·기기 변화에도 견디는 EEG·웨어러블 신호 표현을 위한 그래프 구조 사전지식과 준/자기지도 대조학습.</p>
-          <span class="kw">EEG · BCI · GNN · CONTRASTIVE</span>
-        </div>
-        <div class="pillar">
-          <h3><span class="en">Multimodal affective &amp; physiological computing</span><span class="ko">멀티모달 감정·생리 컴퓨팅</span></h3>
-          <p class="en">Cross-modal alignment across biosignals, facial video, speech, and language — emotion recognition in conversation, rPPG, and digital biomarkers of craving.</p>
-          <p class="ko">생체신호·얼굴 영상·음성·언어를 잇는 교차 모달 정렬 — 대화 감정 인식(ERC), rPPG, 갈망(craving) 디지털 바이오마커.</p>
-          <span class="kw">ERC · rPPG · BIOMARKERS</span>
-        </div>
-        <div class="pillar">
-          <h3><span class="en">Evidence-grounded clinical agents</span><span class="ko">근거 기반 임상 에이전트</span></h3>
-          <p class="en">LLM-based multi-agent systems that trace clinical claims back to the waveform — toward just-in-time intervention and physiological digital twins.</p>
-          <p class="ko">임상적 판단을 파형 근거까지 되짚는 LLM 멀티 에이전트 시스템 — 적시 중재(JITAI)와 생리학적 디지털 트윈을 향해.</p>
-          <span class="kw">LLM AGENTS · JITAI · DIGITAL TWIN</span>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="stats" aria-label="연구 이력 요약">
+<div class="stat">
+<strong>6</strong>
+<span>SCIE 게재 및 확정</span>
+</div>
+<div class="stat">
+<strong>7</strong>
+<span>국제학회 논문</span>
+</div>
+<div class="stat">
+<strong>8</strong>
+<span>정부과제 참여</span>
+</div>
+<div class="stat">
+<strong>4</strong>
+<span>기술 세부과제 리드</span>
+</div>
+</div>
+<section class="section" id="research">
+<div class="section-head">
+<div>
+<p class="eyebrow">01 / RESEARCH</p>
+<h2>연구 분야</h2>
+</div>
+</div>
+<div class="research-grid">
+<div class="research-item">
+<span class="number">01</span>
+<h3>그래프 표현과 구조 학습</h3>
+<p>표본과 채널의 관계를 적응적으로 구성하고, 준지도 대조학습과 구조적 희소성으로 적은 레이블과 관계 잡음을 다룹니다.</p>
+</div>
+<div class="research-item">
+<span class="number">02</span>
+<h3>다중모달 학습과 도메인 적응</h3>
+<p>생체신호, 음성, 언어를 관계 기반으로 융합합니다. 교차모달 정렬을 통해 입력 결손과 피험자 및 세션 변화에 대응합니다.</p>
+</div>
+<div class="research-item">
+<span class="number">03</span>
+<h3>경량 모델과 근거 기반 에이전트</h3>
+<p>경량 시간 모델과 공유 그래프 연산자를 연구하고, 관측 근거를 보존하는 상태 표현을 검색과 다중 에이전트 실행에 연결합니다.</p>
+</div>
+</div>
 </section>
-
-<!-- ================= NEWS ================= -->
-<section class="section" id="news">
-  <div class="wrap sec-grid rv">
-    <div class="sec-head">
-      <p class="eyebrow">News</p>
-      <h2><span class="en">Recent updates</span><span class="ko">최근 소식</span></h2>
-    </div>
-    <div class="sec-body">
-      <ul class="news">
-        <li>
-          <span class="date">Mar 2026</span>
-          <p><span class="mini"><span class="en">Competition</span><span class="ko">경진대회</span></span><span class="en">Advanced to the main round of <b>AI Champion</b>, a nationwide AI competition hosted by the Korean Ministry of Science and ICT — in both the Regular and Korean-AI tracks.</span><span class="ko">과학기술정보통신부 주관 전국 단위 AI 경진대회 <b>AI Champion</b> 본선 진출 — 일반 트랙과 한국어 AI 트랙 동시 진출.</span></p>
-        </li>
-        <li>
-          <span class="date">2026</span>
-          <p><span class="en"><b>ASGCRL</b>, on robust EEG-based emotion recognition, published in <i>Knowledge-Based Systems</i> (IF 7.6, JCR top 12.5%).</span><span class="ko">강건한 EEG 감정 인식 연구 <b>ASGCRL</b>이 <i>Knowledge-Based Systems</i>에 게재 (IF 7.6, JCR 상위 12.5%).</span></p>
-        </li>
-        <li>
-          <span class="date">2026</span>
-          <p><span class="en">Two papers accepted at <b>IEEE ICASSP 2026</b> (Barcelona) — one oral, one poster.</span><span class="ko"><b>IEEE ICASSP 2026</b>(바르셀로나)에 논문 2편 채택 — 구두 1편, 포스터 1편.</span></p>
-        </li>
-        <li>
-          <span class="date">2026</span>
-          <p><span class="en">A mentee's first-author paper accepted as an <b>oral presentation at IEEE WCCI–IJCNN 2026</b>.</span><span class="ko">멘티 학생의 제1저자 논문이 <b>IEEE WCCI–IJCNN 2026 구두 발표</b>로 채택.</span></p>
-        </li>
-        <li>
-          <span class="date">Dec 2025</span>
-          <p><span class="en">Paper on semi-supervised graph contrastive learning for EEG emotion recognition published in <i>Engineering Applications of Artificial Intelligence</i> (IF 8.0, JCR top 2.5%).</span><span class="ko">준지도 그래프 대조학습 기반 EEG 감정 인식 논문이 <i>Engineering Applications of Artificial Intelligence</i>에 게재 (IF 8.0, JCR 상위 2.5%).</span></p>
-        </li>
-        <li>
-          <span class="date">Nov 2025</span>
-          <p><span class="en">Co-authored paper on sparse dynamic graph CNNs published in <i>IEEE Sensors Journal</i>.</span><span class="ko">희소 동적 그래프 CNN 공저 논문이 <i>IEEE Sensors Journal</i>에 게재.</span></p>
-        </li>
-        <li>
-          <span class="date">May 2024</span>
-          <p><span class="mini"><span class="en">Award</span><span class="ko">수상</span></span><span class="en"><b>Best Poster Award</b> at the KOSOMBE Spring Conference.</span><span class="ko">대한의용생체공학회 춘계학술대회 <b>우수 포스터상</b> 수상.</span></p>
-        </li>
-        <li>
-          <span class="date">Apr 2024</span>
-          <p><span class="en">Paper on multiscale distribution entropy for epileptic EEG published in <i>Mathematical Biosciences and Engineering</i>.</span><span class="ko">뇌전증 EEG의 다중스케일 분포 엔트로피 분석 논문이 <i>Mathematical Biosciences and Engineering</i>에 게재.</span></p>
-        </li>
-      </ul>
-    </div>
-  </div>
+<section class="section" id="projects">
+<div class="section-head">
+<div>
+<p class="eyebrow">02 / PROJECTS</p>
+<h2>주요 프로젝트</h2>
+</div>
+<a href="/projects/" class="text-link">전체 프로젝트 13개 보기</a>
+</div>
+<div class="project-list">
+<article class="project-row">
+<a class="thumb" href="/projects/eeg-graph-learning/" tabindex="-1" aria-hidden="true">
+<img src="/assets/figures/slide-13-1.png" alt="EEG 그래프 학습과 경량 디코딩" loading="lazy" width="220" height="150">
+</a>
+<div>
+<p class="category">Graph learning</p>
+<h3>
+<a href="/projects/eeg-graph-learning/">EEG 그래프 학습과 경량 디코딩</a>
+</h3>
+<p class="summary">소량 레이블의 그래프 학습과 경량 시간 모델로 EEG 상태를 분류했다.</p>
+<span class="role">EEG 연구 리드</span>
+</div>
+</article>
+<article class="project-row">
+<a class="thumb" href="/projects/multimodal-emotion/" tabindex="-1" aria-hidden="true">
+<img src="/assets/figures/slide-16-1.png" alt="다중모달 감정 인식" loading="lazy" width="220" height="150">
+</a>
+<div>
+<p class="category">Multimodal learning</p>
+<h3>
+<a href="/projects/multimodal-emotion/">다중모달 감정 인식</a>
+</h3>
+<p class="summary">노년층 발화 데이터를 구축하고 음성 및 텍스트의 그래프 융합을 평가했다.</p>
+<span class="role">기술 세부과제 리드</span>
+</div>
+</article>
+<article class="project-row">
+<a class="thumb" href="/projects/kist-ultrasound/" tabindex="-1" aria-hidden="true">
+<img src="/assets/figures/slide-29-1.png" alt="집속초음파 위치 정합과 제어" loading="lazy" width="220" height="150">
+</a>
+<div>
+<p class="category">KIST internship</p>
+<h3>
+<a href="/projects/kist-ultrasound/">집속초음파 위치 정합과 제어</a>
+</h3>
+<p class="summary">영상과 추적 좌표를 정합하고 집속초음파 음장 측정의 위치 제어를 구현했다.</p>
+<span class="role">3D Slicer 모듈 및 장치 제어 개발</span>
+</div>
+</article>
+<article class="project-row">
+<a class="thumb" href="/projects/bcg-blood-pressure/" tabindex="-1" aria-hidden="true">
+<img src="/assets/figures/slide-32-1.png" alt="2채널 BCG 혈압 추정" loading="lazy" width="220" height="150">
+</a>
+<div>
+<p class="category">Undergraduate internship</p>
+<h3>
+<a href="/projects/bcg-blood-pressure/">2채널 BCG 혈압 추정</a>
+</h3>
+<p class="summary">의자의 2채널 BCG를 CNN, BiGRU, 어텐션으로 분석해 혈압을 추정했다.</p>
+<span class="role">혈압 추정 모델 및 실시간 처리 공동 개발</span>
+</div>
+</article>
+<article class="project-row">
+<a class="thumb" href="/projects/neurosync/" tabindex="-1" aria-hidden="true">
+<img src="/assets/figures/slide-35-1.png" alt="NeuroSync" loading="lazy" width="220" height="150">
+</a>
+<div>
+<p class="category">AI Champion 2026</p>
+<h3>
+<a href="/projects/neurosync/">NeuroSync</a>
+</h3>
+<p class="summary">국산 LLM과 근거 검증을 결합해 사전문진 내용을 의료진 인계 기록으로 구성했다.</p>
+<span class="role">방법론 설계 및 핵심 구현</span>
+</div>
+</article>
+<article class="project-row">
+<a class="thumb" href="/projects/neurotruth/" tabindex="-1" aria-hidden="true">
+<img src="/assets/figures/slide-38-1.png" alt="NeuroTruth" loading="lazy" width="220" height="150">
+</a>
+<div>
+<p class="category">AI Champion 2026</p>
+<h3>
+<a href="/projects/neurotruth/">NeuroTruth</a>
+</h3>
+<p class="summary">웨어러블 갈망 추정과 규칙 기반 위험 판정을 앱 알림 및 대화 지원에 연결했다.</p>
+<span class="role">기술 리드 및 PM</span>
+</div>
+</article>
+</div>
 </section>
-
-<!-- ================= PUBLICATIONS ================= -->
 <section class="section" id="publications">
-  <div class="wrap sec-grid rv">
-    <div class="sec-head">
-      <p class="eyebrow">Publications</p>
-      <h2><span class="en">Selected work</span><span class="ko">주요 논문</span></h2>
-    </div>
-    <div class="sec-body">
-      <ol class="pubs">
-
-        <li class="pub">
-          <h3><a href="https://www.sciencedirect.com/science/article/pii/S0950705126003783" target="_blank" rel="noopener" style="color:inherit">ASGCRL: Adaptive Semi-Supervised Graph Contrastive Representation Learning for Robust EEG-Based Emotion Recognition</a></h3>
-          <p class="authors"><b>Dae Hyeon Kim</b> and Young-Seok Choi</p>
-          <p class="venue">KNOWLEDGE-BASED SYSTEMS · VOL. 339 · 2026</p>
-          <div class="pub-meta">
-            <span class="tag">Journal</span>
-            <span class="tag hl">IF 7.6 · JCR top 12.5%</span>
-            <a class="plink" href="https://www.sciencedirect.com/science/article/pii/S0950705126003783" target="_blank" rel="noopener">DOI ↗</a>
-          </div>
-        </li>
-
-        <li class="pub">
-          <h3><a href="https://www.sciencedirect.com/science/article/pii/S0952197625019773" target="_blank" rel="noopener" style="color:inherit">Semi-Supervised Graph Contrastive Learning for Emotion Recognition Based on Electroencephalogram Signals</a></h3>
-          <p class="authors"><b>Dae Hyeon Kim</b> and Young-Seok Choi</p>
-          <p class="venue">ENGINEERING APPLICATIONS OF ARTIFICIAL INTELLIGENCE · VOL. 161 · DEC 2025</p>
-          <div class="pub-meta">
-            <span class="tag">Journal</span>
-            <span class="tag hl">IF 8.0 · JCR top 2.5%</span>
-            <a class="plink" href="https://www.sciencedirect.com/science/article/pii/S0952197625019773" target="_blank" rel="noopener">DOI ↗</a>
-          </div>
-        </li>
-
-        <li class="pub">
-          <h3>Joint Graph-Based Modality Alignment for Robustness in Conversational Emotion Recognition</h3>
-          <p class="authors"><b>Dae Hyeon Kim</b> and Young-Seok Choi</p>
-          <p class="venue">IEEE ICASSP 2026 · BARCELONA, SPAIN</p>
-          <div class="pub-meta">
-            <span class="tag">Conference</span>
-          </div>
-        </li>
-
-        <li class="pub">
-          <h3>Inter-Dialog Contrastive Learning for Multimodal Emotion Recognition in Conversations</h3>
-          <p class="authors">Dong-Hyeon Lee, <b>Dae Hyeon Kim</b>, and Young-Seok Choi</p>
-          <p class="venue">IEEE ICASSP 2026 · BARCELONA, SPAIN</p>
-          <div class="pub-meta">
-            <span class="tag">Conference</span>
-            <span class="tag hl">Oral</span>
-          </div>
-        </li>
-
-        <li class="pub">
-          <h3><a href="https://ieeexplore.ieee.org/abstract/document/11195977" target="_blank" rel="noopener" style="color:inherit">Enhancing EEG-Based Emotion Recognition Using Sparse Dynamic Graph CNN with ℓ<sub>2,1</sub>-Norm</a></h3>
-          <p class="authors">Min Seok Lee, <b>Dae Hyeon Kim</b>, and Young-Seok Choi</p>
-          <p class="venue">IEEE SENSORS JOURNAL · 25(22) · NOV 2025</p>
-          <div class="pub-meta">
-            <span class="tag">Journal</span>
-            <a class="plink" href="https://ieeexplore.ieee.org/abstract/document/11195977" target="_blank" rel="noopener">DOI ↗</a>
-          </div>
-        </li>
-
-        <li class="pub">
-          <h3>Physiology-Aware Multi-Branch Network for Fully Contactless Blood Pressure Estimation via Facial Remote Pulse Transit Time</h3>
-          <p class="authors">Seung Hyun Jho, <b>Dae Hyeon Kim</b>, Jun Ho Son, and Young-Seok Choi</p>
-          <p class="venue">IEEE WCCI–IJCNN 2026 · MAASTRICHT, NETHERLANDS</p>
-          <div class="pub-meta">
-            <span class="tag">Conference</span>
-            <span class="tag hl">Oral</span>
-            <span class="tag"><span class="en">Mentee-led</span><span class="ko">멘티 주도</span></span>
-          </div>
-        </li>
-
-        <li class="pub">
-          <h3><a href="https://www.aimspress.com/article/doi/10.3934/mbe.2024245" target="_blank" rel="noopener" style="color:inherit">Multiscale Distribution Entropy Analysis of Short Epileptic EEG Signals</a></h3>
-          <p class="authors"><b>Dae Hyeon Kim</b>, Jin-Oh Park, Dae-Young Lee, and Young-Seok Choi</p>
-          <p class="venue">MATHEMATICAL BIOSCIENCES AND ENGINEERING · 21(4) · APR 2024</p>
-          <div class="pub-meta">
-            <span class="tag">Journal</span>
-            <a class="plink" href="https://www.aimspress.com/article/doi/10.3934/mbe.2024245" target="_blank" rel="noopener">DOI ↗</a>
-          </div>
-        </li>
-
-      </ol>
-      <p class="pubs-more">
-        <span class="en">Full list on <a href="https://scholar.google.com/citations?user=CcqJMb0AAAAJ" target="_blank" rel="noopener">Google Scholar ↗</a></span>
-        <span class="ko">전체 논문 목록은 <a href="https://scholar.google.com/citations?user=CcqJMb0AAAAJ" target="_blank" rel="noopener">Google Scholar ↗</a>에서 확인하실 수 있습니다.</span>
-      </p>
-    </div>
-  </div>
+<div class="section-head">
+<div>
+<p class="eyebrow">03 / PUBLICATIONS</p>
+<h2>주요 논문</h2>
+</div>
+<a href="/publications/" class="text-link">전체 논문 및 원고 보기</a>
+</div>
+<ol class="publication-list">
+<li class="publication-row">
+<div class="publication-year">2026</div>
+<div>
+<h3>
+<a href="/publications/simnext-eeg/">SimNeXt-EEG: Compact Motor Imagery EEG Decoding via Parameter-Free Temporal Attention and Separable Refinement</a>
+</h3>
+<div class="publication-meta">
+<span>IEEE Signal Processing Letters</span>
+<span>제1저자</span>
+<span class="status">게재 (Early Access)</span>
+</div>
+<div class="publication-links">
+<a href="/publications/simnext-eeg/">연구 상세</a>
+<a href="https://doi.org/10.1109/LSP.2026.3727949" target="_blank" rel="noopener noreferrer">DOI</a>
+<a href="https://github.com/dhkim-kr/simnext-eeg" target="_blank" rel="noopener noreferrer">연구 저장소</a>
+</div>
+</div>
+</li>
+<li class="publication-row">
+<div class="publication-year">2026</div>
+<div>
+<h3>
+<a href="/publications/mda-gcl/">Adversarial Graph Contrastive Learning with Topology-Aware Multimodal Fusion for Cross-Domain Emotion Recognition</a>
+</h3>
+<div class="publication-meta">
+<span>Knowledge-Based Systems</span>
+<span>공동제1저자</span>
+<span class="status">게재 확정</span>
+</div>
+<div class="publication-links">
+<a href="/publications/mda-gcl/">연구 상세</a>
+<a href="https://github.com/dhkim-kr/MDA-GCL" target="_blank" rel="noopener noreferrer">연구 저장소</a>
+</div>
+</div>
+</li>
+<li class="publication-row">
+<div class="publication-year">2026</div>
+<div>
+<h3>
+<a href="/publications/asgcrl/">Adaptive Semi-Supervised Graph Contrastive Representation Learning for Robust Emotion Recognition Using Electroencephalogram</a>
+</h3>
+<div class="publication-meta">
+<span>Knowledge-Based Systems</span>
+<span>제1저자</span>
+<span class="status">게재</span>
+</div>
+<div class="publication-links">
+<a href="/publications/asgcrl/">연구 상세</a>
+<a href="https://doi.org/10.1016/j.knosys.2026.115638" target="_blank" rel="noopener noreferrer">DOI</a>
+<a href="https://github.com/dhkim-kr/ASGCRL" target="_blank" rel="noopener noreferrer">연구 저장소</a>
+</div>
+</div>
+</li>
+<li class="publication-row">
+<div class="publication-year">2026</div>
+<div>
+<h3>
+<a href="/publications/emotionheart/">Joint Graph-Based Modality Alignment for Robustness in Conversational Emotion Recognition</a>
+</h3>
+<div class="publication-meta">
+<span>IEEE ICASSP 2026</span>
+<span>제1저자</span>
+<span class="status">포스터</span>
+</div>
+<div class="publication-links">
+<a href="/publications/emotionheart/">연구 상세</a>
+<a href="https://doi.org/10.1109/ICASSP55912.2026.11461220" target="_blank" rel="noopener noreferrer">DOI</a>
+<a href="https://github.com/dhkim-kr/emotionheart" target="_blank" rel="noopener noreferrer">연구 저장소</a>
+</div>
+</div>
+</li>
+<li class="publication-row">
+<div class="publication-year">2025</div>
+<div>
+<h3>
+<a href="/publications/sgcl/">Semi-Supervised Graph Contrastive Learning for Emotion Recognition Based on Electroencephalogram Signals</a>
+</h3>
+<div class="publication-meta">
+<span>Engineering Applications of Artificial Intelligence</span>
+<span>제1저자</span>
+<span class="status">게재</span>
+</div>
+<div class="publication-links">
+<a href="/publications/sgcl/">연구 상세</a>
+<a href="https://doi.org/10.1016/j.engappai.2025.111969" target="_blank" rel="noopener noreferrer">DOI</a>
+<a href="https://github.com/dhkim-kr/sgcl" target="_blank" rel="noopener noreferrer">연구 저장소</a>
+</div>
+</div>
+</li>
+<li class="publication-row">
+<div class="publication-year">2024</div>
+<div>
+<h3>
+<a href="/publications/multiscale-entropy/">Multiscale Distribution Entropy Analysis of Short Epileptic EEG Signals</a>
+</h3>
+<div class="publication-meta">
+<span>Mathematical Biosciences and Engineering</span>
+<span>공동제1저자</span>
+<span class="status">게재</span>
+</div>
+<div class="publication-links">
+<a href="/publications/multiscale-entropy/">연구 상세</a>
+<a href="https://doi.org/10.3934/mbe.2024245" target="_blank" rel="noopener noreferrer">DOI</a>
+<a href="https://github.com/dhkim-kr/multiscale-distribution-entropy" target="_blank" rel="noopener noreferrer">연구 저장소</a>
+</div>
+</div>
+</li>
+</ol>
 </section>
-
-<!-- ================= EXPERIENCE ================= -->
 <section class="section" id="experience">
-  <div class="wrap sec-grid rv">
-    <div class="sec-head">
-      <p class="eyebrow">Experience</p>
-      <h2><span class="en">Research &amp; education</span><span class="ko">연구 경력 · 학력</span></h2>
-    </div>
-    <div class="sec-body">
-      <ul class="tl">
-        <li>
-          <span class="date">MAR 2022 — FEB 2027 <span class="en">(EXPECTED)</span><span class="ko">(예정)</span></span>
-          <h3><span class="en">Ph.D. in Electronics and Communications Engineering</span><span class="ko">박사과정 · 전자통신공학과</span></h3>
-          <p class="org"><span class="en">Kwangwoon University · NeuroAI Lab (Advisor: Prof. Young-Seok Choi)</span><span class="ko">광운대학교 · NeuroAI 연구실 (지도교수: 최영석)</span></p>
-          <p class="detail"><span class="en">Dissertation research on robust representation learning for physiological and behavioral time series under distribution shift.</span><span class="ko">분포 변화 하에서의 생리·행동 시계열 강건 표현 학습을 주제로 박사 연구 수행.</span></p>
-        </li>
-        <li>
-          <span class="date">MAR 2022 — PRESENT</span>
-          <h3><span class="en">Graduate Research Assistant</span><span class="ko">대학원 연구원</span></h3>
-          <p class="org"><span class="en">NeuroAI Lab, Kwangwoon University</span><span class="ko">광운대학교 NeuroAI 연구실</span></p>
-          <p class="detail"><span class="en">Researcher on five nationally funded projects (NRF, IITP) spanning physiological AI, affective computing, and clinical digital health. Designed and led IRB-approved multimodal biosignal acquisition — 80+ participants with substance use disorders and 60+ in emotion-elicitation studies — from protocol design to data curation.</span><span class="ko">생리 AI·감정 컴퓨팅·임상 디지털 헬스에 걸친 국가 연구과제 5건(NRF·IITP) 수행. 물질사용장애 환자 80여 명, 정서 유발 실험 60여 명 규모의 IRB 승인 멀티모달 생체신호 수집을 프로토콜 설계부터 데이터 정제까지 주도.</span></p>
-        </li>
-        <li>
-          <span class="date">MAR 2024 — DEC 2025</span>
-          <h3><span class="en">Research Mentor, Undergraduate Multidisciplinary Project Program</span><span class="ko">학부연구생 융합 프로젝트 멘토</span></h3>
-          <p class="org"><span class="en">Dept. of Electronics and Communications Engineering, Kwangwoon University</span><span class="ko">광운대학교 전자통신공학과</span></p>
-          <p class="detail"><span class="en">Mentored three undergraduate researchers — all advanced to M.S. programs. Technical mentor on eight student-led conference papers, including an oral at IEEE WCCI–IJCNN 2026.</span><span class="ko">학부연구생 3명 멘토링(전원 석사과정 진학). 학생 주도 학회 논문 8편의 기술 멘토 — IEEE WCCI–IJCNN 2026 구두 발표 포함.</span></p>
-        </li>
-        <li>
-          <span class="date">DEC 2020 — FEB 2021</span>
-          <h3><span class="en">Research Intern</span><span class="ko">연구 인턴</span></h3>
-          <p class="org"><span class="en">Bionics Research Center, Korea Institute of Science and Technology (KIST)</span><span class="ko">한국과학기술연구원(KIST) 바이오닉스연구센터</span></p>
-          <p class="detail"><span class="en">Built an open-source 3D MRI/CT volumetric-rendering simulator and accelerated robotic control for focused-ultrasound tumor targeting by 3.3×.</span><span class="ko">오픈소스 3D MRI/CT 볼륨 렌더링 시뮬레이터 개발, 집속초음파 종양 표적 로봇 제어 3.3배 가속.</span></p>
-        </li>
-        <li>
-          <span class="date">SEP 2020 — JUN 2021</span>
-          <h3><span class="en">Research Intern</span><span class="ko">연구 인턴</span></h3>
-          <p class="org"><span class="en">Bio Computing and Machine Learning Lab, Kwangwoon University</span><span class="ko">광운대학교 Bio Computing and Machine Learning 연구실</span></p>
-          <p class="detail"><span class="en">End-to-end deep learning for noninvasive blood-pressure estimation from ECG, PPG, and BCG signals.</span><span class="ko">ECG·PPG·BCG 신호 기반 비침습 혈압 추정을 위한 엔드투엔드 딥러닝 연구.</span></p>
-        </li>
-        <li>
-          <span class="date">MAR 2016 — FEB 2021</span>
-          <h3><span class="en">B.S. in Computer Engineering</span><span class="ko">학사 · 컴퓨터공학과</span></h3>
-          <p class="org"><span class="en">Kwangwoon University</span><span class="ko">광운대학교</span></p>
-          <p class="detail"><span class="en">Undergraduate thesis on real-time deep learning analysis of ballistocardiogram for blood-pressure estimation.</span><span class="ko">학사 논문: BCG 실시간 딥러닝 분석 기반 혈압 추정.</span></p>
-        </li>
-      </ul>
-    </div>
-  </div>
+<div class="split-section">
+<div>
+<p class="eyebrow">04 / EXPERIENCE</p>
+<h2>학력 및 연구 경력</h2>
+</div>
+<ul class="timeline">
+<li>
+<span class="date">2022.03 – Present</span>
+<div>
+<h3>석박사통합과정 / 대학원 연구원</h3>
+<p>광운대학교 전자통신공학과, NeuroAI Lab. 지도교수 최영석. 2027.02 졸업 예정. GPA 4.50/4.50.</p>
+</div>
+</li>
+<li>
+<span class="date">2022.01 – 2022.02</span>
+<div>
+<h3>NeuroAI 연구 인턴</h3>
+<p>EEG 엔트로피와 연결성 기반 그래프 학습. 후속 MBE 논문 공동 제1저자.</p>
+</div>
+</li>
+<li>
+<span class="date">2021.01 – 2021.02</span>
+<div>
+<h3>KIST 연구 인턴</h3>
+<p>바이오닉스연구센터. CT/MRI 정합, 위치추적, 집속초음파 측정과 로봇 제어.</p>
+</div>
+</li>
+<li>
+<span class="date">2020.09 – 2021.06</span>
+<div>
+<h3>BCML 학부 연구 인턴</h3>
+<p>광운대학교. ECG, PPG, BCG 신호 수집과 혈압 추정. 산학연계 SW 프로젝트 공동 개발.</p>
+</div>
+</li>
+<li>
+<span class="date">2016.03 – 2022.02</span>
+<div>
+<h3>컴퓨터공학 학사</h3>
+<p>광운대학교. GPA 3.86/4.50.</p>
+</div>
+</li>
+</ul>
+</div>
 </section>
-
-<!-- ================= AWARDS & SERVICE ================= -->
 <section class="section" id="awards">
-  <div class="wrap sec-grid rv">
-    <div class="sec-head">
-      <p class="eyebrow">Recognition</p>
-      <h2><span class="en">Awards &amp; service</span><span class="ko">수상 · 학술 활동</span></h2>
-    </div>
-    <div class="sec-body">
-      <div class="duo">
-        <div>
-          <h3><span class="en">Awards &amp; honors</span><span class="ko">수상</span></h3>
-          <ul>
-            <li>
-              <p><span class="en"><b>AI Champion</b> — main round (Regular &amp; Korean-AI tracks)<span class="sub">Nationwide AI competition, Ministry of Science and ICT, Korea</span></span><span class="ko"><b>AI Champion</b> 본선 진출 (일반·한국어 AI 트랙)<span class="sub">과학기술정보통신부 주관 전국 AI 경진대회</span></span></p>
-              <span class="when">2026</span>
-            </li>
-            <li>
-              <p><span class="en"><b>Best Poster Award</b><span class="sub">KOSOMBE Spring Conference</span></span><span class="ko"><b>우수 포스터상</b><span class="sub">대한의용생체공학회 춘계학술대회</span></span></p>
-              <span class="when">2024</span>
-            </li>
-            <li>
-              <p><span class="en">Full-tuition merit &amp; research scholarships<span class="sub">Kwangwoon University</span></span><span class="ko">성적우수·연구 전액 장학금<span class="sub">광운대학교</span></span></p>
-              <span class="when">2016 — 2024</span>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <h3><span class="en">Academic service</span><span class="ko">학술 활동</span></h3>
-          <ul>
-            <li>
-              <p><span class="en"><b>Reviewer</b> — 9 manuscripts<span class="sub">IEEE Trans. Affective Computing · npj Artificial Intelligence · Scientific Reports · Cluster Computing</span></span><span class="ko"><b>국제 학술지 심사위원</b> — 총 9편<span class="sub">IEEE Trans. Affective Computing · npj Artificial Intelligence · Scientific Reports · Cluster Computing</span></span></p>
-              <span class="when">2025 —</span>
-            </li>
-            <li>
-              <p><span class="en"><b>Graduate Student Member</b>, IEEE<span class="sub">Signal Processing Society · EMBS · Sensors Council</span></span><span class="ko"><b>IEEE 대학원생 회원</b><span class="sub">Signal Processing Society · EMBS · Sensors Council</span></span></p>
-              <span class="when">2025 —</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="section-head">
+<div>
+<p class="eyebrow">05 / SERVICE</p>
+<h2>수상과 학술 활동</h2>
+</div>
+</div>
+<div class="service-grid">
+<div>
+<h3>수상 및 연구 성과</h3>
+<ul>
+<li>AI Champion 2026 일반 및 국내 AI 트랙 본선 진출</li>
+<li>KOSOMBE 2024 우수 포스터상</li>
+<li>기업 기술이전 1건, 2,000만원</li>
+<li>6학기 등록금 전액 RA 장학금, 학부 성적우수 장학금 3회</li>
+</ul>
+</div>
+<div>
+<h3>심사와 교육</h3>
+<ul>
+<li>npj Artificial Intelligence, Scientific Reports, Cluster Computing 심사</li>
+<li>IEEE 대학원생 회원, SPS 및 EMBS</li>
+<li>Signals & Systems, Digital Signal Processing 조교</li>
+<li>KW-VIP 및 학부생 21명 연구 튜토리얼</li>
+<li>국내학회 논문 13편</li>
+</ul>
+</div>
+</div>
 </section>
-
+<section class="section" id="news">
+<div class="split-section">
+<div>
+<p class="eyebrow">06 / NEWS</p>
+<h2>최근 연구 소식</h2>
+</div>
+<ul class="news-list">
+<li>
+<time>2026</time>
+<p>
+<a href="/publications/simnext-eeg/">SimNeXt-EEG, IEEE Signal Processing Letters 게재</a>
+</p>
+</li>
+<li>
+<time>2026</time>
+<p>
+<a href="/publications/mda-gcl/">MDA-GCL, Knowledge-Based Systems 게재 확정</a>
+</p>
+</li>
+<li>
+<time>2026</time>
+<p>
+<a href="/publications/emotionheart/">EmotionHeart, ICASSP 2026 제1저자 발표</a>
+</p>
+</li>
+</ul>
+</div>
+</section>
+</div>
 </main>
-
-<!-- ================= FOOTER ================= -->
 <footer class="footer" id="contact">
-  <div class="wrap rv">
-    <p class="eyebrow">Contact</p>
-    <h2><span class="en">Open to research conversations.</span><span class="ko">연구 이야기, 언제든 환영합니다.</span></h2>
-    <p class="contact-note"><span class="en">For collaborations, questions about my work, or anything in between — email is the fastest way to reach me.</span><span class="ko">공동연구 제안이든 연구에 대한 질문이든, 이메일로 연락 주시면 가장 빠르게 답변드립니다.</span></p>
-    <a class="mail" href="mailto:dhkim1016@kw.ac.kr">dhkim1016@kw.ac.kr</a>
-    <div class="foot-meta">
-      <span><span class="en">NeuroAI Lab · Kwangwoon University · Seoul, Korea</span><span class="ko">광운대학교 NeuroAI 연구실 · 서울</span></span>
-      <span class="spacer"></span>
-      <a href="https://scholar.google.com/citations?user=CcqJMb0AAAAJ" target="_blank" rel="noopener">SCHOLAR</a>
-      <a href="https://github.com/dhkim-kr" target="_blank" rel="noopener">GITHUB</a>
-      <a href="https://www.linkedin.com/in/dhkim-kr" target="_blank" rel="noopener">LINKEDIN</a>
-      <a href="https://orcid.org/0009-0005-7105-0894" target="_blank" rel="noopener">ORCID</a>
-      <span>© 2026 DAE HYEON KIM</span>
-    </div>
-  </div>
+<div class="wrap">
+<div class="footer-top">
+<div>
+<p class="eyebrow">CONTACT</p>
+<h2>연구 및 협업 연락처</h2>
+<a href="mailto:dhkim1016@kw.ac.kr" class="mail">dhkim1016@kw.ac.kr</a>
+<p class="affiliation">광운대학교 전자통신공학과, NeuroAI Lab<br>서울, 대한민국</p>
+</div>
+<div class="link-list">
+<a href="https://scholar.google.com/citations?user=CcqJMb0AAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+<a href="https://github.com/dhkim-kr" target="_blank" rel="noopener noreferrer">GitHub</a>
+<a href="https://orcid.org/0009-0005-7105-0894" target="_blank" rel="noopener noreferrer">ORCID</a>
+<a href="https://www.linkedin.com/in/dhkim-kr" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 Dae Hyeon Kim</span>
+<span>연구 정보 기준: 2026년 9월</span>
+</div>
+</div>
 </footer>
-
-<script>
-(function(){
-  "use strict";
-
-  /* ---------- Language toggle ---------- */
-  var root = document.documentElement;
-  var btnEn = document.getElementById("btn-en");
-  var btnKo = document.getElementById("btn-ko");
-
-  function setLang(l){
-    root.setAttribute("data-lang", l);
-    root.setAttribute("lang", l === "ko" ? "ko" : "en");
-    btnEn.setAttribute("aria-pressed", l === "en" ? "true" : "false");
-    btnKo.setAttribute("aria-pressed", l === "ko" ? "true" : "false");
-    try { localStorage.setItem("dhk-lang", l); } catch(e){}
-  }
-  btnEn.addEventListener("click", function(){ setLang("en"); });
-  btnKo.addEventListener("click", function(){ setLang("ko"); });
-
-  var saved = null;
-  try { saved = localStorage.getItem("dhk-lang"); } catch(e){}
-  setLang(saved === "ko" ? "ko" : "en");
-
-  /* ---------- Scroll reveal ---------- */
-  var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  var rvs = document.querySelectorAll(".rv");
-  if (reduced || !("IntersectionObserver" in window)) {
-    rvs.forEach(function(el){ el.classList.add("in"); });
-  } else {
-    var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(en){
-        if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); }
-      });
-    }, { threshold: 0.1 });
-    rvs.forEach(function(el){ io.observe(el); });
-  }
-
-  /* ---------- Physiological signal strip ---------- */
-  var cv = document.getElementById("sig");
-  if (!cv || !cv.getContext) return;
-  var ctx = cv.getContext("2d");
-
-  var PX_PER_SAMPLE = 2;     /* horizontal pixels per sample */
-  var DT = 1 / 90;           /* signal seconds per sample    */
-  var SPEED = 1.35;          /* sweep speed multiplier       */
-  var W = 0, H = 0, N = 0, dpr = 1;
-  var t = 0;
-  var running = false, rafId = null, lastTs = 0, acc = 0;
-
-  function gauss(x, mu, s){ var d = (x - mu) / s; return Math.exp(-0.5 * d * d); }
-
-  /* EEG: mixed rhythms + noise */
-  function fEEG(tt){
-    return 0.42 * Math.sin(2 * Math.PI * 9.4 * tt)
-         + 0.30 * Math.sin(2 * Math.PI * 5.3 * tt + 1.4)
-         + 0.18 * Math.sin(2 * Math.PI * 16.8 * tt + 0.6)
-         + (Math.random() - 0.5) * 0.62;
-  }
-  /* ECG: P-QRS-T morphology, ~70 bpm */
-  function fECG(tt){
-    var p = (tt % 0.86) / 0.86;
-    var v = 0;
-    v += 0.13 * gauss(p, 0.18, 0.030);   /* P  */
-    v -= 0.16 * gauss(p, 0.335, 0.012);  /* Q  */
-    v += 1.00 * gauss(p, 0.360, 0.013);  /* R  */
-    v -= 0.24 * gauss(p, 0.388, 0.012);  /* S  */
-    v += 0.26 * gauss(p, 0.560, 0.048);  /* T  */
-    return (v - 0.14) * 1.9;
-  }
-  /* PPG: systolic peak + dicrotic wave */
-  function fPPG(tt){
-    var p = ((tt + 0.22) % 0.86) / 0.86;
-    return (0.92 * gauss(p, 0.24, 0.085) + 0.34 * gauss(p, 0.54, 0.105) - 0.36) * 1.7;
-  }
-  /* EDA: slow tonic drift */
-  function fEDA(tt){
-    return 0.55 * Math.sin(2 * Math.PI * 0.055 * tt)
-         + 0.35 * Math.sin(2 * Math.PI * 0.017 * tt + 2.1)
-         + 0.22 * Math.sin(2 * Math.PI * 0.11 * tt + 0.7);
-  }
-
-  var CH = [
-    { f: fEEG, color: "rgba(23,80,127,0.48)", lw: 1.0, amp: 0.30 },
-    { f: fECG, color: "#17507F",              lw: 1.6, amp: 0.34 },
-    { f: fPPG, color: "rgba(23,80,127,0.62)", lw: 1.3, amp: 0.32 },
-    { f: fEDA, color: "rgba(23,80,127,0.36)", lw: 1.2, amp: 0.28 }
-  ];
-  CH.forEach(function(c){ c.data = []; });
-
-  function pushSample(){
-    t += DT;
-    CH.forEach(function(c){
-      c.data.push(c.f(t));
-      if (c.data.length > N) c.data.shift();
-    });
-  }
-
-  function draw(){
-    ctx.clearRect(0, 0, W, H);
-    var band = H / CH.length;
-    /* channel separators */
-    ctx.strokeStyle = "rgba(23,80,127,0.12)";
-    ctx.lineWidth = 1;
-    for (var s = 1; s < CH.length; s++){
-      ctx.beginPath();
-      ctx.moveTo(0, Math.round(band * s) + 0.5);
-      ctx.lineTo(W, Math.round(band * s) + 0.5);
-      ctx.stroke();
-    }
-    /* traces */
-    CH.forEach(function(c, i){
-      var mid = band * (i + 0.5);
-      var ampPx = band * c.amp;
-      ctx.strokeStyle = c.color;
-      ctx.lineWidth = c.lw;
-      ctx.lineJoin = "round";
-      ctx.lineCap = "round";
-      ctx.beginPath();
-      var offset = N - c.data.length;
-      for (var k = 0; k < c.data.length; k++){
-        var x = (offset + k) * PX_PER_SAMPLE;
-        var y = mid - c.data[k] * ampPx;
-        if (k === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
-      }
-      ctx.stroke();
-    });
-  }
-
-  function frame(ts){
-    if (!running) return;
-    if (!lastTs) lastTs = ts;
-    acc += (ts - lastTs) / 1000 * SPEED;
-    lastTs = ts;
-    var stepped = false;
-    while (acc >= DT){
-      pushSample();
-      acc -= DT;
-      stepped = true;
-    }
-    if (stepped) draw();
-    rafId = requestAnimationFrame(frame);
-  }
-
-  function start(){
-    if (running || reduced) return;
-    running = true;
-    lastTs = 0;
-    rafId = requestAnimationFrame(frame);
-  }
-  function stop(){
-    running = false;
-    if (rafId) cancelAnimationFrame(rafId);
-  }
-
-  function setup(){
-    dpr = Math.min(window.devicePixelRatio || 1, 2);
-    var rect = cv.getBoundingClientRect();
-    W = Math.max(1, Math.floor(rect.width));
-    H = Math.max(1, Math.floor(rect.height));
-    cv.width = Math.floor(W * dpr);
-    cv.height = Math.floor(H * dpr);
-    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    N = Math.ceil(W / PX_PER_SAMPLE) + 2;
-    CH.forEach(function(c){ c.data = []; });
-    /* pre-fill so the strip is never empty */
-    for (var k = 0; k < N; k++) pushSample();
-    draw();
-  }
-
-  setup();
-
-  var resizeTimer = null;
-  window.addEventListener("resize", function(){
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(setup, 160);
-  });
-
-  if (!reduced){
-    if ("IntersectionObserver" in window){
-      var stripIO = new IntersectionObserver(function(entries){
-        entries.forEach(function(en){
-          if (en.isIntersecting) start(); else stop();
-        });
-      }, { threshold: 0 });
-      stripIO.observe(cv);
-    } else {
-      start();
-    }
-    document.addEventListener("visibilitychange", function(){
-      if (document.hidden) stop(); else start();
-    });
-  }
-})();
-</script>
 </body>
 </html>

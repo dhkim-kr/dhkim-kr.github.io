@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Joint Graph-Based Modality Alignment for Robustness in Conversational Emotion Recognition | Dae Hyeon Kim</title>
+<meta name="description" content="Encoded speaker and modality relationships in a heterogeneous graph and aligned modalities for conversational emotion recognition.">
+<link rel="canonical" href="https://dhkim-kr.github.io/en/publications/emotionheart/">
+<link rel="alternate" hreflang="ko" href="https://dhkim-kr.github.io/publications/emotionheart/">
+<link rel="alternate" hreflang="en" href="https://dhkim-kr.github.io/en/publications/emotionheart/">
+<link rel="alternate" hreflang="x-default" href="https://dhkim-kr.github.io/publications/emotionheart/">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:title" content="Joint Graph-Based Modality Alignment for Robustness in Conversational Emotion Recognition">
+<meta property="og:description" content="Encoded speaker and modality relationships in a heterogeneous graph and aligned modalities for conversational emotion recognition.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dhkim-kr.github.io/en/publications/emotionheart/">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/site.css">
+<script src="/assets/site.js" defer>
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="wrap header-inner">
+<a class="brand" href="/en/">Dae Hyeon Kim <span>RESEARCH</span>
+</a>
+<button class="menu-button" type="button" aria-expanded="false" aria-controls="main-nav">Menu</button>
+<nav class="main-nav" id="main-nav" aria-label="Main navigation">
+<a href="/en/#about">About</a>
+<a href="/en/projects/">Projects</a>
+<a href="/en/publications/">Publications</a>
+<a href="/en/#experience">Experience</a>
+<a href="/en/#contact">Contact</a>
+</nav>
+<a class="language" href="/publications/emotionheart/" lang="ko" hreflang="ko" aria-label="한국어로 보기">한국어</a>
+</div>
+</header>
+<main id="main">
+<div class="wrap">
+<div class="paper-body">
+<div class="page-intro">
+<div class="breadcrumb">
+<a href="/en/">Home</a>
+<span>/</span>
+<span>Publications</span>
+</div>
+<h1>Joint Graph-Based Modality Alignment for Robustness in Conversational Emotion Recognition</h1>
+<p class="lead">Encoded speaker and modality relationships in a heterogeneous graph and aligned modalities for conversational emotion recognition.</p>
+</div>
+<p class="paper-status">Poster presentation</p>
+<dl class="detail-meta">
+<div>
+<dt>Venue</dt>
+<dd>IEEE ICASSP 2026</dd>
+</div>
+<div>
+<dt>Author role</dt>
+<dd>First author</dd>
+</div>
+<div>
+<dt>Year</dt>
+<dd>2026</dd>
+</div>
+</dl>
+<div class="publication-links">
+<a href="https://doi.org/10.1109/ICASSP55912.2026.11461220" target="_blank" rel="noopener noreferrer">DOI</a>
+<a href="https://github.com/dhkim-kr/emotionheart" target="_blank" rel="noopener noreferrer">Research repository</a>
+</div>
+<h2>Research approach</h2>
+<p>Encoded speaker and modality relationships in a heterogeneous graph and aligned modalities for conversational emotion recognition.</p>
+<div class="evidence-gallery">
+<figure>
+<a class="figure-link" href="/assets/figures/slide-17-1.png" target="_blank" rel="noopener" aria-label="Enlarge figure: Joint Graph-Based Modality Alignment for Robustness in Conversational Emotion Recognition: source figure 1">
+<img src="/assets/figures/slide-17-1.png" alt="Joint Graph-Based Modality Alignment for Robustness in Conversational Emotion Recognition: source figure 1" loading="lazy">
+</a>
+<figcaption>Joint Graph-Based Modality Alignment for Robustness in Conversational Emotion Recognition: source figure 1<br>
+<a href="/assets/figures/slide-17-1.png">View full-size figure</a>
+</figcaption>
+</figure>
+<figure>
+<a class="figure-link" href="/assets/figures/slide-17-2.png" target="_blank" rel="noopener" aria-label="Enlarge figure: Joint Graph-Based Modality Alignment for Robustness in Conversational Emotion Recognition: source figure 2">
+<img src="/assets/figures/slide-17-2.png" alt="Joint Graph-Based Modality Alignment for Robustness in Conversational Emotion Recognition: source figure 2" loading="lazy">
+</a>
+<figcaption>Joint Graph-Based Modality Alignment for Robustness in Conversational Emotion Recognition: source figure 2<br>
+<a href="/assets/figures/slide-17-2.png">View full-size figure</a>
+</figcaption>
+</figure>
+</div>
+<h2>Results and evaluation scope</h2>
+<p>Weighted F1: 73.13% on IEMOCAP and 68.99% on MELD. Audio-only IEMOCAP reaches 60.26%; full-input and missing-modality comparisons use different baselines.</p>
+<div class="table-wrap" role="region" tabindex="0" aria-label="Paper specification and results">
+<table>
+<caption>Paper specification and results</caption>
+<thead>
+<tr>
+<th scope="col">Evaluation setting</th>
+<th scope="col">Baseline</th>
+<th scope="col">Proposed model</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IEMOCAP, all inputs</td>
+<td>68.99</td>
+<td>73.13</td>
+</tr>
+<tr>
+<td>MELD, all inputs</td>
+<td>66.75</td>
+<td>68.99</td>
+</tr>
+<tr>
+<td>IEMOCAP, audio only</td>
+<td>54.09</td>
+<td>60.26</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="evidence-note">
+<strong>Interpretation</strong>Weighted F1, averaged over 10 random splits. The full-input baseline is Transformer; the audio-only baseline is GRACE. IEMOCAP: 73.13 with all inputs and 60.26 with audio only.</div>
+<section class="related">
+<h2>Related project</h2>
+<p>
+<a href="/en/projects/multimodal-emotion/">Multimodal emotion recognition</a>
+</p>
+</section>
+<section class="related">
+<h2>Paper and code</h2>
+<ul>
+<li>
+<a href="https://doi.org/10.1109/ICASSP55912.2026.11461220" target="_blank" rel="noopener noreferrer">DOI: 10.1109/ICASSP55912.2026.11461220</a>
+</li>
+<li>
+<a href="https://github.com/dhkim-kr/emotionheart" target="_blank" rel="noopener noreferrer">GitHub / dhkim-kr/emotionheart</a>
+</li>
+</ul>
+</section>
+<a href="/en/publications/" class="text-link">All publications</a>
+</div>
+</div>
+</main>
+<footer class="footer" id="contact">
+<div class="wrap">
+<div class="footer-top">
+<div>
+<p class="eyebrow">CONTACT</p>
+<h2>Research & collaboration</h2>
+<a href="mailto:dhkim1016@kw.ac.kr" class="mail">dhkim1016@kw.ac.kr</a>
+<p class="affiliation">NeuroAI Lab, Kwangwoon University<br>Seoul, Republic of Korea</p>
+</div>
+<div class="link-list">
+<a href="https://scholar.google.com/citations?user=CcqJMb0AAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+<a href="https://github.com/dhkim-kr" target="_blank" rel="noopener noreferrer">GitHub</a>
+<a href="https://orcid.org/0009-0005-7105-0894" target="_blank" rel="noopener noreferrer">ORCID</a>
+<a href="https://www.linkedin.com/in/dhkim-kr" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 Dae Hyeon Kim</span>
+<span>Research information as of September 2026</span>
+</div>
+</div>
+</footer>
+</body>
+</html>

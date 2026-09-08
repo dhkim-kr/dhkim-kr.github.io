@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NeuroSync: 국산 LLM 다중 에이전트 기반 정신건강 사전문진, 종단 분석, 의료진 인계 시스템 | Dae Hyeon Kim</title>
+<meta name="description" content="국산 LLM과 근거 검증을 결합해 사전문진 내용을 의료진 인계 기록으로 구성했다.">
+<link rel="canonical" href="https://dhkim-kr.github.io/projects/neurosync/">
+<link rel="alternate" hreflang="ko" href="https://dhkim-kr.github.io/projects/neurosync/">
+<link rel="alternate" hreflang="en" href="https://dhkim-kr.github.io/en/projects/neurosync/">
+<link rel="alternate" hreflang="x-default" href="https://dhkim-kr.github.io/projects/neurosync/">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:title" content="NeuroSync: 국산 LLM 다중 에이전트 기반 정신건강 사전문진, 종단 분석, 의료진 인계 시스템">
+<meta property="og:description" content="국산 LLM과 근거 검증을 결합해 사전문진 내용을 의료진 인계 기록으로 구성했다.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dhkim-kr.github.io/projects/neurosync/">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/site.css">
+<script src="/assets/site.js" defer>
+</script>
+</head>
+<body>
+<a class="skip" href="#main">본문 바로가기</a>
+<header class="site-header">
+<div class="wrap header-inner">
+<a class="brand" href="/">Dae Hyeon Kim <span>RESEARCH</span>
+</a>
+<button class="menu-button" type="button" aria-expanded="false" aria-controls="main-nav">메뉴</button>
+<nav class="main-nav" id="main-nav" aria-label="주 메뉴">
+<a href="/#about">소개</a>
+<a href="/projects/">프로젝트</a>
+<a href="/publications/">논문</a>
+<a href="/#experience">경력</a>
+<a href="/#contact">연락처</a>
+</nav>
+<a class="language" href="/en/projects/neurosync/" lang="en" hreflang="en" aria-label="Switch to English">EN</a>
+</div>
+</header>
+<main id="main">
+<div class="wrap">
+<div class="page-intro">
+<div class="breadcrumb">
+<a href="/">홈</a>
+<span>/</span>
+<span>프로젝트</span>
+</div>
+<h1>NeuroSync: 국산 LLM 다중 에이전트 기반 정신건강 사전문진, 종단 분석, 의료진 인계 시스템</h1>
+<p class="lead">국산 LLM과 근거 검증을 결합해 사전문진 내용을 의료진 인계 기록으로 구성했다.</p>
+</div>
+<div class="link-list">
+<a href="https://github.com/dhkim-kr/neurosync" target="_blank" rel="noopener noreferrer">NeuroSync GitHub</a>
+</div>
+<dl class="detail-meta">
+<div>
+<dt>역할</dt>
+<dd>방법론 설계 및 핵심 구현</dd>
+</div>
+<div>
+<dt>담당 업무</dt>
+<dd>다중 에이전트 오케스트레이션 RAG와 근거 검증 구현, 앱 및 의료진 웹 통합</dd>
+</div>
+<div>
+<dt>기간 및 소속</dt>
+<dd>2026.03 ~ 현재 NeuroSync</dd>
+</div>
+</dl>
+<div class="detail-layout">
+<aside class="detail-toc">
+<p>이 프로젝트에서</p>
+<a href="#stage-1">01 국산 LLM 사전문진</a>
+<a href="#stage-2">02 합성 시나리오 평가</a>
+<a href="#related">관련 논문</a>
+</aside>
+<div class="detail-body">
+<section class="detail-stage" id="stage-1">
+<h2>
+<span class="section-number">01 / RESEARCH DETAIL</span>국산 LLM 사전문진 / 구조화 기록과 근거 검증을 통한 의료진 인계</h2>
+<dl class="arguments">
+<dt>난제</dt>
+<dd>자유 대화에서 임상 슬롯을 빠짐없이 확보하고 근거 없는 값이 인계 기록에 들어가지 않도록 제어</dd>
+<dt>해결</dt>
+<dd>규칙 기반 상태기계가 전문 에이전트 10종을 실행 척도는 규칙 채점, 최종 기록은 출처와 근거 검증</dd>
+<dt>기여</dt>
+<dd>오케스트레이션, RAG 및 검증 로직 핵심 구현 환자 앱, 의료진 웹, 백엔드 통합</dd>
+</dl>
+<div class="evidence-gallery">
+<figure>
+<a class="figure-link" href="/assets/figures/slide-35-1.png" target="_blank" rel="noopener" aria-label="그림 확대: 원본 보고서: 문진, RAG, 척도, 종단 분석, 근거 검증">
+<img src="/assets/figures/slide-35-1.png" alt="원본 보고서: 문진, RAG, 척도, 종단 분석, 근거 검증" loading="lazy">
+</a>
+<figcaption>원본 보고서: 문진, RAG, 척도, 종단 분석, 근거 검증<br>
+<a href="/assets/figures/slide-35-1.png">원본 그림 확대</a>
+</figcaption>
+</figure>
+<figure>
+<a class="figure-link" href="/assets/figures/slide-35-2.png" target="_blank" rel="noopener" aria-label="그림 확대: 시제품 보고서 발췌: 현재 상태, PHQ-9, 위험 단계">
+<img src="/assets/figures/slide-35-2.png" alt="시제품 보고서 발췌: 현재 상태, PHQ-9, 위험 단계" loading="lazy">
+</a>
+<figcaption>시제품 보고서 발췌: 현재 상태, PHQ-9, 위험 단계<br>
+<a href="/assets/figures/slide-35-2.png">원본 그림 확대</a>
+</figcaption>
+</figure>
+</div>
+<div class="table-wrap" role="region" tabindex="0" aria-label="모델 구성 및 평가 수치 1">
+<table>
+<caption>모델 구성 및 평가 수치 1</caption>
+<thead>
+<tr>
+<th scope="col">구성</th>
+<th scope="col">구현 범위</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>국산 모델</td>
+<td>Solar Pro 3, K-EXAONE, A.X K1</td>
+</tr>
+<tr>
+<td>검색 근거</td>
+<td>임상 사례 1,248개, QA 1,789개</td>
+</tr>
+<tr>
+<td>서비스</td>
+<td>FastAPI, PostgreSQL, Expo, Next.js</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="evidence-note">
+<strong>평가 조건 및 연구 범위</strong>AI Champion 중간결과보고서의 시제품 구조와 화면. 진단을 확정하지 않는 의료진 인계 지원 시스템</div>
+</section>
+<section class="detail-stage" id="stage-2">
+<h2>
+<span class="section-number">02 / RESEARCH DETAIL</span>합성 시나리오 평가 / 출력 신뢰도와 호출 비용의 동시 확인</h2>
+<dl class="arguments">
+<dt>확인 결과</dt>
+<dd>비근거 후보 337건을 최종 출력 전에 차단 슬롯 커버리지와 척도 배정 정확도 향상</dd>
+<dt>남은 난제</dt>
+<dd>필터 전 비근거 후보 비율은 46.4%에서 55.2% 출력 검증의 효과와 생성 단계의 한계를 함께 확인</dd>
+<dt>후속 검증</dt>
+<dd>호출 수와 토큰을 줄이는 실행 경로 최적화 전문의 평가와 임상 PoC 자료 추가 필요</dd>
+</dl>
+<div class="chart-set">
+<figure class="chart-figure">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 410" role="img" aria-labelledby="chart-36-0" aria-describedby="chart-desc-36-0">
+<title id="chart-36-0">구조화 문진 성능 (%)</title>
+<desc id="chart-desc-36-0">단일 백본: 척도 배정 23.8, 슬롯 커버리지 55.6; NeuroSync: 척도 배정 73.0, 슬롯 커버리지 98.4</desc>
+<rect width="680" height="410" fill="white"/>
+<line x1="65" y1="290.0" x2="665" y2="290.0" stroke="#dce5f1"/>
+<text x="55" y="295.0" text-anchor="end" fill="#596b82" font-size="14">0</text>
+<line x1="65" y1="226.25" x2="665" y2="226.25" stroke="#dce5f1"/>
+<text x="55" y="231.25" text-anchor="end" fill="#596b82" font-size="14">25</text>
+<line x1="65" y1="162.5" x2="665" y2="162.5" stroke="#dce5f1"/>
+<text x="55" y="167.5" text-anchor="end" fill="#596b82" font-size="14">50</text>
+<line x1="65" y1="98.75" x2="665" y2="98.75" stroke="#dce5f1"/>
+<text x="55" y="103.75" text-anchor="end" fill="#596b82" font-size="14">75</text>
+<line x1="65" y1="35.0" x2="665" y2="35.0" stroke="#dce5f1"/>
+<text x="55" y="40.0" text-anchor="end" fill="#596b82" font-size="14">100</text>
+<rect x="147.0" y="229.31" width="65" height="60.690000000000005" rx="2" fill="#a7bddd"/>
+<text x="179.5" y="221.31" text-anchor="middle" fill="#172a43" font-size="15" font-weight="600">23.8</text>
+<rect x="215.0" y="103.85" width="65" height="186.15" rx="2" fill="#1f5fbf"/>
+<text x="247.5" y="95.85" text-anchor="middle" fill="#172a43" font-size="15" font-weight="600">73</text>
+<text x="215.0" y="315" text-anchor="middle" fill="#172a43" font-size="14">척도 배정</text>
+<rect x="447.0" y="148.22" width="65" height="141.78" rx="2" fill="#a7bddd"/>
+<text x="479.5" y="140.22" text-anchor="middle" fill="#172a43" font-size="15" font-weight="600">55.6</text>
+<rect x="515.0" y="39.079999999999984" width="65" height="250.92000000000002" rx="2" fill="#1f5fbf"/>
+<text x="547.5" y="31.079999999999984" text-anchor="middle" fill="#172a43" font-size="15" font-weight="600">98.4</text>
+<text x="515.0" y="315" text-anchor="middle" fill="#172a43" font-size="14">슬롯 커버리지</text>
+<rect x="65" y="379" width="10" height="10" rx="2" fill="#a7bddd"/>
+<text x="82" y="389" fill="#596b82" font-size="13">단일 백본</text>
+<rect x="275" y="379" width="10" height="10" rx="2" fill="#1f5fbf"/>
+<text x="292" y="389" fill="#596b82" font-size="13">NeuroSync</text>
+</svg>
+<figcaption>구조화 문진 성능 (%)</figcaption>
+</figure>
+<figure class="chart-figure">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 410" role="img" aria-labelledby="chart-36-1" aria-describedby="chart-desc-36-1">
+<title id="chart-36-1">최종 비근거 값 (건)</title>
+<desc id="chart-desc-36-1">최종 출력: 단일 백본 39.0, NeuroSync 0.0</desc>
+<rect width="680" height="410" fill="white"/>
+<line x1="65" y1="290.0" x2="665" y2="290.0" stroke="#dce5f1"/>
+<text x="55" y="295.0" text-anchor="end" fill="#596b82" font-size="14">0</text>
+<line x1="65" y1="226.25" x2="665" y2="226.25" stroke="#dce5f1"/>
+<text x="55" y="231.25" text-anchor="end" fill="#596b82" font-size="14">12</text>
+<line x1="65" y1="162.5" x2="665" y2="162.5" stroke="#dce5f1"/>
+<text x="55" y="167.5" text-anchor="end" fill="#596b82" font-size="14">24</text>
+<line x1="65" y1="98.75" x2="665" y2="98.75" stroke="#dce5f1"/>
+<text x="55" y="103.75" text-anchor="end" fill="#596b82" font-size="14">36</text>
+<line x1="65" y1="35.0" x2="665" y2="35.0" stroke="#dce5f1"/>
+<text x="55" y="40.0" text-anchor="end" fill="#596b82" font-size="14">48</text>
+<rect x="181.0" y="80.98360655737704" width="65" height="209.01639344262296" rx="2" fill="#a7bddd"/>
+<text x="213.5" y="72.98360655737704" text-anchor="middle" fill="#172a43" font-size="15" font-weight="600">39</text>
+<text x="215.0" y="315" text-anchor="middle" fill="#172a43" font-size="14">단일 백본</text>
+<rect x="481.0" y="290.0" width="65" height="0.0" rx="2" fill="#a7bddd"/>
+<text x="513.5" y="282.0" text-anchor="middle" fill="#172a43" font-size="15" font-weight="600">0</text>
+<text x="515.0" y="315" text-anchor="middle" fill="#172a43" font-size="14">NeuroSync</text>
+<rect x="65" y="379" width="10" height="10" rx="2" fill="#a7bddd"/>
+<text x="82" y="389" fill="#596b82" font-size="13">최종 출력</text>
+</svg>
+<figcaption>최종 비근거 값 (건)</figcaption>
+</figure>
+<figure class="chart-figure">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 410" role="img" aria-labelledby="chart-36-2" aria-describedby="chart-desc-36-2">
+<title id="chart-36-2">턴 누적 대기 (초)</title>
+<desc id="chart-desc-36-2">누적 대기: 단일 백본 4.16, NeuroSync 9.04</desc>
+<rect width="680" height="410" fill="white"/>
+<line x1="65" y1="290.0" x2="665" y2="290.0" stroke="#dce5f1"/>
+<text x="55" y="295.0" text-anchor="end" fill="#596b82" font-size="14">0</text>
+<line x1="65" y1="226.25" x2="665" y2="226.25" stroke="#dce5f1"/>
+<text x="55" y="231.25" text-anchor="end" fill="#596b82" font-size="14">3</text>
+<line x1="65" y1="162.5" x2="665" y2="162.5" stroke="#dce5f1"/>
+<text x="55" y="167.5" text-anchor="end" fill="#596b82" font-size="14">6</text>
+<line x1="65" y1="98.75" x2="665" y2="98.75" stroke="#dce5f1"/>
+<text x="55" y="103.75" text-anchor="end" fill="#596b82" font-size="14">8</text>
+<line x1="65" y1="35.0" x2="665" y2="35.0" stroke="#dce5f1"/>
+<text x="55" y="40.0" text-anchor="end" fill="#596b82" font-size="14">11</text>
+<rect x="181.0" y="193.81546496445668" width="65" height="96.18453503554332" rx="2" fill="#a7bddd"/>
+<text x="213.5" y="185.81546496445668" text-anchor="middle" fill="#172a43" font-size="15" font-weight="600">4.16</text>
+<text x="215.0" y="315" text-anchor="middle" fill="#172a43" font-size="14">단일 백본</text>
+<rect x="481.0" y="80.98360655737704" width="65" height="209.01639344262296" rx="2" fill="#a7bddd"/>
+<text x="513.5" y="72.98360655737704" text-anchor="middle" fill="#172a43" font-size="15" font-weight="600">9.04</text>
+<text x="515.0" y="315" text-anchor="middle" fill="#172a43" font-size="14">NeuroSync</text>
+<rect x="65" y="379" width="10" height="10" rx="2" fill="#a7bddd"/>
+<text x="82" y="389" fill="#596b82" font-size="13">누적 대기</text>
+</svg>
+<figcaption>턴 누적 대기 (초)</figcaption>
+</figure>
+</div>
+<div class="table-wrap" role="region" tabindex="0" aria-label="모델 구성 및 평가 수치 1">
+<table>
+<caption>모델 구성 및 평가 수치 1</caption>
+<thead>
+<tr>
+<th scope="col">비교 지표</th>
+<th scope="col">단일 백본</th>
+<th scope="col">NeuroSync</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>세션 토큰</td>
+<td>30,514</td>
+<td>125,933</td>
+</tr>
+<tr>
+<td>비근거 세션 비율</td>
+<td>54.2%</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>전체 평가</td>
+<td>8개 페르소나</td>
+<td>384세션</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="evidence-note">
+<strong>평가 조건 및 연구 범위</strong>384세션 중 직접 비교는 144세션. 나머지는 모델 비교 및 대조 평가. 합성 실험 결과이며 임상 효과와 구분</div>
+</section>
+<section class="related" id="related">
+<h2>관련 논문과 연구 자료</h2>
+<ul>
+<li>
+<a href="https://github.com/dhkim-kr/neurosync" target="_blank" rel="noopener noreferrer">NeuroSync GitHub</a>
+</li>
+</ul>
+</section>
+<nav class="next-project" aria-label="다른 프로젝트">
+<a href="/projects/">전체 프로젝트</a>
+<a href="/projects/neurotruth/">다음: NeuroTruth</a>
+</nav>
+</div>
+</div>
+</div>
+</main>
+<footer class="footer" id="contact">
+<div class="wrap">
+<div class="footer-top">
+<div>
+<p class="eyebrow">CONTACT</p>
+<h2>연구 및 협업 연락처</h2>
+<a href="mailto:dhkim1016@kw.ac.kr" class="mail">dhkim1016@kw.ac.kr</a>
+<p class="affiliation">광운대학교 전자통신공학과, NeuroAI Lab<br>서울, 대한민국</p>
+</div>
+<div class="link-list">
+<a href="https://scholar.google.com/citations?user=CcqJMb0AAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+<a href="https://github.com/dhkim-kr" target="_blank" rel="noopener noreferrer">GitHub</a>
+<a href="https://orcid.org/0009-0005-7105-0894" target="_blank" rel="noopener noreferrer">ORCID</a>
+<a href="https://www.linkedin.com/in/dhkim-kr" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 Dae Hyeon Kim</span>
+<span>연구 정보 기준: 2026년 9월</span>
+</div>
+</div>
+</footer>
+</body>
+</html>
