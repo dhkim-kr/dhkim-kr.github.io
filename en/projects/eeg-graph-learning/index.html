@@ -78,42 +78,42 @@
 <h2>
 <span class="section-number">01 / RESEARCH DETAIL</span>ASGCRL: adaptive graphs and contrastive learning</h2>
 <dl class="arguments">
-<dt>Problem / context</dt>
+<dt>Challenge</dt>
 <dd>Incorrect connections in fixed similarity graphs can propagate errors when labels are scarce.</dd>
 <dt>Approach</dt>
 <dd>Updated connections with learned representations and used adaptive augmentation to preserve class relationships during contrastive learning.</dd>
-<dt>Contribution / next steps</dt>
+<dt>Contribution</dt>
 <dd>Designed the method, implemented the model, conducted ablations and wrote the first-author KBS 2026 paper as a follow-up to SGCL.</dd>
 </dl>
 <div class="evidence-gallery">
 <figure>
-<a class="figure-link" href="/assets/figures/slide-13-1.png" target="_blank" rel="noopener" aria-label="Enlarge figure: ASGCRL: adaptive graphs and contrastive learning: source figure 1">
-<img src="/assets/figures/slide-13-1.png" alt="ASGCRL: adaptive graphs and contrastive learning: source figure 1" loading="lazy">
+<a class="figure-link" href="/assets/figures/slide-13-1.png" target="_blank" rel="noopener" aria-label="Enlarge figure: ASGCRL: adaptive graphs, label-guided augmentation and contrastive loss">
+<img src="/assets/figures/slide-13-1.png" alt="ASGCRL: adaptive graphs, label-guided augmentation and contrastive loss" loading="lazy" width="1170" height="523">
 </a>
-<figcaption>ASGCRL: adaptive graphs and contrastive learning: source figure 1<br>
+<figcaption>ASGCRL: adaptive graphs, label-guided augmentation and contrastive loss<br>
 <a href="/assets/figures/slide-13-1.png">View full-size figure</a>
 </figcaption>
 </figure>
 <figure>
-<a class="figure-link" href="/assets/figures/slide-13-2.png" target="_blank" rel="noopener" aria-label="Enlarge figure: ASGCRL: adaptive graphs and contrastive learning: source figure 2">
-<img src="/assets/figures/slide-13-2.png" alt="ASGCRL: adaptive graphs and contrastive learning: source figure 2" loading="lazy">
+<a class="figure-link" href="/assets/figures/slide-13-2.png" target="_blank" rel="noopener" aria-label="Enlarge figure: SEED-IV participant 15: Static GCN embedding, 84.29% accuracy">
+<img src="/assets/figures/slide-13-2.png" alt="SEED-IV participant 15: Static GCN embedding, 84.29% accuracy" loading="lazy" width="394" height="370">
 </a>
-<figcaption>ASGCRL: adaptive graphs and contrastive learning: source figure 2<br>
+<figcaption>SEED-IV participant 15: Static GCN embedding, 84.29% accuracy<br>
 <a href="/assets/figures/slide-13-2.png">View full-size figure</a>
 </figcaption>
 </figure>
 <figure>
-<a class="figure-link" href="/assets/figures/slide-13-3.png" target="_blank" rel="noopener" aria-label="Enlarge figure: ASGCRL: adaptive graphs and contrastive learning: source figure 3">
-<img src="/assets/figures/slide-13-3.png" alt="ASGCRL: adaptive graphs and contrastive learning: source figure 3" loading="lazy">
+<a class="figure-link" href="/assets/figures/slide-13-3.png" target="_blank" rel="noopener" aria-label="Enlarge figure: SEED-IV participant 15: ASGCRL embedding, 94.23% accuracy">
+<img src="/assets/figures/slide-13-3.png" alt="SEED-IV participant 15: ASGCRL embedding, 94.23% accuracy" loading="lazy" width="331" height="370">
 </a>
-<figcaption>ASGCRL: adaptive graphs and contrastive learning: source figure 3<br>
+<figcaption>SEED-IV participant 15: ASGCRL embedding, 94.23% accuracy<br>
 <a href="/assets/figures/slide-13-3.png">View full-size figure</a>
 </figcaption>
 </figure>
 </div>
-<div class="table-wrap" role="region" tabindex="0" aria-label="Model specification and evaluation 1">
+<div class="table-wrap" role="region" tabindex="0" aria-label="SEED-IV Case 1 accuracy comparison">
 <table>
-<caption>Model specification and evaluation 1</caption>
+<caption>SEED-IV Case 1 accuracy comparison</caption>
 <thead>
 <tr>
 <th scope="col">SEED-IV Case 1</th>
@@ -143,15 +143,16 @@
 <h2>
 <span class="section-number">02 / RESEARCH DETAIL</span>SimNeXt-EEG: compact temporal attention</h2>
 <dl class="arguments">
-<dt>Problem / context</dt>
+<dt>Challenge</dt>
 <dd>A small motor-imagery model must capture multiple temporal scales and suppress noise.</dd>
 <dt>Approach</dt>
 <dd>Extracted temporal features with multiple kernels and recalibrated time points using parameter-free SimAM attention.</dd>
-<dt>Contribution / next steps</dt>
+<dt>Contribution</dt>
 <dd>Designed the model, measured classification accuracy and CPU latency, and conducted ablations for the first-author IEEE SPL 2026 paper.</dd>
 </dl>
 <div class="chart-set">
 <figure class="chart-figure">
+<div class="chart-plot" role="region" tabindex="0" aria-label="Classification accuracy (%)">
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 410" role="img" aria-labelledby="chart-14-0" aria-describedby="chart-desc-14-0">
 <title id="chart-14-0">Classification accuracy (%)</title>
 <desc id="chart-desc-14-0">Accuracy: EEGNet 58.6, MSVTNet 65.93, SimNeXt 70.81</desc>
@@ -178,9 +179,11 @@
 <rect x="65" y="379" width="10" height="10" rx="2" fill="#a7bddd"/>
 <text x="82" y="389" fill="#596b82" font-size="13">Accuracy</text>
 </svg>
+</div>
 <figcaption>Classification accuracy (%)</figcaption>
 </figure>
 <figure class="chart-figure">
+<div class="chart-plot" role="region" tabindex="0" aria-label="Temporal attention ablation (%)">
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 410" role="img" aria-labelledby="chart-14-1" aria-describedby="chart-desc-14-1">
 <title id="chart-14-1">Temporal attention ablation (%)</title>
 <desc id="chart-desc-14-1">Accuracy: Without both modules 68.26, Full model 70.81</desc>
@@ -204,12 +207,13 @@
 <rect x="65" y="379" width="10" height="10" rx="2" fill="#a7bddd"/>
 <text x="82" y="389" fill="#596b82" font-size="13">Accuracy</text>
 </svg>
+</div>
 <figcaption>Temporal attention ablation (%)</figcaption>
 </figure>
 </div>
-<div class="table-wrap" role="region" tabindex="0" aria-label="Model specification and evaluation 1">
+<div class="table-wrap" role="region" tabindex="0" aria-label="SimNeXt-EEG architecture">
 <table>
-<caption>Model specification and evaluation 1</caption>
+<caption>SimNeXt-EEG architecture</caption>
 <thead>
 <tr>
 <th scope="col">Stage</th>
@@ -236,9 +240,9 @@
 </tbody>
 </table>
 </div>
-<div class="table-wrap" role="region" tabindex="0" aria-label="Model specification and evaluation 2">
+<div class="table-wrap" role="region" tabindex="0" aria-label="Parameter count and CPU latency">
 <table>
-<caption>Model specification and evaluation 2</caption>
+<caption>Parameter count and CPU latency</caption>
 <thead>
 <tr>
 <th scope="col">Model</th>
@@ -287,10 +291,10 @@
 <a href="/en/publications/dls-gcn/">Distance-Structured Lag-Sparse Graph Convolution with a Lag-Shared Adjacency Residual for Imagined Speech EEG Decoding</a>
 </li>
 <li>
-<a href="/en/publications/graph-transformer-eeg/">Semi-Supervised EEG Emotion Recognition with a Discriminative Graph Transformer Model</a>
+<a href="/en/publications/graph-transformer-eeg/">Semi-supervised EEG emotion recognition with Discriminative Graph Transformer Model</a>
 </li>
 <li>
-<a href="/en/publications/pdc-gcn/">EEG-Based Emotion Recognition Using a Spectral Graph Convolutional Neural Network Based on Partial Directed Coherence</a>
+<a href="/en/publications/pdc-gcn/">EEG-based Emotion Recognition Using Spectral Graph Convolutional Neural Network based on Partial Directed Coherence</a>
 </li>
 <li>
 <a href="/en/publications/damc-net/">DAMC-Net: Dual-Branch Attention-Guided Multi-Scale Convolutional Network for EEG-Based Imagined Speech Decoding</a>

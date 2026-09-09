@@ -57,7 +57,7 @@
 </div>
 <div>
 <dt>담당 업무</dt>
-<dd>다중모달 수집 프로토콜 설계 도메인 적응 모델 공동 개발, 절제 실험</dd>
+<dd>다중모달 수집 프로토콜 설계, 도메인 적응 모델 공동 개발, 절제 실험</dd>
 </div>
 <div>
 <dt>기간 및 소속</dt>
@@ -76,16 +76,16 @@
 <span class="section-number">01 / RESEARCH DETAIL</span>MDA-GCL / 모달 융합과 도메인 적대학습의 효과</h2>
 <dl class="arguments">
 <dt>난제</dt>
-<dd>EEG와 안구 특징의 분포가 피험자와 세션에 따라 달라져 같은 분류기를 적용하기 어려움</dd>
+<dd>EEG와 안구 특징의 분포가 피험자와 세션에 따라 달라 동일한 분류기를 적용하기 어렵다.</dd>
 <dt>해결</dt>
-<dd>모달 유사도를 융합한 그래프에 대조 손실과 도메인 적대 손실을 적용해 분포 차이 완화</dd>
+<dd>모달 유사도를 융합한 그래프에 대조 손실과 도메인 적대 손실을 적용해 분포 차이를 줄였다.</dd>
 <dt>기여</dt>
-<dd>MDA-GCL 공동 개발 및 절제 실험, 공동 제1저자 다중모달 수집 프로토콜 설계 참여</dd>
+<dd>공동 제1저자로 MDA-GCL 개발과 절제 실험에 참여했다. 다중모달 수집 프로토콜을 공동 설계했다.</dd>
 </dl>
 <div class="evidence-gallery">
 <figure>
 <a class="figure-link" href="/assets/figures/slide-25-1.png" target="_blank" rel="noopener" aria-label="그림 확대: 모달별 유사도 그래프, 대조학습, 도메인 적대학습">
-<img src="/assets/figures/slide-25-1.png" alt="모달별 유사도 그래프, 대조학습, 도메인 적대학습" loading="lazy">
+<img src="/assets/figures/slide-25-1.png" alt="모달별 유사도 그래프, 대조학습, 도메인 적대학습" loading="lazy" width="1001" height="616">
 </a>
 <figcaption>모달별 유사도 그래프, 대조학습, 도메인 적대학습<br>
 <a href="/assets/figures/slide-25-1.png">원본 그림 확대</a>
@@ -93,7 +93,7 @@
 </figure>
 <figure>
 <a class="figure-link" href="/assets/figures/slide-25-2.png" target="_blank" rel="noopener" aria-label="그림 확대: SEED-IV, 피험자 간 평가">
-<img src="/assets/figures/slide-25-2.png" alt="SEED-IV, 피험자 간 평가" loading="lazy">
+<img src="/assets/figures/slide-25-2.png" alt="SEED-IV, 피험자 간 평가" loading="lazy" width="317" height="401">
 </a>
 <figcaption>SEED-IV, 피험자 간 평가<br>
 <a href="/assets/figures/slide-25-2.png">원본 그림 확대</a>
@@ -102,6 +102,7 @@
 </div>
 <div class="chart-set one">
 <figure class="chart-figure">
+<div class="chart-plot" role="region" tabindex="0" aria-label="DANN 절제 (%)">
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 410" role="img" aria-labelledby="chart-25-0" aria-describedby="chart-desc-25-0">
 <title id="chart-25-0">DANN 절제 (%)</title>
 <desc id="chart-desc-25-0">정확도: DANN 제거 62.5, 전체 76.1</desc>
@@ -125,12 +126,13 @@
 <rect x="65" y="379" width="10" height="10" rx="2" fill="#a7bddd"/>
 <text x="82" y="389" fill="#596b82" font-size="13">정확도</text>
 </svg>
+</div>
 <figcaption>DANN 절제 (%)</figcaption>
 </figure>
 </div>
-<div class="table-wrap" role="region" tabindex="0" aria-label="모델 구성 및 평가 수치 1">
+<div class="table-wrap" role="region" tabindex="0" aria-label="도메인 적응 정확도 (%)와 과제 수집 목표">
 <table>
-<caption>모델 구성 및 평가 수치 1</caption>
+<caption>도메인 적응 정확도 (%)와 과제 수집 목표</caption>
 <thead>
 <tr>
 <th scope="col">정확도 (%)</th>

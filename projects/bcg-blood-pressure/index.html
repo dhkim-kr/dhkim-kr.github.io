@@ -57,7 +57,7 @@
 </div>
 <div>
 <dt>담당 업무</dt>
-<dd>혈압 상승 실험과 동기화 신호 수집 최종 모델 개발, 실시간 분석, 코드 리팩토링</dd>
+<dd>혈압 상승 실험과 동기화 신호 수집, 최종 모델 개발, 실시간 분석, 코드 리팩토링</dd>
 </div>
 <div>
 <dt>기간 및 소속</dt>
@@ -77,16 +77,16 @@
 <span class="section-number">01 / RESEARCH DETAIL</span>2채널 BCG 혈압 추정 / 최종 모델과 실시간 서비스 구성</h2>
 <dl class="arguments">
 <dt>난제</dt>
-<dd>등과 좌석의 BCG에서 시간에 따른 변화를 추출하고 실시간 혈압 표시까지 연결해야 함</dd>
+<dd>등과 좌석의 BCG에서 시간에 따른 변화를 추출하고 실시간 혈압 표시까지 연결해야 한다.</dd>
 <dt>해결</dt>
-<dd>10초 구간의 국소 특징을 CNN으로 추출 BiGRU와 시간 어텐션으로 혈압 회귀</dd>
+<dd>10초 구간의 국소 특징을 CNN으로 추출하고 BiGRU와 시간 어텐션으로 혈압을 회귀했다.</dd>
 <dt>기여</dt>
-<dd>신호 수집과 모델 및 실시간 처리 공동 개발 최종 프로젝트 코드를 모듈화해 공개 저장소 구성</dd>
+<dd>신호 수집, 모델, 실시간 처리를 공동 개발했다. 최종 프로젝트 코드를 모듈화해 공개 저장소로 정리했다.</dd>
 </dl>
 <div class="evidence-gallery">
 <figure>
 <a class="figure-link" href="/assets/figures/slide-32-1.png" target="_blank" rel="noopener" aria-label="그림 확대: 등과 좌석 BCG의 실시간 수집 및 분석 구성">
-<img src="/assets/figures/slide-32-1.png" alt="등과 좌석 BCG의 실시간 수집 및 분석 구성" loading="lazy">
+<img src="/assets/figures/slide-32-1.png" alt="등과 좌석 BCG의 실시간 수집 및 분석 구성" loading="lazy" width="695" height="362">
 </a>
 <figcaption>등과 좌석 BCG의 실시간 수집 및 분석 구성<br>
 <a href="/assets/figures/slide-32-1.png">원본 그림 확대</a>
@@ -94,7 +94,7 @@
 </figure>
 <figure>
 <a class="figure-link" href="/assets/figures/slide-32-2.png" target="_blank" rel="noopener" aria-label="그림 확대: 최종 발표의 CNN, BiGRU, Attention 모델">
-<img src="/assets/figures/slide-32-2.png" alt="최종 발표의 CNN, BiGRU, Attention 모델" loading="lazy">
+<img src="/assets/figures/slide-32-2.png" alt="최종 발표의 CNN, BiGRU, Attention 모델" loading="lazy" width="913" height="342">
 </a>
 <figcaption>최종 발표의 CNN, BiGRU, Attention 모델<br>
 <a href="/assets/figures/slide-32-2.png">원본 그림 확대</a>
@@ -102,16 +102,16 @@
 </figure>
 <figure>
 <a class="figure-link" href="/assets/figures/slide-32-3.png" target="_blank" rel="noopener" aria-label="그림 확대: 원본 모니터링 앱 화면">
-<img src="/assets/figures/slide-32-3.png" alt="원본 모니터링 앱 화면" loading="lazy">
+<img src="/assets/figures/slide-32-3.png" alt="원본 모니터링 앱 화면" loading="lazy" width="327" height="615">
 </a>
 <figcaption>원본 모니터링 앱 화면<br>
 <a href="/assets/figures/slide-32-3.png">원본 그림 확대</a>
 </figcaption>
 </figure>
 </div>
-<div class="table-wrap" role="region" tabindex="0" aria-label="모델 구성 및 평가 수치 1">
+<div class="table-wrap" role="region" tabindex="0" aria-label="공개한 최종 코드의 모델 명세">
 <table>
-<caption>모델 구성 및 평가 수치 1</caption>
+<caption>공개한 최종 코드의 모델 명세</caption>
 <thead>
 <tr>
 <th scope="col">최종 코드 명세</th>
@@ -142,16 +142,16 @@
 <span class="section-number">02 / RESEARCH DETAIL</span>혈압 추적 결과 / 6명 개인 내 평가와 재현 조건</h2>
 <dl class="arguments">
 <dt>실험</dt>
-<dd>1인 약 3시간, 안정 및 운동 후 상태 측정 커프 혈압을 2분 간격으로 확보</dd>
+<dd>1인당 약 3시간 동안 안정 상태와 운동 후 상태를 측정하고 커프 혈압을 2분 간격으로 확보했다.</dd>
 <dt>평가</dt>
-<dd>개인 내 시간 분할 29 / 14 / 57% 적용 6명의 SBP 및 DBP 추적 오차 보고</dd>
+<dd>개인 내 데이터를 시간순으로 29 / 14 / 57% 분할해 6명의 SBP 및 DBP 추적 오차를 평가했다.</dd>
 <dt>재현 조건</dt>
-<dd>원 실험은 중첩 구간과 분할 전 정규화 사용 리팩토링 코드의 실데이터 재평가 필요</dd>
+<dd>원 실험은 중첩 구간과 분할 전 정규화를 사용했다. 공개한 리팩토링 코드의 성능은 실데이터로 재평가해야 한다.</dd>
 </dl>
 <div class="evidence-gallery">
 <figure>
 <a class="figure-link" href="/assets/figures/slide-33-1.png" target="_blank" rel="noopener" aria-label="그림 확대: 원논문 SBP 실측 및 예측 파형 예시">
-<img src="/assets/figures/slide-33-1.png" alt="원논문 SBP 실측 및 예측 파형 예시" loading="lazy">
+<img src="/assets/figures/slide-33-1.png" alt="원논문 SBP 실측 및 예측 파형 예시" loading="lazy" width="621" height="269">
 </a>
 <figcaption>원논문 SBP 실측 및 예측 파형 예시<br>
 <a href="/assets/figures/slide-33-1.png">원본 그림 확대</a>
@@ -159,7 +159,7 @@
 </figure>
 <figure>
 <a class="figure-link" href="/assets/figures/slide-33-2.png" target="_blank" rel="noopener" aria-label="그림 확대: 원논문 DBP 실측 및 예측 파형 예시">
-<img src="/assets/figures/slide-33-2.png" alt="원논문 DBP 실측 및 예측 파형 예시" loading="lazy">
+<img src="/assets/figures/slide-33-2.png" alt="원논문 DBP 실측 및 예측 파형 예시" loading="lazy" width="624" height="269">
 </a>
 <figcaption>원논문 DBP 실측 및 예측 파형 예시<br>
 <a href="/assets/figures/slide-33-2.png">원본 그림 확대</a>
@@ -168,6 +168,7 @@
 </div>
 <div class="chart-set one">
 <figure class="chart-figure">
+<div class="chart-plot" role="region" tabindex="0" aria-label="참여자별 MAE (mmHg)">
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 410" role="img" aria-labelledby="chart-33-0" aria-describedby="chart-desc-33-0">
 <title id="chart-33-0">참여자별 MAE (mmHg)</title>
 <desc id="chart-desc-33-0">SBP: 1 5.5, 2 3.2, 3 5.25, 4 3.35, 5 4.68, 6 6.2; DBP: 1 4.65, 2 3.12, 3 3.88, 4 4.03, 5 3.8, 6 3.5</desc>
@@ -217,12 +218,13 @@
 <rect x="275" y="379" width="10" height="10" rx="2" fill="#1f5fbf"/>
 <text x="292" y="389" fill="#596b82" font-size="13">DBP</text>
 </svg>
+</div>
 <figcaption>참여자별 MAE (mmHg)</figcaption>
 </figure>
 </div>
-<div class="table-wrap" role="region" tabindex="0" aria-label="모델 구성 및 평가 수치 1">
+<div class="table-wrap" role="region" tabindex="0" aria-label="6명 평균 혈압 추정 오차 (mmHg)">
 <table>
-<caption>모델 구성 및 평가 수치 1</caption>
+<caption>6명 평균 혈압 추정 오차 (mmHg)</caption>
 <thead>
 <tr>
 <th scope="col">6명 평균 (mmHg)</th>

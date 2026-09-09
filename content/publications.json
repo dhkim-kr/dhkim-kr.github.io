@@ -40,7 +40,7 @@
     "type": "journal",
     "status": "게재 확정",
     "group": "published",
-    "role": "공동제1저자",
+    "role": "공동 제1저자",
     "links": [
       "https://github.com/dhkim-kr/MDA-GCL"
     ],
@@ -87,7 +87,7 @@
     "type": "journal",
     "status": "게재",
     "group": "published",
-    "role": "공동제1저자",
+    "role": "공동 제1저자",
     "links": [
       "https://doi.org/10.3934/mbe.2024245",
       "https://github.com/dhkim-kr/multiscale-distribution-entropy"
@@ -96,7 +96,7 @@
   },
   {
     "slug": "nacl",
-    "title": "Cross-Modal Neighborhood Alignment for Multimodal Emotion Recognition in Conversation",
+    "title": "Cross-Modal Alignment for Robust Multimodal Fusion in Conversational Emotion Recognition",
     "venue": "Expert Systems with Applications",
     "date": "2026",
     "year": 2026,
@@ -118,7 +118,7 @@
     "type": "journal",
     "status": "심사 중",
     "group": "review",
-    "role": "공동제1저자",
+    "role": "공동 제1저자",
     "links": [
       "https://github.com/dhkim-kr/alcohol-craving-study"
     ],
@@ -148,11 +148,15 @@
     "type": "journal",
     "status": "투고 예정",
     "group": "preparation",
-    "role": "공동제1저자",
+    "role": "공동 제1저자",
     "links": [
       "https://github.com/dhkim-kr/glcl_rPPG"
     ],
-    "related": "rppg-deployment"
+    "related": "rppg-deployment",
+    "scopeNote": {
+      "ko": "원고에 보고된 데이터셋 평가 결과이다. 키오스크 장치에서 측정한 지연과 현장 오차는 포함하지 않는다.",
+      "en": "Dataset results reported in the manuscript. Device latency and field error at kiosk deployments are outside this evaluation."
+    }
   },
   {
     "slug": "axis-ecg",
@@ -163,7 +167,7 @@
     "type": "journal",
     "status": "투고 예정",
     "group": "preparation",
-    "role": "공동제1저자",
+    "role": "공동 제1저자",
     "links": [
       "https://github.com/dhkim-kr/axis-ecg"
     ],
@@ -182,11 +186,15 @@
     "links": [
       "https://github.com/dhkim-kr/fr-ptt-bp"
     ],
-    "related": "dual-stream-foundation"
+    "related": "dual-stream-foundation",
+    "scopeNote": {
+      "ko": "표는 FR-PTT 논문의 혈압 추정 결과이다. SBP는 수축기 혈압, DBP는 이완기 혈압이며 오차 단위는 mmHg이다.",
+      "en": "The table reports FR-PTT blood-pressure results in mmHg. SBP and DBP denote systolic and diastolic blood pressure."
+    }
   },
   {
     "slug": "emotionheart",
-    "title": "Joint Graph-Based Modality Alignment for Robustness in Conversational Emotion Recognition",
+    "title": "Graph-based Modality Alignment for Robustness in Conversational Emotion Recognition",
     "venue": "IEEE ICASSP 2026",
     "date": "May 2026",
     "year": 2026,
@@ -249,7 +257,7 @@
   },
   {
     "slug": "graph-transformer-eeg",
-    "title": "Semi-Supervised EEG Emotion Recognition with a Discriminative Graph Transformer Model",
+    "title": "Semi-supervised EEG emotion recognition with Discriminative Graph Transformer Model",
     "venue": "IEEE ICCE-Asia 2023",
     "date": "Oct. 2023",
     "year": 2023,
@@ -264,7 +272,7 @@
   },
   {
     "slug": "pdc-gcn",
-    "title": "EEG-Based Emotion Recognition Using a Spectral Graph Convolutional Neural Network Based on Partial Directed Coherence",
+    "title": "EEG-based Emotion Recognition Using Spectral Graph Convolutional Neural Network based on Partial Directed Coherence",
     "venue": "IEEE ICCE-Asia 2022",
     "date": "Oct. 2022",
     "year": 2022,

@@ -76,34 +76,34 @@
 <h2>
 <span class="section-number">01 / RESEARCH DETAIL</span>NeuroSync: intake, retrieval and clinician handoff</h2>
 <dl class="arguments">
-<dt>Problem / context</dt>
+<dt>Challenge</dt>
 <dd>Free dialogue must populate clinical slots without allowing unsupported values into the handoff record.</dd>
 <dt>Approach</dt>
 <dd>A rule-based state machine runs 10 specialist agents. Scales use deterministic scoring, and final records undergo source and evidence checks.</dd>
-<dt>Contribution / next steps</dt>
+<dt>Contribution</dt>
 <dd>Implemented orchestration, RAG and verification logic and integrated the patient app, clinician interface and backend.</dd>
 </dl>
 <div class="evidence-gallery">
 <figure>
-<a class="figure-link" href="/assets/figures/slide-35-1.png" target="_blank" rel="noopener" aria-label="Enlarge figure: NeuroSync: intake, retrieval and clinician handoff: source figure 1">
-<img src="/assets/figures/slide-35-1.png" alt="NeuroSync: intake, retrieval and clinician handoff: source figure 1" loading="lazy">
+<a class="figure-link" href="/assets/figures/slide-35-1.png" target="_blank" rel="noopener" aria-label="Enlarge figure: Intake, retrieval, scales, longitudinal analysis and evidence verification">
+<img src="/assets/figures/slide-35-1.png" alt="Intake, retrieval, scales, longitudinal analysis and evidence verification" loading="lazy" width="1377" height="616">
 </a>
-<figcaption>NeuroSync: intake, retrieval and clinician handoff: source figure 1<br>
+<figcaption>Intake, retrieval, scales, longitudinal analysis and evidence verification<br>
 <a href="/assets/figures/slide-35-1.png">View full-size figure</a>
 </figcaption>
 </figure>
 <figure>
-<a class="figure-link" href="/assets/figures/slide-35-2.png" target="_blank" rel="noopener" aria-label="Enlarge figure: NeuroSync: intake, retrieval and clinician handoff: source figure 2">
-<img src="/assets/figures/slide-35-2.png" alt="NeuroSync: intake, retrieval and clinician handoff: source figure 2" loading="lazy">
+<a class="figure-link" href="/assets/figures/slide-35-2.png" target="_blank" rel="noopener" aria-label="Enlarge figure: Prototype handoff report: current state, PHQ-9 and risk level">
+<img src="/assets/figures/slide-35-2.png" alt="Prototype handoff report: current state, PHQ-9 and risk level" loading="lazy" width="873" height="324">
 </a>
-<figcaption>NeuroSync: intake, retrieval and clinician handoff: source figure 2<br>
+<figcaption>Prototype handoff report: current state, PHQ-9 and risk level<br>
 <a href="/assets/figures/slide-35-2.png">View full-size figure</a>
 </figcaption>
 </figure>
 </div>
-<div class="table-wrap" role="region" tabindex="0" aria-label="Model specification and evaluation 1">
+<div class="table-wrap" role="region" tabindex="0" aria-label="Models, retrieval sources and service stack">
 <table>
-<caption>Model specification and evaluation 1</caption>
+<caption>Models, retrieval sources and service stack</caption>
 <thead>
 <tr>
 <th scope="col">Component</th>
@@ -133,15 +133,16 @@
 <h2>
 <span class="section-number">02 / RESEARCH DETAIL</span>NeuroSync: output reliability and inference cost</h2>
 <dl class="arguments">
-<dt>Problem / context</dt>
+<dt>Verification results</dt>
 <dd>Verification blocked 337 unsupported candidates before final output and improved slot coverage and scale assignment.</dd>
-<dt>Approach</dt>
+<dt>Remaining issue</dt>
 <dd>The pre-filter unsupported-candidate ratio rose from 46.4% to 55.2%, exposing limitations at the generation stage despite final-output verification.</dd>
-<dt>Contribution / next steps</dt>
+<dt>Next steps</dt>
 <dd>Further work concerns reducing calls and tokens and obtaining specialist assessment and clinical proof-of-concept evidence.</dd>
 </dl>
 <div class="chart-set">
 <figure class="chart-figure">
+<div class="chart-plot" role="region" tabindex="0" aria-label="Structured intake performance (%)">
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 410" role="img" aria-labelledby="chart-36-0" aria-describedby="chart-desc-36-0">
 <title id="chart-36-0">Structured intake performance (%)</title>
 <desc id="chart-desc-36-0">Single backbone: Scale assignment 23.8, Slot coverage 55.6; NeuroSync: Scale assignment 73.0, Slot coverage 98.4</desc>
@@ -171,9 +172,11 @@
 <rect x="275" y="379" width="10" height="10" rx="2" fill="#1f5fbf"/>
 <text x="292" y="389" fill="#596b82" font-size="13">NeuroSync</text>
 </svg>
+</div>
 <figcaption>Structured intake performance (%)</figcaption>
 </figure>
 <figure class="chart-figure">
+<div class="chart-plot" role="region" tabindex="0" aria-label="Unsupported final values (count)">
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 410" role="img" aria-labelledby="chart-36-1" aria-describedby="chart-desc-36-1">
 <title id="chart-36-1">Unsupported final values (count)</title>
 <desc id="chart-desc-36-1">Final output: Single backbone 39.0, NeuroSync 0.0</desc>
@@ -197,9 +200,11 @@
 <rect x="65" y="379" width="10" height="10" rx="2" fill="#a7bddd"/>
 <text x="82" y="389" fill="#596b82" font-size="13">Final output</text>
 </svg>
+</div>
 <figcaption>Unsupported final values (count)</figcaption>
 </figure>
 <figure class="chart-figure">
+<div class="chart-plot" role="region" tabindex="0" aria-label="Cumulative waiting time per turn (s)">
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 410" role="img" aria-labelledby="chart-36-2" aria-describedby="chart-desc-36-2">
 <title id="chart-36-2">Cumulative waiting time per turn (s)</title>
 <desc id="chart-desc-36-2">Cumulative waiting time: Single backbone 4.16, NeuroSync 9.04</desc>
@@ -223,12 +228,13 @@
 <rect x="65" y="379" width="10" height="10" rx="2" fill="#a7bddd"/>
 <text x="82" y="389" fill="#596b82" font-size="13">Cumulative waiting time</text>
 </svg>
+</div>
 <figcaption>Cumulative waiting time per turn (s)</figcaption>
 </figure>
 </div>
-<div class="table-wrap" role="region" tabindex="0" aria-label="Model specification and evaluation 1">
+<div class="table-wrap" role="region" tabindex="0" aria-label="Synthetic-session outputs and token use">
 <table>
-<caption>Model specification and evaluation 1</caption>
+<caption>Synthetic-session outputs and token use</caption>
 <thead>
 <tr>
 <th scope="col">Metric</th>

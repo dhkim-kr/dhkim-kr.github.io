@@ -57,7 +57,7 @@
 </div>
 <div>
 <dt>담당 업무</dt>
-<dd>좌표 정합, 실시간 영상 단면 갱신 VXM 이동 제어, 파형 취득, 모듈 패키징</dd>
+<dd>좌표 정합, 실시간 영상 단면 갱신, VXM 이동 제어, 파형 취득, 모듈 패키징</dd>
 </div>
 <div>
 <dt>기간 및 소속</dt>
@@ -77,16 +77,16 @@
 <span class="section-number">01 / RESEARCH DETAIL</span>영상 좌표와 추적 좌표의 정합 / 3D Slicer 모듈 구현</h2>
 <dl class="arguments">
 <dt>난제</dt>
-<dd>CT/MRI, 추적장치, 탐침의 좌표가 달라 추적 위치를 영상과 측정 위치에 연결해야 함</dd>
+<dd>CT/MRI, 추적장치, 탐침의 좌표계가 달라 추적 위치를 영상과 측정 위치에 연결해야 한다.</dd>
 <dt>해결</dt>
-<dd>랜드마크 및 표면 정합으로 Reference와 RAS 연결 탐침의 위치 변환을 영상 단면에 실시간 반영</dd>
+<dd>랜드마크 및 표면 정합으로 Reference와 RAS 좌표를 연결했다. 탐침의 위치 변환을 영상 단면에 실시간으로 반영했다.</dd>
 <dt>기여</dt>
-<dd>3D Slicer Python 모듈 개발과 장치 연동 연구용 모듈 패키징, 전임상 연구자와 검증</dd>
+<dd>3D Slicer Python 모듈과 장치 연동을 개발했다. 연구용 모듈을 패키징하고 전임상 연구자와 동작을 검증했다.</dd>
 </dl>
 <div class="evidence-gallery">
 <figure>
 <a class="figure-link" href="/assets/figures/slide-29-1.png" target="_blank" rel="noopener" aria-label="그림 확대: KIST 원본 PPT: 영상 RAS와 추적 좌표의 연결">
-<img src="/assets/figures/slide-29-1.png" alt="KIST 원본 PPT: 영상 RAS와 추적 좌표의 연결" loading="lazy">
+<img src="/assets/figures/slide-29-1.png" alt="KIST 원본 PPT: 영상 RAS와 추적 좌표의 연결" loading="lazy" width="1261" height="616">
 </a>
 <figcaption>KIST 원본 PPT: 영상 RAS와 추적 좌표의 연결<br>
 <a href="/assets/figures/slide-29-1.png">원본 그림 확대</a>
@@ -94,7 +94,7 @@
 </figure>
 <figure>
 <a class="figure-link" href="/assets/figures/slide-29-2.png" target="_blank" rel="noopener" aria-label="그림 확대: UpdateSlicePlane으로 MRI 단면 갱신">
-<img src="/assets/figures/slide-29-2.png" alt="UpdateSlicePlane으로 MRI 단면 갱신" loading="lazy">
+<img src="/assets/figures/slide-29-2.png" alt="UpdateSlicePlane으로 MRI 단면 갱신" loading="lazy" width="926" height="481">
 </a>
 <figcaption>UpdateSlicePlane으로 MRI 단면 갱신<br>
 <a href="/assets/figures/slide-29-2.png">원본 그림 확대</a>
@@ -102,16 +102,16 @@
 </figure>
 <figure>
 <a class="figure-link" href="/assets/figures/slide-29-3.png" target="_blank" rel="noopener" aria-label="그림 확대: 위치추적 및 음장 측정 장치">
-<img src="/assets/figures/slide-29-3.png" alt="위치추적 및 음장 측정 장치" loading="lazy">
+<img src="/assets/figures/slide-29-3.png" alt="위치추적 및 음장 측정 장치" loading="lazy" width="550" height="550">
 </a>
 <figcaption>위치추적 및 음장 측정 장치<br>
 <a href="/assets/figures/slide-29-3.png">원본 그림 확대</a>
 </figcaption>
 </figure>
 </div>
-<div class="table-wrap" role="region" tabindex="0" aria-label="모델 구성 및 평가 수치 1">
+<div class="table-wrap" role="region" tabindex="0" aria-label="좌표 정합 및 추적 기능">
 <table>
-<caption>모델 구성 및 평가 수치 1</caption>
+<caption>좌표 정합 및 추적 기능</caption>
 <thead>
 <tr>
 <th scope="col">구현 항목</th>
@@ -135,23 +135,23 @@
 </table>
 </div>
 <div class="evidence-note">
-<strong>평가 조건 및 연구 범위</strong>알키미스트 0119 및 0225 원본 PPTX. 영상 안내와 제어 구현 결과이며 치료 효과 평가와 구분</div>
+<strong>평가 조건 및 연구 범위</strong>KIST 인턴 당시 발표 자료의 영상 안내와 장치 제어 구현 결과이다. 치료 효과를 평가한 결과는 포함하지 않는다.</div>
 </section>
 <section class="detail-stage" id="stage-2">
 <h2>
 <span class="section-number">02 / RESEARCH DETAIL</span>이동과 취득의 순차 제어 / 대기시간 조정과 음장 시각화</h2>
 <dl class="arguments">
 <dt>난제</dt>
-<dd>좌표 이동마다 누적되는 대기시간과 측정 위치 및 파형의 대응 관계 관리</dd>
+<dd>좌표 이동마다 대기시간이 누적된다. 각 측정 위치와 취득 파형의 대응 관계도 유지해야 한다.</dd>
 <dt>해결</dt>
-<dd>이동 간격과 대기시간을 조정한 VXM 제어 구현 격자별 파형 취득 후 평면별 음장 분포 생성</dd>
+<dd>이동 간격과 대기시간을 조정하는 VXM 제어를 구현했다. 격자별 파형을 취득하고 평면별 음장 분포를 생성했다.</dd>
 <dt>기여</dt>
-<dd>로봇 이동, 파형 취득, 음장 시각화 연결 3D Slicer 안에서 측정 절차와 결과 확인</dd>
+<dd>로봇 이동, 파형 취득, 음장 시각화를 연결했다. 3D Slicer에서 측정 절차와 결과를 확인하도록 구성했다.</dd>
 </dl>
 <div class="evidence-gallery">
 <figure>
 <a class="figure-link" href="/assets/figures/slide-30-1.png" target="_blank" rel="noopener" aria-label="그림 확대: Step size와 Sleep time을 조정한 원본 비교">
-<img src="/assets/figures/slide-30-1.png" alt="Step size와 Sleep time을 조정한 원본 비교" loading="lazy">
+<img src="/assets/figures/slide-30-1.png" alt="Step size와 Sleep time을 조정한 원본 비교" loading="lazy" width="783" height="616">
 </a>
 <figcaption>Step size와 Sleep time을 조정한 원본 비교<br>
 <a href="/assets/figures/slide-30-1.png">원본 그림 확대</a>
@@ -159,32 +159,32 @@
 </figure>
 <figure>
 <a class="figure-link" href="/assets/figures/slide-30-2.png" target="_blank" rel="noopener" aria-label="그림 확대: 동일 위치의 취득 파형을 측정 좌표와 저장">
-<img src="/assets/figures/slide-30-2.png" alt="동일 위치의 취득 파형을 측정 좌표와 저장" loading="lazy">
+<img src="/assets/figures/slide-30-2.png" alt="동일 위치의 취득 파형을 측정 좌표와 저장" loading="lazy" width="548" height="327">
 </a>
 <figcaption>동일 위치의 취득 파형을 측정 좌표와 저장<br>
 <a href="/assets/figures/slide-30-2.png">원본 그림 확대</a>
 </figcaption>
 </figure>
 <figure>
-<a class="figure-link" href="/assets/figures/slide-30-3.png" target="_blank" rel="noopener" aria-label="그림 확대: 7 × 7 × 7 격자 / 위치별 취득값의 2D 지도">
-<img src="/assets/figures/slide-30-3.png" alt="7 × 7 × 7 격자 / 위치별 취득값의 2D 지도" loading="lazy">
+<a class="figure-link" href="/assets/figures/slide-30-3.png" target="_blank" rel="noopener" aria-label="그림 확대: 7 × 7 × 7 격자의 측정 위치">
+<img src="/assets/figures/slide-30-3.png" alt="7 × 7 × 7 격자의 측정 위치" loading="lazy" width="415" height="278">
 </a>
-<figcaption>7 × 7 × 7 격자 / 위치별 취득값의 2D 지도<br>
+<figcaption>7 × 7 × 7 격자의 측정 위치<br>
 <a href="/assets/figures/slide-30-3.png">원본 그림 확대</a>
 </figcaption>
 </figure>
 <figure>
-<a class="figure-link" href="/assets/figures/slide-30-4.png" target="_blank" rel="noopener" aria-label="그림 확대: 7 × 7 × 7 격자 / 위치별 취득값의 2D 지도">
-<img src="/assets/figures/slide-30-4.png" alt="7 × 7 × 7 격자 / 위치별 취득값의 2D 지도" loading="lazy">
+<a class="figure-link" href="/assets/figures/slide-30-4.png" target="_blank" rel="noopener" aria-label="그림 확대: 위치별 취득값으로 구성한 2D 음장 지도">
+<img src="/assets/figures/slide-30-4.png" alt="위치별 취득값으로 구성한 2D 음장 지도" loading="lazy" width="489" height="208">
 </a>
-<figcaption>7 × 7 × 7 격자 / 위치별 취득값의 2D 지도<br>
+<figcaption>위치별 취득값으로 구성한 2D 음장 지도<br>
 <a href="/assets/figures/slide-30-4.png">원본 그림 확대</a>
 </figcaption>
 </figure>
 </div>
-<div class="table-wrap" role="region" tabindex="0" aria-label="모델 구성 및 평가 수치 1">
+<div class="table-wrap" role="region" tabindex="0" aria-label="이동 대기시간 계산 비교">
 <table>
-<caption>모델 구성 및 평가 수치 1</caption>
+<caption>이동 대기시간 계산 비교</caption>
 <thead>
 <tr>
 <th scope="col">원본 시간 비교</th>

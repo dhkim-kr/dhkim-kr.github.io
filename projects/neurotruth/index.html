@@ -57,7 +57,7 @@
 </div>
 <div>
 <dt>담당 업무</dt>
-<dd>시스템 설계와 위험 판정 로직 구현 백엔드, 앱 알림, STT 및 TTS 연동</dd>
+<dd>시스템 설계, 위험 판정 로직과 백엔드 구현, 앱 알림 및 STT/TTS 연동</dd>
 </div>
 <div>
 <dt>기간 및 소속</dt>
@@ -77,16 +77,16 @@
 <span class="section-number">01 / RESEARCH DETAIL</span>갈망 추정에서 알림과 대화까지 / 시제품의 현재 구현 범위</h2>
 <dl class="arguments">
 <dt>난제</dt>
-<dd>웨어러블 분류 결과를 상태 확인과 알림으로 연결하고 LLM 대화의 역할을 구분해야 함</dd>
+<dd>웨어러블 분류 결과를 상태 확인과 알림으로 연결하고 위험 판정과 LLM 대화의 역할을 구분해야 한다.</dd>
 <dt>해결</dt>
-<dd>백엔드 규칙이 위험 단계와 알림 시점을 결정 앱에서 상태 확인, 설문과 음성 대화 지원</dd>
+<dd>백엔드 규칙으로 위험 단계와 알림 시점을 결정했다. 앱에서 상태 확인, 설문, 음성 대화를 지원한다.</dd>
 <dt>기여</dt>
-<dd>기술 리드 및 PM, 위험 판정과 백엔드 구현 앱 알림, 한국어 STT와 TTS 통합</dd>
+<dd>기술 리드와 PM을 맡아 위험 판정과 백엔드를 구현하고 앱 알림, 한국어 STT, TTS를 통합했다.</dd>
 </dl>
 <div class="evidence-gallery">
 <figure>
 <a class="figure-link" href="/assets/figures/slide-38-1.png" target="_blank" rel="noopener" aria-label="그림 확대: 신호 화면 발췌: PPG 및 EDA 수신">
-<img src="/assets/figures/slide-38-1.png" alt="신호 화면 발췌: PPG 및 EDA 수신" loading="lazy">
+<img src="/assets/figures/slide-38-1.png" alt="신호 화면 발췌: PPG 및 EDA 수신" loading="lazy" width="439" height="616">
 </a>
 <figcaption>신호 화면 발췌: PPG 및 EDA 수신<br>
 <a href="/assets/figures/slide-38-1.png">원본 그림 확대</a>
@@ -94,7 +94,7 @@
 </figure>
 <figure>
 <a class="figure-link" href="/assets/figures/slide-38-2.png" target="_blank" rel="noopener" aria-label="그림 확대: 갈망 단계와 이전 알림을 반영한 상태 확인 판정">
-<img src="/assets/figures/slide-38-2.png" alt="갈망 단계와 이전 알림을 반영한 상태 확인 판정" loading="lazy">
+<img src="/assets/figures/slide-38-2.png" alt="갈망 단계와 이전 알림을 반영한 상태 확인 판정" loading="lazy" width="684" height="470">
 </a>
 <figcaption>갈망 단계와 이전 알림을 반영한 상태 확인 판정<br>
 <a href="/assets/figures/slide-38-2.png">원본 그림 확대</a>
@@ -102,16 +102,16 @@
 </figure>
 <figure>
 <a class="figure-link" href="/assets/figures/slide-38-3.png" target="_blank" rel="noopener" aria-label="그림 확대: 대화 화면 발췌: 사용자 발화와 응답">
-<img src="/assets/figures/slide-38-3.png" alt="대화 화면 발췌: 사용자 발화와 응답" loading="lazy">
+<img src="/assets/figures/slide-38-3.png" alt="대화 화면 발췌: 사용자 발화와 응답" loading="lazy" width="576" height="616">
 </a>
 <figcaption>대화 화면 발췌: 사용자 발화와 응답<br>
 <a href="/assets/figures/slide-38-3.png">원본 그림 확대</a>
 </figcaption>
 </figure>
 </div>
-<div class="table-wrap" role="region" tabindex="0" aria-label="모델 구성 및 평가 수치 1">
+<div class="table-wrap" role="region" tabindex="0" aria-label="NeuroTruth 시제품의 구현 범위">
 <table>
-<caption>모델 구성 및 평가 수치 1</caption>
+<caption>NeuroTruth 시제품의 구현 범위</caption>
 <thead>
 <tr>
 <th scope="col">현재 기능</th>
@@ -142,16 +142,16 @@
 <span class="section-number">02 / RESEARCH DETAIL</span>갈망 분류와 시스템 통합 평가 / 알림 전달 지연 측정</h2>
 <dl class="arguments">
 <dt>통합 결과</dt>
-<dd>분류, 위험 판정, 알림, 대화 연결을 확인 동일 시나리오 반복 시험 21 / 21회 성공</dd>
+<dd>분류, 위험 판정, 알림, 대화의 연결을 확인했다. 동일 시나리오의 반복 통합 시험에서 21회 모두 성공했다.</dd>
 <dt>추가 확인</dt>
-<dd>카메라 정적 영상 10개에서 유효 처리 10 / 10 20초 영상의 평균 처리시간 14.8초</dd>
+<dd>별도의 카메라 시험에서 정적 영상 10개를 모두 처리했다. 20초 영상의 평균 처리시간은 14.8초였다.</dd>
 <dt>다음 단계</dt>
-<dd>MBID 불일치 점수와 개입 전후 효과 검증 2개 병원 약 80명 임상평가 진행 예정</dd>
+<dd>MBID 불일치 점수와 개입 전후 효과를 검증할 예정이다. 2개 병원에서 약 80명을 대상으로 임상평가를 계획하고 있다.</dd>
 </dl>
 <div class="evidence-gallery one">
 <figure>
 <a class="figure-link" href="/assets/figures/slide-39-1.png" target="_blank" rel="noopener" aria-label="그림 확대: 화면 발췌: 최근 1시간 상태 변화">
-<img src="/assets/figures/slide-39-1.png" alt="화면 발췌: 최근 1시간 상태 변화" loading="lazy">
+<img src="/assets/figures/slide-39-1.png" alt="화면 발췌: 최근 1시간 상태 변화" loading="lazy" width="538" height="616">
 </a>
 <figcaption>화면 발췌: 최근 1시간 상태 변화<br>
 <a href="/assets/figures/slide-39-1.png">원본 그림 확대</a>
@@ -160,6 +160,7 @@
 </div>
 <div class="chart-set">
 <figure class="chart-figure">
+<div class="chart-plot" role="region" tabindex="0" aria-label="갈망 분류 LOSO (%)">
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 410" role="img" aria-labelledby="chart-39-0" aria-describedby="chart-desc-39-0">
 <title id="chart-39-0">갈망 분류 LOSO (%)</title>
 <desc id="chart-desc-39-0">분류 성능: Balanced acc. 71.0, Macro F1 70.0</desc>
@@ -183,9 +184,11 @@
 <rect x="65" y="379" width="10" height="10" rx="2" fill="#a7bddd"/>
 <text x="82" y="389" fill="#596b82" font-size="13">분류 성능</text>
 </svg>
+</div>
 <figcaption>갈망 분류 LOSO (%)</figcaption>
 </figure>
 <figure class="chart-figure">
+<div class="chart-plot" role="region" tabindex="0" aria-label="알림 전달 지연 (ms)">
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 410" role="img" aria-labelledby="chart-39-1" aria-describedby="chart-desc-39-1">
 <title id="chart-39-1">알림 전달 지연 (ms)</title>
 <desc id="chart-desc-39-1">평균: Wi-Fi 78.0, LTE 121.1; P95: Wi-Fi 89.0, LTE 133.0</desc>
@@ -215,12 +218,13 @@
 <rect x="275" y="379" width="10" height="10" rx="2" fill="#1f5fbf"/>
 <text x="292" y="389" fill="#596b82" font-size="13">P95</text>
 </svg>
+</div>
 <figcaption>알림 전달 지연 (ms)</figcaption>
 </figure>
 </div>
-<div class="table-wrap" role="region" tabindex="0" aria-label="모델 구성 및 평가 수치 1">
+<div class="table-wrap" role="region" tabindex="0" aria-label="통합 시험과 지연 측정 범위">
 <table>
-<caption>모델 구성 및 평가 수치 1</caption>
+<caption>통합 시험과 지연 측정 범위</caption>
 <thead>
 <tr>
 <th scope="col">측정 범위</th>

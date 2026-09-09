@@ -18,7 +18,7 @@
       "ko": "기술 세부과제 리드"
     },
     "work": {
-      "ko": "2개 병원 IRB 및 수집 프로토콜 설계 생체신호 품질 검사, 통계 분석, 공인시험 대응"
+      "ko": "2개 병원 IRB 및 수집 프로토콜 설계, 생체신호 품질 검사, 통계 분석, 공인시험 대응"
     },
     "scope": {
       "ko": "ECG, PPG, EDA 임상 수집 환자와 대조군 100명 이상"
@@ -40,15 +40,15 @@
         "arguments": [
           {
             "label": "난제",
-            "text": "갈망 반응의 크기와 방향이 개인마다 달라 단일 지표로 전체 환자를 설명하기 어려움"
+            "text": "갈망 반응의 크기와 방향이 개인마다 달라 단일 지표로 전체 환자의 반응을 설명하기 어렵다."
           },
           {
             "label": "아이디어",
-            "text": "영상 자극, 설문, 생체신호를 동기화하고 개인별 상관과 갈망 단계별 변화 비교"
+            "text": "영상 자극, 설문, 생체신호를 동기화하고 개인별 상관과 갈망 단계별 변화를 비교했다."
           },
           {
             "label": "기여",
-            "text": "2개 병원 수집 프로토콜과 품질 검사 설계 확장 코호트에서 LMM 및 SHAP 분석 수행"
+            "text": "2개 병원의 수집 프로토콜과 품질 검사 절차를 설계했다. 확장 코호트에서 LMM과 SHAP 분석을 수행했다."
           }
         ],
         "note": "그림은 2025년 초기 연구 2편. 50명 확장 연구는 별도 분석이며 JBHI 투고 자료 기준",
@@ -60,7 +60,8 @@
             "y": 236.06,
             "cx": 489.82,
             "cy": 307.88,
-            "caption": "11명 탐색: 개인별 상관 상위 25개 특징"
+            "caption": "11명 탐색: 개인별 상관 상위 25개 특징",
+            "captionEn": "Exploratory study with 11 participants: top 25 within-person correlations"
           },
           {
             "src": "/assets/figures/slide-11-2.png",
@@ -69,7 +70,8 @@
             "y": 255.44,
             "cx": 460.0,
             "cy": 269.12,
-            "caption": "6명 7세션 연구: ECG 및 PPG 심박수"
+            "caption": "6명 7세션 연구: ECG 및 PPG 심박수",
+            "captionEn": "Six-participant, seven-session study: heart rate from ECG and PPG"
           },
           {
             "src": "/assets/figures/slide-11-3.png",
@@ -78,7 +80,8 @@
             "y": 255.44,
             "cx": 460.0,
             "cy": 269.12,
-            "caption": "같은 연구의 다른 참여자 예시"
+            "caption": "같은 연구의 다른 참여자 예시",
+            "captionEn": "ECG and PPG heart rate in another participant from the same study"
           }
         ],
         "tables": [
@@ -128,7 +131,11 @@
             "x": 940.0,
             "y": 614.0,
             "cx": 606.0,
-            "cy": 179.0
+            "cy": 179.0,
+            "caption": {
+              "ko": "수집 및 분석 범위",
+              "en": "Acquisition and analysis scope"
+            }
           }
         ],
         "charts": [],
@@ -137,7 +144,12 @@
           "참여자 #3 심박 반응",
           "참여자 #5 심박 반응"
         ],
-        "overview": []
+        "overview": [],
+        "argumentLabelsEn": [
+          "Challenge",
+          "Approach",
+          "Contribution"
+        ]
       }
     ],
     "metrics": [
@@ -165,7 +177,7 @@
       "ko": "EEG 연구 리드"
     },
     "work": {
-      "ko": "SGCL, ASGCRL, SimNeXt-EEG 방법 설계 모델 구현, 비교 실험, 제1저자 논문 작성"
+      "ko": "SGCL, ASGCRL, SimNeXt-EEG 방법 설계, 모델 구현, 비교 실험, 제1저자 논문 작성"
     },
     "scope": {
       "ko": "EEG 감정 인식과 운동상상 분류 희소 그래프, 대조학습, 시간 어텐션"
@@ -195,15 +207,15 @@
         "arguments": [
           {
             "label": "난제",
-            "text": "고정 유사도 그래프의 잘못된 연결이 소량 레이블 학습에서 오차를 전파"
+            "text": "고정 유사도 그래프의 잘못된 연결은 레이블이 적은 조건에서 오차를 전파한다."
           },
           {
             "label": "해결",
-            "text": "표현에 따라 연결을 갱신하고, 적응형 증강으로 같은 클래스 관계를 유지하며 대조학습"
+            "text": "학습된 표현에 따라 연결을 갱신하고, 적응형 증강으로 같은 클래스의 관계를 유지하며 대조학습을 수행했다."
           },
           {
             "label": "기여",
-            "text": "방법 설계, 모델 구현, 절제 실험 및 논문 작성 KBS 2026 제1저자, SGCL 후속 연구"
+            "text": "방법 설계, 모델 구현, 절제 실험과 논문 작성을 담당했다. SGCL의 후속 연구로 KBS 2026에 제1저자로 게재했다."
           }
         ],
         "note": "레이블 2.4% 조건, 피험자별 transductive 평가. 임베딩 그림의 개인별 정확도와 전체 평균을 구분",
@@ -215,7 +227,8 @@
             "y": 236.0,
             "cx": 689.02,
             "cy": 308.0,
-            "caption": "원본 모델: 적응형 그래프, 레이블 기반 증강, 대조 손실"
+            "caption": "원본 모델: 적응형 그래프, 레이블 기반 증강, 대조 손실",
+            "captionEn": "ASGCRL: adaptive graphs, label-guided augmentation and contrastive loss"
           },
           {
             "src": "/assets/figures/slide-13-2.png",
@@ -224,7 +237,8 @@
             "y": 246.02,
             "cx": 296.0,
             "cy": 277.97,
-            "caption": "참여자 #15 예시: (a) Static GCN / (d) ASGCRL"
+            "caption": "SEED-IV 참여자 15: Static GCN 임베딩, 정확도 84.29%",
+            "captionEn": "SEED-IV participant 15: Static GCN embedding, 84.29% accuracy"
           },
           {
             "src": "/assets/figures/slide-13-3.png",
@@ -233,7 +247,8 @@
             "y": 231.0,
             "cx": 275.54,
             "cy": 308.0,
-            "caption": "참여자 #15 예시: (a) Static GCN / (d) ASGCRL"
+            "caption": "SEED-IV 참여자 15: ASGCRL 임베딩, 정확도 94.23%",
+            "captionEn": "SEED-IV participant 15: ASGCRL embedding, 94.23% accuracy"
           }
         ],
         "tables": [
@@ -283,7 +298,11 @@
             "x": 940.0,
             "y": 620.0,
             "cx": 606.0,
-            "cy": 177.0
+            "cy": 177.0,
+            "caption": {
+              "ko": "SEED-IV Case 1 정확도 비교",
+              "en": "SEED-IV Case 1 accuracy comparison"
+            }
           }
         ],
         "charts": [],
@@ -291,7 +310,12 @@
           "표현과 그래프를 함께 갱신",
           "클래스 관계 변화와 절제 실험"
         ],
-        "overview": []
+        "overview": [],
+        "argumentLabelsEn": [
+          "Challenge",
+          "Approach",
+          "Contribution"
+        ]
       },
       {
         "slide": 14,
@@ -299,15 +323,15 @@
         "arguments": [
           {
             "label": "난제",
-            "text": "운동상상 EEG의 시간척도 차이와 잡음을 작은 모델에서 함께 처리해야 함"
+            "text": "작은 모델로 운동상상 EEG의 시간척도 차이와 잡음을 함께 처리해야 한다."
           },
           {
             "label": "해결",
-            "text": "다중 커널로 시간 특징을 추출하고, 평균과 분산에 기반한 SimAM으로 시간별 중요도 재조정"
+            "text": "다중 커널로 시간 특징을 추출하고 평균과 분산에 기반한 SimAM으로 시간별 중요도를 조정했다."
           },
           {
             "label": "기여",
-            "text": "모델 설계, 정확도 및 CPU 지연 측정, 절제 실험 IEEE SPL 2026 제1저자"
+            "text": "모델 설계, 정확도 및 CPU 지연 측정, 절제 실험을 담당했다. IEEE SPL 2026에 제1저자로 게재했다."
           }
         ],
         "note": "SimNeXt 70.81 ± 0.49%, 20.69 MFLOPs. 데스크톱 CPU, batch size 1. 두 SimAM 제거 시 68.26%",
@@ -369,7 +393,11 @@
             "x": 54.0,
             "y": 236.0,
             "cx": 471.0,
-            "cy": 301.0
+            "cy": 301.0,
+            "caption": {
+              "ko": "SimNeXt-EEG 모델 구성",
+              "en": "SimNeXt-EEG architecture"
+            }
           },
           {
             "rows": [
@@ -433,7 +461,11 @@
             "x": 940.0,
             "y": 614.0,
             "cx": 606.0,
-            "cy": 179.0
+            "cy": 179.0,
+            "caption": {
+              "ko": "파라미터 수와 CPU 지연",
+              "en": "Parameter count and CPU latency"
+            }
           }
         ],
         "charts": [
@@ -485,7 +517,12 @@
           "분류 정확도 (%)",
           "시간 어텐션 절제 (%)"
         ],
-        "overview": []
+        "overview": [],
+        "argumentLabelsEn": [
+          "Challenge",
+          "Approach",
+          "Contribution"
+        ]
       }
     ],
     "metrics": [
@@ -513,7 +550,7 @@
       "ko": "기술 세부과제 리드"
     },
     "work": {
-      "ko": "IRB 및 감정 유발 프로토콜 설계 다중모달 모델 개발, 성능 평가, 기업 기술이전"
+      "ko": "IRB 및 감정 유발 프로토콜 설계, 다중모달 모델 개발, 성능 평가, 기업 기술이전"
     },
     "scope": {
       "ko": "전체 80명 이상 다중모달 수집 노년층 발화 실험 24명"
@@ -535,15 +572,15 @@
         "arguments": [
           {
             "label": "난제",
-            "text": "노년층 발화 특성과 전사 오류가 텍스트 중심 감정 분류에 미치는 영향 확인 필요"
+            "text": "노년층 발화 특성과 음성 전사 오류가 텍스트 중심 감정 분류에 미치는 영향을 확인해야 한다."
           },
           {
             "label": "해결",
-            "text": "고정 문장 발화를 수집하고 음성, 원문, 전사문을 동일한 피험자 독립 분할에서 비교"
+            "text": "고정 문장 발화를 수집하고 음성, 원문, 전사문을 동일한 피험자 독립 분할에서 비교했다."
           },
           {
             "label": "기여",
-            "text": "IRB 및 감정 유발 프로토콜 설계, 모델 공동 개발 전체 과제 데이터 구축과 기업 기술이전 대응"
+            "text": "IRB 및 감정 유발 프로토콜을 설계하고 모델을 공동 개발했다. 과제 데이터 구축과 기업 기술이전을 담당했다."
           }
         ],
         "note": "고정 문장 발화 실험의 결과. 전체 과제는 80명 이상 수집, 기술이전 2,000만원",
@@ -555,7 +592,8 @@
             "y": 236.0,
             "cx": 228.26,
             "cy": 308.0,
-            "caption": "KOSOMBE 2024 원본 모델 구조"
+            "caption": "KOSOMBE 2024 원본 모델 구조",
+            "captionEn": "Model architecture from the KOSOMBE 2024 presentation"
           }
         ],
         "tables": [
@@ -605,7 +643,11 @@
             "x": 940.0,
             "y": 614.0,
             "cx": 606.0,
-            "cy": 179.0
+            "cy": 179.0,
+            "caption": {
+              "ko": "노년층 발화 수집 및 평가 조건",
+              "en": "Older-adult speech acquisition and evaluation"
+            }
           }
         ],
         "charts": [
@@ -645,7 +687,12 @@
           "음성 및 텍스트의 그래프 융합",
           "텍스트 변환 전후 Weighted F1 (%)"
         ],
-        "overview": []
+        "overview": [],
+        "argumentLabelsEn": [
+          "Challenge",
+          "Approach",
+          "Contribution"
+        ]
       },
       {
         "slide": 17,
@@ -653,15 +700,15 @@
         "arguments": [
           {
             "label": "난제",
-            "text": "화자 관계와 모달 간 차이를 함께 반영하고 특정 입력이 빠진 상황에서도 문맥 유지 필요"
+            "text": "화자 관계와 모달 간 차이를 함께 반영하고 특정 입력이 빠진 상황에서도 문맥을 유지해야 한다."
           },
           {
             "label": "해결",
-            "text": "화자 내부, 화자 간, 모달 간 관계를 구분해 인코딩 증강 없는 대조 정렬로 입력 간 의미 차이 축소"
+            "text": "화자 내부, 화자 간, 모달 간 관계를 구분해 인코딩했다. 증강 없는 대조 정렬로 입력 간 의미 차이를 줄였다."
           },
           {
             "label": "기여",
-            "text": "이종 그래프와 정렬 손실 설계, 모달 결손 평가 ICASSP 2026 제1저자"
+            "text": "이종 그래프와 정렬 손실을 설계하고 모달 결손 조건을 평가했다. ICASSP 2026에 제1저자로 발표했다."
           }
         ],
         "note": "Weighted F1 (%). 전체 입력 기준 모델은 Transformer, 음성만 조건은 GRACE. 10회 랜덤 분할 평균",
@@ -673,7 +720,8 @@
             "y": 272.64,
             "cx": 885.0,
             "cy": 234.71,
-            "caption": "원본 구조: Heterogeneous Graph Transformer와 모달 정렬"
+            "caption": "원본 구조: Heterogeneous Graph Transformer와 모달 정렬",
+            "captionEn": "Heterogeneous Graph Transformer and cross-modal alignment"
           },
           {
             "src": "/assets/figures/slide-17-2.png",
@@ -682,7 +730,8 @@
             "y": 283.1,
             "cx": 563.0,
             "cy": 213.8,
-            "caption": "초기 / GCL 제거 / EmotionHeart 임베딩 비교"
+            "caption": "초기 / GCL 제거 / EmotionHeart 임베딩 비교",
+            "captionEn": "Embeddings before training, without GCL and with EmotionHeart"
           }
         ],
         "tables": [
@@ -748,7 +797,11 @@
             "x": 940.0,
             "y": 614.0,
             "cx": 606.0,
-            "cy": 179.0
+            "cy": 179.0,
+            "caption": {
+              "ko": "전체 입력과 모달 결손 조건의 Weighted F1 (%)",
+              "en": "Weighted F1 (%) with full and missing inputs"
+            }
           }
         ],
         "charts": [],
@@ -756,7 +809,12 @@
           "화자 관계와 모달 간 대조 정렬",
           "표현 공간의 변화"
         ],
-        "overview": []
+        "overview": [],
+        "argumentLabelsEn": [
+          "Challenge",
+          "Approach",
+          "Contribution"
+        ]
       }
     ],
     "metrics": [
@@ -784,7 +842,7 @@
       "ko": "기술 세부과제 리드"
     },
     "work": {
-      "ko": "이종 그래프 융합, 시차 의존성 및 이상탐지 연구 성능 평가, 공인시험, 지식재산 산출물 대응"
+      "ko": "이종 그래프 융합, 시차 의존성 및 이상탐지 연구, 성능 평가, 공인시험, 지식재산 산출물 대응"
     },
     "scope": {
       "ko": "EEG, EDA, PPG 특징 융합 준지도 그래프 신경망"
@@ -806,18 +864,18 @@
         "arguments": [
           {
             "label": "난제",
-            "text": "모달별 특징 공간과 레이블 확보량이 달라 단순 연결만으로 관계를 반영하기 어려움"
+            "text": "모달별 특징 공간과 레이블 확보량이 달라 특징을 단순 연결하는 방식으로는 관계를 반영하기 어렵다."
           },
           {
             "label": "해결",
-            "text": "신호 내부의 DE 및 PSD 유사도를 먼저 통합하고 신호 간 유사도를 확산한 뒤 GCN으로 분류"
+            "text": "신호 내부의 DE 및 PSD 유사도를 통합한 뒤 신호 간 유사도를 확산하고 GCN으로 분류했다."
           },
           {
             "label": "기여",
-            "text": "이종 그래프 융합 및 준지도 모델 개발 공인시험과 지식재산 산출물 대응"
+            "text": "이종 그래프 융합과 준지도 모델을 개발하고 공인시험과 지식재산 산출물을 담당했다."
           }
         ],
-        "note": "감정가 97.37 ± 1.75%, 자극 97.38 ± 1.68%. 피험자별 transductive 평가, 특허는 출원 상태",
+        "note": "감정가 97.37 ± 1.75%, 각성도 97.38 ± 1.68%. 피험자별 transductive 평가, 특허는 출원 상태",
         "figures": [
           {
             "src": "/assets/figures/slide-19-1.png",
@@ -826,7 +884,8 @@
             "y": 236.02,
             "cx": 547.42,
             "cy": 307.96,
-            "caption": "원본 구조: EEG, EDA, PPG의 DE 및 PSD 특징 융합"
+            "caption": "원본 구조: EEG, EDA, PPG의 DE 및 PSD 특징 융합",
+            "captionEn": "Fusion of DE and PSD features from EEG, EDA and PPG"
           }
         ],
         "tables": [
@@ -876,7 +935,11 @@
             "x": 940.0,
             "y": 614.0,
             "cx": 606.0,
-            "cy": 179.0
+            "cy": 179.0,
+            "caption": {
+              "ko": "평가 조건과 과제 산출물",
+              "en": "Evaluation protocol and project outputs"
+            }
           }
         ],
         "charts": [
@@ -886,7 +949,7 @@
                 "name": "정확도",
                 "categories": [
                   "감정가",
-                  "자극"
+                  "각성도"
                 ],
                 "values": [
                   97.37,
@@ -905,7 +968,12 @@
           "생리 특징에서 유사도 그래프 구성",
           "DEAP 감정 분류 정확도 (%)"
         ],
-        "overview": []
+        "overview": [],
+        "argumentLabelsEn": [
+          "Challenge",
+          "Approach",
+          "Contribution"
+        ]
       }
     ],
     "metrics": [
@@ -933,7 +1001,7 @@
       "ko": "연구 참여"
     },
     "work": {
-      "ko": "활동, 수면, HRV, 피부온도 특징 구성 이종 그래프 및 시차 정보흐름 모델링"
+      "ko": "활동, 수면, HRV, 피부온도 특징 구성과 이종 그래프 및 시차 정보흐름 모델링"
     },
     "scope": {
       "ko": "복합질병 초조기 예측 치료 반응 모니터링"
@@ -950,18 +1018,18 @@
         "arguments": [
           {
             "label": "난제",
-            "text": "관측 주기와 결측이 다른 웨어러블 지표에서 질병 상태 변화의 선행 신호를 찾아야 함"
+            "text": "관측 주기와 결측 양상이 다른 웨어러블 지표에서 질병 상태 변화의 선행 신호를 찾아야 한다."
           },
           {
             "label": "역할",
-            "text": "모달별 특징 구성과 이종 그래프 연구 참여 시차 정보흐름 및 종단 상태 변화 모델링"
+            "text": "모달별 특징 구성과 이종 그래프 연구에 참여하고 있다. 시차 정보흐름과 종단 상태 변화를 모델링한다."
           },
           {
             "label": "다음 단계",
-            "text": "평가 대상과 예측 시점을 확정한 후 구조도와 결과 그림을 추가"
+            "text": "평가 대상과 예측 시점을 확정한 후 최종 구조와 정량 결과를 추가할 예정이다."
           }
         ],
-        "note": "진행 중 과제. 현재 확보 자료에 없는 최종 구조와 성능은 공란 항목으로 남김",
+        "note": "진행 중인 과제로 코호트 규모, 관측 기간, 최종 구조와 정량 성능은 아직 확정되지 않았다.",
         "figures": [],
         "tables": [
           {
@@ -1010,7 +1078,11 @@
             "x": 940.0,
             "y": 614.0,
             "cx": 606.0,
-            "cy": 179.0
+            "cy": 179.0,
+            "caption": {
+              "ko": "후속 연구에서 확정할 항목",
+              "en": "Items pending research design"
+            }
           }
         ],
         "charts": [],
@@ -1032,6 +1104,11 @@
             "label": "초조기 예측과 반응 평가",
             "text": "예측 대상과 시점을 고정 피험자 및 시간 분할 구분 기준 모델과 전향 평가 설계"
           }
+        ],
+        "argumentLabelsEn": [
+          "Challenge",
+          "Research scope",
+          "Contribution"
         ]
       }
     ],
@@ -1060,7 +1137,7 @@
       "ko": "연구 참여 및 공동 개발"
     },
     "work": {
-      "ko": "생체 상태 표현과 LLM 인터페이스 연구 FR-PTT 비접촉 혈압 추정 모델 공동 개발"
+      "ko": "생체 상태 표현과 LLM 인터페이스 연구, FR-PTT 비접촉 혈압 추정 모델 공동 개발"
     },
     "scope": {
       "ko": "생체 입력과 언어 입력의 정렬 경량 상호작용 모델"
@@ -1082,15 +1159,15 @@
         "arguments": [
           {
             "label": "아이디어",
-            "text": "얼굴 8개 부위의 28개 PTT와 파형 형태를 파형 인코더에 결합해 혈압 관련 정보 보완"
+            "text": "얼굴 8개 부위의 28개 PTT와 파형 형태를 파형 인코더에 결합해 혈압 관련 정보를 보완했다."
           },
           {
             "label": "기여",
-            "text": "FR-PTT 모델 공동 개발 및 IJCNN 2026 구두 발표 생체 상태 표현과 LLM 인터페이스 연구 참여"
+            "text": "FR-PTT 모델을 공동 개발했으며 IJCNN 2026 구두 발표 논문에 제2저자로 참여했다. 생체 상태 표현과 LLM 인터페이스를 연구하고 있다."
           },
           {
             "label": "확장 범위",
-            "text": "연계 인코더를 바탕으로 상호작용 모델 연구 이중 스트림 최종 구조와 지연 평가 자료 필요"
+            "text": "연계 인코더를 바탕으로 상호작용 모델을 연구한다. 이중 스트림의 최종 구조와 지연 평가는 진행 중이다."
           }
         ],
         "note": "단위 mmHg. FR-PTT 논문의 결과이며 진행 중 파운데이션 모델의 최종 성능과 구분",
@@ -1102,7 +1179,8 @@
             "y": 236.0,
             "cx": 483.5,
             "cy": 308.0,
-            "caption": "파형, 형태, 부위 간 PTT를 각각 인코딩"
+            "caption": "파형, 형태, 부위 간 PTT를 각각 인코딩",
+            "captionEn": "Separate encoders for waveforms, morphology and facial PTT"
           },
           {
             "src": "/assets/figures/slide-23-2.png",
@@ -1111,7 +1189,8 @@
             "y": 283.59,
             "cx": 431.62,
             "cy": 212.81,
-            "caption": "원본 FR-PTT 산출 및 잘못된 피크 제외"
+            "caption": "원본 FR-PTT 산출 및 잘못된 피크 제외",
+            "captionEn": "Facial PTT extraction and invalid-peak exclusion"
           }
         ],
         "tables": [
@@ -1177,7 +1256,11 @@
             "x": 940.0,
             "y": 614.0,
             "cx": 606.0,
-            "cy": 179.0
+            "cy": 179.0,
+            "caption": {
+              "ko": "FR-PTT 오차 (mmHg)와 진행 중 연구",
+              "en": "FR-PTT error (mmHg) and ongoing research"
+            }
           }
         ],
         "charts": [
@@ -1218,7 +1301,12 @@
           "얼굴 부위 간 시간차",
           "결합 효과 (mmHg)"
         ],
-        "overview": []
+        "overview": [],
+        "argumentLabelsEn": [
+          "Challenge",
+          "Approach",
+          "Contribution and ongoing work"
+        ]
       }
     ],
     "metrics": [
@@ -1246,7 +1334,7 @@
       "ko": "연구 참여, MDA-GCL 공동 제1저자"
     },
     "work": {
-      "ko": "다중모달 수집 프로토콜 설계 도메인 적응 모델 공동 개발, 절제 실험"
+      "ko": "다중모달 수집 프로토콜 설계, 도메인 적응 모델 공동 개발, 절제 실험"
     },
     "scope": {
       "ko": "음성, 영상, 텍스트, 생체신호 수집 목표 3,300시간 이상"
@@ -1268,15 +1356,15 @@
         "arguments": [
           {
             "label": "난제",
-            "text": "EEG와 안구 특징의 분포가 피험자와 세션에 따라 달라져 같은 분류기를 적용하기 어려움"
+            "text": "EEG와 안구 특징의 분포가 피험자와 세션에 따라 달라 동일한 분류기를 적용하기 어렵다."
           },
           {
             "label": "해결",
-            "text": "모달 유사도를 융합한 그래프에 대조 손실과 도메인 적대 손실을 적용해 분포 차이 완화"
+            "text": "모달 유사도를 융합한 그래프에 대조 손실과 도메인 적대 손실을 적용해 분포 차이를 줄였다."
           },
           {
             "label": "기여",
-            "text": "MDA-GCL 공동 개발 및 절제 실험, 공동 제1저자 다중모달 수집 프로토콜 설계 참여"
+            "text": "공동 제1저자로 MDA-GCL 개발과 절제 실험에 참여했다. 다중모달 수집 프로토콜을 공동 설계했다."
           }
         ],
         "note": "비레이블 타깃 특징을 학습에 사용하는 transductive 도메인 적응. 타깃 감정 레이블은 학습 및 모델 선택에서 제외",
@@ -1288,7 +1376,8 @@
             "y": 236.0,
             "cx": 500.5,
             "cy": 308.0,
-            "caption": "모달별 유사도 그래프, 대조학습, 도메인 적대학습"
+            "caption": "모달별 유사도 그래프, 대조학습, 도메인 적대학습",
+            "captionEn": "Modality similarity graphs, contrastive learning and domain-adversarial learning"
           },
           {
             "src": "/assets/figures/slide-25-2.png",
@@ -1297,7 +1386,8 @@
             "y": 236.0,
             "cx": 243.48,
             "cy": 308.0,
-            "caption": "SEED-IV, 피험자 간 평가"
+            "caption": "SEED-IV, 피험자 간 평가",
+            "captionEn": "SEED-IV cross-subject evaluation"
           }
         ],
         "tables": [
@@ -1363,7 +1453,11 @@
             "x": 940.0,
             "y": 614.0,
             "cx": 606.0,
-            "cy": 179.0
+            "cy": 179.0,
+            "caption": {
+              "ko": "도메인 적응 정확도 (%)와 과제 수집 목표",
+              "en": "Domain-adaptation accuracy (%) and acquisition target"
+            }
           }
         ],
         "charts": [
@@ -1393,7 +1487,12 @@
           "피험자 간 혼동행렬",
           "DANN 절제 (%)"
         ],
-        "overview": []
+        "overview": [],
+        "argumentLabelsEn": [
+          "Challenge",
+          "Approach",
+          "Contribution"
+        ]
       }
     ],
     "metrics": [
@@ -1421,7 +1520,7 @@
       "ko": "알고리즘 공동 개발 및 추론 최적화"
     },
     "work": {
-      "ko": "rPPG 모델 개발 TensorRT FP16 변환, 임베디드 추론 최적화"
+      "ko": "rPPG 모델 개발, TensorRT FP16 변환, 임베디드 추론 최적화"
     },
     "scope": {
       "ko": "HEALLO 키오스크 서울 NH농협은행 약 100개 지점"
@@ -1443,15 +1542,15 @@
         "arguments": [
           {
             "label": "아이디어",
-            "text": "같은 영상에서 추출한 맥파 스펙트럼을 정렬해 맥파 레이블 없이 생리적 공통 성분 학습"
+            "text": "같은 영상에서 추출한 맥파 스펙트럼을 정렬해 맥파 레이블 없이 공통 생리 성분을 학습했다."
           },
           {
             "label": "제품 적용",
-            "text": "모델 공동 개발, TensorRT FP16 변환 Jetson Nano 추론 및 키오스크 연동"
+            "text": "모델 공동 개발과 TensorRT FP16 변환을 수행하고 Jetson Nano 추론을 키오스크에 연동했다."
           },
           {
             "label": "성과",
-            "text": "HEALLO 키오스크 현장 적용 지원 서울 NH농협은행 약 100개 지점 공급 경험"
+            "text": "HEALLO 키오스크의 현장 적용을 지원했다. 서울 NH농협은행 약 100개 지점 공급 과정에 참여했다."
           }
         ],
         "note": "GLCL은 관련 연구의 원고 결과. 추가 자료: 실제 배포 모델 명세, 제품 사진, 장치 지연 및 현장 오차",
@@ -1463,7 +1562,8 @@
             "y": 236.0,
             "cx": 494.42,
             "cy": 308.0,
-            "caption": "공간별 맥파의 전역 및 국소 스펙트럼 대조학습"
+            "caption": "공간별 맥파의 전역 및 국소 스펙트럼 대조학습",
+            "captionEn": "Global and local contrastive learning of spatial pulse spectra"
           },
           {
             "src": "/assets/figures/slide-27-2.png",
@@ -1472,7 +1572,8 @@
             "y": 236.0,
             "cx": 590.43,
             "cy": 308.0,
-            "caption": "원고 Fig. 3(a): UBFC-rPPG 산점도와 Bland-Altman"
+            "caption": "원고 Fig. 3(a): UBFC-rPPG 산점도와 Bland-Altman",
+            "captionEn": "Manuscript Fig. 3(a): UBFC-rPPG scatter and Bland-Altman plots"
           }
         ],
         "tables": [
@@ -1538,7 +1639,11 @@
             "x": 940.0,
             "y": 614.0,
             "cx": 606.0,
-            "cy": 179.0
+            "cy": 179.0,
+            "caption": {
+              "ko": "GLCL 원고의 심박 추정 오차",
+              "en": "Heart-rate errors reported in the GLCL manuscript"
+            }
           }
         ],
         "charts": [],
@@ -1546,7 +1651,12 @@
           "관련 연구 GLCL의 학습 구조",
           "맥파 추정 결과와 오차 분포"
         ],
-        "overview": []
+        "overview": [],
+        "argumentLabelsEn": [
+          "Challenge",
+          "Approach",
+          "Deployment"
+        ]
       }
     ],
     "metrics": [
@@ -1574,7 +1684,7 @@
       "ko": "3D Slicer 모듈 및 장치 제어 개발"
     },
     "work": {
-      "ko": "좌표 정합, 실시간 영상 단면 갱신 VXM 이동 제어, 파형 취득, 모듈 패키징"
+      "ko": "좌표 정합, 실시간 영상 단면 갱신, VXM 이동 제어, 파형 취득, 모듈 패키징"
     },
     "scope": {
       "ko": "CT/MRI와 위치추적장치 연결 집속초음파 스캔 및 음장 시각화"
@@ -1596,18 +1706,18 @@
         "arguments": [
           {
             "label": "난제",
-            "text": "CT/MRI, 추적장치, 탐침의 좌표가 달라 추적 위치를 영상과 측정 위치에 연결해야 함"
+            "text": "CT/MRI, 추적장치, 탐침의 좌표계가 달라 추적 위치를 영상과 측정 위치에 연결해야 한다."
           },
           {
             "label": "해결",
-            "text": "랜드마크 및 표면 정합으로 Reference와 RAS 연결 탐침의 위치 변환을 영상 단면에 실시간 반영"
+            "text": "랜드마크 및 표면 정합으로 Reference와 RAS 좌표를 연결했다. 탐침의 위치 변환을 영상 단면에 실시간으로 반영했다."
           },
           {
             "label": "기여",
-            "text": "3D Slicer Python 모듈 개발과 장치 연동 연구용 모듈 패키징, 전임상 연구자와 검증"
+            "text": "3D Slicer Python 모듈과 장치 연동을 개발했다. 연구용 모듈을 패키징하고 전임상 연구자와 동작을 검증했다."
           }
         ],
-        "note": "알키미스트 0119 및 0225 원본 PPTX. 영상 안내와 제어 구현 결과이며 치료 효과 평가와 구분",
+        "note": "KIST 인턴 당시 발표 자료의 영상 안내와 장치 제어 구현 결과이다. 치료 효과를 평가한 결과는 포함하지 않는다.",
         "figures": [
           {
             "src": "/assets/figures/slide-29-1.png",
@@ -1616,7 +1726,8 @@
             "y": 236.04,
             "cx": 630.35,
             "cy": 307.93,
-            "caption": "KIST 원본 PPT: 영상 RAS와 추적 좌표의 연결"
+            "caption": "KIST 원본 PPT: 영상 RAS와 추적 좌표의 연결",
+            "captionEn": "Registration of image RAS and tracking coordinates"
           },
           {
             "src": "/assets/figures/slide-29-2.png",
@@ -1625,7 +1736,8 @@
             "y": 269.78,
             "cx": 462.89,
             "cy": 240.44,
-            "caption": "UpdateSlicePlane으로 MRI 단면 갱신"
+            "caption": "UpdateSlicePlane으로 MRI 단면 갱신",
+            "captionEn": "Real-time MRI slice updates with UpdateSlicePlane"
           },
           {
             "src": "/assets/figures/slide-29-3.png",
@@ -1634,7 +1746,8 @@
             "y": 252.5,
             "cx": 275.0,
             "cy": 275.0,
-            "caption": "위치추적 및 음장 측정 장치"
+            "caption": "위치추적 및 음장 측정 장치",
+            "captionEn": "Tracking and acoustic-field measurement equipment"
           }
         ],
         "tables": [
@@ -1684,7 +1797,11 @@
             "x": 940.0,
             "y": 614.0,
             "cx": 606.0,
-            "cy": 179.0
+            "cy": 179.0,
+            "caption": {
+              "ko": "좌표 정합 및 추적 기능",
+              "en": "Registration and tracking functions"
+            }
           }
         ],
         "charts": [],
@@ -1693,7 +1810,12 @@
           "추적 위치에 따른 영상 단면",
           "실제 장치"
         ],
-        "overview": []
+        "overview": [],
+        "argumentLabelsEn": [
+          "Challenge",
+          "Approach",
+          "Contribution"
+        ]
       },
       {
         "slide": 30,
@@ -1701,15 +1823,15 @@
         "arguments": [
           {
             "label": "난제",
-            "text": "좌표 이동마다 누적되는 대기시간과 측정 위치 및 파형의 대응 관계 관리"
+            "text": "좌표 이동마다 대기시간이 누적된다. 각 측정 위치와 취득 파형의 대응 관계도 유지해야 한다."
           },
           {
             "label": "해결",
-            "text": "이동 간격과 대기시간을 조정한 VXM 제어 구현 격자별 파형 취득 후 평면별 음장 분포 생성"
+            "text": "이동 간격과 대기시간을 조정하는 VXM 제어를 구현했다. 격자별 파형을 취득하고 평면별 음장 분포를 생성했다."
           },
           {
             "label": "기여",
-            "text": "로봇 이동, 파형 취득, 음장 시각화 연결 3D Slicer 안에서 측정 절차와 결과 확인"
+            "text": "로봇 이동, 파형 취득, 음장 시각화를 연결했다. 3D Slicer에서 측정 절차와 결과를 확인하도록 구성했다."
           }
         ],
         "note": "KIST PPT의 시간 계산 비교. 추가 자료: 표적 오차의 단위, 기준 위치와 반복 검증표",
@@ -1721,7 +1843,8 @@
             "y": 236.0,
             "cx": 391.5,
             "cy": 308.0,
-            "caption": "Step size와 Sleep time을 조정한 원본 비교"
+            "caption": "Step size와 Sleep time을 조정한 원본 비교",
+            "captionEn": "Movement comparison after adjusting step size and waiting time"
           },
           {
             "src": "/assets/figures/slide-30-2.png",
@@ -1730,7 +1853,8 @@
             "y": 258.72,
             "cx": 440.0,
             "cy": 262.55,
-            "caption": "동일 위치의 취득 파형을 측정 좌표와 저장"
+            "caption": "동일 위치의 취득 파형을 측정 좌표와 저장",
+            "captionEn": "Waveform acquisition linked to its measurement coordinates"
           },
           {
             "src": "/assets/figures/slide-30-3.png",
@@ -1739,7 +1863,8 @@
             "y": 232.0,
             "cx": 207.5,
             "cy": 139.0,
-            "caption": "7 × 7 × 7 격자 / 위치별 취득값의 2D 지도"
+            "caption": "7 × 7 × 7 격자의 측정 위치",
+            "captionEn": "Measurement positions on a 7 × 7 × 7 grid"
           },
           {
             "src": "/assets/figures/slide-30-4.png",
@@ -1748,7 +1873,8 @@
             "y": 374.0,
             "cx": 387.91,
             "cy": 165.0,
-            "caption": "7 × 7 × 7 격자 / 위치별 취득값의 2D 지도"
+            "caption": "위치별 취득값으로 구성한 2D 음장 지도",
+            "captionEn": "2D map of acquired acoustic-field values"
           }
         ],
         "tables": [
@@ -1798,7 +1924,11 @@
             "x": 940.0,
             "y": 614.0,
             "cx": 606.0,
-            "cy": 179.0
+            "cy": 179.0,
+            "caption": {
+              "ko": "이동 대기시간 계산 비교",
+              "en": "Calculated movement waiting time"
+            }
           }
         ],
         "charts": [],
@@ -1807,7 +1937,12 @@
           "위치별 파형 취득",
           "스캔 격자와 음장 분포"
         ],
-        "overview": []
+        "overview": [],
+        "argumentLabelsEn": [
+          "Challenge",
+          "Approach",
+          "Contribution"
+        ]
       }
     ],
     "metrics": [
@@ -1835,7 +1970,7 @@
       "ko": "혈압 추정 모델 및 실시간 처리 공동 개발"
     },
     "work": {
-      "ko": "혈압 상승 실험과 동기화 신호 수집 최종 모델 개발, 실시간 분석, 코드 리팩토링"
+      "ko": "혈압 상승 실험과 동기화 신호 수집, 최종 모델 개발, 실시간 분석, 코드 리팩토링"
     },
     "scope": {
       "ko": "등과 좌석 BCG 2채널 모델 서버와 모니터링 앱 연동"
@@ -1857,15 +1992,15 @@
         "arguments": [
           {
             "label": "난제",
-            "text": "등과 좌석의 BCG에서 시간에 따른 변화를 추출하고 실시간 혈압 표시까지 연결해야 함"
+            "text": "등과 좌석의 BCG에서 시간에 따른 변화를 추출하고 실시간 혈압 표시까지 연결해야 한다."
           },
           {
             "label": "해결",
-            "text": "10초 구간의 국소 특징을 CNN으로 추출 BiGRU와 시간 어텐션으로 혈압 회귀"
+            "text": "10초 구간의 국소 특징을 CNN으로 추출하고 BiGRU와 시간 어텐션으로 혈압을 회귀했다."
           },
           {
             "label": "기여",
-            "text": "신호 수집과 모델 및 실시간 처리 공동 개발 최종 프로젝트 코드를 모듈화해 공개 저장소 구성"
+            "text": "신호 수집, 모델, 실시간 처리를 공동 개발했다. 최종 프로젝트 코드를 모듈화해 공개 저장소로 정리했다."
           }
         ],
         "note": "발표 그림의 CNN 채널 표기는 최종 코드와 차이가 있어 표에 실제 구현을 기재. 팀 TOG 공동 프로젝트",
@@ -1877,7 +2012,8 @@
             "y": 265.77,
             "cx": 477.0,
             "cy": 248.45,
-            "caption": "등과 좌석 BCG의 실시간 수집 및 분석 구성"
+            "caption": "등과 좌석 BCG의 실시간 수집 및 분석 구성",
+            "captionEn": "Real-time back and seat BCG acquisition and analysis"
           },
           {
             "src": "/assets/figures/slide-32-2.png",
@@ -1886,7 +2022,8 @@
             "y": 263.39,
             "cx": 676.0,
             "cy": 253.22,
-            "caption": "최종 발표의 CNN, BiGRU, Attention 모델"
+            "caption": "최종 발표의 CNN, BiGRU, Attention 모델",
+            "captionEn": "CNN, BiGRU and attention architecture from the final presentation"
           },
           {
             "src": "/assets/figures/slide-32-3.png",
@@ -1895,7 +2032,8 @@
             "y": 236.11,
             "cx": 163.65,
             "cy": 307.78,
-            "caption": "원본 모니터링 앱 화면"
+            "caption": "원본 모니터링 앱 화면",
+            "captionEn": "Monitoring app from the original project"
           }
         ],
         "tables": [
@@ -1945,7 +2083,11 @@
             "x": 940.0,
             "y": 614.0,
             "cx": 606.0,
-            "cy": 179.0
+            "cy": 179.0,
+            "caption": {
+              "ko": "공개한 최종 코드의 모델 명세",
+              "en": "Model specification in the released final code"
+            }
           }
         ],
         "charts": [],
@@ -1954,7 +2096,12 @@
           "시간 특징 기반 회귀 모델",
           "결과 표시"
         ],
-        "overview": []
+        "overview": [],
+        "argumentLabelsEn": [
+          "Challenge",
+          "Approach",
+          "Contribution"
+        ]
       },
       {
         "slide": 33,
@@ -1962,15 +2109,15 @@
         "arguments": [
           {
             "label": "실험",
-            "text": "1인 약 3시간, 안정 및 운동 후 상태 측정 커프 혈압을 2분 간격으로 확보"
+            "text": "1인당 약 3시간 동안 안정 상태와 운동 후 상태를 측정하고 커프 혈압을 2분 간격으로 확보했다."
           },
           {
             "label": "평가",
-            "text": "개인 내 시간 분할 29 / 14 / 57% 적용 6명의 SBP 및 DBP 추적 오차 보고"
+            "text": "개인 내 데이터를 시간순으로 29 / 14 / 57% 분할해 6명의 SBP 및 DBP 추적 오차를 평가했다."
           },
           {
             "label": "재현 조건",
-            "text": "원 실험은 중첩 구간과 분할 전 정규화 사용 리팩토링 코드의 실데이터 재평가 필요"
+            "text": "원 실험은 중첩 구간과 분할 전 정규화를 사용했다. 공개한 리팩토링 코드의 성능은 실데이터로 재평가해야 한다."
           }
         ],
         "note": "수치는 2021년 원논문 결과. 현재 리팩토링 코드로 재평가한 결과와 구분",
@@ -1982,7 +2129,8 @@
             "y": 287.99,
             "cx": 471.0,
             "cy": 204.02,
-            "caption": "원논문 SBP 실측 및 예측 파형 예시"
+            "caption": "원논문 SBP 실측 및 예측 파형 예시",
+            "captionEn": "Measured and estimated SBP traces from the original paper"
           },
           {
             "src": "/assets/figures/slide-33-2.png",
@@ -1991,7 +2139,8 @@
             "y": 288.48,
             "cx": 471.0,
             "cy": 203.04,
-            "caption": "원논문 DBP 실측 및 예측 파형 예시"
+            "caption": "원논문 DBP 실측 및 예측 파형 예시",
+            "captionEn": "Measured and estimated DBP traces from the original paper"
           }
         ],
         "tables": [
@@ -2043,7 +2192,11 @@
             "x": 940.0,
             "y": 614.0,
             "cx": 606.0,
-            "cy": 179.0
+            "cy": 179.0,
+            "caption": {
+              "ko": "6명 평균 혈압 추정 오차 (mmHg)",
+              "en": "Mean blood-pressure error over six participants (mmHg)"
+            }
           }
         ],
         "charts": [
@@ -2100,7 +2253,12 @@
           "이완기 혈압 추적",
           "참여자별 MAE (mmHg)"
         ],
-        "overview": []
+        "overview": [],
+        "argumentLabelsEn": [
+          "Acquisition",
+          "Evaluation",
+          "Reproduction conditions"
+        ]
       }
     ],
     "metrics": [
@@ -2128,7 +2286,7 @@
       "ko": "방법론 설계 및 핵심 구현"
     },
     "work": {
-      "ko": "다중 에이전트 오케스트레이션 RAG와 근거 검증 구현, 앱 및 의료진 웹 통합"
+      "ko": "다중 에이전트 오케스트레이션, RAG 및 근거 검증 구현, 앱과 의료진 웹 통합"
     },
     "scope": {
       "ko": "규칙 기반 상태기계, 전문 에이전트 10종 음성, 문서, 대화 입력"
@@ -2150,15 +2308,15 @@
         "arguments": [
           {
             "label": "난제",
-            "text": "자유 대화에서 임상 슬롯을 빠짐없이 확보하고 근거 없는 값이 인계 기록에 들어가지 않도록 제어"
+            "text": "자유 대화에서 임상 슬롯을 확보하고 근거 없는 값이 의료진 인계 기록에 포함되지 않도록 제어해야 한다."
           },
           {
             "label": "해결",
-            "text": "규칙 기반 상태기계가 전문 에이전트 10종을 실행 척도는 규칙 채점, 최종 기록은 출처와 근거 검증"
+            "text": "규칙 기반 상태기계로 전문 에이전트 10종을 실행했다. 척도는 규칙으로 채점하고 최종 기록의 출처와 근거를 검증했다."
           },
           {
             "label": "기여",
-            "text": "오케스트레이션, RAG 및 검증 로직 핵심 구현 환자 앱, 의료진 웹, 백엔드 통합"
+            "text": "오케스트레이션, RAG, 검증 로직을 구현하고 환자 앱, 의료진 웹, 백엔드를 통합했다."
           }
         ],
         "note": "AI Champion 중간결과보고서의 시제품 구조와 화면. 진단을 확정하지 않는 의료진 인계 지원 시스템",
@@ -2170,7 +2328,8 @@
             "y": 236.0,
             "cx": 688.5,
             "cy": 308.0,
-            "caption": "원본 보고서: 문진, RAG, 척도, 종단 분석, 근거 검증"
+            "caption": "원본 보고서: 문진, RAG, 척도, 종단 분석, 근거 검증",
+            "captionEn": "Intake, retrieval, scales, longitudinal analysis and evidence verification"
           },
           {
             "src": "/assets/figures/slide-35-2.png",
@@ -2179,7 +2338,8 @@
             "y": 282.74,
             "cx": 578.0,
             "cy": 214.52,
-            "caption": "시제품 보고서 발췌: 현재 상태, PHQ-9, 위험 단계"
+            "caption": "시제품 보고서 발췌: 현재 상태, PHQ-9, 위험 단계",
+            "captionEn": "Prototype handoff report: current state, PHQ-9 and risk level"
           }
         ],
         "tables": [
@@ -2229,7 +2389,11 @@
             "x": 940.0,
             "y": 614.0,
             "cx": 606.0,
-            "cy": 179.0
+            "cy": 179.0,
+            "caption": {
+              "ko": "모델, 검색 자료와 서비스 구성",
+              "en": "Models, retrieval sources and service stack"
+            }
           }
         ],
         "charts": [],
@@ -2237,7 +2401,12 @@
           "입력부터 인계까지의 처리 구조",
           "인계 보고서의 상태 및 척도 요약"
         ],
-        "overview": []
+        "overview": [],
+        "argumentLabelsEn": [
+          "Challenge",
+          "Approach",
+          "Contribution"
+        ]
       },
       {
         "slide": 36,
@@ -2245,15 +2414,15 @@
         "arguments": [
           {
             "label": "확인 결과",
-            "text": "비근거 후보 337건을 최종 출력 전에 차단 슬롯 커버리지와 척도 배정 정확도 향상"
+            "text": "근거가 없는 후보 337건을 최종 출력 전에 차단했다. 슬롯 커버리지와 척도 배정 정확도가 향상됐다."
           },
           {
             "label": "남은 난제",
-            "text": "필터 전 비근거 후보 비율은 46.4%에서 55.2% 출력 검증의 효과와 생성 단계의 한계를 함께 확인"
+            "text": "필터 적용 전 비근거 후보 비율은 46.4%에서 55.2%로 증가했다. 출력 검증과 별도로 생성 단계의 오류를 줄여야 한다."
           },
           {
             "label": "후속 검증",
-            "text": "호출 수와 토큰을 줄이는 실행 경로 최적화 전문의 평가와 임상 PoC 자료 추가 필요"
+            "text": "호출 수와 토큰을 줄이는 실행 경로를 연구하고 있다. 전문의 평가와 임상 PoC가 후속 과제다."
           }
         ],
         "note": "384세션 중 직접 비교는 144세션. 나머지는 모델 비교 및 대조 평가. 합성 실험 결과이며 임상 효과와 구분",
@@ -2321,7 +2490,11 @@
             "x": 940.0,
             "y": 614.0,
             "cx": 606.0,
-            "cy": 179.0
+            "cy": 179.0,
+            "caption": {
+              "ko": "합성 시나리오의 출력과 토큰 비교",
+              "en": "Synthetic-session outputs and token use"
+            }
           }
         ],
         "charts": [
@@ -2402,7 +2575,12 @@
           "최종 비근거 값 (건)",
           "턴 누적 대기 (초)"
         ],
-        "overview": []
+        "overview": [],
+        "argumentLabelsEn": [
+          "Verification results",
+          "Remaining issue",
+          "Next steps"
+        ]
       }
     ],
     "metrics": [
@@ -2430,7 +2608,7 @@
       "ko": "기술 리드 및 PM"
     },
     "work": {
-      "ko": "시스템 설계와 위험 판정 로직 구현 백엔드, 앱 알림, STT 및 TTS 연동"
+      "ko": "시스템 설계, 위험 판정 로직과 백엔드 구현, 앱 알림 및 STT/TTS 연동"
     },
     "scope": {
       "ko": "4단계 갈망 추정, 상태 확인, 대화 지원 MBID 불일치 분석은 후속 개발"
@@ -2452,15 +2630,15 @@
         "arguments": [
           {
             "label": "난제",
-            "text": "웨어러블 분류 결과를 상태 확인과 알림으로 연결하고 LLM 대화의 역할을 구분해야 함"
+            "text": "웨어러블 분류 결과를 상태 확인과 알림으로 연결하고 위험 판정과 LLM 대화의 역할을 구분해야 한다."
           },
           {
             "label": "해결",
-            "text": "백엔드 규칙이 위험 단계와 알림 시점을 결정 앱에서 상태 확인, 설문과 음성 대화 지원"
+            "text": "백엔드 규칙으로 위험 단계와 알림 시점을 결정했다. 앱에서 상태 확인, 설문, 음성 대화를 지원한다."
           },
           {
             "label": "기여",
-            "text": "기술 리드 및 PM, 위험 판정과 백엔드 구현 앱 알림, 한국어 STT와 TTS 통합"
+            "text": "기술 리드와 PM을 맡아 위험 판정과 백엔드를 구현하고 앱 알림, 한국어 STT, TTS를 통합했다."
           }
         ],
         "note": "중간결과보고서의 시제품 화면. 생체-언어 불일치 분석 MBID와 임상 개입 효과 검증은 후속 개발",
@@ -2472,7 +2650,8 @@
             "y": 236.1,
             "cx": 219.35,
             "cy": 307.79,
-            "caption": "신호 화면 발췌: PPG 및 EDA 수신"
+            "caption": "신호 화면 발췌: PPG 및 EDA 수신",
+            "captionEn": "Prototype display of received PPG and EDA signals"
           },
           {
             "src": "/assets/figures/slide-38-2.png",
@@ -2481,7 +2660,8 @@
             "y": 236.0,
             "cx": 448.24,
             "cy": 308.0,
-            "caption": "갈망 단계와 이전 알림을 반영한 상태 확인 판정"
+            "caption": "갈망 단계와 이전 알림을 반영한 상태 확인 판정",
+            "captionEn": "State-check decision using craving level and previous notifications"
           },
           {
             "src": "/assets/figures/slide-38-3.png",
@@ -2490,7 +2670,8 @@
             "y": 236.0,
             "cx": 288.0,
             "cy": 308.0,
-            "caption": "대화 화면 발췌: 사용자 발화와 응답"
+            "caption": "대화 화면 발췌: 사용자 발화와 응답",
+            "captionEn": "Prototype dialogue view: user speech and system response"
           }
         ],
         "tables": [
@@ -2540,7 +2721,11 @@
             "x": 940.0,
             "y": 614.0,
             "cx": 606.0,
-            "cy": 179.0
+            "cy": 179.0,
+            "caption": {
+              "ko": "NeuroTruth 시제품의 구현 범위",
+              "en": "Implemented NeuroTruth prototype functions"
+            }
           }
         ],
         "charts": [],
@@ -2549,7 +2734,12 @@
           "규칙 기반 상태 확인",
           "음성 대화 지원"
         ],
-        "overview": []
+        "overview": [],
+        "argumentLabelsEn": [
+          "Challenge",
+          "Approach",
+          "Contribution"
+        ]
       },
       {
         "slide": 39,
@@ -2557,15 +2747,15 @@
         "arguments": [
           {
             "label": "통합 결과",
-            "text": "분류, 위험 판정, 알림, 대화 연결을 확인 동일 시나리오 반복 시험 21 / 21회 성공"
+            "text": "분류, 위험 판정, 알림, 대화의 연결을 확인했다. 동일 시나리오의 반복 통합 시험에서 21회 모두 성공했다."
           },
           {
             "label": "추가 확인",
-            "text": "카메라 정적 영상 10개에서 유효 처리 10 / 10 20초 영상의 평균 처리시간 14.8초"
+            "text": "별도의 카메라 시험에서 정적 영상 10개를 모두 처리했다. 20초 영상의 평균 처리시간은 14.8초였다."
           },
           {
             "label": "다음 단계",
-            "text": "MBID 불일치 점수와 개입 전후 효과 검증 2개 병원 약 80명 임상평가 진행 예정"
+            "text": "MBID 불일치 점수와 개입 전후 효과를 검증할 예정이다. 2개 병원에서 약 80명을 대상으로 임상평가를 계획하고 있다."
           }
         ],
         "note": "카메라 시험은 유효 처리율과 처리시간을 평가. 심박 정확도 또는 임상 개입 효과의 근거로 사용하지 않음",
@@ -2577,7 +2767,8 @@
             "y": 236.0,
             "cx": 269.0,
             "cy": 308.0,
-            "caption": "화면 발췌: 최근 1시간 상태 변화"
+            "caption": "화면 발췌: 최근 1시간 상태 변화",
+            "captionEn": "Prototype view of state changes over the previous hour"
           }
         ],
         "tables": [
@@ -2627,7 +2818,11 @@
             "x": 940.0,
             "y": 614.0,
             "cx": 606.0,
-            "cy": 179.0
+            "cy": 179.0,
+            "caption": {
+              "ko": "통합 시험과 지연 측정 범위",
+              "en": "Integration and latency measurement scope"
+            }
           }
         ],
         "charts": [
@@ -2688,7 +2883,12 @@
           "알림 전달 지연 (ms)",
           "기록 확인 화면"
         ],
-        "overview": []
+        "overview": [],
+        "argumentLabelsEn": [
+          "Integration test",
+          "Camera test",
+          "Next steps"
+        ]
       }
     ],
     "metrics": [
@@ -2716,7 +2916,7 @@
       "ko": "분석 방법 비교 및 공동 제1저자"
     },
     "work": {
-      "ko": "짧은 EEG 구간 분석, 엔트로피 방법 비교 통계 검정, 결과 해석, 논문 작성"
+      "ko": "짧은 EEG 구간 분석, 엔트로피 방법 비교, 통계 검정, 결과 해석, 논문 작성"
     },
     "scope": {
       "ko": "Bonn 및 Bern-Barcelona 공개 EEG 척도별 ROC AUC 비교"
@@ -2742,15 +2942,15 @@
         "arguments": [
           {
             "label": "난제",
-            "text": "짧은 EEG에 coarse-graining을 적용하면 큰 척도에서 표본이 줄어 엔트로피 추정이 제한됨"
+            "text": "짧은 EEG에 coarse-graining을 적용하면 큰 척도에서 표본이 줄어 엔트로피 추정이 제한된다."
           },
           {
             "label": "해결",
-            "text": "이동평균으로 표본 수를 유지하며 척도를 구성 MSE 및 MDE-CG와 척도별 ROC AUC 비교"
+            "text": "중첩 이동평균으로 각 척도의 표본 감소를 줄이고 MSE 및 MDE-CG와 척도별 ROC AUC를 비교했다."
           },
           {
             "label": "기여",
-            "text": "짧은 구간 분석, 방법 비교와 통계 검정 MBE 2024 공동 제1저자"
+            "text": "짧은 구간 분석, 방법 비교, 통계 검정을 수행했다. MBE 2024 논문에 공동 제1저자로 참여했다."
           }
         ],
         "note": "Bonn A 구간은 제1사분위 중심의 5초. 척도별 ROC AUC는 공개 EEG의 상태 분리 성능",
@@ -2762,7 +2962,8 @@
             "y": 236.04,
             "cx": 453.87,
             "cy": 307.91,
-            "caption": "원본 방법 그림: 중첩 이동평균으로 표본 유지"
+            "caption": "원본 방법 그림: 중첩 이동평균으로 표본 유지",
+            "captionEn": "Moving-average construction with overlapping samples"
           },
           {
             "src": "/assets/figures/slide-41-2.png",
@@ -2771,7 +2972,8 @@
             "y": 236.0,
             "cx": 277.61,
             "cy": 308.0,
-            "caption": "Normal / Ictal, A 구간의 5초"
+            "caption": "Normal / Ictal: 제1사분위 중심의 5초 구간",
+            "captionEn": "Normal versus ictal EEG: five-second segment centered on the first quartile"
           },
           {
             "src": "/assets/figures/slide-41-3.png",
@@ -2780,7 +2982,8 @@
             "y": 236.0,
             "cx": 384.29,
             "cy": 308.0,
-            "caption": "Focal / Non-focal, 척도별 분리도"
+            "caption": "Focal / Non-focal, 척도별 분리도",
+            "captionEn": "Focal versus non-focal EEG: discrimination across scales"
           }
         ],
         "tables": [
@@ -2830,7 +3033,11 @@
             "x": 940.0,
             "y": 614.0,
             "cx": 606.0,
-            "cy": 179.0
+            "cy": 179.0,
+            "caption": {
+              "ko": "척도별 표본 수와 평가 대상",
+              "en": "Scale-wise sample counts and evaluation scope"
+            }
           }
         ],
         "charts": [],
@@ -2839,7 +3046,12 @@
           "Bonn ROC AUC",
           "Bern-Barcelona ROC AUC"
         ],
-        "overview": []
+        "overview": [],
+        "argumentLabelsEn": [
+          "Challenge",
+          "Approach",
+          "Contribution"
+        ]
       }
     ],
     "metrics": [

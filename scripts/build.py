@@ -1,7 +1,7 @@
 """Build the bilingual, dependency-free GitHub Pages portfolio."""
 from pathlib import Path
 from html import escape
-import json,re,math,textwrap
+import json,re,math,textwrap,struct
 
 ROOT=Path(__file__).resolve().parents[1]
 projects=json.loads((ROOT/'content/projects.json').read_text(encoding='utf8'))
@@ -27,7 +27,7 @@ def page(path,title,description,body):
     html=f'''<!doctype html><html lang="{LANG}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{e(title)} | Dae Hyeon Kim</title><meta name="description" content="{e(description)}"><link rel="canonical" href="{BASE+full}"><link rel="alternate" hreflang="ko" href="{BASE+path}"><link rel="alternate" hreflang="en" href="{BASE+'/en'+path}"><link rel="alternate" hreflang="x-default" href="{BASE+path}"><meta name="theme-color" content="#ffffff"><meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(description)}"><meta property="og:type" content="website"><meta property="og:url" content="{BASE+full}"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/assets/site.css"><script src="/assets/site.js" defer></script></head><body>{header(path)}<main id="main">{body}</main>{footer()}</body></html>'''
     out.write_text(html.replace('><','>\n<'),encoding='utf8')
 def section_head(num,ko,en,href=None,label=None):return f'<div class="section-head"><div><p class="eyebrow">{num}</p><h2>{t(ko,en)}</h2></div>'+(a(href,label,'text-link') if href else '')+'</div>'
-def paper_role(p):return p['role'] if LANG=='ko' else {'제1저자':'First author','공동제1저자':'Co-first author','제2저자':'Second author','제2저자 (발표자)':'Second author, presenter'}.get(p['role'],p['role'])
+def paper_role(p):return p['role'] if LANG=='ko' else {'제1저자':'First author','공동 제1저자':'Co-first author','공동제1저자':'Co-first author','제2저자':'Second author','제2저자 (발표자)':'Second author, presenter'}.get(p['role'],p['role'])
 def paper_status(p):return p['status'] if LANG=='ko' else {'게재':'Published','게재 확정':'Accepted','게재 (Early Access)':'Published, Early Access','심사 중':'Under review','투고 예정':'In preparation','구두':'Oral presentation','포스터':'Poster presentation'}[p['status']]
 def paper_links(p):return ''.join(a(u,'DOI' if 'doi.org/' in u else t('연구 저장소','Research repository')) for u in p['links'])
 def publication_row(p):
@@ -35,7 +35,7 @@ def publication_row(p):
 def project_row(p,i=0):
     url=route('/projects/'+p['slug']+'/');thumb=f'<img src="{p["thumbnail"]}" alt="{e(local(p["short"]))}" loading="lazy" width="220" height="150">' if p['thumbnail'] else f'<span class="index-number">{i+1:02}</span>'
     return f'<article class="project-row"><a class="thumb" href="{url}" tabindex="-1" aria-hidden="true">{thumb}</a><div><p class="category">{e(p["category"])}</p><h3>{a(url,local(p["short"]))}</h3><p class="summary">{e(local(p["summary"]))}</p><span class="role">{e(local(p["role"]))}</span></div></article>'
-def archive_intro(title,description,bread):return f'<div class="page-intro"><div class="breadcrumb">{a(route("/"),t("홈","Home"))}<span>/</span><span>{e(bread)}</span></div><h1>{e(title)}</h1><p class="lead">{e(description)}</p></div>'
+def archive_intro(title,description,bread):return f'<div class="page-intro"><div class="breadcrumb">{a(route("/"),t("홈","Home"))}<span>/</span><span>{e(bread)}</span></div><h1>{e(title)}</h1>'+ (f'<p class="lead">{e(description)}</p>' if description else '')+'</div>'
 def home():
     hero=f'''<div class="wrap"><section class="hero" id="about"><div class="hero-copy"><p class="eyebrow">NEUROAI LAB / KWANGWOON UNIVERSITY</p><div class="hero-name"><h1>{t('김대현','Dae Hyeon Kim')}</h1><p class="name-en">{t('Dae Hyeon Kim','김대현 / Integrated M.S.–Ph.D. student')}</p></div><h2 class="hero-title">{t('그래프와 다중모달 학습의<br>강건성과 효율성을 연구합니다.','Robust and efficient learning<br>for graphs and multimodal data.')}</h2><p class="hero-intro">{t('적은 레이블과 변화하는 측정 환경에서도 유효한 관계를 학습하는 모델을 연구합니다. 생체신호 수집과 분석, 그래프 모델 설계, 실제 시스템 구현까지 연구를 수행해 왔습니다.','I study models that learn useful relationships from limited labels and changing measurement conditions. My work covers biosignal acquisition and analysis, graph learning, and implementation in research and deployed systems.')}</p>{socials()}</div><div class="portrait"><figure><img src="/assets/portrait.png" alt="{t('김대현 프로필 사진','Portrait of Dae Hyeon Kim')}" width="270" height="350" fetchpriority="high"><figcaption>{t('전자통신공학과 석박사통합과정<br>지도교수 최영석 / 2027.02 졸업 예정','Electronics and Communications Engineering<br>Advisor: Young-Seok Choi<br>Expected graduation: February 2027')}</figcaption></figure></div></section><div class="stats" aria-label="{t('연구 이력 요약','Research record')}">'''
     for n,ko,en in [('6','SCIE 게재 및 확정','SCIE published / accepted'),('7','국제학회 논문','International conference papers'),('8','정부과제 참여','Government-funded projects'),('4','기술 세부과제 리드','Technical work packages led')]:hero+=f'<div class="stat"><strong>{n}</strong><span>{t(ko,en)}</span></div>'
@@ -52,7 +52,7 @@ def home():
     body+='</ol></section>'
     experiences=[('2022.03 – Present','석박사통합과정 / 대학원 연구원','Integrated M.S.–Ph.D. / Graduate research assistant','광운대학교 전자통신공학과, NeuroAI Lab. 지도교수 최영석. 2027.02 졸업 예정. GPA 4.50/4.50.','NeuroAI Lab, Kwangwoon University. Advisor: Young-Seok Choi. Expected February 2027. GPA 4.50/4.50.'),('2022.01 – 2022.02','NeuroAI 연구 인턴','Research intern, NeuroAI Lab','EEG 엔트로피와 연결성 기반 그래프 학습. 후속 MBE 논문 공동 제1저자.','EEG entropy and connectivity-based graph learning; co-first author of the subsequent MBE paper.'),('2021.01 – 2021.02','KIST 연구 인턴','Research intern, KIST','바이오닉스연구센터. CT/MRI 정합, 위치추적, 집속초음파 측정과 로봇 제어.','Bionics Research Center. CT/MRI registration, tracking, focused-ultrasound measurement and robotic control.'),('2020.09 – 2021.06','BCML 학부 연구 인턴','Undergraduate research intern, BCML','광운대학교. ECG, PPG, BCG 신호 수집과 혈압 추정. 산학연계 SW 프로젝트 공동 개발.','Kwangwoon University. ECG, PPG and BCG acquisition, blood-pressure estimation and industry-linked software development.'),('2016.03 – 2022.02','컴퓨터공학 학사','B.S. in Computer Engineering','광운대학교. GPA 3.86/4.50.','Kwangwoon University. GPA 3.86/4.50.')]
     body+='<section class="section" id="experience"><div class="split-section"><div><p class="eyebrow">04 / EXPERIENCE</p><h2>'+t('학력 및 연구 경력','Education & experience')+'</h2></div><ul class="timeline">'
-    for date,ko,en,kp,ep in experiences:body+=f'<li><span class="date">{e(date)}</span><div><h3>{t(ko,en)}</h3><p>{t(kp,ep)}</p></div></li>'
+    for date,ko,en,kp,ep in experiences:body+=f'<li><span class="date">{e(date.replace("Present","현재") if LANG=="ko" else date)}</span><div><h3>{t(ko,en)}</h3><p>{t(kp,ep)}</p></div></li>'
     body+='</ul></div></section>'
     body+='<section class="section" id="awards">'+section_head('05 / SERVICE','수상과 학술 활동','Awards & academic service')+'<div class="service-grid"><div><h3>'+t('수상 및 연구 성과','Recognition')+'</h3><ul>'
     for ko,en in [('AI Champion 2026 일반 및 국내 AI 트랙 본선 진출','AI Champion 2026 main round in the regular and Korean-AI tracks'),('KOSOMBE 2024 우수 포스터상','KOSOMBE 2024 Best Poster Award'),('기업 기술이전 1건, 2,000만원','One technology transfer, KRW 20 million'),('6학기 등록금 전액 RA 장학금, 학부 성적우수 장학금 3회','Full-tuition RA scholarship for six semesters; three undergraduate merit scholarships')]:body+=f'<li>{t(ko,en)}</li>'
@@ -81,13 +81,19 @@ CELL={}
 transpath=ROOT/'content/table-translations.json'
 if transpath.exists():CELL=json.loads(transpath.read_text(encoding='utf8'))
 def translate_cell(v):return CELL.get(v,v)
+
+def figure_dimensions(src):
+    with (ROOT/src.lstrip('/')).open('rb') as source:header=source.read(24)
+    if header[:8]!=b'\x89PNG\r\n\x1a\n':raise ValueError('Expected PNG research figure: '+src)
+    width,height=struct.unpack('>II',header[16:24])
+    return f' width="{width}" height="{height}"'
 def figures_html(figs,title):
     if not figs:return ''
     h='<div class="evidence-gallery'+(' one' if len(figs)==1 else '')+'">'
     for i,f in enumerate(figs,1):
         caption=f.get('caption') or title
         if LANG=='en':caption=f.get('captionEn',title+f': source figure {i}')
-        h+=f'<figure><a class="figure-link" href="{e(f["src"])}" target="_blank" rel="noopener" aria-label="{e(t("그림 확대: ","Enlarge figure: ")+caption)}"><img src="{e(f["src"])}" alt="{e(caption)}" loading="lazy"></a><figcaption>{e(caption)}<br>{a(f["src"],t("원본 그림 확대","View full-size figure"))}</figcaption></figure>'
+        h+=f'<figure><a class="figure-link" href="{e(f["src"])}" target="_blank" rel="noopener" aria-label="{e(t("그림 확대: ","Enlarge figure: ")+caption)}"><img src="{e(f["src"])}" alt="{e(caption)}" loading="lazy"{figure_dimensions(f["src"])}></a><figcaption>{e(caption)}<br>{a(f["src"],t("원본 그림 확대","View full-size figure"))}</figcaption></figure>'
     return h+'</div>'
 def chart_html(c,title,i):
     series=c['series'];cats=series[0]['categories'];values=[x for s in series for x in s['values']];maximum=max(values,default=1)*1.22 or 1
@@ -111,7 +117,7 @@ def chart_html(c,title,i):
         label=translate_cell(s['name']) if LANG=='en' else s['name'];x=left+si*210
         svg+=f'<rect x="{x}" y="379" width="10" height="10" rx="2" fill="{colors[si%3]}"/><text x="{x+17}" y="389" fill="#596b82" font-size="13">{e(label)}</text>'
     svg+='</svg>'
-    return '<figure class="chart-figure">'+svg+'<figcaption>'+e(title)+'</figcaption></figure>'
+    return '<figure class="chart-figure"><div class="chart-plot" role="region" tabindex="0" aria-label="'+e(title)+'">'+svg+'</div><figcaption>'+e(title)+'</figcaption></figure>'
 def project_page(p,index):
     title=local(p['title']);path='/projects/'+p['slug']+'/'
     body='<div class="wrap">'+archive_intro(title,local(p['summary']),t('프로젝트','Projects'))
@@ -124,11 +130,11 @@ def project_page(p,index):
     body+=a('#related',t('관련 논문','Related work'))+'</aside><div class="detail-body">'
     for j,st in enumerate(p['stages'],1):
         en=ed['stageEnglish'][str(st['slide'])];heading=st['title'] if LANG=='ko' else en[0]
-        args=st['arguments'] if LANG=='ko' else [{'label':l,'text':v} for l,v in zip(['Problem / context','Approach','Contribution / next steps'],en[1:4])]
+        args=st['arguments'] if LANG=='ko' else [{'label':l,'text':v} for l,v in zip(st.get('argumentLabelsEn',['Challenge','Approach','Contribution']),en[1:4])]
         body+=f'<section class="detail-stage" id="stage-{j}"><h2><span class="section-number">{j:02} / RESEARCH DETAIL</span>{e(heading)}</h2><dl class="arguments">'+''.join(f'<dt>{e(arg["label"])}</dt><dd>{e(arg["text"])}</dd>' for arg in args)+'</dl>'
         body+=figures_html(st['figures'],heading)
         if st['charts']:body+='<div class="chart-set'+(' one' if len(st['charts'])==1 else '')+'">'+''.join(chart_html(c,(c['title'] if LANG=='ko' else translate_cell(c['title'])),f'{st["slide"]}-{k}') for k,c in enumerate(st['charts']))+'</div>'
-        for k,tbl in enumerate(st['tables']):body+=table_html(tbl,t('모델 구성 및 평가 수치','Model specification and evaluation')+f' {k+1}')
+        for k,tbl in enumerate(st['tables']):body+=table_html(tbl,local(tbl.get('caption',t('모델 구성 및 평가 수치','Model specification and evaluation')+f' {k+1}')))
         body+='<div class="evidence-note"><strong>'+t('평가 조건 및 연구 범위','Evaluation conditions and scope')+'</strong>'+e(st['note'] if LANG=='ko' else en[4])+'</div></section>'
     rel=[q for q in papers if q['related']==p['slug']]
     body+='<section class="related" id="related"><h2>'+t('관련 논문과 연구 자료','Related publications and research')+'</h2><ul>'
@@ -140,16 +146,24 @@ def project_page(p,index):
     body+='</nav></div></div></div>'
     page(path,title,local(p['summary']),body)
 PAPER_FIGURES={'sgcl':['sgcl-architecture.png','sgcl-embeddings.png'],'sparse-dgcnn':['sparse-dgcnn-l21-architecture.png','sparse-dgcnn-l21-edge-density.png'],'idcl':['idcl-architecture.png','idcl-inter-dialog.png'],'axis-ecg':['axis-ecg-model_architecture.png']}
+PAPER_CAPTIONS={
+    'sgcl-architecture.png':('SGCL 모델 구조','SGCL model architecture'),
+    'sgcl-embeddings.png':('SGCL 임베딩 비교','SGCL embedding comparison'),
+    'sparse-dgcnn-l21-architecture.png':('Sparse DGCNN 모델과 희소 규제','Sparse DGCNN architecture and sparsity regularization'),
+    'sparse-dgcnn-l21-edge-density.png':('Sparse DGCNN의 그래프 연결 밀도 분석','Graph edge-density analysis for Sparse DGCNN'),
+    'idcl-architecture.png':('IDCL 모델 구조','IDCL model architecture'),
+    'idcl-inter-dialog.png':('IDCL의 대화 간 대조학습','Inter-dialog contrastive learning in IDCL'),
+    'axis-ecg-model_architecture.png':('AXIS의 국소 및 전역 ECG 처리 구조','Local and global ECG processing in AXIS')}
 PAPER_STAGE={'asgcrl':13,'simnext-eeg':14,'mda-gcl':25,'multiscale-entropy':41,'emotionheart':17,'glcl-rppg':27,'fr-ptt':23}
 def paper_page(p):
     notes=ed['paperNotes'][p['slug']];summary=t(notes[0],notes[1]);results=t(notes[2],notes[3])
-    body='<div class="wrap"><div class="paper-body">'+archive_intro(p['title'],summary,t('논문','Publications'))
+    body='<div class="wrap"><div class="paper-body">'+archive_intro(p['title'],'',t('논문','Publications'))
     label=t('투고 예정 학술지/학회','Intended venue') if p['group']=='preparation' else t('심사 중 학술지/학회','Submitted venue') if p['group']=='review' else t('학술지/학회','Venue')
     body+='<p class="paper-status">'+e(paper_status(p))+'</p><dl class="detail-meta">'
     for k,v in [(label,p['venue']),(t('저자 역할','Author role'),paper_role(p)),(t('연도','Year'),str(p['year']))]:body+=f'<div><dt>{e(k)}</dt><dd>{e(v)}</dd></div>'
     body+='</dl><div class="publication-links">'+paper_links(p)+'</div><h2>'+t('연구 내용','Research approach')+'</h2><p>'+e(summary)+'</p>'
     figs=[]
-    if p['slug'] in PAPER_FIGURES:figs=[{'src':'/assets/figures/'+f,'caption':p['slug'].upper()+t(' 원본 구조 및 분석 그림',' original architecture and analysis'),'captionEn':p['slug'].upper()+' original architecture and analysis'} for f in PAPER_FIGURES[p['slug']]]
+    if p['slug'] in PAPER_FIGURES:figs=[{'src':'/assets/figures/'+f,'caption':PAPER_CAPTIONS[f][0],'captionEn':PAPER_CAPTIONS[f][1]} for f in PAPER_FIGURES[p['slug']]]
     elif p['slug'] in PAPER_STAGE:
         st=next(s for pr in projects for s in pr['stages'] if s['slide']==PAPER_STAGE[p['slug']]);figs=st['figures']
     body+=figures_html(figs,p['title'])
@@ -160,8 +174,12 @@ def paper_page(p):
             if p['slug']=='fr-ptt':
                 tbl={**tbl,'rows':tbl['rows'][:3]}
             if p['slug']=='mda-gcl':tbl={**tbl,'rows':tbl['rows'][:3]}
-            body+=table_html(tbl,t('논문 구성과 결과','Paper specification and results'))
-        body+='<div class="evidence-note"><strong>'+t('해석 범위','Interpretation')+'</strong>'+e(st['note'] if LANG=='ko' else ed['stageEnglish'][str(st['slide'])][4])+'</div>'
+            caption=local(tbl.get('caption',t('논문 구성과 결과','Paper specification and results')))
+            if p['slug']=='fr-ptt':caption=t('FR-PTT 혈압 추정 오차 (mmHg)','FR-PTT blood-pressure error (mmHg)')
+            if p['slug']=='mda-gcl':caption=t('MDA-GCL 도메인 적응 정확도 (%)','MDA-GCL domain-adaptation accuracy (%)')
+            body+=table_html(tbl,caption)
+        scope=local(p['scopeNote']) if p.get('scopeNote') else (st['note'] if LANG=='ko' else ed['stageEnglish'][str(st['slide'])][4])
+        body+='<div class="evidence-note"><strong>'+t('해석 범위','Interpretation')+'</strong>'+e(scope)+'</div>'
     if p['slug']=='graph-mamba':body+='<div class="evidence-note">'+t('최종 모델 구조, 검증 프로토콜, 정량 결과, 공개 코드가 추가될 예정이다.','Final architecture, validation protocol, quantitative results and public code are pending.')+'</div>'
     if p['related']:
         pr=next(x for x in projects if x['slug']==p['related']);body+='<section class="related"><h2>'+t('관련 프로젝트','Related project')+'</h2><p>'+a(route('/projects/'+pr['slug']+'/'),local(pr['short']))+'</p></section>'

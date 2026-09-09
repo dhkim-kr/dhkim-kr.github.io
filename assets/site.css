@@ -7,3 +7,11 @@
 @media(max-width:380px){.wrap{width:calc(100% - 30px)}.hero{grid-template-columns:minmax(0,1fr) 115px;gap:22px}.hero h1{font-size:37px}.portrait img{height:150px}.hero .name-en{margin-top:14px}.project-row{grid-template-columns:90px 1fr;gap:15px}.project-row .thumb{height:100px}.stat span{display:block}.section-head{flex-wrap:wrap;gap:8px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
 @media print{.site-header,.detail-toc,.language,.menu-button,.skip{display:none}.wrap{width:100%;max-width:none}.hero{padding-top:0}.detail-layout{display:block}.section,.detail-stage{break-inside:avoid}.footer{background:white}.figure-link{border:0}a{color:inherit}.detail-meta{margin-top:15px}}
+
+/* Preserve chart label size. Narrow screens scroll the plot within its figure. */
+.chart-set{grid-template-columns:1fr}
+.chart-plot{overflow-x:auto;overscroll-behavior-x:contain}
+.chart-plot svg{min-width:600px;max-width:800px;margin-inline:auto}
+.chart-figure figcaption{margin-top:10px}
+.menu-button{min-height:44px;min-width:48px}
+@media print{.chart-plot{overflow:visible}.chart-plot svg{min-width:0}}

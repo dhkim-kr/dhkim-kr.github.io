@@ -57,7 +57,7 @@
 </div>
 <div>
 <dt>담당 업무</dt>
-<dd>다중 에이전트 오케스트레이션 RAG와 근거 검증 구현, 앱 및 의료진 웹 통합</dd>
+<dd>다중 에이전트 오케스트레이션, RAG 및 근거 검증 구현, 앱과 의료진 웹 통합</dd>
 </div>
 <div>
 <dt>기간 및 소속</dt>
@@ -77,16 +77,16 @@
 <span class="section-number">01 / RESEARCH DETAIL</span>국산 LLM 사전문진 / 구조화 기록과 근거 검증을 통한 의료진 인계</h2>
 <dl class="arguments">
 <dt>난제</dt>
-<dd>자유 대화에서 임상 슬롯을 빠짐없이 확보하고 근거 없는 값이 인계 기록에 들어가지 않도록 제어</dd>
+<dd>자유 대화에서 임상 슬롯을 확보하고 근거 없는 값이 의료진 인계 기록에 포함되지 않도록 제어해야 한다.</dd>
 <dt>해결</dt>
-<dd>규칙 기반 상태기계가 전문 에이전트 10종을 실행 척도는 규칙 채점, 최종 기록은 출처와 근거 검증</dd>
+<dd>규칙 기반 상태기계로 전문 에이전트 10종을 실행했다. 척도는 규칙으로 채점하고 최종 기록의 출처와 근거를 검증했다.</dd>
 <dt>기여</dt>
-<dd>오케스트레이션, RAG 및 검증 로직 핵심 구현 환자 앱, 의료진 웹, 백엔드 통합</dd>
+<dd>오케스트레이션, RAG, 검증 로직을 구현하고 환자 앱, 의료진 웹, 백엔드를 통합했다.</dd>
 </dl>
 <div class="evidence-gallery">
 <figure>
 <a class="figure-link" href="/assets/figures/slide-35-1.png" target="_blank" rel="noopener" aria-label="그림 확대: 원본 보고서: 문진, RAG, 척도, 종단 분석, 근거 검증">
-<img src="/assets/figures/slide-35-1.png" alt="원본 보고서: 문진, RAG, 척도, 종단 분석, 근거 검증" loading="lazy">
+<img src="/assets/figures/slide-35-1.png" alt="원본 보고서: 문진, RAG, 척도, 종단 분석, 근거 검증" loading="lazy" width="1377" height="616">
 </a>
 <figcaption>원본 보고서: 문진, RAG, 척도, 종단 분석, 근거 검증<br>
 <a href="/assets/figures/slide-35-1.png">원본 그림 확대</a>
@@ -94,16 +94,16 @@
 </figure>
 <figure>
 <a class="figure-link" href="/assets/figures/slide-35-2.png" target="_blank" rel="noopener" aria-label="그림 확대: 시제품 보고서 발췌: 현재 상태, PHQ-9, 위험 단계">
-<img src="/assets/figures/slide-35-2.png" alt="시제품 보고서 발췌: 현재 상태, PHQ-9, 위험 단계" loading="lazy">
+<img src="/assets/figures/slide-35-2.png" alt="시제품 보고서 발췌: 현재 상태, PHQ-9, 위험 단계" loading="lazy" width="873" height="324">
 </a>
 <figcaption>시제품 보고서 발췌: 현재 상태, PHQ-9, 위험 단계<br>
 <a href="/assets/figures/slide-35-2.png">원본 그림 확대</a>
 </figcaption>
 </figure>
 </div>
-<div class="table-wrap" role="region" tabindex="0" aria-label="모델 구성 및 평가 수치 1">
+<div class="table-wrap" role="region" tabindex="0" aria-label="모델, 검색 자료와 서비스 구성">
 <table>
-<caption>모델 구성 및 평가 수치 1</caption>
+<caption>모델, 검색 자료와 서비스 구성</caption>
 <thead>
 <tr>
 <th scope="col">구성</th>
@@ -134,14 +134,15 @@
 <span class="section-number">02 / RESEARCH DETAIL</span>합성 시나리오 평가 / 출력 신뢰도와 호출 비용의 동시 확인</h2>
 <dl class="arguments">
 <dt>확인 결과</dt>
-<dd>비근거 후보 337건을 최종 출력 전에 차단 슬롯 커버리지와 척도 배정 정확도 향상</dd>
+<dd>근거가 없는 후보 337건을 최종 출력 전에 차단했다. 슬롯 커버리지와 척도 배정 정확도가 향상됐다.</dd>
 <dt>남은 난제</dt>
-<dd>필터 전 비근거 후보 비율은 46.4%에서 55.2% 출력 검증의 효과와 생성 단계의 한계를 함께 확인</dd>
+<dd>필터 적용 전 비근거 후보 비율은 46.4%에서 55.2%로 증가했다. 출력 검증과 별도로 생성 단계의 오류를 줄여야 한다.</dd>
 <dt>후속 검증</dt>
-<dd>호출 수와 토큰을 줄이는 실행 경로 최적화 전문의 평가와 임상 PoC 자료 추가 필요</dd>
+<dd>호출 수와 토큰을 줄이는 실행 경로를 연구하고 있다. 전문의 평가와 임상 PoC가 후속 과제다.</dd>
 </dl>
 <div class="chart-set">
 <figure class="chart-figure">
+<div class="chart-plot" role="region" tabindex="0" aria-label="구조화 문진 성능 (%)">
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 410" role="img" aria-labelledby="chart-36-0" aria-describedby="chart-desc-36-0">
 <title id="chart-36-0">구조화 문진 성능 (%)</title>
 <desc id="chart-desc-36-0">단일 백본: 척도 배정 23.8, 슬롯 커버리지 55.6; NeuroSync: 척도 배정 73.0, 슬롯 커버리지 98.4</desc>
@@ -171,9 +172,11 @@
 <rect x="275" y="379" width="10" height="10" rx="2" fill="#1f5fbf"/>
 <text x="292" y="389" fill="#596b82" font-size="13">NeuroSync</text>
 </svg>
+</div>
 <figcaption>구조화 문진 성능 (%)</figcaption>
 </figure>
 <figure class="chart-figure">
+<div class="chart-plot" role="region" tabindex="0" aria-label="최종 비근거 값 (건)">
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 410" role="img" aria-labelledby="chart-36-1" aria-describedby="chart-desc-36-1">
 <title id="chart-36-1">최종 비근거 값 (건)</title>
 <desc id="chart-desc-36-1">최종 출력: 단일 백본 39.0, NeuroSync 0.0</desc>
@@ -197,9 +200,11 @@
 <rect x="65" y="379" width="10" height="10" rx="2" fill="#a7bddd"/>
 <text x="82" y="389" fill="#596b82" font-size="13">최종 출력</text>
 </svg>
+</div>
 <figcaption>최종 비근거 값 (건)</figcaption>
 </figure>
 <figure class="chart-figure">
+<div class="chart-plot" role="region" tabindex="0" aria-label="턴 누적 대기 (초)">
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 410" role="img" aria-labelledby="chart-36-2" aria-describedby="chart-desc-36-2">
 <title id="chart-36-2">턴 누적 대기 (초)</title>
 <desc id="chart-desc-36-2">누적 대기: 단일 백본 4.16, NeuroSync 9.04</desc>
@@ -223,12 +228,13 @@
 <rect x="65" y="379" width="10" height="10" rx="2" fill="#a7bddd"/>
 <text x="82" y="389" fill="#596b82" font-size="13">누적 대기</text>
 </svg>
+</div>
 <figcaption>턴 누적 대기 (초)</figcaption>
 </figure>
 </div>
-<div class="table-wrap" role="region" tabindex="0" aria-label="모델 구성 및 평가 수치 1">
+<div class="table-wrap" role="region" tabindex="0" aria-label="합성 시나리오의 출력과 토큰 비교">
 <table>
-<caption>모델 구성 및 평가 수치 1</caption>
+<caption>합성 시나리오의 출력과 토큰 비교</caption>
 <thead>
 <tr>
 <th scope="col">비교 지표</th>
