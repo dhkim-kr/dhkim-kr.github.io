@@ -2,7 +2,7 @@
 
 Research profile and project portfolio at [dhkim-kr.github.io](https://dhkim-kr.github.io/).
 
-The site contains Korean and English pages, 13 project details and 20 publication or manuscript details. Research figures and evaluation conditions are based on the September 2026 portfolio and linked research repositories. Published work, manuscripts under review and work in preparation are listed separately.
+The site contains Korean and English pages, 13 project details and 33 publication or manuscript details, including 13 domestic conference papers. Research figures and evaluation conditions are based on the September 2026 portfolio, original papers and linked research repositories. Journal articles, international conferences, domestic conferences, manuscripts under review and work in preparation are listed separately.
 
 ## Update content
 

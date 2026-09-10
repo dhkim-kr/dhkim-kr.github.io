@@ -42,7 +42,14 @@ for f,p in pages.items():
         if not target.exists():errors.append(f'{f}: broken route {href}')
         elif u.fragment and target.resolve() in pages and unquote(u.fragment) not in pages[target.resolve()].ids:errors.append(f'{f}: missing anchor {href}')
 pr=json.loads((ROOT/'content/projects.json').read_text(encoding='utf8'));pub=json.loads((ROOT/'content/publications.json').read_text(encoding='utf8'));tr=json.loads((ROOT/'content/table-translations.json').read_text(encoding='utf8'))
-if len(pr)!=13 or len(pub)!=20:errors.append('Content inventory changed unexpectedly')
+if len(pr)!=13 or len(pub)!=33:errors.append('Content inventory changed unexpectedly')
+domestic=[p for p in pub if p['group']=='domestic']
+if len(domestic)!=13:errors.append('Expected 13 domestic conference papers')
+if len({p['slug'] for p in pub})!=len(pub):errors.append('Duplicate publication slug')
+for p in domestic:
+    if not all(p.get(k) for k in ['titleKo','venueEn','authors','figures','links']):errors.append('Incomplete domestic paper: '+p['slug'])
+    position=int(p['role'][1])-1
+    if p['authors']['ko'].split(', ')[position]!='김대현':errors.append('Author role mismatch: '+p['slug'])
 for lang in ['', 'en/']:
     for group,rows in [('projects',pr),('publications',pub)]:
         for obj in rows:
@@ -55,8 +62,11 @@ for p in pr:
         for c in s['charts']:
             words.add(c['title'])
             for series in c['series']:words.update(series['categories']+[series['name']])
+for p in pub:
+    for tbl in p.get('tables',[]):words.update(c['text'] for row in tbl['rows'] for c in row)
 for word in words:
     if re.search('[가-힣]',word) and word not in tr:errors.append('Missing table/chart translation: '+word)
-if len(files)!=73:errors.append(f'Expected 73 HTML documents, found {len(files)}')
-result={'pages':len(files),'projects':len(pr),'publications':len(pub),'internal_and_external_links_checked':links,'errors':errors}
+expected=2*(3+len(pr)+len(pub))+1
+if len(files)!=expected:errors.append(f'Expected {expected} HTML documents, found {len(files)}')
+result={'pages':len(files),'projects':len(pr),'publications':len(pub),'domestic_conference_papers':len(domestic),'internal_and_external_links_checked':links,'errors':errors}
 print(json.dumps(result,ensure_ascii=False,indent=2));sys.exit(bool(errors))

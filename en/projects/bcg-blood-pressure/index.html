@@ -57,7 +57,7 @@
 </div>
 <div>
 <dt>Contribution</dt>
-<dd>Participated in synchronized acquisition and blood-pressure elevation experiments. Developed the final model and refactored the project code.</dd>
+<dd>Co-developed blood-pressure elevation experiments, synchronized signal acquisition, the estimation model and real-time analysis.</dd>
 </div>
 <div>
 <dt>Period & affiliation</dt>
@@ -66,7 +66,7 @@
 </dl>
 <div class="detail-layout">
 <aside class="detail-toc">
-<p>On this page</p>
+<p>Contents</p>
 <a href="#stage-1">01 Two-channel BCG model and real-time service</a>
 <a href="#stage-2">02 Blood-pressure tracking and reproduction conditions</a>
 <a href="#related">Related work</a>
@@ -81,7 +81,7 @@
 <dt>Approach</dt>
 <dd>Extracted local features from 10-second windows with a CNN, then used a BiGRU and temporal attention for regression.</dd>
 <dt>Contribution</dt>
-<dd>Co-developed acquisition, modeling and real-time processing. Modularized the final TOG project into a public repository.</dd>
+<dd>Co-developed synchronized acquisition, the blood-pressure model and the real-time analysis service.</dd>
 </dl>
 <div class="evidence-gallery">
 <figure>
@@ -135,18 +135,16 @@
 </table>
 </div>
 <div class="evidence-note">
-<strong>Evaluation conditions and scope</strong>The original presentation figure differs from the final code in CNN channel counts. The final code uses 10 convolutional layers with 64/128/256/512 channels, a 64-unit BiGRU and temporal attention.</div>
+<strong>Evaluation conditions and scope</strong>Final code: 10 convolutional layers, 64/128/256/512 channels and a 64-unit BiGRU. The presentation figure shows an earlier configuration.</div>
 </section>
 <section class="detail-stage" id="stage-2">
 <h2>
 <span class="section-number">02 / RESEARCH DETAIL</span>Blood-pressure tracking and reproduction conditions</h2>
 <dl class="arguments">
-<dt>Acquisition</dt>
-<dd>Measured resting and post-exercise states for about three hours per participant, with cuff references every two minutes.</dd>
+<dt>Experiment</dt>
+<dd>Recorded resting and post-exercise states for about three hours per participant, with cuff references every two minutes.</dd>
 <dt>Evaluation</dt>
-<dd>Reported SBP and DBP errors for six participants using within-person temporal splits of 29/14/57%.</dd>
-<dt>Reproduction conditions</dt>
-<dd>The original experiment used overlapping windows and normalization before splitting. Real-data reevaluation of the refactored code remains necessary.</dd>
+<dd>Evaluated SBP and DBP errors for six participants using within-person temporal splits of 29/14/57%.</dd>
 </dl>
 <div class="evidence-gallery">
 <figure>
@@ -247,13 +245,16 @@
 </table>
 </div>
 <div class="evidence-note">
-<strong>Evaluation conditions and scope</strong>The 2021 paper reports mean SBP/DBP MAE of 4.70/3.83 mmHg and RMSE of 6.02/4.90 mmHg. These are original paper results, not a new evaluation of the released refactor.</div>
+<strong>Evaluation conditions and scope</strong>Results from the 2021 paper: within-person evaluation with overlapping windows and normalization before splitting.</div>
 </section>
 <section class="related" id="related">
 <h2>Related publications and research</h2>
 <ul>
 <li>
-<a href="https://github.com/dhkim-kr/e2e_multimodal_bp_estimation" target="_blank" rel="noopener noreferrer">Research repository</a>
+<a href="/en/publications/bcg-bp-2021/">Blood Pressure Estimation based on Real-Time Deep Learning Analysis on BCG</a>
+</li>
+<li>
+<a href="/en/publications/bcg-bp-2020/">Deep learning based blood pressure estimation using ballistocardiogram</a>
 </li>
 </ul>
 </section>

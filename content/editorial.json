@@ -1,60 +1,430 @@
 {
   "projectEnglish": {
-    "alcohol-craving": ["Individual physiological responses were analyzed to identify candidate markers of alcohol craving.", "Technical work-package lead", "Designed acquisition protocols and signal-quality checks with two hospitals. Conducted mixed-effects and SHAP analyses in the expanded cohort.", "ECG, PPG and EDA acquisition from over 100 patients and controls", "Expanded analysis: 50 participants and 1,697 trials. JBHI manuscript under review."],
-    "eeg-graph-learning": ["Graph contrastive learning and compact temporal models were developed for EEG emotion recognition and motor-imagery decoding.", "EEG research lead", "Designed SGCL, ASGCRL and SimNeXt-EEG. Implemented models, controlled comparisons and ablation experiments, and wrote first-author papers.", "Sparse graphs, limited-label learning and compact temporal attention", "First-author papers in EAAI 2025, KBS 2026 and IEEE SPL 2026."],
-    "multimodal-emotion": ["Built an older-adult speech dataset and evaluated graph-based fusion of speech and text for emotion recognition.", "Technical work-package lead", "Designed IRB and emotion-elicitation protocols. Co-developed multimodal models and supported technology transfer.", "Over 80 participants across the project; 24 in the older-adult speech experiment", "KRW 20 million technology transfer and KOSOMBE Best Poster Award."],
-    "time-series-fusion": ["Fused signal-specific similarity networks to learn multimodal representations with limited labels.", "Technical work-package lead", "Developed heterogeneous graph fusion and semi-supervised learning. Supported certification tests and intellectual-property deliverables.", "EEG, EDA and PPG feature fusion with graph neural networks", "Two certified tests, one patent application and three software registrations."],
-    "neurobio-hybrid": ["Researching lagged relationships between mental and metabolic state changes using longitudinal wearable observations.", "Research contributor", "Constructing activity, sleep, HRV and skin-temperature features. Studying heterogeneous graphs and lagged information flow.", "Early prediction of combined disorders and treatment-response monitoring", "Model and evaluation protocol design in progress."],
-    "dual-stream-foundation": ["Researching a dual-stream architecture that connects continuous physiological encoders with dialogue models.", "Research contributor and model co-developer", "Studying physiological state representations and LLM interfaces. Co-developed the related FR-PTT contactless blood-pressure model.", "Alignment of physiological and language inputs for efficient interaction", "Related FR-PTT paper presented orally at IJCNN 2026."],
-    "multimodal-domain-adaptation": ["Evaluated multimodal fusion and adversarial domain adaptation under subject and session changes.", "Research contributor; co-first author of MDA-GCL", "Co-developed the domain-adaptation model and ablations. Contributed to multimodal acquisition protocol design.", "Speech, video, text and biosignals; acquisition target above 3,300 hours", "MDA-GCL accepted at KBS 2026. Acquired data volume remains to be confirmed."],
-    "rppg-deployment": ["Adapted facial pulse-estimation models to Jetson hardware and supported kiosk deployment.", "Algorithm co-development and inference optimization", "Developed rPPG models, converted inference to TensorRT FP16, and integrated embedded inference with the kiosk.", "HEALLO kiosks at approximately 100 NH NongHyup Bank branches in Seoul", "Industry collaboration and field deployment support."],
-    "kist-ultrasound": ["Registered imaging and tracking coordinates and implemented position control for focused-ultrasound field measurement.", "3D Slicer module and device-control developer", "Implemented coordinate registration, real-time slice updates, VXM stage control, waveform acquisition and module packaging.", "CT/MRI registration, position tracking, ultrasound scanning and field visualization", "Research prototype developed with preclinical researchers."],
-    "bcg-blood-pressure": ["Estimated blood pressure from two chair BCG channels using a CNN, BiGRU and temporal attention.", "Co-developer of blood-pressure estimation and real-time processing", "Participated in synchronized acquisition and blood-pressure elevation experiments. Developed the final model and refactored the project code.", "Back and seat BCG channels connected to a model server and monitoring app", "First-author oral presentation at KOSOMBE 2021."],
-    "neurosync": ["Combined Korean LLMs with evidence verification to turn intake conversations into structured clinician handoff records.", "Method design and core implementation", "Implemented multi-agent orchestration, retrieval and evidence verification. Integrated the patient app, clinician web interface and backend.", "Rule-based state machine with 10 specialist agents; speech, documents and dialogue", "Eight synthetic personas and 384 evaluation sessions."],
-    "neurotruth": ["Connected wearable craving estimates and rule-based risk decisions to app notifications and conversational support.", "Technical lead and project manager", "Designed the system and implemented risk logic, backend services, notifications, speech recognition and speech synthesis.", "Four-level craving estimation, state checks and dialogue; MBID remains future work", "Prototype integration and notification-latency evaluation."],
-    "multiscale-entropy": ["Used moving averages to retain samples when estimating multiscale entropy from short EEG segments.", "Method comparison and co-first authorship", "Analyzed short EEG segments, compared entropy methods, performed statistical tests and contributed to the manuscript.", "Scale-wise ROC AUC on the Bonn and Bern-Barcelona EEG datasets", "Published in Mathematical Biosciences and Engineering, 2024."]
+    "alcohol-craving": [
+      "Individual physiological responses were analyzed to identify candidate markers of alcohol craving.",
+      "Technical work-package lead",
+      "Designed acquisition protocols and signal-quality checks with two hospitals. Conducted mixed-effects and SHAP analyses in the expanded cohort.",
+      "ECG, PPG and EDA acquisition from over 100 patients and controls",
+      "Expanded analysis: 50 participants and 1,697 trials. JBHI manuscript under review."
+    ],
+    "eeg-graph-learning": [
+      "Graph contrastive learning and compact temporal models were developed for EEG emotion recognition and motor-imagery decoding.",
+      "EEG research lead",
+      "Designed SGCL, ASGCRL and SimNeXt-EEG. Implemented models, controlled comparisons and ablation experiments, and wrote first-author papers.",
+      "Sparse graphs, limited-label learning and compact temporal attention",
+      "First-author papers in EAAI 2025, KBS 2026 and IEEE SPL 2026."
+    ],
+    "multimodal-emotion": [
+      "Built an older-adult speech dataset and evaluated graph-based fusion of speech and text for emotion recognition.",
+      "Technical work-package lead",
+      "Designed IRB and emotion-elicitation protocols. Co-developed multimodal models and supported technology transfer.",
+      "Over 80 participants across the project; 24 in the older-adult speech experiment",
+      "KRW 20 million technology transfer and KOSOMBE Best Poster Award."
+    ],
+    "time-series-fusion": [
+      "Fused signal-specific similarity networks to learn multimodal representations with limited labels.",
+      "Technical work-package lead",
+      "Developed heterogeneous graph fusion and semi-supervised learning. Supported certification tests and intellectual-property deliverables.",
+      "EEG, EDA and PPG feature fusion with graph neural networks",
+      "Two certified tests, one patent application and three software registrations."
+    ],
+    "neurobio-hybrid": [
+      "Researching lagged relationships between mental and metabolic state changes using longitudinal wearable observations.",
+      "Research contributor",
+      "Constructing activity, sleep, HRV and skin-temperature features. Studying heterogeneous graphs and lagged information flow.",
+      "Early prediction of combined disorders and treatment-response monitoring",
+      "Model and evaluation protocol design in progress."
+    ],
+    "dual-stream-foundation": [
+      "Researching a dual-stream architecture that connects continuous physiological encoders with dialogue models.",
+      "Research contributor and model co-developer",
+      "Studying physiological state representations and LLM interfaces. Co-developed the related FR-PTT contactless blood-pressure model.",
+      "Alignment of physiological and language inputs for efficient interaction",
+      "Related FR-PTT paper presented orally at IJCNN 2026."
+    ],
+    "multimodal-domain-adaptation": [
+      "Evaluated multimodal fusion and adversarial domain adaptation under subject and session changes.",
+      "Research contributor; co-first author of MDA-GCL",
+      "Co-developed the domain-adaptation model and ablations. Contributed to multimodal acquisition protocol design.",
+      "Speech, video, text and biosignals; acquisition target above 3,300 hours",
+      "MDA-GCL accepted at Knowledge-Based Systems in 2026."
+    ],
+    "rppg-deployment": [
+      "Adapted facial pulse-estimation models to Jetson hardware and supported kiosk deployment.",
+      "Algorithm co-development and inference optimization",
+      "Developed rPPG models, converted inference to TensorRT FP16, and integrated embedded inference with the kiosk.",
+      "HEALLO kiosks at approximately 100 NH NongHyup Bank branches in Seoul",
+      "Industry collaboration and field deployment support."
+    ],
+    "kist-ultrasound": [
+      "Registered imaging and tracking coordinates and implemented position control for focused-ultrasound field measurement.",
+      "3D Slicer module and device-control developer",
+      "Implemented coordinate registration, real-time slice updates, VXM stage control, waveform acquisition and module packaging.",
+      "CT/MRI registration, position tracking, ultrasound scanning and field visualization",
+      "Research prototype developed with preclinical researchers."
+    ],
+    "bcg-blood-pressure": [
+      "Estimated blood pressure from two chair BCG channels using a CNN, BiGRU and temporal attention.",
+      "Co-developer of blood-pressure estimation and real-time processing",
+      "Co-developed blood-pressure elevation experiments, synchronized signal acquisition, the estimation model and real-time analysis.",
+      "Back and seat BCG channels connected to a model server and monitoring app",
+      "First-author oral presentation at KOSOMBE 2021."
+    ],
+    "neurosync": [
+      "Combined Korean LLMs with evidence verification to turn intake conversations into structured clinician handoff records.",
+      "Method design and core implementation",
+      "Implemented multi-agent orchestration, retrieval and evidence verification. Integrated the patient app, clinician web interface and backend.",
+      "Rule-based state machine with 10 specialist agents; speech, documents and dialogue",
+      "Eight synthetic personas and 384 evaluation sessions."
+    ],
+    "neurotruth": [
+      "Connected wearable craving estimates and rule-based risk decisions to app notifications and conversational support.",
+      "Technical lead and project manager",
+      "Designed the system and implemented risk logic, backend services, notifications, speech recognition and speech synthesis.",
+      "Four-level craving estimation, state checks and dialogue; MBID remains future work",
+      "Prototype integration and notification-latency evaluation."
+    ],
+    "multiscale-entropy": [
+      "Used moving averages to retain samples when estimating multiscale entropy from short EEG segments.",
+      "Method comparison and co-first authorship",
+      "Analyzed short EEG segments, compared entropy methods, performed statistical tests and contributed to the manuscript.",
+      "Scale-wise ROC AUC on the Bonn and Bern-Barcelona EEG datasets",
+      "Published in Mathematical Biosciences and Engineering, 2024."
+    ]
   },
   "stageEnglish": {
-    "11": ["Candidate physiomarkers of individual craving responses", "Craving responses differ in magnitude and direction across individuals, limiting a single marker's explanatory power.", "Synchronized video stimuli, questionnaires and physiological signals, then compared individual correlations and changes across craving levels.", "Designed acquisition and quality checks at two hospitals. Conducted LMM and SHAP analyses in the expanded cohort.", "The figures show two early 2025 studies: an 11-person exploration and heart-rate examples from a six-person, seven-session study. The 50-person JBHI analysis is a separate expanded study."],
-    "13": ["ASGCRL: adaptive graphs and contrastive learning", "Incorrect connections in fixed similarity graphs can propagate errors when labels are scarce.", "Updated connections with learned representations and used adaptive augmentation to preserve class relationships during contrastive learning.", "Designed the method, implemented the model, conducted ablations and wrote the first-author KBS 2026 paper as a follow-up to SGCL.", "SEED-IV Case 1 uses 2.4% labels and subject-wise transductive evaluation. The embedding illustration for subject 15 is distinct from aggregate accuracy."],
-    "14": ["SimNeXt-EEG: compact temporal attention", "A small motor-imagery model must capture multiple temporal scales and suppress noise.", "Extracted temporal features with multiple kernels and recalibrated time points using parameter-free SimAM attention.", "Designed the model, measured classification accuracy and CPU latency, and conducted ablations for the first-author IEEE SPL 2026 paper.", "BCI Competition IV 2a, session-independent accuracy: 70.81 ± 0.49%. Complexity: 1.84K parameters and 20.69 MFLOPs. Latency: 1.46 ms on a desktop CPU, batch size 1; not a wearable-device measurement."],
-    "16": ["Older-adult speech: acquisition and transcription effects", "Older-adult speech and transcription errors can alter text-based emotion classification.", "Compared speech, original text and transcribed text using the same subject-independent split of fixed-sentence utterances.", "Designed IRB and emotion-elicitation protocols, co-developed models and supported data construction and technology transfer.", "The experiment involved 24 participants aged 66 to 81, seven emotions and 1,512 utterances. Transcription reduced weighted F1; adding speech did not recover this loss under the tested condition."],
-    "17": ["EmotionHeart: dialogue graphs and missing modalities", "The model must represent speaker relationships and modality differences while retaining context when an input is missing.", "Encoded within-speaker, between-speaker and cross-modal relations, then aligned modalities with an augmentation-free contrastive objective.", "Designed the heterogeneous graph and alignment loss and evaluated missing modalities. First author, ICASSP 2026.", "Weighted F1, averaged over 10 random splits. The full-input baseline is Transformer; the audio-only baseline is GRACE. IEMOCAP: 73.13 with all inputs and 60.26 with audio only."],
-    "19": ["MSGCN: fusion within and across signals", "Different feature spaces and limited labels make simple feature concatenation insufficient for representing modality relationships.", "First fused DE and PSD similarity within signals, then diffused cross-signal similarity and classified the resulting graph with a GCN.", "Developed graph fusion and semi-supervised models and supported certification and intellectual-property outputs.", "DEAP, subject-wise transductive evaluation with 120 labels per class. Valence accuracy: 97.37 ± 1.75%; arousal: 97.38 ± 1.68%. The patent is an application, not a granted patent."],
-    "21": ["Longitudinal observation and evaluation design", "Wearable measurements have different sampling intervals and missing-data patterns, complicating early state-change detection.", "Research covers activity, sleep, HRV and skin temperature, heterogeneous relationships, and lagged information flow.", "Contributing to feature construction, graph research and longitudinal state modeling.", "Work is in progress. Cohort size, observation period, final architecture, prediction horizon and quantitative comparisons are not yet established."],
-    "23": ["Related FR-PTT encoder and dual-stream research", "Contactless blood-pressure estimation requires information beyond the pulse waveform alone.", "Combined pulse morphology with 28 pulse-transit-time relations among eight facial regions in a three-branch model.", "Co-developed FR-PTT and contributed to its IJCNN 2026 oral presentation. Studying physiological state representations and LLM interfaces.", "VitalVideos SBP/DBP MAE: 13.13/7.56 mmHg; V4V: 12.16/8.96 mmHg. These are FR-PTT paper results, not final results for the ongoing foundation model."],
-    "25": ["MDA-GCL: multimodal fusion and domain alignment", "EEG and eye-feature distributions change across subjects and sessions.", "Applied graph contrastive and domain-adversarial objectives to a graph built through modality-similarity fusion.", "Co-developed the model and ablations as a co-first author and contributed to acquisition protocols.", "Transductive domain adaptation uses unlabeled target features. Target emotion labels are excluded from training and model selection. SEED-IV cross-subject/session accuracy: 76.1 ± 7.4% / 83.8 ± 8.3%."],
-    "27": ["Remote pulse estimation and kiosk deployment", "Remote pulse models need physiological representations and an inference path suitable for embedded hardware.", "Aligned global and local pulse spectra from the same video to learn shared physiological components without pulse labels.", "Co-developed models, converted inference to TensorRT FP16, integrated Jetson Nano and supported HEALLO field deployment.", "GLCL results are from the related research manuscript. Deployment specifications, device latency and field error require separate evidence. UBFC-rPPG MAE/RMSE: 1.09/1.72 bpm; PURE: 0.26/0.42 bpm; COHFACE: 2.19/5.83 bpm."],
-    "29": ["Coordinate registration and real-time image slices", "CT/MRI volumes, tracking devices and probes use different coordinate systems.", "Connected Reference and RAS coordinates through landmark and surface registration and propagated probe transforms to image slices in real time.", "Developed Python modules for 3D Slicer, integrated devices and packaged the prototype with preclinical researchers.", "Figures are from the original KIST presentations. They document imaging guidance and control implementation, not therapeutic efficacy."],
-    "30": ["Stage movement, waveform acquisition and field maps", "Stage movements accumulate waiting time, and each waveform must remain associated with its measurement location.", "Adjusted VXM movement intervals and waiting times and generated plane-wise field maps from grid measurements.", "Connected robotic movement, waveform acquisition and field visualization within 3D Slicer.", "The original timing calculation compares 14.7 seconds with 4.4 seconds, approximately 3.3 times faster. Targeting error units, reference positions and repeated-trial validation remain to be documented."],
-    "32": ["Two-channel BCG model and real-time service", "Temporal BCG information from the chair back and seat must be connected to real-time blood-pressure display.", "Extracted local features from 10-second windows with a CNN, then used a BiGRU and temporal attention for regression.", "Co-developed acquisition, modeling and real-time processing. Modularized the final TOG project into a public repository.", "The original presentation figure differs from the final code in CNN channel counts. The final code uses 10 convolutional layers with 64/128/256/512 channels, a 64-unit BiGRU and temporal attention."],
-    "33": ["Blood-pressure tracking and reproduction conditions", "Measured resting and post-exercise states for about three hours per participant, with cuff references every two minutes.", "Reported SBP and DBP errors for six participants using within-person temporal splits of 29/14/57%.", "The original experiment used overlapping windows and normalization before splitting. Real-data reevaluation of the refactored code remains necessary.", "The 2021 paper reports mean SBP/DBP MAE of 4.70/3.83 mmHg and RMSE of 6.02/4.90 mmHg. These are original paper results, not a new evaluation of the released refactor."],
-    "35": ["NeuroSync: intake, retrieval and clinician handoff", "Free dialogue must populate clinical slots without allowing unsupported values into the handoff record.", "A rule-based state machine runs 10 specialist agents. Scales use deterministic scoring, and final records undergo source and evidence checks.", "Implemented orchestration, RAG and verification logic and integrated the patient app, clinician interface and backend.", "The architecture and screens document an AI Champion prototype for clinician handoff support. It does not establish diagnoses."],
-    "36": ["NeuroSync: output reliability and inference cost", "Verification blocked 337 unsupported candidates before final output and improved slot coverage and scale assignment.", "The pre-filter unsupported-candidate ratio rose from 46.4% to 55.2%, exposing limitations at the generation stage despite final-output verification.", "Further work concerns reducing calls and tokens and obtaining specialist assessment and clinical proof-of-concept evidence.", "384 synthetic sessions in total, with 144 in the direct comparison. Slot coverage improved from 55.6% to 98.4%; cumulative turn waiting time increased from 4.16 to 9.04 seconds. These are synthetic evaluations, not clinical outcomes."],
-    "38": ["NeuroTruth: sensing, state checks and dialogue", "Wearable predictions must trigger state checks and notifications while keeping dialogue separate from risk decisions.", "Backend rules determine risk levels and notification timing. The app supports state confirmation, questionnaires and speech interaction.", "Served as technical lead and PM; implemented risk logic, backend, notifications, Korean STT and TTS integration.", "The prototype currently supports four-level craving estimation. Bio-linguistic incongruence analysis (MBID) and clinical intervention evaluation remain future work."],
-    "39": ["NeuroTruth: integration and notification latency", "Confirmed the connection between classification, risk decisions, notifications and dialogue in 21 of 21 repeated integration tests.", "A separate camera test processed 10 of 10 static videos. Mean processing time for a 20-second video was 14.8 seconds.", "Next steps are MBID scoring and intervention evaluation, with clinical assessment of approximately 80 participants at two hospitals planned.", "LOSO balanced accuracy: 71%; macro F1: 70%. Mean notification delay: 78.0 ms over Wi-Fi and 121.1 ms over LTE, excluding LLM response time. Camera throughput does not establish heart-rate accuracy or clinical benefit."],
-    "41": ["MDE-MA: multiscale analysis of short EEG", "Coarse-graining reduces sample counts at larger scales, limiting entropy estimation in short segments.", "Used moving averages to retain N-s+1 samples and compared scale-wise ROC AUC with MSE and coarse-grained MDE.", "Analyzed short segments, compared methods and performed statistical tests. Co-first author, MBE 2024.", "The Bonn A segment is a five-second interval centered on the first quartile. ROC AUC measures state separation in public EEG datasets. Bern-Barcelona evaluation distinguishes focal from non-focal EEG."]
+    "11": [
+      "Candidate physiomarkers of individual craving responses",
+      "Craving responses differ in magnitude and direction across individuals, limiting a single marker's explanatory power.",
+      "Synchronized video stimuli, questionnaires and physiological signals, then compared individual correlations and changes across craving levels.",
+      "Designed acquisition and quality checks at two hospitals. Conducted LMM and SHAP analyses in the expanded cohort.",
+      "Figures: an 11-person biomarker study and a six-person heart-rate study. Expanded analysis: 50 patients with AUD and 1,697 trials."
+    ],
+    "13": [
+      "ASGCRL: adaptive graphs and contrastive learning",
+      "Incorrect connections in fixed similarity graphs can propagate errors when labels are scarce.",
+      "Updated connections with learned representations and used adaptive augmentation to preserve class relationships during contrastive learning.",
+      "Designed the method, implemented the model, conducted ablations and wrote the first-author KBS 2026 paper as a follow-up to SGCL.",
+      "SEED-IV Case 1, 2.4% labels, subject-wise transductive evaluation. Embedding example: subject 15."
+    ],
+    "14": [
+      "SimNeXt-EEG: compact temporal attention",
+      "A small motor-imagery model must capture multiple temporal scales and suppress noise.",
+      "Extracted temporal features with multiple kernels and recalibrated time points using parameter-free SimAM attention.",
+      "Designed the model, measured classification accuracy and CPU latency, and conducted ablations for the first-author IEEE SPL 2026 paper.",
+      "BCI Competition IV 2a, session-independent accuracy: 70.81 ± 0.49%. Complexity: 1.84K parameters and 20.69 MFLOPs. Latency: 1.46 ms on a desktop CPU, batch size 1; not a wearable-device measurement."
+    ],
+    "16": [
+      "Older-adult speech: acquisition and transcription effects",
+      "Older-adult speech and transcription errors can alter text-based emotion classification.",
+      "Compared speech, original text and transcribed text using the same subject-independent split of fixed-sentence utterances.",
+      "Designed IRB and emotion-elicitation protocols, co-developed models and supported data construction and technology transfer.",
+      "The experiment involved 24 participants aged 66 to 81, seven emotions and 1,512 utterances. Transcription reduced weighted F1; adding speech did not recover this loss under the tested condition."
+    ],
+    "17": [
+      "EmotionHeart: dialogue graphs and missing modalities",
+      "The model must represent speaker relationships and modality differences while retaining context when an input is missing.",
+      "Encoded within-speaker, between-speaker and cross-modal relations, then aligned modalities with an augmentation-free contrastive objective.",
+      "Designed the heterogeneous graph and alignment loss and evaluated missing modalities. First author, ICASSP 2026.",
+      "Weighted F1, averaged over 10 random splits. The full-input baseline is Transformer; the audio-only baseline is GRACE. IEMOCAP: 73.13 with all inputs and 60.26 with audio only."
+    ],
+    "19": [
+      "MSGCN: fusion within and across signals",
+      "Different feature spaces and limited labels make simple feature concatenation insufficient for representing modality relationships.",
+      "First fused DE and PSD similarity within signals, then diffused cross-signal similarity and classified the resulting graph with a GCN.",
+      "Developed graph fusion and semi-supervised models and supported certification and intellectual-property outputs.",
+      "DEAP, subject-wise transductive evaluation with 120 labels per class. Valence accuracy: 97.37 ± 1.75%; arousal: 97.38 ± 1.68%. The patent is an application, not a granted patent."
+    ],
+    "21": [
+      "Longitudinal observation and evaluation design",
+      "Identify wearable signals that precede changes in mental and metabolic states despite irregular sampling and missing observations.",
+      "Represent activity, sleep, HRV and skin temperature as a heterogeneous graph and analyze lagged relationships.",
+      "Contributing to feature construction, graph modeling and longitudinal evaluation design.",
+      "Model and longitudinal evaluation protocol in development."
+    ],
+    "23": [
+      "Related FR-PTT encoder and dual-stream research",
+      "Contactless blood-pressure estimation requires information beyond the pulse waveform alone.",
+      "Combined pulse morphology with 28 pulse-transit-time relations among eight facial regions in a three-branch model.",
+      "Co-developed FR-PTT and contributed to its IJCNN 2026 oral presentation. Studying physiological state representations and LLM interfaces.",
+      "FR-PTT evaluation on VitalVideos and V4V. The dual-stream foundation model is in development."
+    ],
+    "25": [
+      "MDA-GCL: multimodal fusion and domain alignment",
+      "EEG and eye-feature distributions change across subjects and sessions.",
+      "Applied graph contrastive and domain-adversarial objectives to a graph built through modality-similarity fusion.",
+      "Co-developed the model and ablations as a co-first author and contributed to acquisition protocols.",
+      "Transductive domain adaptation uses unlabeled target features. Target emotion labels are excluded from training and model selection. SEED-IV cross-subject/session accuracy: 76.1 ± 7.4% / 83.8 ± 8.3%."
+    ],
+    "27": [
+      "Remote pulse estimation and kiosk deployment",
+      "Remote pulse models need physiological representations and an inference path suitable for embedded hardware.",
+      "Aligned global and local pulse spectra from the same video to learn shared physiological components without pulse labels.",
+      "Co-developed models, converted inference to TensorRT FP16, integrated Jetson Nano and supported HEALLO field deployment.",
+      "GLCL manuscript evaluation on public datasets; kiosk field performance was not measured in these experiments."
+    ],
+    "29": [
+      "Coordinate registration and real-time image slices",
+      "CT/MRI volumes, tracking devices and probes use different coordinate systems.",
+      "Connected Reference and RAS coordinates through landmark and surface registration and propagated probe transforms to image slices in real time.",
+      "Developed Python modules for 3D Slicer, integrated devices and packaged the prototype with preclinical researchers.",
+      "Image guidance and device control in the KIST research prototype."
+    ],
+    "30": [
+      "Stage movement, waveform acquisition and field maps",
+      "Stage movements accumulate waiting time, and each waveform must remain associated with its measurement location.",
+      "Adjusted VXM movement intervals and waiting times and generated plane-wise field maps from grid measurements.",
+      "Connected robotic movement, waveform acquisition and field visualization within 3D Slicer.",
+      "Calculated movement waiting time: 14.7 to 4.4 seconds, approximately 3.3 times faster."
+    ],
+    "32": [
+      "Two-channel BCG model and real-time service",
+      "Temporal BCG information from the chair back and seat must be connected to real-time blood-pressure display.",
+      "Extracted local features from 10-second windows with a CNN, then used a BiGRU and temporal attention for regression.",
+      "Co-developed synchronized acquisition, the blood-pressure model and the real-time analysis service.",
+      "Final code: 10 convolutional layers, 64/128/256/512 channels and a 64-unit BiGRU. The presentation figure shows an earlier configuration."
+    ],
+    "33": [
+      "Blood-pressure tracking and reproduction conditions",
+      "Recorded resting and post-exercise states for about three hours per participant, with cuff references every two minutes.",
+      "Evaluated SBP and DBP errors for six participants using within-person temporal splits of 29/14/57%.",
+      "",
+      "Results from the 2021 paper: within-person evaluation with overlapping windows and normalization before splitting."
+    ],
+    "35": [
+      "NeuroSync: intake, retrieval and clinician handoff",
+      "Free dialogue must populate clinical slots without allowing unsupported values into the handoff record.",
+      "A rule-based state machine runs 10 specialist agents. Scales use deterministic scoring, and final records undergo source and evidence checks.",
+      "Implemented orchestration, RAG and verification logic and integrated the patient app, clinician interface and backend.",
+      "AI Champion intake prototype for preparing clinician handoff records; it does not make diagnoses."
+    ],
+    "36": [
+      "NeuroSync: output reliability and inference cost",
+      "Verification blocked 337 unsupported candidates before final output and improved slot coverage and scale assignment.",
+      "The pre-filter unsupported-candidate ratio rose from 46.4% to 55.2%, exposing limitations at the generation stage despite final-output verification.",
+      "Further work concerns reducing calls and tokens and obtaining specialist assessment and clinical proof-of-concept evidence.",
+      "Eight synthetic personas, 384 sessions in total; 144 sessions in the direct comparison with a single-backbone baseline."
+    ],
+    "38": [
+      "NeuroTruth: sensing, state checks and dialogue",
+      "Wearable predictions must trigger state checks and notifications while keeping dialogue separate from risk decisions.",
+      "Backend rules determine risk levels and notification timing. The app supports state confirmation, questionnaires and speech interaction.",
+      "Served as technical lead and PM; implemented risk logic, backend, notifications, Korean STT and TTS integration.",
+      "Four-level craving-estimation prototype using PPG and EDA. MBID and clinical intervention evaluation are planned."
+    ],
+    "39": [
+      "NeuroTruth: integration and notification latency",
+      "Confirmed the connection between classification, risk decisions, notifications and dialogue in 21 of 21 repeated integration tests.",
+      "A separate camera test processed 10 of 10 static videos. Mean processing time for a 20-second video was 14.8 seconds.",
+      "Next steps are MBID scoring and intervention evaluation, with clinical assessment of approximately 80 participants at two hospitals planned.",
+      "Notification latency excludes LLM response time. The camera test measured processing success and duration."
+    ],
+    "41": [
+      "MDE-MA: multiscale analysis of short EEG",
+      "Coarse-graining reduces sample counts at larger scales, limiting entropy estimation in short segments.",
+      "Used moving averages to retain N-s+1 samples and compared scale-wise ROC AUC with MSE and coarse-grained MDE.",
+      "Analyzed short segments, compared methods and performed statistical tests. Co-first author, MBE 2024.",
+      "The Bonn A segment is a five-second interval centered on the first quartile. ROC AUC measures state separation in public EEG datasets. Bern-Barcelona evaluation distinguishes focal from non-focal EEG."
+    ]
   },
   "paperNotes": {
-    "sgcl": ["DE와 PSD의 표본 유사도 그래프를 융합하고, 소량 레이블의 분류 손실과 그래프 대조 손실을 함께 학습했다.", "Combined DE and PSD sample-similarity graphs with classification and contrastive objectives under limited labels.", "SEED-IV Case 1 정확도 84.61 ± 4.20%. 레이블 2.4%, 피험자별 transductive 평가로, 새로운 피험자에 대한 일반화 성능과 구분한다.", "SEED-IV Case 1 accuracy: 84.61 ± 4.20% with 2.4% labels. Subject-wise transductive evaluation, distinct from transfer to an unseen subject."],
-    "asgcrl": ["표현에 따라 표본 그래프를 갱신하고 레이블 기반 증강을 적용해 고정 그래프의 잡음 연결을 줄였다.", "Updated sample graphs with learned representations and used label-guided augmentation to reduce noisy connections.", "SEED-IV Case 1에서 Static GCN 75.75 ± 8.95%, ASGCRL 87.31 ± 3.84%. 동일 조건 차이는 11.56%p이다.", "SEED-IV Case 1: 75.75 ± 8.95% for Static GCN and 87.31 ± 3.84% for ASGCRL, a difference of 11.56 percentage points under the same protocol."],
-    "mda-gcl": ["토폴로지를 반영한 모달 융합과 그래프 대조학습, 도메인 적대학습을 결합해 피험자와 세션 간 분포 차이를 다뤘다.", "Combined topology-aware modality fusion, graph contrastive learning and adversarial domain adaptation for subject and session shifts.", "SEED-IV 피험자 간 76.1 ± 7.4%, 세션 간 83.8 ± 8.3%. 비레이블 타깃 특징을 사용하는 transductive 평가이다.", "SEED-IV accuracy: 76.1 ± 7.4% across subjects and 83.8 ± 8.3% across sessions. Evaluation is transductive and uses unlabeled target features."],
-    "simnext-eeg": ["다중 시간척도 합성곱, 파라미터 없는 시간 어텐션, 분리형 정제로 작은 운동상상 EEG 디코더를 구성했다.", "Built a compact motor-imagery EEG decoder using multiscale convolution, parameter-free temporal attention and separable refinement.", "BCI IV 2a 세션 독립 정확도 70.81 ± 0.49%, 파라미터 1.84K, 데스크톱 CPU 지연 1.46 ms(batch size 1).", "BCI IV 2a session-independent accuracy: 70.81 ± 0.49%; 1.84K parameters; 1.46 ms desktop CPU latency at batch size 1."],
-    "sparse-dgcnn": ["EEG 전극 그래프에 행 단위 ℓ₂,₁ 희소성을 적용하고, proximal 갱신으로 불필요한 연결을 줄였다.", "Applied row-wise ℓ₂,₁ sparsity and proximal updates to a learned EEG electrode graph.", "DE 특징의 피험자 독립 정확도는 SEED 78.36 ± 9.53%, SEED-IV 47.67 ± 6.67%. 공개 예제는 합성 데이터 실행이며 원논문 재현 결과가 아니다.", "With DE features, subject-independent accuracy is 78.36 ± 9.53% on SEED and 47.67 ± 6.67% on SEED-IV. The public synthetic example does not reproduce the benchmark results."],
-    "multiscale-entropy": ["이동평균으로 짧은 EEG의 표본 수를 유지하고, 다중척도 분포 엔트로피의 상태 분리 성능을 비교했다.", "Preserved samples through moving averages and compared multiscale distribution entropy for state separation in short EEG.", "Bonn과 Bern-Barcelona 공개 EEG에서 척도별 ROC AUC를 평가했다. 큰 척도에서의 표본 감소 문제를 분석했다.", "Evaluated scale-wise ROC AUC on Bonn and Bern-Barcelona EEG, focusing on sample loss at larger scales."],
-    "nacl": ["대화를 이종 그래프로 표현하고, 마스킹 복원과 이웃 기반 교차모달 대조 정렬로 감정 표현을 학습한다.", "Represents dialogues as heterogeneous graphs and learns emotion representations through masked reconstruction and neighborhood-based cross-modal alignment.", "MELD 사전학습과 IEMOCAP 전이, 입력 모달 결손을 평가한다. 공개 저장소에 사전학습, 미세조정, 평가 설정을 제공한다.", "Studies MELD pretraining, transfer to IEMOCAP and missing input modalities. The repository provides pretraining, fine-tuning and evaluation configurations."],
-    "craving-physiomarkers": ["VR로 유발한 단계별 알코올 갈망에서 ECG, PPG, EDA 후보 생리지표를 분석했다.", "Analyzed ECG, PPG and EDA candidate physiomarkers of graded alcohol craving elicited in VR.", "50명, 1,697 trial, 152개 특징을 대상으로 혼합효과 모형과 SHAP 분석을 수행했다. 후보 지표 연구이며 임상 진단 성능과 구분한다.", "The expanded analysis includes 50 participants, 1,697 trials and 152 features, using mixed-effects models and SHAP. Candidate-marker analysis is distinct from diagnostic validation."],
-    "dls-gcn": ["거리별 그래프 지지집합과 시차를 공유하는 잔차 인접행렬로 상상 발화 EEG의 시공간 관계를 표현한다.", "Models imagined-speech EEG with distance-specific graph supports and residual adjacency shared across temporal lags.", "동일 프로토콜의 피험자 의존 평가: BCI Competition Track 3 정확도 84.33 ± 4.59%, Thinking Out Loud 41.08 ± 2.60%. 공개 실행기는 Track 3에 해당한다.", "Matched subject-dependent accuracy: 84.33 ± 4.59% on BCI Competition Track 3 and 41.08 ± 2.60% on Thinking Out Loud. The released runner covers Track 3."],
-    "glcl-rppg": ["얼굴 영상의 전역 및 국소 맥파 스펙트럼을 대조 정렬해 심박 레이블 없이 표현을 학습한다.", "Aligns global and local pulse spectra from facial video to learn representations without heart-rate labels.", "원고의 UBFC-rPPG MAE 1.09 bpm, PURE 0.26 bpm, COHFACE 2.19 bpm. 실제 키오스크의 현장 오차와 구분한다.", "Manuscript MAE: 1.09 bpm on UBFC-rPPG, 0.26 on PURE and 2.19 on COHFACE. These are separate from kiosk field errors."],
-    "axis-ecg": ["12유도 ECG의 국소 구간과 전역 관계를 순차적으로 처리하는 1D Swin Transformer와 two-way 다중 레이블 손실을 연구한다.", "Studies local-then-global 1D Swin attention and a two-way multilabel loss for 12-lead ECG classification.", "PTB-XL fold 10, 1,000회 bootstrap 평균. AXIS (4,2)의 Macro AUROC 0.9327, 파라미터 644,631개. 모델과 손실 구현을 공개했으며 독립 학습 파이프라인은 준비 중이다.", "PTB-XL fold 10, means over 1,000 bootstrap resamples: AXIS (4,2) Macro AUROC 0.9327 with 644,631 parameters. Model and loss code are available; the standalone training pipeline is pending."],
-    "fr-ptt": ["얼굴 부위 간 맥파 전달시간, 파형 형태, 파형 인코더를 결합해 비접촉 혈압을 추정했다.", "Combined facial pulse transit time, pulse morphology and a waveform encoder for contactless blood-pressure estimation.", "VitalVideos SBP/DBP MAE 13.13/7.56 mmHg, V4V 12.16/8.96 mmHg. IJCNN 2026 구두 발표, 제2저자로 공동 개발에 참여했다.", "SBP/DBP MAE: 13.13/7.56 mmHg on VitalVideos and 12.16/8.96 mmHg on V4V. Co-developed the model as second author; oral presentation at IJCNN 2026."],
-    "emotionheart": ["화자와 모달 관계를 이종 그래프로 인코딩하고, 교차모달 대조 정렬로 대화 감정 인식을 수행했다.", "Encoded speaker and modality relationships in a heterogeneous graph and aligned modalities for conversational emotion recognition.", "Weighted F1: IEMOCAP 73.13%, MELD 68.99%. 음성만 남긴 IEMOCAP 조건에서는 60.26%이며, 전체 입력과 결손 조건의 기준 모델이 다르다.", "Weighted F1: 73.13% on IEMOCAP and 68.99% on MELD. Audio-only IEMOCAP reaches 60.26%; full-input and missing-modality comparisons use different baselines."],
-    "idcl": ["서로 다른 대화의 이웃 표현을 양성 쌍으로 선택해 음성과 텍스트를 대조 정렬했다.", "Selected neighboring representations across dialogues as positive pairs for audio-text contrastive alignment.", "MELD 사전학습 후 IEMOCAP 4분류 weighted F1 85.8%, 6분류 66.6%. 제2저자이자 ICASSP 2026 구두 발표자로 참여했다.", "With MELD pretraining, IEMOCAP weighted F1 is 85.8% for four classes and 66.6% for six classes. Second author and oral presenter at ICASSP 2026."],
-    "balanced-rppg": ["균형 대조학습을 이용해 얼굴 영상에서 원격 심박을 추정했다.", "Used balanced contrastive learning for remote heart-rate estimation from facial video.", "ICEIC 2025 구두 발표 논문. 제2저자로 참여했으며 DOI와 관련 연구 저장소를 연결했다. GLCL 후속 원고의 수치와 구분한다.", "Oral paper at ICEIC 2025, contributed as second author. DOI and the related research repository are provided. Results from the later GLCL manuscript are not attributed to this paper."],
-    "global-emotion-fusion": ["대화의 전역 정보를 융합해 다중모달 감정 인식을 수행한 초기 연구이다.", "An earlier study of global information fusion for multimodal emotion recognition in conversations.", "ITC-CSCC 2024 제1저자 구두 발표. 이후 대화 관계와 모달 정렬을 다루는 EmotionHeart 연구로 확장했다.", "First-author oral paper at ITC-CSCC 2024. Subsequent work on dialogue relations and modality alignment includes EmotionHeart."],
-    "graph-transformer-eeg": ["준지도 EEG 감정 인식을 위해 판별적 그래프 Transformer 모델을 연구했다.", "Studied a discriminative graph Transformer for semi-supervised EEG emotion recognition.", "IEEE ICCE-Asia 2023 제1저자 구두 발표. 논문의 상세 실험 조건과 결과는 연결된 원문에서 확인할 수 있다.", "First-author oral paper at IEEE ICCE-Asia 2023. The linked paper provides experimental conditions and results."],
-    "pdc-gcn": ["Partial Directed Coherence로 EEG 채널의 연결 관계를 구성하고 스펙트럴 GCN으로 감정을 분류했다.", "Constructed EEG channel relationships with Partial Directed Coherence and classified emotions with a spectral GCN.", "IEEE ICCE-Asia 2022 제1저자 구두 발표. EEG 연결성 기반 그래프 학습의 초기 연구이다.", "First-author oral paper at IEEE ICCE-Asia 2022, representing early work on EEG connectivity-based graph learning."],
-    "damc-net": ["시간 및 공간 분기의 다중척도 합성곱, SimAM, 로그 파워 집계로 상상 발화 EEG를 분류한다.", "Classifies imagined-speech EEG using temporal and spatial multiscale branches, SimAM and log-power aggregation.", "BCI Competition Track 3의 15명, 5개 단어를 대상으로 한 피험자 의존 모델. 구현 기준 파라미터 55,749개이며 AAAI 심사 중이다.", "A subject-dependent model for 15 participants and five words in BCI Competition Track 3. The implementation has 55,749 parameters; the manuscript is under review at AAAI."],
-    "graph-mamba": ["시간에 따라 달라지는 공간 관계를 상태공간 모델로 선택하는 그래프 학습을 연구한다.", "Studies state-space modeling for selecting spatial relationships that change over time.", "원고 준비 단계. 최종 구조, 실험 결과와 코드가 공개되면 상세 내용을 갱신할 예정이다.", "Manuscript in preparation. Final architecture, experiments and code have not yet been released."]
+    "sgcl": [
+      "DE와 PSD의 표본 유사도 그래프를 융합하고, 소량 레이블의 분류 손실과 그래프 대조 손실을 함께 학습했다.",
+      "Combined DE and PSD sample-similarity graphs with classification and contrastive objectives under limited labels.",
+      "SEED-IV Case 1 정확도 84.61 ± 4.20%. 레이블 2.4%를 사용한 피험자별 transductive 평가.",
+      "SEED-IV Case 1 accuracy: 84.61 ± 4.20%, with 2.4% labels in subject-wise transductive evaluation."
+    ],
+    "asgcrl": [
+      "표현에 따라 표본 그래프를 갱신하고 레이블 기반 증강을 적용해 고정 그래프의 잡음 연결을 줄였다.",
+      "Updated sample graphs with learned representations and used label-guided augmentation to reduce noisy connections.",
+      "SEED-IV Case 1에서 Static GCN 75.75 ± 8.95%, ASGCRL 87.31 ± 3.84%. 동일 조건 차이는 11.56%p이다.",
+      "SEED-IV Case 1: 75.75 ± 8.95% for Static GCN and 87.31 ± 3.84% for ASGCRL, a difference of 11.56 percentage points under the same protocol."
+    ],
+    "mda-gcl": [
+      "토폴로지를 반영한 모달 융합과 그래프 대조학습, 도메인 적대학습을 결합해 피험자와 세션 간 분포 차이를 다뤘다.",
+      "Combined topology-aware modality fusion, graph contrastive learning and adversarial domain adaptation for subject and session shifts.",
+      "SEED-IV 피험자 간 76.1 ± 7.4%, 세션 간 83.8 ± 8.3%. 비레이블 타깃 특징을 사용하는 transductive 평가이다.",
+      "SEED-IV accuracy: 76.1 ± 7.4% across subjects and 83.8 ± 8.3% across sessions. Evaluation is transductive and uses unlabeled target features."
+    ],
+    "simnext-eeg": [
+      "다중 시간척도 합성곱, 파라미터 없는 시간 어텐션, 분리형 정제로 작은 운동상상 EEG 디코더를 구성했다.",
+      "Built a compact motor-imagery EEG decoder using multiscale convolution, parameter-free temporal attention and separable refinement.",
+      "BCI IV 2a 세션 독립 정확도 70.81 ± 0.49%, 파라미터 1.84K, 데스크톱 CPU 지연 1.46 ms(batch size 1).",
+      "BCI IV 2a session-independent accuracy: 70.81 ± 0.49%; 1.84K parameters; 1.46 ms desktop CPU latency at batch size 1."
+    ],
+    "sparse-dgcnn": [
+      "EEG 전극 그래프에 행 단위 ℓ₂,₁ 희소성을 적용하고, proximal 갱신으로 불필요한 연결을 줄였다.",
+      "Applied row-wise ℓ₂,₁ sparsity and proximal updates to a learned EEG electrode graph.",
+      "DE 특징의 피험자 독립 정확도: SEED 78.36 ± 9.53%, SEED-IV 47.67 ± 6.67%.",
+      "Subject-independent accuracy with DE features: 78.36 ± 9.53% on SEED and 47.67 ± 6.67% on SEED-IV."
+    ],
+    "multiscale-entropy": [
+      "이동평균으로 짧은 EEG의 표본 수를 유지하고, 다중척도 분포 엔트로피의 상태 분리 성능을 비교했다.",
+      "Preserved samples through moving averages and compared multiscale distribution entropy for state separation in short EEG.",
+      "Bonn과 Bern-Barcelona 공개 EEG에서 척도별 ROC AUC를 평가했다. 큰 척도에서의 표본 감소 문제를 분석했다.",
+      "Evaluated scale-wise ROC AUC on Bonn and Bern-Barcelona EEG, focusing on sample loss at larger scales."
+    ],
+    "nacl": [
+      "대화를 이종 그래프로 표현하고, 마스킹 복원과 이웃 기반 교차모달 대조 정렬로 감정 표현을 학습한다.",
+      "Represents dialogues as heterogeneous graphs and learns emotion representations through masked reconstruction and neighborhood-based cross-modal alignment.",
+      "MELD 사전학습, IEMOCAP 전이 학습과 입력 모달 결손 조건을 평가한다.",
+      "Evaluates MELD pretraining, transfer to IEMOCAP and missing input modalities."
+    ],
+    "craving-physiomarkers": [
+      "VR로 유발한 단계별 알코올 갈망에서 ECG, PPG, EDA 후보 생리지표를 분석했다.",
+      "Analyzed ECG, PPG and EDA candidate physiomarkers of graded alcohol craving elicited in VR.",
+      "AUD 환자 50명, 1,697 trial, 생리 특징 152개를 대상으로 혼합효과 모형과 SHAP 분석을 수행했다.",
+      "Mixed-effects and SHAP analyses of 152 physiological features from 50 patients with AUD and 1,697 trials."
+    ],
+    "dls-gcn": [
+      "거리별 그래프 지지집합과 시차를 공유하는 잔차 인접행렬로 상상 발화 EEG의 시공간 관계를 표현한다.",
+      "Models imagined-speech EEG with distance-specific graph supports and residual adjacency shared across temporal lags.",
+      "동일 프로토콜의 피험자 의존 평가: BCI Competition Track 3 정확도 84.33 ± 4.59%, Thinking Out Loud 41.08 ± 2.60%.",
+      "Matched subject-dependent accuracy: 84.33 ± 4.59% on BCI Competition Track 3 and 41.08 ± 2.60% on Thinking Out Loud."
+    ],
+    "glcl-rppg": [
+      "얼굴 영상의 전역 및 국소 맥파 스펙트럼을 대조 정렬해 심박 레이블 없이 표현을 학습한다.",
+      "Aligns global and local pulse spectra from facial video to learn representations without heart-rate labels.",
+      "원고의 UBFC-rPPG MAE 1.09 bpm, PURE 0.26 bpm, COHFACE 2.19 bpm. 실제 키오스크의 현장 오차와 구분한다.",
+      "Manuscript MAE: 1.09 bpm on UBFC-rPPG, 0.26 on PURE and 2.19 on COHFACE. These are separate from kiosk field errors."
+    ],
+    "axis-ecg": [
+      "12유도 ECG의 국소 구간과 전역 관계를 순차적으로 처리하는 1D Swin Transformer와 two-way 다중 레이블 손실을 연구한다.",
+      "Studies local-then-global 1D Swin attention and a two-way multilabel loss for 12-lead ECG classification.",
+      "PTB-XL fold 10에서 1,000회 bootstrap 평균 Macro AUROC 0.9327. AXIS (4,2)의 파라미터 수는 644,631개.",
+      "PTB-XL fold 10, 1,000 bootstrap resamples: mean Macro AUROC 0.9327 for AXIS (4,2), with 644,631 parameters."
+    ],
+    "fr-ptt": [
+      "얼굴 부위 간 맥파 전달시간, 파형 형태, 파형 인코더를 결합해 비접촉 혈압을 추정했다.",
+      "Combined facial pulse transit time, pulse morphology and a waveform encoder for contactless blood-pressure estimation.",
+      "VitalVideos SBP/DBP MAE 13.13/7.56 mmHg, V4V 12.16/8.96 mmHg.",
+      "SBP/DBP MAE: 13.13/7.56 mmHg on VitalVideos and 12.16/8.96 mmHg on V4V."
+    ],
+    "emotionheart": [
+      "화자와 모달 관계를 이종 그래프로 인코딩하고, 교차모달 대조 정렬로 대화 감정 인식을 수행했다.",
+      "Encoded speaker and modality relationships in a heterogeneous graph and aligned modalities for conversational emotion recognition.",
+      "Weighted F1: IEMOCAP 73.13%, MELD 68.99%. 음성만 남긴 IEMOCAP 조건에서는 60.26%이며, 전체 입력과 결손 조건의 기준 모델이 다르다.",
+      "Weighted F1: 73.13% on IEMOCAP and 68.99% on MELD. Audio-only IEMOCAP reaches 60.26%; full-input and missing-modality comparisons use different baselines."
+    ],
+    "idcl": [
+      "서로 다른 대화의 이웃 표현을 양성 쌍으로 선택해 음성과 텍스트를 대조 정렬했다.",
+      "Selected neighboring representations across dialogues as positive pairs for audio-text contrastive alignment.",
+      "MELD 사전학습 후 IEMOCAP 4분류 weighted F1 85.8%, 6분류 66.6%.",
+      "With MELD pretraining, IEMOCAP weighted F1 is 85.8% for four classes and 66.6% for six classes."
+    ],
+    "balanced-rppg": [
+      "균형 대조학습을 이용해 얼굴 영상에서 원격 심박을 추정했다.",
+      "Used balanced contrastive learning for remote heart-rate estimation from facial video.",
+      "",
+      ""
+    ],
+    "global-emotion-fusion": [
+      "대화의 전역 정보를 융합해 다중모달 감정 인식을 수행한 초기 연구이다.",
+      "An earlier study of global information fusion for multimodal emotion recognition in conversations.",
+      "ITC-CSCC 2024 제1저자 구두 발표. 이후 대화 관계와 모달 정렬을 다루는 EmotionHeart 연구로 확장했다.",
+      "First-author oral paper at ITC-CSCC 2024. Subsequent work on dialogue relations and modality alignment includes EmotionHeart."
+    ],
+    "graph-transformer-eeg": [
+      "준지도 EEG 감정 인식을 위해 판별적 그래프 Transformer 모델을 연구했다.",
+      "Studied a discriminative graph Transformer for semi-supervised EEG emotion recognition.",
+      "",
+      ""
+    ],
+    "pdc-gcn": [
+      "Partial Directed Coherence로 EEG 채널의 연결 관계를 구성하고 스펙트럴 GCN으로 감정을 분류했다.",
+      "Constructed EEG channel relationships with Partial Directed Coherence and classified emotions with a spectral GCN.",
+      "",
+      ""
+    ],
+    "damc-net": [
+      "시간 및 공간 분기의 다중척도 합성곱, SimAM, 로그 파워 집계로 상상 발화 EEG를 분류한다.",
+      "Classifies imagined-speech EEG using temporal and spatial multiscale branches, SimAM and log-power aggregation.",
+      "BCI Competition Track 3의 15명, 5개 단어를 대상으로 한 피험자 의존 모델. 구현 기준 파라미터 55,749개이며 AAAI 심사 중이다.",
+      "A subject-dependent model for 15 participants and five words in BCI Competition Track 3. The implementation has 55,749 parameters; the manuscript is under review at AAAI."
+    ],
+    "graph-mamba": [
+      "시간에 따라 달라지는 공간 관계를 상태공간 모델로 선택하는 그래프 학습을 연구한다.",
+      "Studies state-space modeling for selecting spatial relationships that change over time.",
+      "",
+      ""
+    ],
+    "craving-biomarkers-2025": [
+      "알코올 사용장애 환자 11명의 VR 자극 중 ECG, PPG, 피부전도 신호와 갈망 설문을 동기화했다. 심박수, 심박변이도, 맥파 전달시간과 피부전도 반응을 추출하고 개인별 갈망 점수와의 상관을 분석했다.",
+      "Synchronized ECG, PPG and skin conductance with craving ratings during VR stimuli in 11 patients with alcohol use disorder. Analyzed individual correlations with heart rate, HRV, pulse transit time and skin-conductance responses.",
+      "개인별 상관을 바탕으로 상위 특징 25개를 선별했다. ECG 및 PPG의 심박수와 NN 간격 지표가 주요 후보에 포함됐으며, 반응의 크기와 방향에는 개인차가 있었다.",
+      "Selected 25 candidate features from individual correlations. ECG- and PPG-derived heart-rate and NN-interval measures were prominent, with differences in response magnitude and direction across participants."
+    ],
+    "multimodal-gcn-2025": [
+      "EEG와 안구 특징별 유사도 그래프를 구성하고 모달 내부 및 모달 간 유사도를 계층적으로 융합하는 F-MSGCN을 제안했다. 융합 그래프에서 소량 레이블로 GCN 분류기를 학습했다.",
+      "F-MSGCN builds similarity graphs for EEG and eye features, then fuses relationships within and across modalities. A GCN classifier learns from the fused graph with limited labels.",
+      "SEED-IV 15명, 4개 감정의 피험자별 transductive 평가. 클래스당 레이블 120개에서 정확도 99.71 ± 0.31%, 비교 모델 EGFG는 77.18 ± 8.78%.",
+      "Subject-wise transductive evaluation on SEED-IV: 15 participants and four emotions. With 120 labels per class, accuracy was 99.71 ± 0.31%, compared with 77.18 ± 8.78% for EGFG."
+    ],
+    "contactless-bp-2025": [
+      "얼굴 영상에서 POS로 rPPG를 추출하고 대표 맥파 구간에 혈압 관련 특징 51개를 결합했다. 표본 간 유사도 그래프와 2층 GCN으로 수축기 및 이완기 혈압을 추정했다.",
+      "Extracted rPPG with POS and combined a representative pulse segment with 51 blood-pressure features. A two-layer GCN estimates systolic and diastolic pressure from a sample-similarity graph.",
+      "250명이 포함된 Vital Videos VV-Medium에서 rPPG 입력의 SBP MAE 17.42 mmHg, DBP MAE 10.94 mmHg. 같은 모델의 피부색 입력은 각각 18.10, 11.13 mmHg.",
+      "On Vital Videos VV-Medium, which contains 250 participants, rPPG inputs yielded SBP/DBP MAE of 17.42/10.94 mmHg. Skin-color inputs yielded 18.10/11.13 mmHg."
+    ],
+    "rppg-deepfake-2025": [
+      "BiSeNet으로 피부 영역을 분리하고 PhysNet으로 rPPG를 추출했다. 1D CNN의 국소 시간 특징과 Transformer의 전역 의존성을 결합해 실제 영상과 합성 영상을 분류했다.",
+      "Isolated skin regions with BiSeNet and extracted rPPG with PhysNet. A 1D CNN captures local temporal features and a Transformer models global dependencies to classify real and synthetic videos.",
+      "FaceForensics++와 CelebV-HQ 기반 실험. 학습, 검증, 평가를 6:2:2로 분할했으며, 합성곱 3개 구성의 정확도는 88.58%. Transformer 단독은 84.95%.",
+      "Experiments used FaceForensics++ and CelebV-HQ with a 6:2:2 train/validation/test split. Three convolutional blocks reached 88.58% accuracy, compared with 84.95% for the Transformer alone."
+    ],
+    "imagined-speech-2025": [
+      "EEG를 32, 64, 128, 256 Hz로 재표본화하고 각 시간척도에서 1D CNN 특징을 추출했다. 특징을 결합한 뒤 Transformer로 단어를 상상할 때의 EEG를 분류했다.",
+      "Resampled EEG at 32, 64, 128 and 256 Hz and extracted 1D CNN features at each temporal scale. A Transformer combines these features to decode imagined words.",
+      "BCI Competition 2020 Track 3의 15명, 5개 단어에 대한 피험자 의존 평가. 합성곱 2층 구성의 정확도 73.34 ± 3.26%, Transformer 단독 58.89 ± 7.40%.",
+      "Subject-dependent evaluation on BCI Competition 2020 Track 3: 15 participants and five words. Two convolutional layers achieved 73.34 ± 3.26% accuracy, compared with 58.89 ± 7.40% for the Transformer alone."
+    ],
+    "craving-heart-rate-2025": [
+      "알코올 사용장애 환자 6명의 7개 세션에서 VR 자극에 따른 ECG 및 PPG를 수집했다. 피크 간격으로 심박수를 산출하고 낮음, 중간, 높음의 갈망 단계별 반응을 비교했다.",
+      "Recorded ECG and PPG during VR stimuli in seven sessions from six patients with alcohol use disorder. Computed heart rate from peak intervals and compared low, medium and high craving levels.",
+      "다수 참여자에서 갈망 수준이 높아질수록 심박수가 증가했으나, 단계별 변화에는 개인차가 있었다. 3번 참여자의 ECG 평균 심박수는 73.50, 74.01, 74.57 bpm.",
+      "Heart rate generally increased with craving, although responses varied between participants. For participant 3, mean ECG heart rates were 73.50, 74.01 and 74.57 bpm across the three levels."
+    ],
+    "sparse-dgcnn-2024": [
+      "EEG 전극의 연결을 학습하는 DGCNN에 행 단위 L2,1 희소 규제를 적용했다. 5개 주파수 대역의 DE 특징을 사용해 3개 감정을 분류하고 L1 규제와 비교했다.",
+      "Applied row-wise L2,1 sparsity to a DGCNN that learns EEG electrode connections. Classified three emotions using DE features from five frequency bands and compared L1 regularization.",
+      "SEED 15명, 피험자 의존 평가에서 L2,1 정확도 75.52 ± 8.88%. L1은 75.56 ± 8.89%, DGCNN은 74.90 ± 8.20%. L1과 유사한 분류 성능을 보였다.",
+      "Subject-dependent evaluation on SEED, with 15 participants: L2,1 accuracy 75.52 ± 8.88%, L1 75.56 ± 8.89% and DGCNN 74.90 ± 8.20%. Classification performance was comparable to L1."
+    ],
+    "facial-bp-gcn-2024": [
+      "얼굴 피부 영역을 5초 구간으로 나누고 RGB를 YUV로 변환했다. 피부색 변화의 표본 간 유사도 그래프에서 2층 GCN으로 혈압을 추정하며 별도의 맥파 추출 단계를 생략했다.",
+      "Divided facial skin regions into five-second clips and converted RGB to YUV. A two-layer GCN estimates blood pressure from a sample-similarity graph of skin-color changes without a separate pulse-extraction stage.",
+      "VV-Medium 250명, 피험자 독립 70:30 분할의 transductive 평가. 피부색 입력의 SBP/DBP MAE 17.66/10.01 mmHg, rPPG 입력은 19.68/11.67 mmHg.",
+      "Transductive evaluation on VV-Medium with 250 participants and a subject-independent 70:30 split. Skin-color inputs yielded SBP/DBP MAE of 17.66/10.01 mmHg; rPPG inputs yielded 19.68/11.67 mmHg."
+    ],
+    "senior-emotion-2024": [
+      "66~81세 참여자 24명의 7개 감정, 1,512개 발화를 수집했다. 음성과 텍스트 유사도 그래프를 SNF로 융합한 뒤 GCN으로 분류하고 음성 전사 오류의 영향을 비교했다.",
+      "Collected 1,512 utterances spanning seven emotions from 24 participants aged 66 to 81. Fused speech and text similarity graphs with SNF, classified them with a GCN and assessed transcription errors.",
+      "피험자 독립 4-fold 평가에서 원문과 음성 융합의 weighted F1은 92.33%, 전사문과 음성 융합은 81.38%. 해당 조건에서는 음성 추가로 전사 오류에 따른 성능 저하를 회복하지 못했다.",
+      "Subject-independent four-fold evaluation: weighted F1 was 92.33% for speech with original text and 81.38% for speech with transcribed text. Adding speech did not recover the loss from transcription errors under this protocol."
+    ],
+    "multimodal-gcn-2023": [
+      "EEG 14채널, EDA와 PPG 각 1채널의 DE 및 PSD 특징으로 유사도 그래프를 구성했다. 신호 내부와 신호 간 유사도를 순차적으로 융합하고 준지도 GCN으로 감정가와 각성도를 분류했다.",
+      "Built similarity graphs from DE and PSD features of 14 EEG channels and one channel each of EDA and PPG. Fused within-signal and cross-signal similarities before semi-supervised GCN classification of valence and arousal.",
+      "DEAP 32명, 클래스당 레이블 120개의 피험자별 transductive 평가. 감정가 정확도 97.37 ± 1.75%, 각성도 97.38 ± 1.68%.",
+      "Subject-wise transductive evaluation on DEAP, with 32 participants and 120 labels per class. Accuracy: 97.37 ± 1.75% for valence and 97.38 ± 1.68% for arousal."
+    ],
+    "qeeg-gcn-2022": [
+      "EEG를 경험적 모드 분해로 5개 내재 모드 함수로 나누고 동적 미분 엔트로피(DDE)를 추출했다. 이동평균으로 특징을 평활화하고 전극 간 연결을 갱신하는 스펙트럴 GCN으로 감정을 분류했다.",
+      "Decomposed EEG into five intrinsic mode functions and extracted dynamic differential entropy (DDE). Smoothed features with a moving average and classified emotions using a spectral GCN with learned electrode connections.",
+      "SEED 15명의 피험자 의존 평가에서 DDE와 이동평균의 정확도 76.13 ± 4.91%. 기존 DE와 이동평균은 73.39 ± 6.24%.",
+      "Subject-dependent evaluation on SEED with 15 participants: DDE with moving averages reached 76.13 ± 4.91% accuracy, compared with 73.39 ± 6.24% for conventional DE with moving averages."
+    ],
+    "bcg-bp-2021": [
+      "의자의 등과 좌석에서 250 Hz의 2채널 BCG를 수집했다. 10초 구간을 CNN, BiGRU와 시간 어텐션으로 분석해 수축기 및 이완기 혈압을 추정했다.",
+      "Recorded two-channel BCG at 250 Hz from a chair back and seat. A CNN, BiGRU and temporal attention process ten-second windows to estimate systolic and diastolic blood pressure.",
+      "6명, 개인당 약 3시간의 안정 및 운동 후 측정. 개인 내 시간순 29:14:57 분할에서 평균 SBP/DBP MAE 4.70/3.83 mmHg, RMSE 6.02/4.90 mmHg. 중첩 구간과 분할 전 정규화를 사용했다.",
+      "Six participants, with approximately three hours of resting and post-exercise measurements each. Within-person temporal splits of 29:14:57 yielded mean SBP/DBP MAE of 4.70/3.83 mmHg and RMSE of 6.02/4.90 mmHg. The study used overlapping windows and normalization before splitting."
+    ],
+    "bcg-bp-2020": [
+      "의자에 부착한 PVDF 센서의 2채널 BCG를 4~15 Hz로 필터링했다. 1D CNN과 양방향 GRU를 연결해 수작업 맥파 특징 없이 혈압을 추정했다.",
+      "Filtered two-channel BCG from chair-mounted PVDF sensors at 4–15 Hz. Combined a 1D CNN and bidirectional GRU to estimate blood pressure without handcrafted pulse features.",
+      "5명의 안정 상태와 운동 후 신호를 약 3시간씩 수집해 개인 내 학습과 평가를 수행했다. 커프 혈압을 기준으로 예측 오차를 비교했다.",
+      "Collected about three hours of resting and post-exercise recordings from each of five participants. Trained and evaluated within each participant using cuff blood pressure as the reference."
+    ]
   }
 }

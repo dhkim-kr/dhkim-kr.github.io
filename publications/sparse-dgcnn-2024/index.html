@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>L2,1-norm 기반 희소 동적 그래프 컨볼루션 네트워크 | Dae Hyeon Kim</title>
+<meta name="description" content="EEG 전극의 연결을 학습하는 DGCNN에 행 단위 L2,1 희소 규제를 적용했다. 5개 주파수 대역의 DE 특징을 사용해 3개 감정을 분류하고 L1 규제와 비교했다.">
+<link rel="canonical" href="https://dhkim-kr.github.io/publications/sparse-dgcnn-2024/">
+<link rel="alternate" hreflang="ko" href="https://dhkim-kr.github.io/publications/sparse-dgcnn-2024/">
+<link rel="alternate" hreflang="en" href="https://dhkim-kr.github.io/en/publications/sparse-dgcnn-2024/">
+<link rel="alternate" hreflang="x-default" href="https://dhkim-kr.github.io/publications/sparse-dgcnn-2024/">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:title" content="L2,1-norm 기반 희소 동적 그래프 컨볼루션 네트워크">
+<meta property="og:description" content="EEG 전극의 연결을 학습하는 DGCNN에 행 단위 L2,1 희소 규제를 적용했다. 5개 주파수 대역의 DE 특징을 사용해 3개 감정을 분류하고 L1 규제와 비교했다.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dhkim-kr.github.io/publications/sparse-dgcnn-2024/">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/site.css">
+<script src="/assets/site.js" defer>
+</script>
+</head>
+<body>
+<a class="skip" href="#main">본문 바로가기</a>
+<header class="site-header">
+<div class="wrap header-inner">
+<a class="brand" href="/">Dae Hyeon Kim <span>RESEARCH</span>
+</a>
+<button class="menu-button" type="button" aria-expanded="false" aria-controls="main-nav">메뉴</button>
+<nav class="main-nav" id="main-nav" aria-label="주 메뉴">
+<a href="/#about">소개</a>
+<a href="/projects/">프로젝트</a>
+<a href="/publications/">논문</a>
+<a href="/#experience">경력</a>
+<a href="/#contact">연락처</a>
+</nav>
+<a class="language" href="/en/publications/sparse-dgcnn-2024/" lang="en" hreflang="en" aria-label="Switch to English">EN</a>
+</div>
+</header>
+<main id="main">
+<div class="wrap">
+<div class="paper-body">
+<div class="page-intro">
+<div class="breadcrumb">
+<a href="/">홈</a>
+<span>/</span>
+<span>논문</span>
+</div>
+<h1>L2,1-norm 기반 희소 동적 그래프 컨볼루션 네트워크</h1>
+</div>
+<p class="paper-status">포스터</p>
+<dl class="detail-meta">
+<div>
+<dt>학술지/학회</dt>
+<dd>대한전자공학회 하계학술대회</dd>
+</div>
+<div>
+<dt>저자 역할</dt>
+<dd>제2저자</dd>
+</div>
+<div>
+<dt>연도</dt>
+<dd>2024.06</dd>
+</div>
+</dl>
+<p class="paper-authors">
+<strong>저자</strong> 이민석, 김대현, 최영석</p>
+<div class="publication-links">
+<a href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11890912" target="_blank" rel="noopener noreferrer">DBpia</a>
+</div>
+<h2>연구 내용</h2>
+<p>EEG 전극의 연결을 학습하는 DGCNN에 행 단위 L2,1 희소 규제를 적용했다. 5개 주파수 대역의 DE 특징을 사용해 3개 감정을 분류하고 L1 규제와 비교했다.</p>
+<div class="evidence-gallery one">
+<figure>
+<a class="figure-link" href="/assets/figures/sparse-dgcnn-2024-architecture.png" target="_blank" rel="noopener" aria-label="그림 확대: 희소 동적 그래프 컨볼루션 모델">
+<img src="/assets/figures/sparse-dgcnn-2024-architecture.png" alt="희소 동적 그래프 컨볼루션 모델" loading="lazy" width="742" height="304">
+</a>
+<figcaption>희소 동적 그래프 컨볼루션 모델<br>
+<a href="/assets/figures/sparse-dgcnn-2024-architecture.png">원본 그림 확대</a>
+</figcaption>
+</figure>
+</div>
+<h2>결과</h2>
+<p>SEED 15명, 피험자 의존 평가에서 L2,1 정확도 75.52 ± 8.88%. L1은 75.56 ± 8.89%, DGCNN은 74.90 ± 8.20%. L1과 유사한 분류 성능을 보였다.</p>
+<div class="table-wrap" role="region" tabindex="0" aria-label="SEED 피험자 의존 정확도 (%)">
+<table>
+<caption>SEED 피험자 의존 정확도 (%)</caption>
+<thead>
+<tr>
+<th scope="col">모델</th>
+<th scope="col">정확도</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DGCNN</td>
+<td>74.90 ± 8.20</td>
+</tr>
+<tr>
+<td>L1 Sparse DGCNN</td>
+<td>75.56 ± 8.89</td>
+</tr>
+<tr>
+<td>L2,1 Sparse DGCNN</td>
+<td>75.52 ± 8.88</td>
+</tr>
+</tbody>
+</table>
+</div>
+<section class="related">
+<h2>관련 프로젝트</h2>
+<p>
+<a href="/projects/eeg-graph-learning/">EEG 그래프 학습과 경량 디코딩</a>
+</p>
+</section>
+<a href="/publications/" class="text-link">전체 논문 목록</a>
+</div>
+</div>
+</main>
+<footer class="footer" id="contact">
+<div class="wrap">
+<div class="footer-top">
+<div>
+<p class="eyebrow">CONTACT</p>
+<h2>연구 및 협업 연락처</h2>
+<a href="mailto:dhkim1016@kw.ac.kr" class="mail">dhkim1016@kw.ac.kr</a>
+<p class="affiliation">광운대학교 전자통신공학과, NeuroAI Lab<br>서울, 대한민국</p>
+</div>
+<div class="link-list">
+<a href="https://scholar.google.com/citations?user=CcqJMb0AAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+<a href="https://github.com/dhkim-kr" target="_blank" rel="noopener noreferrer">GitHub</a>
+<a href="https://orcid.org/0009-0005-7105-0894" target="_blank" rel="noopener noreferrer">ORCID</a>
+<a href="https://www.linkedin.com/in/dhkim-kr" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 Dae Hyeon Kim</span>
+<span>연구 정보 기준: 2026년 9월</span>
+</div>
+</div>
+</footer>
+</body>
+</html>

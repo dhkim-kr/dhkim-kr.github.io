@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>노년층 발화 음성 다중모달 그래프 표현학습 기반 감정 인식 | Dae Hyeon Kim</title>
+<meta name="description" content="66~81세 참여자 24명의 7개 감정, 1,512개 발화를 수집했다. 음성과 텍스트 유사도 그래프를 SNF로 융합한 뒤 GCN으로 분류하고 음성 전사 오류의 영향을 비교했다.">
+<link rel="canonical" href="https://dhkim-kr.github.io/publications/senior-emotion-2024/">
+<link rel="alternate" hreflang="ko" href="https://dhkim-kr.github.io/publications/senior-emotion-2024/">
+<link rel="alternate" hreflang="en" href="https://dhkim-kr.github.io/en/publications/senior-emotion-2024/">
+<link rel="alternate" hreflang="x-default" href="https://dhkim-kr.github.io/publications/senior-emotion-2024/">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:title" content="노년층 발화 음성 다중모달 그래프 표현학습 기반 감정 인식">
+<meta property="og:description" content="66~81세 참여자 24명의 7개 감정, 1,512개 발화를 수집했다. 음성과 텍스트 유사도 그래프를 SNF로 융합한 뒤 GCN으로 분류하고 음성 전사 오류의 영향을 비교했다.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dhkim-kr.github.io/publications/senior-emotion-2024/">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/site.css">
+<script src="/assets/site.js" defer>
+</script>
+</head>
+<body>
+<a class="skip" href="#main">본문 바로가기</a>
+<header class="site-header">
+<div class="wrap header-inner">
+<a class="brand" href="/">Dae Hyeon Kim <span>RESEARCH</span>
+</a>
+<button class="menu-button" type="button" aria-expanded="false" aria-controls="main-nav">메뉴</button>
+<nav class="main-nav" id="main-nav" aria-label="주 메뉴">
+<a href="/#about">소개</a>
+<a href="/projects/">프로젝트</a>
+<a href="/publications/">논문</a>
+<a href="/#experience">경력</a>
+<a href="/#contact">연락처</a>
+</nav>
+<a class="language" href="/en/publications/senior-emotion-2024/" lang="en" hreflang="en" aria-label="Switch to English">EN</a>
+</div>
+</header>
+<main id="main">
+<div class="wrap">
+<div class="paper-body">
+<div class="page-intro">
+<div class="breadcrumb">
+<a href="/">홈</a>
+<span>/</span>
+<span>논문</span>
+</div>
+<h1>노년층 발화 음성 다중모달 그래프 표현학습 기반 감정 인식</h1>
+</div>
+<p class="paper-status">포스터</p>
+<dl class="detail-meta">
+<div>
+<dt>학술지/학회</dt>
+<dd>대한의용생체공학회 춘계학술대회</dd>
+</div>
+<div>
+<dt>저자 역할</dt>
+<dd>제1저자</dd>
+</div>
+<div>
+<dt>연도</dt>
+<dd>2024.05</dd>
+</div>
+</dl>
+<p class="paper-authors">
+<strong>저자</strong> 김대현, 이민석, 이동혁, 김채민, 박성수, 손재혁, 박철수, 이창현, 이기백, 권새힘, 손량희, 최영석</p>
+<p class="paper-award">우수 포스터상</p>
+<div class="publication-links">
+<a href="https://sites.google.com/view/neuroailab/members-achievements/dae-hyeon-kim" target="_blank" rel="noopener noreferrer">연구실 발표 이력</a>
+</div>
+<h2>연구 내용</h2>
+<p>66~81세 참여자 24명의 7개 감정, 1,512개 발화를 수집했다. 음성과 텍스트 유사도 그래프를 SNF로 융합한 뒤 GCN으로 분류하고 음성 전사 오류의 영향을 비교했다.</p>
+<div class="evidence-gallery one">
+<figure>
+<a class="figure-link" href="/assets/figures/slide-16-1.png" target="_blank" rel="noopener" aria-label="그림 확대: 노년층 음성과 텍스트의 그래프 융합">
+<img src="/assets/figures/slide-16-1.png" alt="노년층 음성과 텍스트의 그래프 융합" loading="lazy" width="375" height="506">
+</a>
+<figcaption>노년층 음성과 텍스트의 그래프 융합<br>
+<a href="/assets/figures/slide-16-1.png">원본 그림 확대</a>
+</figcaption>
+</figure>
+</div>
+<h2>결과</h2>
+<p>피험자 독립 4-fold 평가에서 원문과 음성 융합의 weighted F1은 92.33%, 전사문과 음성 융합은 81.38%. 해당 조건에서는 음성 추가로 전사 오류에 따른 성능 저하를 회복하지 못했다.</p>
+<div class="table-wrap" role="region" tabindex="0" aria-label="음성 및 텍스트 구성별 weighted F1 (%)">
+<table>
+<caption>음성 및 텍스트 구성별 weighted F1 (%)</caption>
+<thead>
+<tr>
+<th scope="col">입력</th>
+<th scope="col">Weighted F1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>원문</td>
+<td>92.33</td>
+</tr>
+<tr>
+<td>음성 + 원문</td>
+<td>92.33</td>
+</tr>
+<tr>
+<td>전사문</td>
+<td>81.64</td>
+</tr>
+<tr>
+<td>음성 + 전사문</td>
+<td>81.38</td>
+</tr>
+</tbody>
+</table>
+</div>
+<section class="related">
+<h2>관련 프로젝트</h2>
+<p>
+<a href="/projects/multimodal-emotion/">다중모달 감정 인식</a>
+</p>
+</section>
+<a href="/publications/" class="text-link">전체 논문 목록</a>
+</div>
+</div>
+</main>
+<footer class="footer" id="contact">
+<div class="wrap">
+<div class="footer-top">
+<div>
+<p class="eyebrow">CONTACT</p>
+<h2>연구 및 협업 연락처</h2>
+<a href="mailto:dhkim1016@kw.ac.kr" class="mail">dhkim1016@kw.ac.kr</a>
+<p class="affiliation">광운대학교 전자통신공학과, NeuroAI Lab<br>서울, 대한민국</p>
+</div>
+<div class="link-list">
+<a href="https://scholar.google.com/citations?user=CcqJMb0AAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+<a href="https://github.com/dhkim-kr" target="_blank" rel="noopener noreferrer">GitHub</a>
+<a href="https://orcid.org/0009-0005-7105-0894" target="_blank" rel="noopener noreferrer">ORCID</a>
+<a href="https://www.linkedin.com/in/dhkim-kr" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 Dae Hyeon Kim</span>
+<span>연구 정보 기준: 2026년 9월</span>
+</div>
+</div>
+</footer>
+</body>
+</html>

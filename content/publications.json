@@ -314,5 +314,753 @@
       "https://github.com/dhkim-kr/graph-mamba"
     ],
     "related": null
+  },
+  {
+    "slug": "craving-biomarkers-2025",
+    "title": "Correlation Analysis of Biomarkers using Multimodal Biosignals for Detecting Craving States in Patients with Substance Use Disorder",
+    "titleKo": "물질중독 갈망 상태 인지를 위한 멀티모달 생체신호 바이오마커 분석",
+    "venue": "대한전자공학회 추계학술대회",
+    "venueEn": "IEIE Autumn Annual Conference",
+    "date": "2025.11",
+    "year": 2025,
+    "type": "domestic_conference",
+    "status": "포스터",
+    "group": "domestic",
+    "role": "제2저자",
+    "authors": {
+      "ko": "이민석, 김대현, 이동혁, 이준영, 권민아, 한지은, 황재연, 김지혜, 이상규, 안무업, 장재린, 최영석",
+      "en": "Min Seok Lee, Dae Hyeon Kim, Dong Hyuk Lee, Joon-Young Lee, Mina Kwon, Ji Eun Han, Jae Yeon Hwang, Ji-hye Kim, Sang-Kyu Lee, Moo Eob Ann, Jae Reen Jang, Young-Seok Choi"
+    },
+    "links": [
+      "https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12551203"
+    ],
+    "related": "alcohol-craving",
+    "figures": [
+      {
+        "src": "/assets/figures/slide-11-1.png",
+        "caption": "11명에서 갈망 점수와 생리 특징의 상관",
+        "captionEn": "Correlations between craving ratings and physiological features in 11 participants"
+      }
+    ]
+  },
+  {
+    "slug": "multimodal-gcn-2025",
+    "title": "Semi-supervised Graph Convolutional Network for Emotion Recognition using Multimodal Biosignals Fusion",
+    "titleKo": "다중 생체 신호 융합 기반 감정인식을 위한 준지도 그래프 컨볼루션 신경망",
+    "venue": "대한전자공학회 추계학술대회",
+    "venueEn": "IEIE Autumn Annual Conference",
+    "date": "2025.11",
+    "year": 2025,
+    "type": "domestic_conference",
+    "status": "구두",
+    "group": "domestic",
+    "role": "제2저자",
+    "authors": {
+      "ko": "이준영, 김대현, 이민석, 최영석",
+      "en": "Joon-Young Lee, Dae Hyeon Kim, Min Seok Lee, Young-Seok Choi"
+    },
+    "links": [
+      "https://sites.google.com/view/neuroailab/members-achievements/dae-hyeon-kim"
+    ],
+    "related": "multimodal-emotion",
+    "linkLabels": {
+      "https://sites.google.com/view/neuroailab/members-achievements/dae-hyeon-kim": {
+        "ko": "연구실 발표 이력",
+        "en": "Lab publication record"
+      }
+    },
+    "figures": [
+      {
+        "src": "/assets/figures/multimodal-gcn-2025-architecture.png",
+        "caption": "F-MSGCN의 특징별 유사도 및 모달 융합",
+        "captionEn": "Feature-specific similarity and modality fusion in F-MSGCN"
+      }
+    ],
+    "tables": [
+      {
+        "caption": {
+          "ko": "SEED-IV 피험자별 정확도 (%)",
+          "en": "SEED-IV subject-wise accuracy (%)"
+        },
+        "rows": [
+          [
+            {
+              "text": "모델"
+            },
+            {
+              "text": "정확도"
+            }
+          ],
+          [
+            {
+              "text": "EGFG"
+            },
+            {
+              "text": "77.18 ± 8.78"
+            }
+          ],
+          [
+            {
+              "text": "F-MSGCN"
+            },
+            {
+              "text": "99.71 ± 0.31"
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "contactless-bp-2025",
+    "title": "Contactless Blood Pressure Estimation based on Graph Convolution Network with Semi-supervised Learning",
+    "titleKo": "준지도 학습 기반 그래프 컨볼루션 네트워크를 활용한 비접촉식 혈압 추정",
+    "venue": "대한전자공학회 추계학술대회",
+    "venueEn": "IEIE Autumn Annual Conference",
+    "date": "2025.11",
+    "year": 2025,
+    "type": "domestic_conference",
+    "status": "구두",
+    "group": "domestic",
+    "role": "제2저자",
+    "authors": {
+      "ko": "조서현, 김대현, 최영석",
+      "en": "Seo Hyun Jho, Dae Hyeon Kim, Young-Seok Choi"
+    },
+    "links": [
+      "https://sites.google.com/view/neuroailab/members-achievements/dae-hyeon-kim"
+    ],
+    "related": "rppg-deployment",
+    "linkLabels": {
+      "https://sites.google.com/view/neuroailab/members-achievements/dae-hyeon-kim": {
+        "ko": "연구실 발표 이력",
+        "en": "Lab publication record"
+      }
+    },
+    "figures": [
+      {
+        "src": "/assets/figures/contactless-bp-2025-architecture.png",
+        "caption": "rPPG 구간 및 특징 기반 GCN 혈압 추정",
+        "captionEn": "GCN blood-pressure estimation from rPPG segments and features"
+      }
+    ],
+    "tables": [
+      {
+        "caption": {
+          "ko": "입력별 혈압 MAE (mmHg)",
+          "en": "Blood-pressure MAE by input (mmHg)"
+        },
+        "rows": [
+          [
+            {
+              "text": "입력"
+            },
+            {
+              "text": "SBP"
+            },
+            {
+              "text": "DBP"
+            }
+          ],
+          [
+            {
+              "text": "피부색"
+            },
+            {
+              "text": "18.10"
+            },
+            {
+              "text": "11.13"
+            }
+          ],
+          [
+            {
+              "text": "rPPG"
+            },
+            {
+              "text": "17.42"
+            },
+            {
+              "text": "10.94"
+            }
+          ],
+          [
+            {
+              "text": "접촉식 PPG"
+            },
+            {
+              "text": "15.71"
+            },
+            {
+              "text": "10.89"
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "rppg-deepfake-2025",
+    "title": "Robust Deepfake Detection using a 1D Convolution-Transformer Hybrid Model based on Remote Photoplethysmography Signals",
+    "titleKo": "원격 광용적맥파 신호 기반 1D 컨볼루션-트랜스포머 하이브리드 모델을 활용한 강건한 딥페이크 탐지",
+    "venue": "대한전자공학회 추계학술대회",
+    "venueEn": "IEIE Autumn Annual Conference",
+    "date": "2025.11",
+    "year": 2025,
+    "type": "domestic_conference",
+    "status": "구두",
+    "group": "domestic",
+    "role": "제4저자",
+    "authors": {
+      "ko": "김승원, 문경준, 마경빈, 김대현, 최영석",
+      "en": "Seung Won Kim, Kyung Jun Moon, Gyeong Bin Ma, Dae Hyeon Kim, Young-Seok Choi"
+    },
+    "links": [
+      "https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12551067"
+    ],
+    "related": "rppg-deployment",
+    "figures": [
+      {
+        "src": "/assets/figures/rppg-deepfake-2025-architecture.png",
+        "caption": "피부 영역 분리, rPPG 추출과 딥페이크 분류",
+        "captionEn": "Skin segmentation, rPPG extraction and deepfake classification"
+      }
+    ]
+  },
+  {
+    "slug": "imagined-speech-2025",
+    "title": "Multiscale 1D Convolution-Transformer Model for Imagined Speech Decoding",
+    "titleKo": "멀티스케일 1차원 컨볼루션-트랜스포머 모델 기반 발화심상 디코딩",
+    "venue": "대한전자공학회 추계학술대회",
+    "venueEn": "IEIE Autumn Annual Conference",
+    "date": "2025.11",
+    "year": 2025,
+    "type": "domestic_conference",
+    "status": "구두",
+    "group": "domestic",
+    "role": "제3저자",
+    "authors": {
+      "ko": "김승원, 문경준, 김대현, 최영석",
+      "en": "Seung Won Kim, Kyung-Jun Moon, Dae Hyeon Kim, Young-Seok Choi"
+    },
+    "links": [
+      "https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12551066"
+    ],
+    "related": "eeg-graph-learning",
+    "figures": [
+      {
+        "src": "/assets/figures/imagined-speech-2025-architecture.png",
+        "caption": "다중 샘플링과 1D CNN-Transformer 발화심상 디코더",
+        "captionEn": "Multisampling and the 1D CNN-Transformer imagined-speech decoder"
+      }
+    ],
+    "tables": [
+      {
+        "caption": {
+          "ko": "합성곱 층 수에 따른 정확도 (%)",
+          "en": "Accuracy by convolutional depth (%)"
+        },
+        "rows": [
+          [
+            {
+              "text": "모델"
+            },
+            {
+              "text": "정확도"
+            }
+          ],
+          [
+            {
+              "text": "Transformer"
+            },
+            {
+              "text": "58.89 ± 7.40"
+            }
+          ],
+          [
+            {
+              "text": "1D CNN 1층 + Transformer"
+            },
+            {
+              "text": "66.00 ± 6.35"
+            }
+          ],
+          [
+            {
+              "text": "1D CNN 2층 + Transformer"
+            },
+            {
+              "text": "73.34 ± 3.26"
+            }
+          ],
+          [
+            {
+              "text": "1D CNN 3층 + Transformer"
+            },
+            {
+              "text": "71.11 ± 4.29"
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "craving-heart-rate-2025",
+    "title": "A Study on the Exploration of Physiological Biomarkers for Classifying Alcohol Craving Levels Based on Heart Rate Responses",
+    "titleKo": "심박 반응 기반 알코올 갈망 수준 구분을 위한 생체신호 바이오마커 탐색 연구",
+    "venue": "대한전자공학회 하계학술대회",
+    "venueEn": "IEIE Summer Annual Conference",
+    "date": "2025.06",
+    "year": 2025,
+    "type": "domestic_conference",
+    "status": "포스터",
+    "group": "domestic",
+    "role": "제4저자",
+    "authors": {
+      "ko": "이민석, 이준영, 이동혁, 김대현, 권민아, 한지은, 황재연, 장재린, 최영석",
+      "en": "Min Seok Lee, Joon-Young Lee, Dong Hyuk Lee, Dae Hyeon Kim, Mina Kwon, Ji Eun Han, Jae Yeon Hwang, Jae Reen Jang, Young-Seok Choi"
+    },
+    "links": [
+      "https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12331474"
+    ],
+    "related": "alcohol-craving",
+    "figures": [
+      {
+        "src": "/assets/figures/slide-11-2.png",
+        "caption": "3번 참여자의 갈망 단계별 심박수",
+        "captionEn": "Heart rate across craving levels for participant 3"
+      },
+      {
+        "src": "/assets/figures/slide-11-3.png",
+        "caption": "5번 참여자의 갈망 단계별 심박수",
+        "captionEn": "Heart rate across craving levels for participant 5"
+      }
+    ]
+  },
+  {
+    "slug": "sparse-dgcnn-2024",
+    "title": "L2,1-norm-based Sparse Dynamic Graph Convolution Neural Network",
+    "titleKo": "L2,1-norm 기반 희소 동적 그래프 컨볼루션 네트워크",
+    "venue": "대한전자공학회 하계학술대회",
+    "venueEn": "IEIE Summer Annual Conference",
+    "date": "2024.06",
+    "year": 2024,
+    "type": "domestic_conference",
+    "status": "포스터",
+    "group": "domestic",
+    "role": "제2저자",
+    "authors": {
+      "ko": "이민석, 김대현, 최영석",
+      "en": "Min Seok Lee, Dae Hyeon Kim, Young-Seok Choi"
+    },
+    "links": [
+      "https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11890912"
+    ],
+    "related": "eeg-graph-learning",
+    "figures": [
+      {
+        "src": "/assets/figures/sparse-dgcnn-2024-architecture.png",
+        "caption": "희소 동적 그래프 컨볼루션 모델",
+        "captionEn": "Sparse dynamic graph convolutional model"
+      }
+    ],
+    "tables": [
+      {
+        "caption": {
+          "ko": "SEED 피험자 의존 정확도 (%)",
+          "en": "SEED subject-dependent accuracy (%)"
+        },
+        "rows": [
+          [
+            {
+              "text": "모델"
+            },
+            {
+              "text": "정확도"
+            }
+          ],
+          [
+            {
+              "text": "DGCNN"
+            },
+            {
+              "text": "74.90 ± 8.20"
+            }
+          ],
+          [
+            {
+              "text": "L1 Sparse DGCNN"
+            },
+            {
+              "text": "75.56 ± 8.89"
+            }
+          ],
+          [
+            {
+              "text": "L2,1 Sparse DGCNN"
+            },
+            {
+              "text": "75.52 ± 8.88"
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "facial-bp-gcn-2024",
+    "title": "Facial Video-based Contactless Blood Pressure Estimation Using End-to-End Graph Convolutional Network",
+    "titleKo": "종단형 그래프 컨볼루션 신경망을 활용한 얼굴영상 기반 비접촉식 혈압 추정",
+    "venue": "대한전자공학회 하계학술대회",
+    "venueEn": "IEIE Summer Annual Conference",
+    "date": "2024.06",
+    "year": 2024,
+    "type": "domestic_conference",
+    "status": "포스터",
+    "group": "domestic",
+    "role": "제1저자",
+    "authors": {
+      "ko": "김대현, 최영석",
+      "en": "Dae Hyeon Kim, Young-Seok Choi"
+    },
+    "links": [
+      "https://sites.google.com/view/neuroailab/members-achievements/dae-hyeon-kim"
+    ],
+    "related": "rppg-deployment",
+    "linkLabels": {
+      "https://sites.google.com/view/neuroailab/members-achievements/dae-hyeon-kim": {
+        "ko": "연구실 발표 이력",
+        "en": "Lab publication record"
+      }
+    },
+    "figures": [
+      {
+        "src": "/assets/figures/facial-bp-gcn-2024-architecture.png",
+        "caption": "피부색 변화의 그래프 기반 혈압 추정",
+        "captionEn": "Graph-based blood-pressure estimation from skin-color changes"
+      }
+    ],
+    "tables": [
+      {
+        "caption": {
+          "ko": "입력별 혈압 MAE (mmHg)",
+          "en": "Blood-pressure MAE by input (mmHg)"
+        },
+        "rows": [
+          [
+            {
+              "text": "입력"
+            },
+            {
+              "text": "SBP"
+            },
+            {
+              "text": "DBP"
+            }
+          ],
+          [
+            {
+              "text": "접촉식 PPG"
+            },
+            {
+              "text": "17.37"
+            },
+            {
+              "text": "10.02"
+            }
+          ],
+          [
+            {
+              "text": "rPPG"
+            },
+            {
+              "text": "19.68"
+            },
+            {
+              "text": "11.67"
+            }
+          ],
+          [
+            {
+              "text": "피부색"
+            },
+            {
+              "text": "17.66"
+            },
+            {
+              "text": "10.01"
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "senior-emotion-2024",
+    "title": "Emotion Recognition based on Multimodal Graph Representation Learning of Senior Utterance",
+    "titleKo": "노년층 발화 음성 다중모달 그래프 표현학습 기반 감정 인식",
+    "venue": "대한의용생체공학회 춘계학술대회",
+    "venueEn": "KOSOMBE Spring Conference",
+    "date": "2024.05",
+    "year": 2024,
+    "type": "domestic_conference",
+    "status": "포스터",
+    "group": "domestic",
+    "role": "제1저자",
+    "authors": {
+      "ko": "김대현, 이민석, 이동혁, 김채민, 박성수, 손재혁, 박철수, 이창현, 이기백, 권새힘, 손량희, 최영석",
+      "en": "Dae Hyeon Kim, Min Seok Lee, Dong Hyuk Lee, Chae-min Kim, Sung Soo Park, Jae Hyeok Son, Cheolsoo Park, ChangHyun Lee, Ki-Baek Lee, Saehim Kwon, Ryanghee Sohn, Young-Seok Choi"
+    },
+    "links": [
+      "https://sites.google.com/view/neuroailab/members-achievements/dae-hyeon-kim"
+    ],
+    "related": "multimodal-emotion",
+    "linkLabels": {
+      "https://sites.google.com/view/neuroailab/members-achievements/dae-hyeon-kim": {
+        "ko": "연구실 발표 이력",
+        "en": "Lab publication record"
+      }
+    },
+    "award": {
+      "ko": "우수 포스터상",
+      "en": "Best Poster Award"
+    },
+    "figures": [
+      {
+        "src": "/assets/figures/slide-16-1.png",
+        "caption": "노년층 음성과 텍스트의 그래프 융합",
+        "captionEn": "Graph fusion of older-adult speech and text"
+      }
+    ],
+    "tables": [
+      {
+        "caption": {
+          "ko": "음성 및 텍스트 구성별 weighted F1 (%)",
+          "en": "Weighted F1 by speech and text input (%)"
+        },
+        "rows": [
+          [
+            {
+              "text": "입력"
+            },
+            {
+              "text": "Weighted F1"
+            }
+          ],
+          [
+            {
+              "text": "원문"
+            },
+            {
+              "text": "92.33"
+            }
+          ],
+          [
+            {
+              "text": "음성 + 원문"
+            },
+            {
+              "text": "92.33"
+            }
+          ],
+          [
+            {
+              "text": "전사문"
+            },
+            {
+              "text": "81.64"
+            }
+          ],
+          [
+            {
+              "text": "음성 + 전사문"
+            },
+            {
+              "text": "81.38"
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "multimodal-gcn-2023",
+    "title": "Semi-supervised Graph Convolution Neural Network based Emotion Recognition using Multimodal Biosignals",
+    "titleKo": "다중모달 생체신호를 활용한 준지도 그래프 신경망 기반 감정 인식",
+    "venue": "한국방송미디어공학회 하계학술대회",
+    "venueEn": "KIBME Summer Conference",
+    "date": "2023.06",
+    "year": 2023,
+    "type": "domestic_conference",
+    "status": "구두",
+    "group": "domestic",
+    "role": "제1저자",
+    "authors": {
+      "ko": "김대현, 최영석",
+      "en": "Dae Hyeon Kim, Young Seok Choi"
+    },
+    "links": [
+      "https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11514165"
+    ],
+    "related": "time-series-fusion",
+    "figures": [
+      {
+        "src": "/assets/figures/slide-19-1.png",
+        "caption": "EEG, EDA와 PPG의 계층적 유사도 융합",
+        "captionEn": "Hierarchical similarity fusion of EEG, EDA and PPG"
+      }
+    ]
+  },
+  {
+    "slug": "qeeg-gcn-2022",
+    "title": "Quantitative EEG based Emotion Recognition Using Graph Convolutional Neural Network",
+    "titleKo": "그래프 컨볼루션 신경망을 이용한 정량화 뇌파 기반 감정 인식",
+    "venue": "대한전자공학회 하계학술대회",
+    "venueEn": "IEIE Summer Annual Conference",
+    "date": "2022.06",
+    "year": 2022,
+    "type": "domestic_conference",
+    "status": "구두",
+    "group": "domestic",
+    "role": "제1저자",
+    "authors": {
+      "ko": "김대현, 최영석",
+      "en": "Dae-Hyeon Kim, Young-Seok Choi"
+    },
+    "links": [
+      "https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11132708"
+    ],
+    "related": "eeg-graph-learning",
+    "figures": [
+      {
+        "src": "/assets/figures/qeeg-gcn-2022-architecture.png",
+        "caption": "DDE 특징과 동적 전극 그래프를 이용한 감정 인식",
+        "captionEn": "Emotion recognition with DDE features and a learned electrode graph"
+      }
+    ],
+    "tables": [
+      {
+        "caption": {
+          "ko": "EEG 특징별 정확도 (%)",
+          "en": "Accuracy by EEG feature (%)"
+        },
+        "rows": [
+          [
+            {
+              "text": "특징"
+            },
+            {
+              "text": "정확도"
+            }
+          ],
+          [
+            {
+              "text": "DE"
+            },
+            {
+              "text": "69.32 ± 12.69"
+            }
+          ],
+          [
+            {
+              "text": "DE + 이동평균"
+            },
+            {
+              "text": "73.39 ± 6.24"
+            }
+          ],
+          [
+            {
+              "text": "DDE"
+            },
+            {
+              "text": "70.37 ± 9.79"
+            }
+          ],
+          [
+            {
+              "text": "DDE + 이동평균"
+            },
+            {
+              "text": "76.13 ± 4.91"
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "bcg-bp-2021",
+    "title": "Blood Pressure Estimation based on Real-Time Deep Learning Analysis on BCG",
+    "titleKo": "BCG 신호 실시간 딥러닝 분석을 통한 혈압 추정",
+    "venue": "대한의용생체공학회 춘계학술대회",
+    "venueEn": "KOSOMBE Spring Conference",
+    "date": "2021.05",
+    "year": 2021,
+    "type": "domestic_conference",
+    "status": "구두",
+    "group": "domestic",
+    "role": "제1저자",
+    "authors": {
+      "ko": "김대현, 조현우, 고건영, 최재혁, 서유정, 유재원, 손량희, 박철수",
+      "en": "Dae Hyeon Kim, Hyeonwoo Cho, Keonyoung Ko, Jaehyeok Choi, Youjung Seo, Jaewon Yu, Ryanghee Son, Cheolsoo Park"
+    },
+    "links": [
+      "https://sites.google.com/view/neuroailab/members-achievements/dae-hyeon-kim"
+    ],
+    "related": "bcg-blood-pressure",
+    "linkLabels": {
+      "https://sites.google.com/view/neuroailab/members-achievements/dae-hyeon-kim": {
+        "ko": "연구실 발표 이력",
+        "en": "Lab publication record"
+      }
+    },
+    "figures": [
+      {
+        "src": "/assets/figures/slide-33-1.png",
+        "caption": "수축기 혈압의 커프 측정값과 BCG 예측 예시",
+        "captionEn": "Example systolic cuff measurements and BCG predictions"
+      },
+      {
+        "src": "/assets/figures/slide-33-2.png",
+        "caption": "이완기 혈압의 커프 측정값과 BCG 예측 예시",
+        "captionEn": "Example diastolic cuff measurements and BCG predictions"
+      }
+    ]
+  },
+  {
+    "slug": "bcg-bp-2020",
+    "title": "Deep learning based blood pressure estimation using ballistocardiogram",
+    "titleKo": "Balistocardiogram을 이용한 딥러닝 기반 혈압 추정",
+    "venue": "제30회 신호처리합동학술대회",
+    "venueEn": "30th Joint Conference on Signal Processing",
+    "date": "2020.09",
+    "year": 2020,
+    "type": "domestic_conference",
+    "status": "구두",
+    "group": "domestic",
+    "role": "제4저자",
+    "authors": {
+      "ko": "서유정, 이원규, 고건영, 김대현, 조현우, 최재혁, 유재원, 손량희, 박철수",
+      "en": "You-Jung Seo, Won-Gyu Lee, Keon-Young Kho, Dae-Hyun Kim, Hyun-woo Cho, Jae-Hyuk Choi, Jaewon Yu, Ryang-hee Sohn, Cheol-Soo Park"
+    },
+    "links": [
+      "https://sites.google.com/view/neuroailab/members-achievements/dae-hyeon-kim"
+    ],
+    "related": "bcg-blood-pressure",
+    "linkLabels": {
+      "https://sites.google.com/view/neuroailab/members-achievements/dae-hyeon-kim": {
+        "ko": "연구실 발표 이력",
+        "en": "Lab publication record"
+      }
+    },
+    "figures": [
+      {
+        "src": "/assets/figures/bcg-bp-2020-architecture.png",
+        "caption": "2채널 BCG 입력의 CNN 및 양방향 GRU",
+        "captionEn": "CNN and bidirectional GRU for two-channel BCG"
+      }
+    ]
   }
 ]

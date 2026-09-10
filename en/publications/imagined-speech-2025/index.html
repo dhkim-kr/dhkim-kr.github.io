@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Multiscale 1D Convolution-Transformer Model for Imagined Speech Decoding | Dae Hyeon Kim</title>
+<meta name="description" content="Resampled EEG at 32, 64, 128 and 256 Hz and extracted 1D CNN features at each temporal scale. A Transformer combines these features to decode imagined words.">
+<link rel="canonical" href="https://dhkim-kr.github.io/en/publications/imagined-speech-2025/">
+<link rel="alternate" hreflang="ko" href="https://dhkim-kr.github.io/publications/imagined-speech-2025/">
+<link rel="alternate" hreflang="en" href="https://dhkim-kr.github.io/en/publications/imagined-speech-2025/">
+<link rel="alternate" hreflang="x-default" href="https://dhkim-kr.github.io/publications/imagined-speech-2025/">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:title" content="Multiscale 1D Convolution-Transformer Model for Imagined Speech Decoding">
+<meta property="og:description" content="Resampled EEG at 32, 64, 128 and 256 Hz and extracted 1D CNN features at each temporal scale. A Transformer combines these features to decode imagined words.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dhkim-kr.github.io/en/publications/imagined-speech-2025/">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/site.css">
+<script src="/assets/site.js" defer>
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="wrap header-inner">
+<a class="brand" href="/en/">Dae Hyeon Kim <span>RESEARCH</span>
+</a>
+<button class="menu-button" type="button" aria-expanded="false" aria-controls="main-nav">Menu</button>
+<nav class="main-nav" id="main-nav" aria-label="Main navigation">
+<a href="/en/#about">About</a>
+<a href="/en/projects/">Projects</a>
+<a href="/en/publications/">Publications</a>
+<a href="/en/#experience">Experience</a>
+<a href="/en/#contact">Contact</a>
+</nav>
+<a class="language" href="/publications/imagined-speech-2025/" lang="ko" hreflang="ko" aria-label="한국어로 보기">한국어</a>
+</div>
+</header>
+<main id="main">
+<div class="wrap">
+<div class="paper-body">
+<div class="page-intro">
+<div class="breadcrumb">
+<a href="/en/">Home</a>
+<span>/</span>
+<span>Publications</span>
+</div>
+<h1>Multiscale 1D Convolution-Transformer Model for Imagined Speech Decoding</h1>
+</div>
+<p class="paper-status">Oral presentation</p>
+<dl class="detail-meta">
+<div>
+<dt>Venue</dt>
+<dd>IEIE Autumn Annual Conference</dd>
+</div>
+<div>
+<dt>Author role</dt>
+<dd>Third author</dd>
+</div>
+<div>
+<dt>Year</dt>
+<dd>2025.11</dd>
+</div>
+</dl>
+<p class="paper-authors">
+<strong>Authors</strong> Seung Won Kim, Kyung-Jun Moon, Dae Hyeon Kim, Young-Seok Choi</p>
+<div class="publication-links">
+<a href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12551066" target="_blank" rel="noopener noreferrer">DBpia</a>
+</div>
+<h2>Research approach</h2>
+<p>Resampled EEG at 32, 64, 128 and 256 Hz and extracted 1D CNN features at each temporal scale. A Transformer combines these features to decode imagined words.</p>
+<div class="evidence-gallery one">
+<figure>
+<a class="figure-link" href="/assets/figures/imagined-speech-2025-architecture.png" target="_blank" rel="noopener" aria-label="Enlarge figure: Multisampling and the 1D CNN-Transformer imagined-speech decoder">
+<img src="/assets/figures/imagined-speech-2025-architecture.png" alt="Multisampling and the 1D CNN-Transformer imagined-speech decoder" loading="lazy" width="1546" height="662">
+</a>
+<figcaption>Multisampling and the 1D CNN-Transformer imagined-speech decoder<br>
+<a href="/assets/figures/imagined-speech-2025-architecture.png">View full-size figure</a>
+</figcaption>
+</figure>
+</div>
+<h2>Results</h2>
+<p>Subject-dependent evaluation on BCI Competition 2020 Track 3: 15 participants and five words. Two convolutional layers achieved 73.34 ± 3.26% accuracy, compared with 58.89 ± 7.40% for the Transformer alone.</p>
+<div class="table-wrap" role="region" tabindex="0" aria-label="Accuracy by convolutional depth (%)">
+<table>
+<caption>Accuracy by convolutional depth (%)</caption>
+<thead>
+<tr>
+<th scope="col">Model</th>
+<th scope="col">Accuracy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Transformer</td>
+<td>58.89 ± 7.40</td>
+</tr>
+<tr>
+<td>1-layer 1D CNN + Transformer</td>
+<td>66.00 ± 6.35</td>
+</tr>
+<tr>
+<td>2-layer 1D CNN + Transformer</td>
+<td>73.34 ± 3.26</td>
+</tr>
+<tr>
+<td>3-layer 1D CNN + Transformer</td>
+<td>71.11 ± 4.29</td>
+</tr>
+</tbody>
+</table>
+</div>
+<section class="related">
+<h2>Related project</h2>
+<p>
+<a href="/en/projects/eeg-graph-learning/">EEG graph learning and compact decoding</a>
+</p>
+</section>
+<a href="/en/publications/" class="text-link">All publications</a>
+</div>
+</div>
+</main>
+<footer class="footer" id="contact">
+<div class="wrap">
+<div class="footer-top">
+<div>
+<p class="eyebrow">CONTACT</p>
+<h2>Research & collaboration</h2>
+<a href="mailto:dhkim1016@kw.ac.kr" class="mail">dhkim1016@kw.ac.kr</a>
+<p class="affiliation">NeuroAI Lab, Kwangwoon University<br>Seoul, Republic of Korea</p>
+</div>
+<div class="link-list">
+<a href="https://scholar.google.com/citations?user=CcqJMb0AAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+<a href="https://github.com/dhkim-kr" target="_blank" rel="noopener noreferrer">GitHub</a>
+<a href="https://orcid.org/0009-0005-7105-0894" target="_blank" rel="noopener noreferrer">ORCID</a>
+<a href="https://www.linkedin.com/in/dhkim-kr" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 Dae Hyeon Kim</span>
+<span>Research information as of September 2026</span>
+</div>
+</div>
+</footer>
+</body>
+</html>

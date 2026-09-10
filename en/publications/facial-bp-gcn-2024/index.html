@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Facial Video-based Contactless Blood Pressure Estimation Using End-to-End Graph Convolutional Network | Dae Hyeon Kim</title>
+<meta name="description" content="Divided facial skin regions into five-second clips and converted RGB to YUV. A two-layer GCN estimates blood pressure from a sample-similarity graph of skin-color changes without a separate pulse-extraction stage.">
+<link rel="canonical" href="https://dhkim-kr.github.io/en/publications/facial-bp-gcn-2024/">
+<link rel="alternate" hreflang="ko" href="https://dhkim-kr.github.io/publications/facial-bp-gcn-2024/">
+<link rel="alternate" hreflang="en" href="https://dhkim-kr.github.io/en/publications/facial-bp-gcn-2024/">
+<link rel="alternate" hreflang="x-default" href="https://dhkim-kr.github.io/publications/facial-bp-gcn-2024/">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:title" content="Facial Video-based Contactless Blood Pressure Estimation Using End-to-End Graph Convolutional Network">
+<meta property="og:description" content="Divided facial skin regions into five-second clips and converted RGB to YUV. A two-layer GCN estimates blood pressure from a sample-similarity graph of skin-color changes without a separate pulse-extraction stage.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dhkim-kr.github.io/en/publications/facial-bp-gcn-2024/">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/site.css">
+<script src="/assets/site.js" defer>
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="wrap header-inner">
+<a class="brand" href="/en/">Dae Hyeon Kim <span>RESEARCH</span>
+</a>
+<button class="menu-button" type="button" aria-expanded="false" aria-controls="main-nav">Menu</button>
+<nav class="main-nav" id="main-nav" aria-label="Main navigation">
+<a href="/en/#about">About</a>
+<a href="/en/projects/">Projects</a>
+<a href="/en/publications/">Publications</a>
+<a href="/en/#experience">Experience</a>
+<a href="/en/#contact">Contact</a>
+</nav>
+<a class="language" href="/publications/facial-bp-gcn-2024/" lang="ko" hreflang="ko" aria-label="한국어로 보기">한국어</a>
+</div>
+</header>
+<main id="main">
+<div class="wrap">
+<div class="paper-body">
+<div class="page-intro">
+<div class="breadcrumb">
+<a href="/en/">Home</a>
+<span>/</span>
+<span>Publications</span>
+</div>
+<h1>Facial Video-based Contactless Blood Pressure Estimation Using End-to-End Graph Convolutional Network</h1>
+</div>
+<p class="paper-status">Poster presentation</p>
+<dl class="detail-meta">
+<div>
+<dt>Venue</dt>
+<dd>IEIE Summer Annual Conference</dd>
+</div>
+<div>
+<dt>Author role</dt>
+<dd>First author</dd>
+</div>
+<div>
+<dt>Year</dt>
+<dd>2024.06</dd>
+</div>
+</dl>
+<p class="paper-authors">
+<strong>Authors</strong> Dae Hyeon Kim, Young-Seok Choi</p>
+<div class="publication-links">
+<a href="https://sites.google.com/view/neuroailab/members-achievements/dae-hyeon-kim" target="_blank" rel="noopener noreferrer">Lab publication record</a>
+</div>
+<h2>Research approach</h2>
+<p>Divided facial skin regions into five-second clips and converted RGB to YUV. A two-layer GCN estimates blood pressure from a sample-similarity graph of skin-color changes without a separate pulse-extraction stage.</p>
+<div class="evidence-gallery one">
+<figure>
+<a class="figure-link" href="/assets/figures/facial-bp-gcn-2024-architecture.png" target="_blank" rel="noopener" aria-label="Enlarge figure: Graph-based blood-pressure estimation from skin-color changes">
+<img src="/assets/figures/facial-bp-gcn-2024-architecture.png" alt="Graph-based blood-pressure estimation from skin-color changes" loading="lazy" width="1532" height="712">
+</a>
+<figcaption>Graph-based blood-pressure estimation from skin-color changes<br>
+<a href="/assets/figures/facial-bp-gcn-2024-architecture.png">View full-size figure</a>
+</figcaption>
+</figure>
+</div>
+<h2>Results</h2>
+<p>Transductive evaluation on VV-Medium with 250 participants and a subject-independent 70:30 split. Skin-color inputs yielded SBP/DBP MAE of 17.66/10.01 mmHg; rPPG inputs yielded 19.68/11.67 mmHg.</p>
+<div class="table-wrap" role="region" tabindex="0" aria-label="Blood-pressure MAE by input (mmHg)">
+<table>
+<caption>Blood-pressure MAE by input (mmHg)</caption>
+<thead>
+<tr>
+<th scope="col">Input</th>
+<th scope="col">SBP</th>
+<th scope="col">DBP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Contact PPG</td>
+<td>17.37</td>
+<td>10.02</td>
+</tr>
+<tr>
+<td>rPPG</td>
+<td>19.68</td>
+<td>11.67</td>
+</tr>
+<tr>
+<td>Skin color</td>
+<td>17.66</td>
+<td>10.01</td>
+</tr>
+</tbody>
+</table>
+</div>
+<section class="related">
+<h2>Related project</h2>
+<p>
+<a href="/en/projects/rppg-deployment/">Contactless vital estimation and deployment</a>
+</p>
+</section>
+<a href="/en/publications/" class="text-link">All publications</a>
+</div>
+</div>
+</main>
+<footer class="footer" id="contact">
+<div class="wrap">
+<div class="footer-top">
+<div>
+<p class="eyebrow">CONTACT</p>
+<h2>Research & collaboration</h2>
+<a href="mailto:dhkim1016@kw.ac.kr" class="mail">dhkim1016@kw.ac.kr</a>
+<p class="affiliation">NeuroAI Lab, Kwangwoon University<br>Seoul, Republic of Korea</p>
+</div>
+<div class="link-list">
+<a href="https://scholar.google.com/citations?user=CcqJMb0AAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+<a href="https://github.com/dhkim-kr" target="_blank" rel="noopener noreferrer">GitHub</a>
+<a href="https://orcid.org/0009-0005-7105-0894" target="_blank" rel="noopener noreferrer">ORCID</a>
+<a href="https://www.linkedin.com/in/dhkim-kr" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 Dae Hyeon Kim</span>
+<span>Research information as of September 2026</span>
+</div>
+</div>
+</footer>
+</body>
+</html>

@@ -35,6 +35,70 @@
       "src": "/assets/figures/axis-ecg-model_architecture.png",
       "source": "https://github.com/dhkim-kr/axis-ecg",
       "sourcePath": "model_architecture.png"
+    },
+    {
+      "src": "/assets/figures/multimodal-gcn-2025-architecture.png",
+      "source": "Semi-supervised Graph Convolutional Network for Emotion Recognition using Multimodal Biosignals Fusion",
+      "venue": "IEIE Autumn Annual Conference",
+      "year": 2025,
+      "page": 2,
+      "extraction": "Original paper figure, cropped without content changes"
+    },
+    {
+      "src": "/assets/figures/contactless-bp-2025-architecture.png",
+      "source": "Contactless Blood Pressure Estimation based on Graph Convolution Network with Semi-supervised Learning",
+      "venue": "IEIE Autumn Annual Conference",
+      "year": 2025,
+      "page": 2,
+      "extraction": "Original paper figure, cropped without content changes"
+    },
+    {
+      "src": "/assets/figures/rppg-deepfake-2025-architecture.png",
+      "source": "Robust Deepfake Detection using a 1D Convolution-Transformer Hybrid Model based on Remote Photoplethysmography Signals",
+      "venue": "IEIE Autumn Annual Conference",
+      "year": 2025,
+      "page": 3,
+      "extraction": "Original paper figure, cropped without content changes"
+    },
+    {
+      "src": "/assets/figures/imagined-speech-2025-architecture.png",
+      "source": "Multiscale 1D Convolution-Transformer Model for Imagined Speech Decoding",
+      "venue": "IEIE Autumn Annual Conference",
+      "year": 2025,
+      "page": 2,
+      "extraction": "Original paper figure, cropped without content changes"
+    },
+    {
+      "src": "/assets/figures/sparse-dgcnn-2024-architecture.png",
+      "source": "L2,1-norm-based Sparse Dynamic Graph Convolution Neural Network",
+      "venue": "IEIE Summer Annual Conference",
+      "year": 2024,
+      "page": 2,
+      "extraction": "Original paper figure, cropped without content changes"
+    },
+    {
+      "src": "/assets/figures/facial-bp-gcn-2024-architecture.png",
+      "source": "Facial Video-based Contactless Blood Pressure Estimation Using End-to-End Graph Convolutional Network",
+      "venue": "IEIE Summer Annual Conference",
+      "year": 2024,
+      "page": 2,
+      "extraction": "Original paper figure, cropped without content changes"
+    },
+    {
+      "src": "/assets/figures/qeeg-gcn-2022-architecture.png",
+      "source": "Quantitative EEG based Emotion Recognition Using Graph Convolutional Neural Network",
+      "venue": "IEIE Summer Annual Conference",
+      "year": 2022,
+      "page": 3,
+      "extraction": "Original paper figure, cropped without content changes"
+    },
+    {
+      "src": "/assets/figures/bcg-bp-2020-architecture.png",
+      "source": "Deep learning based blood pressure estimation using ballistocardiogram",
+      "venue": "30th Joint Conference on Signal Processing",
+      "year": 2020,
+      "page": 2,
+      "extraction": "Original paper figure, cropped without content changes"
     }
   ]
 }

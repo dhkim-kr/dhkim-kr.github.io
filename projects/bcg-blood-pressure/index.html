@@ -57,7 +57,7 @@
 </div>
 <div>
 <dt>담당 업무</dt>
-<dd>혈압 상승 실험과 동기화 신호 수집, 최종 모델 개발, 실시간 분석, 코드 리팩토링</dd>
+<dd>혈압 상승 실험, 동기화 신호 수집, 혈압 추정 모델 및 실시간 분석 서비스 공동 개발</dd>
 </div>
 <div>
 <dt>기간 및 소속</dt>
@@ -66,9 +66,9 @@
 </dl>
 <div class="detail-layout">
 <aside class="detail-toc">
-<p>이 프로젝트에서</p>
+<p>목차</p>
 <a href="#stage-1">01 2채널 BCG 혈압 추정</a>
-<a href="#stage-2">02 혈압 추적 결과</a>
+<a href="#stage-2">02 6명 개인 내 혈압 추정 평가</a>
 <a href="#related">관련 논문</a>
 </aside>
 <div class="detail-body">
@@ -81,7 +81,7 @@
 <dt>해결</dt>
 <dd>10초 구간의 국소 특징을 CNN으로 추출하고 BiGRU와 시간 어텐션으로 혈압을 회귀했다.</dd>
 <dt>기여</dt>
-<dd>신호 수집, 모델, 실시간 처리를 공동 개발했다. 최종 프로젝트 코드를 모듈화해 공개 저장소로 정리했다.</dd>
+<dd>동기화 신호 수집, 혈압 추정 모델과 실시간 분석 서비스를 공동 개발했다.</dd>
 </dl>
 <div class="evidence-gallery">
 <figure>
@@ -135,18 +135,16 @@
 </table>
 </div>
 <div class="evidence-note">
-<strong>평가 조건 및 연구 범위</strong>발표 그림의 CNN 채널 표기는 최종 코드와 차이가 있어 표에 실제 구현을 기재. 팀 TOG 공동 프로젝트</div>
+<strong>평가 조건 및 연구 범위</strong>최종 코드: CNN 10층, 64/128/256/512채널, BiGRU 64. 발표 그림은 이전 모델 구성.</div>
 </section>
 <section class="detail-stage" id="stage-2">
 <h2>
-<span class="section-number">02 / RESEARCH DETAIL</span>혈압 추적 결과 / 6명 개인 내 평가와 재현 조건</h2>
+<span class="section-number">02 / RESEARCH DETAIL</span>6명 개인 내 혈압 추정 평가</h2>
 <dl class="arguments">
 <dt>실험</dt>
 <dd>1인당 약 3시간 동안 안정 상태와 운동 후 상태를 측정하고 커프 혈압을 2분 간격으로 확보했다.</dd>
 <dt>평가</dt>
 <dd>개인 내 데이터를 시간순으로 29 / 14 / 57% 분할해 6명의 SBP 및 DBP 추적 오차를 평가했다.</dd>
-<dt>재현 조건</dt>
-<dd>원 실험은 중첩 구간과 분할 전 정규화를 사용했다. 공개한 리팩토링 코드의 성능은 실데이터로 재평가해야 한다.</dd>
 </dl>
 <div class="evidence-gallery">
 <figure>
@@ -247,13 +245,16 @@
 </table>
 </div>
 <div class="evidence-note">
-<strong>평가 조건 및 연구 범위</strong>수치는 2021년 원논문 결과. 현재 리팩토링 코드로 재평가한 결과와 구분</div>
+<strong>평가 조건 및 연구 범위</strong>2021년 논문의 평가 결과. 중첩 구간과 분할 전 정규화를 사용한 개인 내 실험.</div>
 </section>
 <section class="related" id="related">
 <h2>관련 논문과 연구 자료</h2>
 <ul>
 <li>
-<a href="https://github.com/dhkim-kr/e2e_multimodal_bp_estimation" target="_blank" rel="noopener noreferrer">최종 코드 리팩토링 GitHub</a>
+<a href="/publications/bcg-bp-2021/">BCG 신호 실시간 딥러닝 분석을 통한 혈압 추정</a>
+</li>
+<li>
+<a href="/publications/bcg-bp-2020/">Balistocardiogram을 이용한 딥러닝 기반 혈압 추정</a>
 </li>
 </ul>
 </section>

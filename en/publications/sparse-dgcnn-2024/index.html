@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>L2,1-norm-based Sparse Dynamic Graph Convolution Neural Network | Dae Hyeon Kim</title>
+<meta name="description" content="Applied row-wise L2,1 sparsity to a DGCNN that learns EEG electrode connections. Classified three emotions using DE features from five frequency bands and compared L1 regularization.">
+<link rel="canonical" href="https://dhkim-kr.github.io/en/publications/sparse-dgcnn-2024/">
+<link rel="alternate" hreflang="ko" href="https://dhkim-kr.github.io/publications/sparse-dgcnn-2024/">
+<link rel="alternate" hreflang="en" href="https://dhkim-kr.github.io/en/publications/sparse-dgcnn-2024/">
+<link rel="alternate" hreflang="x-default" href="https://dhkim-kr.github.io/publications/sparse-dgcnn-2024/">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:title" content="L2,1-norm-based Sparse Dynamic Graph Convolution Neural Network">
+<meta property="og:description" content="Applied row-wise L2,1 sparsity to a DGCNN that learns EEG electrode connections. Classified three emotions using DE features from five frequency bands and compared L1 regularization.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dhkim-kr.github.io/en/publications/sparse-dgcnn-2024/">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/site.css">
+<script src="/assets/site.js" defer>
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="wrap header-inner">
+<a class="brand" href="/en/">Dae Hyeon Kim <span>RESEARCH</span>
+</a>
+<button class="menu-button" type="button" aria-expanded="false" aria-controls="main-nav">Menu</button>
+<nav class="main-nav" id="main-nav" aria-label="Main navigation">
+<a href="/en/#about">About</a>
+<a href="/en/projects/">Projects</a>
+<a href="/en/publications/">Publications</a>
+<a href="/en/#experience">Experience</a>
+<a href="/en/#contact">Contact</a>
+</nav>
+<a class="language" href="/publications/sparse-dgcnn-2024/" lang="ko" hreflang="ko" aria-label="한국어로 보기">한국어</a>
+</div>
+</header>
+<main id="main">
+<div class="wrap">
+<div class="paper-body">
+<div class="page-intro">
+<div class="breadcrumb">
+<a href="/en/">Home</a>
+<span>/</span>
+<span>Publications</span>
+</div>
+<h1>L2,1-norm-based Sparse Dynamic Graph Convolution Neural Network</h1>
+</div>
+<p class="paper-status">Poster presentation</p>
+<dl class="detail-meta">
+<div>
+<dt>Venue</dt>
+<dd>IEIE Summer Annual Conference</dd>
+</div>
+<div>
+<dt>Author role</dt>
+<dd>Second author</dd>
+</div>
+<div>
+<dt>Year</dt>
+<dd>2024.06</dd>
+</div>
+</dl>
+<p class="paper-authors">
+<strong>Authors</strong> Min Seok Lee, Dae Hyeon Kim, Young-Seok Choi</p>
+<div class="publication-links">
+<a href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11890912" target="_blank" rel="noopener noreferrer">DBpia</a>
+</div>
+<h2>Research approach</h2>
+<p>Applied row-wise L2,1 sparsity to a DGCNN that learns EEG electrode connections. Classified three emotions using DE features from five frequency bands and compared L1 regularization.</p>
+<div class="evidence-gallery one">
+<figure>
+<a class="figure-link" href="/assets/figures/sparse-dgcnn-2024-architecture.png" target="_blank" rel="noopener" aria-label="Enlarge figure: Sparse dynamic graph convolutional model">
+<img src="/assets/figures/sparse-dgcnn-2024-architecture.png" alt="Sparse dynamic graph convolutional model" loading="lazy" width="742" height="304">
+</a>
+<figcaption>Sparse dynamic graph convolutional model<br>
+<a href="/assets/figures/sparse-dgcnn-2024-architecture.png">View full-size figure</a>
+</figcaption>
+</figure>
+</div>
+<h2>Results</h2>
+<p>Subject-dependent evaluation on SEED, with 15 participants: L2,1 accuracy 75.52 ± 8.88%, L1 75.56 ± 8.89% and DGCNN 74.90 ± 8.20%. Classification performance was comparable to L1.</p>
+<div class="table-wrap" role="region" tabindex="0" aria-label="SEED subject-dependent accuracy (%)">
+<table>
+<caption>SEED subject-dependent accuracy (%)</caption>
+<thead>
+<tr>
+<th scope="col">Model</th>
+<th scope="col">Accuracy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DGCNN</td>
+<td>74.90 ± 8.20</td>
+</tr>
+<tr>
+<td>L1 Sparse DGCNN</td>
+<td>75.56 ± 8.89</td>
+</tr>
+<tr>
+<td>L2,1 Sparse DGCNN</td>
+<td>75.52 ± 8.88</td>
+</tr>
+</tbody>
+</table>
+</div>
+<section class="related">
+<h2>Related project</h2>
+<p>
+<a href="/en/projects/eeg-graph-learning/">EEG graph learning and compact decoding</a>
+</p>
+</section>
+<a href="/en/publications/" class="text-link">All publications</a>
+</div>
+</div>
+</main>
+<footer class="footer" id="contact">
+<div class="wrap">
+<div class="footer-top">
+<div>
+<p class="eyebrow">CONTACT</p>
+<h2>Research & collaboration</h2>
+<a href="mailto:dhkim1016@kw.ac.kr" class="mail">dhkim1016@kw.ac.kr</a>
+<p class="affiliation">NeuroAI Lab, Kwangwoon University<br>Seoul, Republic of Korea</p>
+</div>
+<div class="link-list">
+<a href="https://scholar.google.com/citations?user=CcqJMb0AAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+<a href="https://github.com/dhkim-kr" target="_blank" rel="noopener noreferrer">GitHub</a>
+<a href="https://orcid.org/0009-0005-7105-0894" target="_blank" rel="noopener noreferrer">ORCID</a>
+<a href="https://www.linkedin.com/in/dhkim-kr" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 Dae Hyeon Kim</span>
+<span>Research information as of September 2026</span>
+</div>
+</div>
+</footer>
+</body>
+</html>
