@@ -313,28 +313,28 @@
       "With MELD pretraining, IEMOCAP weighted F1 is 85.8% for four classes and 66.6% for six classes."
     ],
     "balanced-rppg": [
-      "균형 대조학습을 이용해 얼굴 영상에서 원격 심박을 추정했다.",
-      "Used balanced contrastive learning for remote heart-rate estimation from facial video.",
-      "",
-      ""
+      "3D CNN으로 얼굴 영상의 전역 및 국소 맥파를 추출했다. 같은 영상의 전역-국소 쌍은 가깝게, 다른 영상의 전역 쌍은 멀어지도록 학습하고 양성 및 음성 쌍의 수를 조절했다.",
+      "Extracted global and local pulse representations with a 3D CNN. Balanced contrastive pairs align global and local representations within a video and separate global representations from different videos.",
+      "데이터셋 내부 평가에서 PURE의 MAE/RMSE는 0.13/0.36 bpm, UBFC-rPPG는 1.08/2.49 bpm. 피험자의 75%를 학습, 25%를 평가에 사용했으며, 심박수 135 bpm 이상 영상은 제외했다.",
+      "Intra-dataset MAE/RMSE: 0.13/0.36 bpm on PURE and 1.08/2.49 bpm on UBFC-rPPG. The study used 75% of subjects for training and 25% for testing, excluding videos with heart rates of 135 bpm or higher."
     ],
     "global-emotion-fusion": [
-      "대화의 전역 정보를 융합해 다중모달 감정 인식을 수행한 초기 연구이다.",
-      "An earlier study of global information fusion for multimodal emotion recognition in conversations.",
-      "ITC-CSCC 2024 제1저자 구두 발표. 이후 대화 관계와 모달 정렬을 다루는 EmotionHeart 연구로 확장했다.",
-      "First-author oral paper at ITC-CSCC 2024. Subsequent work on dialogue relations and modality alignment includes EmotionHeart."
+      "음성, 영상, 텍스트 사이의 긴 문맥을 Multimodal Transformer로 융합했다. RGCN에 화자 내부, 화자 간, 모달 간 관계를 반영해 대화의 발화별 감정을 분류했다.",
+      "Used a Multimodal Transformer to fuse long-range context across speech, video and text. An RGCN models within-speaker, between-speaker and cross-modal relationships for utterance-level emotion classification.",
+      "IEMOCAP 6개 감정 분류에서 정확도 68.21%, weighted F1 68.17%. 비교 모델 COGMEN의 weighted F1은 67.60%.",
+      "Six-class IEMOCAP evaluation: accuracy 68.21% and weighted F1 68.17%, compared with weighted F1 of 67.60% for COGMEN."
     ],
     "graph-transformer-eeg": [
-      "준지도 EEG 감정 인식을 위해 판별적 그래프 Transformer 모델을 연구했다.",
-      "Studied a discriminative graph Transformer for semi-supervised EEG emotion recognition.",
-      "",
-      ""
+      "2층 GCN으로 표본 이웃의 특징을 학습하고, 표본 간 유사도를 어텐션에 반영하는 Graph Transformer를 결합했다. EEG의 DE 특징으로 구성한 그래프에서 소량 레이블로 감정을 분류했다.",
+      "Combined a two-layer GCN for local sample relationships with a Graph Transformer that incorporates sample similarity into attention. Classified emotions from a graph of EEG DE features with limited labels.",
+      "SEED-IV의 피험자별 transductive 평가. 2,505개 표본 중 레이블 60개에서 정확도 83.28 ± 3.70%, 80개에서 88.22 ± 4.48%, 100개에서 93.83 ± 1.87%.",
+      "Subject-wise transductive evaluation on SEED-IV. With 60, 80 and 100 labeled samples out of 2,505, accuracy was 83.28 ± 3.70%, 88.22 ± 4.48% and 93.83 ± 1.87%, respectively."
     ],
     "pdc-gcn": [
       "Partial Directed Coherence로 EEG 채널의 연결 관계를 구성하고 스펙트럴 GCN으로 감정을 분류했다.",
       "Constructed EEG channel relationships with Partial Directed Coherence and classified emotions with a spectral GCN.",
-      "",
-      ""
+      "SEED 피험자 의존 평가에서 SGCN-PDC의 정확도 90.93 ± 4.86%. 비교 모델 DGCNN은 90.40 ± 8.49%.",
+      "Subject-dependent SEED evaluation: SGCN-PDC accuracy 90.93 ± 4.86%, compared with 90.40 ± 8.49% for DGCNN."
     ],
     "damc-net": [
       "시간 및 공간 분기의 다중척도 합성곱, SimAM, 로그 파워 집계로 상상 발화 EEG를 분류한다.",

@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Remote Heart Rate Estimation from Facial Videos with Balanced Contrastive Learning | Dae Hyeon Kim</title>
-<meta name="description" content="균형 대조학습을 이용해 얼굴 영상에서 원격 심박을 추정했다.">
+<meta name="description" content="3D CNN으로 얼굴 영상의 전역 및 국소 맥파를 추출했다. 같은 영상의 전역-국소 쌍은 가깝게, 다른 영상의 전역 쌍은 멀어지도록 학습하고 양성 및 음성 쌍의 수를 조절했다.">
 <link rel="canonical" href="https://dhkim-kr.github.io/publications/balanced-rppg/">
 <link rel="alternate" hreflang="ko" href="https://dhkim-kr.github.io/publications/balanced-rppg/">
 <link rel="alternate" hreflang="en" href="https://dhkim-kr.github.io/en/publications/balanced-rppg/">
 <link rel="alternate" hreflang="x-default" href="https://dhkim-kr.github.io/publications/balanced-rppg/">
 <meta name="theme-color" content="#ffffff">
 <meta property="og:title" content="Remote Heart Rate Estimation from Facial Videos with Balanced Contrastive Learning">
-<meta property="og:description" content="균형 대조학습을 이용해 얼굴 영상에서 원격 심박을 추정했다.">
+<meta property="og:description" content="3D CNN으로 얼굴 영상의 전역 및 국소 맥파를 추출했다. 같은 영상의 전역-국소 쌍은 가깝게, 다른 영상의 전역 쌍은 멀어지도록 학습하고 양성 및 음성 쌍의 수를 조절했다.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://dhkim-kr.github.io/publications/balanced-rppg/">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
@@ -40,11 +40,11 @@
 <div class="wrap">
 <div class="paper-body">
 <div class="page-intro">
-<div class="breadcrumb">
+<nav class="breadcrumb" aria-label="페이지 경로">
 <a href="/">홈</a>
-<span>/</span>
-<span>논문</span>
-</div>
+<span aria-hidden="true">/</span>
+<a href="/publications/">논문</a>
+</nav>
 <h1>Remote Heart Rate Estimation from Facial Videos with Balanced Contrastive Learning</h1>
 </div>
 <p class="paper-status">구두</p>
@@ -59,7 +59,7 @@
 </div>
 <div>
 <dt>연도</dt>
-<dd>Jan. 2025</dd>
+<dd>2025.01</dd>
 </div>
 </dl>
 <div class="publication-links">
@@ -67,7 +67,9 @@
 <a href="https://github.com/Neuro-AI-Lab/contrastive_rppg_kw" target="_blank" rel="noopener noreferrer">GitHub</a>
 </div>
 <h2>연구 내용</h2>
-<p>균형 대조학습을 이용해 얼굴 영상에서 원격 심박을 추정했다.</p>
+<p>3D CNN으로 얼굴 영상의 전역 및 국소 맥파를 추출했다. 같은 영상의 전역-국소 쌍은 가깝게, 다른 영상의 전역 쌍은 멀어지도록 학습하고 양성 및 음성 쌍의 수를 조절했다.</p>
+<h2>결과</h2>
+<p>데이터셋 내부 평가에서 PURE의 MAE/RMSE는 0.13/0.36 bpm, UBFC-rPPG는 1.08/2.49 bpm. 피험자의 75%를 학습, 25%를 평가에 사용했으며, 심박수 135 bpm 이상 영상은 제외했다.</p>
 <section class="related">
 <h2>관련 프로젝트</h2>
 <p>

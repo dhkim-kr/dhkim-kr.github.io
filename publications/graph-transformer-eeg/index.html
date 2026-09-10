@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Semi-supervised EEG emotion recognition with Discriminative Graph Transformer Model | Dae Hyeon Kim</title>
-<meta name="description" content="준지도 EEG 감정 인식을 위해 판별적 그래프 Transformer 모델을 연구했다.">
+<meta name="description" content="2층 GCN으로 표본 이웃의 특징을 학습하고, 표본 간 유사도를 어텐션에 반영하는 Graph Transformer를 결합했다. EEG의 DE 특징으로 구성한 그래프에서 소량 레이블로 감정을 분류했다.">
 <link rel="canonical" href="https://dhkim-kr.github.io/publications/graph-transformer-eeg/">
 <link rel="alternate" hreflang="ko" href="https://dhkim-kr.github.io/publications/graph-transformer-eeg/">
 <link rel="alternate" hreflang="en" href="https://dhkim-kr.github.io/en/publications/graph-transformer-eeg/">
 <link rel="alternate" hreflang="x-default" href="https://dhkim-kr.github.io/publications/graph-transformer-eeg/">
 <meta name="theme-color" content="#ffffff">
 <meta property="og:title" content="Semi-supervised EEG emotion recognition with Discriminative Graph Transformer Model">
-<meta property="og:description" content="준지도 EEG 감정 인식을 위해 판별적 그래프 Transformer 모델을 연구했다.">
+<meta property="og:description" content="2층 GCN으로 표본 이웃의 특징을 학습하고, 표본 간 유사도를 어텐션에 반영하는 Graph Transformer를 결합했다. EEG의 DE 특징으로 구성한 그래프에서 소량 레이블로 감정을 분류했다.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://dhkim-kr.github.io/publications/graph-transformer-eeg/">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
@@ -40,11 +40,11 @@
 <div class="wrap">
 <div class="paper-body">
 <div class="page-intro">
-<div class="breadcrumb">
+<nav class="breadcrumb" aria-label="페이지 경로">
 <a href="/">홈</a>
-<span>/</span>
-<span>논문</span>
-</div>
+<span aria-hidden="true">/</span>
+<a href="/publications/">논문</a>
+</nav>
 <h1>Semi-supervised EEG emotion recognition with Discriminative Graph Transformer Model</h1>
 </div>
 <p class="paper-status">구두</p>
@@ -59,14 +59,16 @@
 </div>
 <div>
 <dt>연도</dt>
-<dd>Oct. 2023</dd>
+<dd>2023.10</dd>
 </div>
 </dl>
 <div class="publication-links">
 <a href="https://doi.org/10.1109/ICCE-Asia59966.2023.10326427" target="_blank" rel="noopener noreferrer">DOI</a>
 </div>
 <h2>연구 내용</h2>
-<p>준지도 EEG 감정 인식을 위해 판별적 그래프 Transformer 모델을 연구했다.</p>
+<p>2층 GCN으로 표본 이웃의 특징을 학습하고, 표본 간 유사도를 어텐션에 반영하는 Graph Transformer를 결합했다. EEG의 DE 특징으로 구성한 그래프에서 소량 레이블로 감정을 분류했다.</p>
+<h2>결과</h2>
+<p>SEED-IV의 피험자별 transductive 평가. 2,505개 표본 중 레이블 60개에서 정확도 83.28 ± 3.70%, 80개에서 88.22 ± 4.48%, 100개에서 93.83 ± 1.87%.</p>
 <section class="related">
 <h2>관련 프로젝트</h2>
 <p>
